@@ -1,0 +1,27 @@
+--- a/.github/workflows/playwright.yml
++++ b/.github/workflows/playwright.yml
+@@ -35,6 +35,9 @@
+       - name: Run Playwright tests
+         run: npm test
+ 
++      - name: Run QA Framework v1
++        run: npm run qa:v1
++
+       - name: Upload test report
+         if: always()
+         uses: actions/upload-artifact@v4
+@@ -43,6 +46,14 @@
+           path: |
+             playwright-report/
+             test-results/
++            qa/reports/QA_Report.html
++            qa/reports/results.json
++            qa/reports/source-audit.json
++            qa/reports/release-gate.json
++            qa/reports/mutations.json
++            qa/reports/Coverage_Matrix.csv
++            qa/reports/target-environment.json
++            qa/reports/pipeline.json
+           retention-days: 14
+           if-no-files-found: ignore
+ 

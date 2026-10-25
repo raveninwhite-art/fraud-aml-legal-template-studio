@@ -1,0 +1,2293 @@
+{
+  "id": "B05",
+  "status": "CURRENT_BEHAVIOR_NOT_LEGAL_APPROVAL",
+  "sourceSha256": "2d990428e4ce6a60576189745e5c5b2d3440151142ea0eebc90bcb35eb85729c",
+  "fixtureSha256": "663b7e3a97fd210f7376c3ce2a6cff2ffbb4a8228e9fc4868ba0ed2e45b1d1c0",
+  "capturedAt": "2026-10-25T13:57:27.507Z",
+  "browser": "153.0.8010.0",
+  "fixture": {
+    "id": "B05",
+    "title": "簡易判決帳戶案",
+    "steps": [
+      {
+        "click": "preset-v9-account-btn"
+      },
+      {
+        "click": "preset-proc-simple-btn"
+      },
+      {
+        "set": [
+          "input-defendant-name",
+          "測試被告甲"
+        ]
+      },
+      {
+        "set": [
+          "input-case-cause",
+          "加重詐欺等"
+        ]
+      },
+      {
+        "set": [
+          "input-judge-name",
+          "測試法官"
+        ]
+      },
+      {
+        "set": [
+          "input-clerk-name",
+          "測試書記官"
+        ]
+      },
+      {
+        "set": [
+          "val-prosecutor-indict",
+          "測試檢察官甲"
+        ]
+      },
+      {
+        "set": [
+          "val-prosecutor-trial",
+          "測試檢察官乙"
+        ]
+      }
+    ]
+  },
+  "text": "臺灣OO地方法院刑事簡易判決\nO年度訴字第O號\n聲　請　人　臺灣OO地方檢察署檢察官\n被　　　告　測試被告甲\n上列被告因加重詐欺等案件，經檢察官聲請以簡易判決處刑（O年度偵字第O號），本院判決如下︰\n　　主　文\n測試被告甲幫助犯洗錢防制法第十九條第一項後段一般洗錢罪，處有期徒刑O月，併科罰金新臺幣O元，徒刑如易科罰金、罰金如易服勞役，均以新臺幣壹仟元折算壹日。\n　　事　實\n一、（請於此處貼入或填寫本案犯罪事實）\n二、案經告訴人訴由警察局報告臺灣OO地方檢察署檢察官偵查起訴。\n　　理　由\n一、認定犯罪事實所憑證據及理由：\n　　上開犯罪事實，業據被告於警詢、偵查、本院準備程序及簡式審判程序中均坦承不諱，核與證人即告訴人於警詢中之證述大致相符，並有扣押筆錄、扣押物品目錄表、對話紀錄截圖、偽造之收據在卷可查，足認被告上開任意性之自白與事實相符，堪以採信。\n二、論罪科刑：\n㈠核被告所為，係犯刑法第30條第1項、第339條第1項之幫助詐欺取財罪及刑法第30條第1項、洗錢防制法第19條第1項後段之幫助一般洗錢罪。\n㈡被告所犯幫助詐欺取財罪、幫助一般洗錢罪，均係在同一犯罪決意及預定計畫下所為行為，乃一行為觸犯數罪名，並侵害不同之財產法益，為想像競合犯，應依刑法第55條之規定，從一重之幫助洗錢防制法第19條第1項後段之一般洗錢罪處斷。\n㈢刑之減輕事由：\n　　被告係幫助他人犯前開之罪，爰依刑法第30條第2項之規定減輕其刑。\n㈣爰審酌被告依其經驗及智識，已預見提供其金融帳戶予他人使用，亟可能涉及財產犯罪，恐掩飾、隱匿他人詐欺犯罪所得之去向或所在，竟提供自己申辦之金融帳戶資料予詐欺集團成員，其所為除造成被害人財產法益受損外，亦增加政府查緝此類犯罪或將來所衍生金融犯罪之困難，更助長原已猖獗之詐欺歪風，其行為當難認有何可取之處，惟念及被告犯後坦認犯行，並兼衡被告OO之智識程度、家庭及經濟狀況等一切情狀，量處如主文所示之刑，並諭知有期徒刑易科罰金、罰金易服勞役之折算標準。\n三、沒收：\n　㈠按犯罪所得，屬於犯罪行為人者，沒收之，於全部或一部不能沒收或不宜執行沒收時，追徵其價額，刑法第38條之1第1項前段、第3項分別定有明文。經查，被告供稱提供本案帳戶資料並未獲得報酬，且依卷內證據，亦無從認定被告因本案有獲取犯罪所得之情形，故不予宣告沒收或追徵。\n　㈡又洗錢防制法第25條第1項規定：「犯第19條、第20條之罪，洗錢之財物或財產上利益，不問屬於犯罪行為人與否，沒收之」。經查，本案詐欺集團成員固然向被害人或告訴人詐得款項，然款項旋經詐欺集團成員提領或轉出，被告已不具有管領、使用權限，是若再就被告上開洗錢之財物部分宣告沒收，顯有過苛之虞，爰依刑法第38條之2第2項規定，不予宣告沒收、追徵。\n據上論斷，應依刑事訴訟法第449條第1項、第450條第1項、第454條第1項，逕以簡易判決處刑如主文。\n本案經檢察官測試檢察官甲聲請以簡易判決處刑。\n中　　華　　民　　國　　O　年　　O　月　　O　日\n　　　　　　　　　刑事第O庭　法　官　 測試法官\n以上正本證明與原本無異。\n如不服本判決應於收受本判決後20日內向本院提出上訴書狀，上訴書狀應敘述具體理由。上訴書狀未敘述上訴理由者，應於上訴期間屆滿後20日內補提理由書狀於本院(均須按他造當事人之人數附繕本 )「切勿逕送上級法院」。\n中　　華　　民　　國　　O　年　　O　月　　O　日\n　　　　　　　　　　　　　　　書記官　 測試書記官\n附錄本案論罪科刑法條：\n洗錢防制法第19條\n有第2條各款所列洗錢行為者，處3年以上10年以下有期徒刑，併科新臺幣1億元以下罰金。其洗錢之財物或財產上利益未達新臺幣一億元者，處6月以上5年以下有期徒刑，併科新臺幣5千萬元以下罰金。\n前項之未遂犯罰之。\n\n中華民國刑法第30條第1項\n幫助他人實行犯罪行為者，為幫助犯。雖他人不知幫助之情者，亦同。\n\n中華民國刑法第339條\n意圖為自己或第三人不法之所有，以詐術使人將本人或第三人之物交付者，處5年以下有期徒刑、拘役或科或併科50萬元以下罰金。\n以前項方法得財產上不法之利益或使第三人得之者，亦同。\n前二項之未遂犯罰之。",
+  "sections": {
+    "caseNo": "臺灣OO地方法院O年度訴字第O號",
+    "headerBlock": "臺灣OO地方法院刑事簡易判決\nO年度訴字第O號\n聲　請　人　臺灣OO地方檢察署檢察官\n被　　　告　測試被告甲\n上列被告因加重詐欺等案件，經檢察官聲請以簡易判決處刑（O年度偵字第O號），本院判決如下︰",
+    "holdingText": "測試被告甲幫助犯洗錢防制法第十九條第一項後段一般洗錢罪，處有期徒刑O月，併科罰金新臺幣O元，徒刑如易科罰金、罰金如易服勞役，均以新臺幣壹仟元折算壹日。",
+    "factText": "一、（請於此處貼入或填寫本案犯罪事實）\n二、案經告訴人訴由警察局報告臺灣OO地方檢察署檢察官偵查起訴。",
+    "reasonFullText": "一、認定犯罪事實所憑證據及理由：\n　　上開犯罪事實，業據被告於警詢、偵查、本院準備程序及簡式審判程序中均坦承不諱，核與證人即告訴人於警詢中之證述大致相符，並有扣押筆錄、扣押物品目錄表、對話紀錄截圖、偽造之收據在卷可查，足認被告上開任意性之自白與事實相符，堪以採信。\n二、論罪科刑：\n㈠核被告所為，係犯刑法第30條第1項、第339條第1項之幫助詐欺取財罪及刑法第30條第1項、洗錢防制法第19條第1項後段之幫助一般洗錢罪。\n㈡被告所犯幫助詐欺取財罪、幫助一般洗錢罪，均係在同一犯罪決意及預定計畫下所為行為，乃一行為觸犯數罪名，並侵害不同之財產法益，為想像競合犯，應依刑法第55條之規定，從一重之幫助洗錢防制法第19條第1項後段之一般洗錢罪處斷。\n㈢刑之減輕事由：\n　　被告係幫助他人犯前開之罪，爰依刑法第30條第2項之規定減輕其刑。\n㈣爰審酌被告依其經驗及智識，已預見提供其金融帳戶予他人使用，亟可能涉及財產犯罪，恐掩飾、隱匿他人詐欺犯罪所得之去向或所在，竟提供自己申辦之金融帳戶資料予詐欺集團成員，其所為除造成被害人財產法益受損外，亦增加政府查緝此類犯罪或將來所衍生金融犯罪之困難，更助長原已猖獗之詐欺歪風，其行為當難認有何可取之處，惟念及被告犯後坦認犯行，並兼衡被告OO之智識程度、家庭及經濟狀況等一切情狀，量處如主文所示之刑，並諭知有期徒刑易科罰金、罰金易服勞役之折算標準。\n三、沒收：\n　㈠按犯罪所得，屬於犯罪行為人者，沒收之，於全部或一部不能沒收或不宜執行沒收時，追徵其價額，刑法第38條之1第1項前段、第3項分別定有明文。經查，被告供稱提供本案帳戶資料並未獲得報酬，且依卷內證據，亦無從認定被告因本案有獲取犯罪所得之情形，故不予宣告沒收或追徵。\n　㈡又洗錢防制法第25條第1項規定：「犯第19條、第20條之罪，洗錢之財物或財產上利益，不問屬於犯罪行為人與否，沒收之」。經查，本案詐欺集團成員固然向被害人或告訴人詐得款項，然款項旋經詐欺集團成員提領或轉出，被告已不具有管領、使用權限，是若再就被告上開洗錢之財物部分宣告沒收，顯有過苛之虞，爰依刑法第38條之2第2項規定，不予宣告沒收、追徵。",
+    "crimeText": "㈠核被告所為，係犯刑法第30條第1項、第339條第1項之幫助詐欺取財罪及刑法第30條第1項、洗錢防制法第19條第1項後段之幫助一般洗錢罪。\n㈡被告所犯幫助詐欺取財罪、幫助一般洗錢罪，均係在同一犯罪決意及預定計畫下所為行為，乃一行為觸犯數罪名，並侵害不同之財產法益，為想像競合犯，應依刑法第55條之規定，從一重之幫助洗錢防制法第19條第1項後段之一般洗錢罪處斷。\n㈢刑之減輕事由：\n　　被告係幫助他人犯前開之罪，爰依刑法第30條第2項之規定減輕其刑。\n㈣爰審酌被告依其經驗及智識，已預見提供其金融帳戶予他人使用，亟可能涉及財產犯罪，恐掩飾、隱匿他人詐欺犯罪所得之去向或所在，竟提供自己申辦之金融帳戶資料予詐欺集團成員，其所為除造成被害人財產法益受損外，亦增加政府查緝此類犯罪或將來所衍生金融犯罪之困難，更助長原已猖獗之詐欺歪風，其行為當難認有何可取之處，惟念及被告犯後坦認犯行，並兼衡被告OO之智識程度、家庭及經濟狀況等一切情狀，量處如主文所示之刑，並諭知有期徒刑易科罰金、罰金易服勞役之折算標準。",
+    "lawCompareText": "",
+    "enhText": "",
+    "mitText": "刑之減輕事由：\n　　被告係幫助他人犯前開之罪，爰依刑法第30條第2項之規定減輕其刑。",
+    "sentencingText": "爰審酌被告依其經驗及智識，已預見提供其金融帳戶予他人使用，亟可能涉及財產犯罪，恐掩飾、隱匿他人詐欺犯罪所得之去向或所在，竟提供自己申辦之金融帳戶資料予詐欺集團成員，其所為除造成被害人財產法益受損外，亦增加政府查緝此類犯罪或將來所衍生金融犯罪之困難，更助長原已猖獗之詐欺歪風，其行為當難認有何可取之處，惟念及被告犯後坦認犯行，並兼衡被告OO之智識程度、家庭及經濟狀況等一切情狀，量處如主文所示之刑，並諭知有期徒刑易科罰金、罰金易服勞役之折算標準。",
+    "confText": "　㈠按犯罪所得，屬於犯罪行為人者，沒收之，於全部或一部不能沒收或不宜執行沒收時，追徵其價額，刑法第38條之1第1項前段、第3項分別定有明文。經查，被告供稱提供本案帳戶資料並未獲得報酬，且依卷內證據，亦無從認定被告因本案有獲取犯罪所得之情形，故不予宣告沒收或追徵。\n　㈡又洗錢防制法第25條第1項規定：「犯第19條、第20條之罪，洗錢之財物或財產上利益，不問屬於犯罪行為人與否，沒收之」。經查，本案詐欺集團成員固然向被害人或告訴人詐得款項，然款項旋經詐欺集團成員提領或轉出，被告已不具有管領、使用權限，是若再就被告上開洗錢之財物部分宣告沒收，顯有過苛之虞，爰依刑法第38條之2第2項規定，不予宣告沒收、追徵。",
+    "probationText": "",
+    "closingBlock": "據上論斷，應依刑事訴訟法第449條第1項、第450條第1項、第454條第1項，逕以簡易判決處刑如主文。\n本案經檢察官測試檢察官甲聲請以簡易判決處刑。\n中　　華　　民　　國　　O　年　　O　月　　O　日\n　　　　　　　　　刑事第O庭　法　官　 測試法官\n以上正本證明與原本無異。\n如不服本判決應於收受本判決後20日內向本院提出上訴書狀，上訴書狀應敘述具體理由。上訴書狀未敘述上訴理由者，應於上訴期間屆滿後20日內補提理由書狀於本院(均須按他造當事人之人數附繕本 )「切勿逕送上級法院」。\n中　　華　　民　　國　　O　年　　O　月　　O　日\n　　　　　　　　　　　　　　　書記官　 測試書記官",
+    "appendixText": "洗錢防制法第19條\n有第2條各款所列洗錢行為者，處3年以上10年以下有期徒刑，併科新臺幣1億元以下罰金。其洗錢之財物或財產上利益未達新臺幣一億元者，處6月以上5年以下有期徒刑，併科新臺幣5千萬元以下罰金。\n前項之未遂犯罰之。\n\n中華民國刑法第30條第1項\n幫助他人實行犯罪行為者，為幫助犯。雖他人不知幫助之情者，亦同。\n\n中華民國刑法第339條\n意圖為自己或第三人不法之所有，以詐術使人將本人或第三人之物交付者，處5年以下有期徒刑、拘役或科或併科50萬元以下罰金。\n以前項方法得財產上不法之利益或使第三人得之者，亦同。\n前二項之未遂犯罰之。"
+  },
+  "state": [
+    {
+      "key": "show-all-sections-toggle",
+      "id": "show-all-sections-toggle",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "input-court-name",
+      "id": "input-court-name",
+      "name": "",
+      "type": "text",
+      "value": "臺灣OO地方法院",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "input-case-no",
+      "id": "input-case-no",
+      "name": "",
+      "type": "text",
+      "value": "O年度訴字第O號",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "input-case-cause",
+      "id": "input-case-cause",
+      "name": "",
+      "type": "text",
+      "value": "加重詐欺等",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "input-defendant-name",
+      "id": "input-defendant-name",
+      "name": "",
+      "type": "text",
+      "value": "測試被告甲",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "input-lawyer-name",
+      "id": "input-lawyer-name",
+      "name": "",
+      "type": "text",
+      "value": "",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "input-judgment-date",
+      "id": "input-judgment-date",
+      "name": "",
+      "type": "date",
+      "value": "",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "input-court-div",
+      "id": "input-court-div",
+      "name": "",
+      "type": "text",
+      "value": "刑事第O庭",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "input-judge-name",
+      "id": "input-judge-name",
+      "name": "",
+      "type": "text",
+      "value": "測試法官",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "input-clerk-name",
+      "id": "input-clerk-name",
+      "name": "",
+      "type": "text",
+      "value": "測試書記官",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-pros-indict",
+      "id": "chk-pros-indict",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "val-pros-indict",
+      "id": "val-pros-indict",
+      "name": "",
+      "type": "text",
+      "value": "O年度偵字第O號",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-pros-add",
+      "id": "chk-pros-add",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-pros-add",
+      "id": "val-pros-add",
+      "name": "",
+      "type": "text",
+      "value": "O年度O字第O號",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-pros-merge",
+      "id": "chk-pros-merge",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-pros-merge",
+      "id": "val-pros-merge",
+      "name": "",
+      "type": "text",
+      "value": "O年度O字第O號",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-prosecutor-indict",
+      "id": "chk-prosecutor-indict",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "val-prosecutor-indict",
+      "id": "val-prosecutor-indict",
+      "name": "",
+      "type": "text",
+      "value": "測試檢察官甲",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-prosecutor-trial",
+      "id": "chk-prosecutor-trial",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "val-prosecutor-trial",
+      "id": "val-prosecutor-trial",
+      "name": "",
+      "type": "text",
+      "value": "測試檢察官乙",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "rad-proc-summary-trial",
+      "id": "rad-proc-summary-trial",
+      "name": "proc-type-mode",
+      "type": "radio",
+      "value": "summary_trial",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-include-reason-one",
+      "id": "chk-include-reason-one",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "rad-proc-simple-judgment",
+      "id": "rad-proc-simple-judgment",
+      "name": "proc-type-mode",
+      "type": "radio",
+      "value": "simple_judgment",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "chk-v9-proc-449-1",
+      "id": "chk-v9-proc-449-1",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "chk-v9-proc-449-2",
+      "id": "chk-v9-proc-449-2",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-v9-proc-450",
+      "id": "chk-v9-proc-450",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "chk-holding-recidivist",
+      "id": "chk-holding-recidivist",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-holding-1",
+      "id": "chk-holding-1",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-h1-crime-title",
+      "id": "val-h1-crime-title",
+      "name": "",
+      "type": "text",
+      "value": "三人以上共同詐欺取財罪",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-h1-sentence",
+      "id": "val-h1-sentence",
+      "name": "",
+      "type": "text",
+      "value": "處有期徒刑O年O月。",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-h1-sub1",
+      "id": "chk-h1-sub1",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-h1-sub2",
+      "id": "chk-h1-sub2",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "chk-h1-sub3",
+      "id": "chk-h1-sub3",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-h1-sub4",
+      "id": "chk-h1-sub4",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-holding-2",
+      "id": "chk-holding-2",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-h2-crime-title",
+      "id": "val-h2-crime-title",
+      "name": "",
+      "type": "text",
+      "value": "三人以上共同詐欺取財未遂罪",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-h2-sentence",
+      "id": "val-h2-sentence",
+      "name": "",
+      "type": "text",
+      "value": "處有期徒刑O年O月。",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-h2-sub1",
+      "id": "chk-h2-sub1",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-h2-sub2",
+      "id": "chk-h2-sub2",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "chk-h2-sub3",
+      "id": "chk-h2-sub3",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-h2-sub4",
+      "id": "chk-h2-sub4",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-holding-3",
+      "id": "chk-holding-3",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-h3-sub1",
+      "id": "chk-h3-sub1",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "chk-h3-sub2",
+      "id": "chk-h3-sub2",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-h3-sub3",
+      "id": "chk-h3-sub3",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-h3-sentence",
+      "id": "val-h3-sentence",
+      "name": "",
+      "type": "text",
+      "value": "處有期徒刑O年O月。",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-v9-holding-recidivist",
+      "id": "chk-v9-holding-recidivist",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-v9-h1",
+      "id": "chk-v9-h1",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-v9-h1-term",
+      "id": "val-v9-h1-term",
+      "name": "",
+      "type": "text",
+      "value": "O月",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-v9-h2",
+      "id": "chk-v9-h2",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-v9-h2-term",
+      "id": "val-v9-h2-term",
+      "name": "",
+      "type": "text",
+      "value": "O月",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-v9-h2-fine",
+      "id": "val-v9-h2-fine",
+      "name": "",
+      "type": "text",
+      "value": "O元",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-v9-h3",
+      "id": "chk-v9-h3",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "val-v9-h3-term",
+      "id": "val-v9-h3-term",
+      "name": "",
+      "type": "text",
+      "value": "O月",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-v9-h3-fine",
+      "id": "val-v9-h3-fine",
+      "name": "",
+      "type": "text",
+      "value": "O元",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-v9-h4",
+      "id": "chk-v9-h4",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-v9-h4-term",
+      "id": "val-v9-h4-term",
+      "name": "",
+      "type": "text",
+      "value": "O月",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-v9-h5",
+      "id": "chk-v9-h5",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-v9-h5-term",
+      "id": "val-v9-h5-term",
+      "name": "",
+      "type": "text",
+      "value": "O月",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-v9-h5-fine",
+      "id": "val-v9-h5-fine",
+      "name": "",
+      "type": "text",
+      "value": "O元",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-v9-h6",
+      "id": "chk-v9-h6",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-v9-h6-term",
+      "id": "val-v9-h6-term",
+      "name": "",
+      "type": "text",
+      "value": "O月",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-v9-h6-fine",
+      "id": "val-v9-h6-fine",
+      "name": "",
+      "type": "text",
+      "value": "O元",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-h-conf-table",
+      "id": "chk-h-conf-table",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-h-conf-unseized",
+      "id": "chk-h-conf-unseized",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-h-unseized-amt",
+      "id": "val-h-unseized-amt",
+      "name": "",
+      "type": "text",
+      "value": "O元",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-h-conf-paid",
+      "id": "chk-h-conf-paid",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-h-paid-amt",
+      "id": "val-h-paid-amt",
+      "name": "",
+      "type": "text",
+      "value": "O元",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "holding-probation-grant",
+      "id": "holding-probation-grant",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "holding-probation-years",
+      "id": "holding-probation-years",
+      "name": "",
+      "type": "text",
+      "value": "O",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-holding-extra",
+      "id": "val-holding-extra",
+      "name": "",
+      "type": "text",
+      "value": "",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "rad-fact-standard",
+      "id": "rad-fact-standard",
+      "name": "fact-mode",
+      "type": "radio",
+      "value": "standard",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "rad-fact-quote",
+      "id": "rad-fact-quote",
+      "name": "fact-mode",
+      "type": "radio",
+      "value": "quote",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "rad-fact-amend",
+      "id": "rad-fact-amend",
+      "name": "fact-mode",
+      "type": "radio",
+      "value": "amend",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-fact-amend",
+      "id": "val-fact-amend",
+      "name": "",
+      "type": "textarea",
+      "value": "一、（請於此處貼入或填寫本案犯罪事實）\n二、案經告訴人訴由警察局報告臺灣OO地方檢察署檢察官偵查起訴。",
+      "disabled": false
+    },
+    {
+      "key": "rad-evid-standard",
+      "id": "rad-evid-standard",
+      "name": "evid-mode",
+      "type": "radio",
+      "value": "standard",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "rad-evid-quote",
+      "id": "rad-evid-quote",
+      "name": "evid-mode",
+      "type": "radio",
+      "value": "quote",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "rad-evid-amend",
+      "id": "rad-evid-amend",
+      "name": "evid-mode",
+      "type": "radio",
+      "value": "amend",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-evid-amend",
+      "id": "val-evid-amend",
+      "name": "",
+      "type": "textarea",
+      "value": "上開犯罪事實，業據被告於警詢、偵查、本院準備程序及簡式審判程序中均坦承不諱，核與證人即告訴人於警詢中之證述大致相符，並有扣押筆錄、扣押物品目錄表、對話紀錄截圖、偽造之收據在卷可查，足認被告上開任意性之自白與事實相符，堪以採信。",
+      "disabled": false
+    },
+    {
+      "key": "auto-sync-statutes",
+      "id": "auto-sync-statutes",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "crime-fraud-339-4",
+      "id": "crime-fraud-339-4",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "c3394-sub1",
+      "id": "c3394-sub1",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "c3394-sub2",
+      "id": "c3394-sub2",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "c3394-sub3",
+      "id": "c3394-sub3",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "c3394-sub4",
+      "id": "c3394-sub4",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "crime-fpa-44",
+      "id": "crime-fpa-44",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "cfpa44-sub1",
+      "id": "cfpa44-sub1",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "cfpa44-sub2",
+      "id": "cfpa44-sub2",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "cfpa44-sub3",
+      "id": "cfpa44-sub3",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "cfpa44-del-sub3",
+      "id": "cfpa44-del-sub3",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "crime-fraud-339-4-att",
+      "id": "crime-fraud-339-4-att",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "c3394att-sub1",
+      "id": "c3394att-sub1",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "c3394att-sub2",
+      "id": "c3394att-sub2",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "c3394att-sub3",
+      "id": "c3394att-sub3",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "c3394att-sub4",
+      "id": "c3394att-sub4",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "crime-forgery-210",
+      "id": "crime-forgery-210",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "crime-forgery-220",
+      "id": "crime-forgery-220",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-forgery-220-part",
+      "id": "val-forgery-220-part",
+      "name": "",
+      "type": "text",
+      "value": "O",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "crime-forgery-212",
+      "id": "crime-forgery-212",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "crime-ml-new19",
+      "id": "crime-ml-new19",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "crime-ml-old14",
+      "id": "crime-ml-old14",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "crime-fraud-339",
+      "id": "crime-fraud-339",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "crime-fraud-339-att",
+      "id": "crime-fraud-339-att",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "crime-org-join",
+      "id": "crime-org-join",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "crime-org-join-dup",
+      "id": "crime-org-join-dup",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "crime-org-recruit",
+      "id": "crime-org-recruit",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "crime-org-recruit-abroad",
+      "id": "crime-org-recruit-abroad",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "crime-org-recruit-minor",
+      "id": "crime-org-recruit-minor",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "crime-org-force",
+      "id": "crime-org-force",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "crime-org-force-join",
+      "id": "crime-org-force-join",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "crime-org-force-leave",
+      "id": "crime-org-force-leave",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "crime-v9-30-1",
+      "id": "crime-v9-30-1",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "crime-v9-339",
+      "id": "crime-v9-339",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "crime-v9-ml-old14",
+      "id": "crime-v9-ml-old14",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "crime-v9-ml-new19",
+      "id": "crime-v9-ml-new19",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "crime-v9-339-att",
+      "id": "crime-v9-339-att",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "crime-v9-ml-old14-att",
+      "id": "crime-v9-ml-old14-att",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "crime-v9-ml-new19-att",
+      "id": "crime-v9-ml-new19-att",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-coprincipal",
+      "id": "chk-coprincipal",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "@coprincipal-style:detailed",
+      "id": "",
+      "name": "coprincipal-style",
+      "type": "radio",
+      "value": "detailed",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "@coprincipal-style:concise",
+      "id": "",
+      "name": "coprincipal-style",
+      "type": "radio",
+      "value": "concise",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-coprincipal-members",
+      "id": "val-coprincipal-members",
+      "name": "",
+      "type": "text",
+      "value": "所屬詐欺集團成員",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-forgery-absorb",
+      "id": "chk-forgery-absorb",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-imag-concur",
+      "id": "chk-imag-concur",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "chk-imag-diff-victims",
+      "id": "chk-imag-diff-victims",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "val-imag-heavy-crime",
+      "id": "val-imag-heavy-crime",
+      "name": "",
+      "type": "text",
+      "value": "幫助洗錢防制法第19條第1項後段之一般洗錢",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "rad-multi-none",
+      "id": "rad-multi-none",
+      "name": "multi-crime-mode",
+      "type": "radio",
+      "value": "none",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "rad-multi-yes",
+      "id": "rad-multi-yes",
+      "name": "multi-crime-mode",
+      "type": "radio",
+      "value": "yes",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-multi-crimes",
+      "id": "val-multi-crimes",
+      "name": "",
+      "type": "text",
+      "value": "上開各次犯行",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-fact-expand",
+      "id": "chk-fact-expand",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-expand-indict",
+      "id": "chk-expand-indict",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "chk-expand-summary",
+      "id": "chk-expand-summary",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "input-custom-law-compare",
+      "id": "input-custom-law-compare",
+      "name": "",
+      "type": "textarea",
+      "value": "",
+      "disabled": false
+    },
+    {
+      "key": "chk-enable-ml-compare",
+      "id": "chk-enable-ml-compare",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-enable-fpa-compare",
+      "id": "chk-enable-fpa-compare",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-law-compare-summary",
+      "id": "chk-law-compare-summary",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-law-compare-summary",
+      "id": "val-law-compare-summary",
+      "name": "",
+      "type": "text",
+      "value": "",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-v9-row1",
+      "id": "chk-v9-row1",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-v9-row2",
+      "id": "chk-v9-row2",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-v9-row3",
+      "id": "chk-v9-row3",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-v9-row4",
+      "id": "chk-v9-row4",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-v9-row5",
+      "id": "chk-v9-row5",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-v9-row6",
+      "id": "chk-v9-row6",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "enh-recidivist",
+      "id": "enh-recidivist",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-recid-detail",
+      "id": "val-recid-detail",
+      "name": "",
+      "type": "textarea",
+      "value": "被告前因OO案件，經法院判處有期徒刑O月確定，於民國O年O月O日執行完畢等情，有法院前案紀錄表在卷可參",
+      "disabled": false
+    },
+    {
+      "key": "@recid-enhance-opt:yes",
+      "id": "",
+      "name": "recid-enhance-opt",
+      "type": "radio",
+      "value": "yes",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "@recid-enhance-opt:no",
+      "id": "",
+      "name": "recid-enhance-opt",
+      "type": "radio",
+      "value": "no",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-recid-date",
+      "id": "val-recid-date",
+      "name": "",
+      "type": "text",
+      "value": "O年O月O日",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-recid-case",
+      "id": "val-recid-case",
+      "name": "",
+      "type": "text",
+      "value": "O年度O字第O號",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "enh-fpa44",
+      "id": "enh-fpa44",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "enh-other",
+      "id": "enh-other",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-enh-other",
+      "id": "val-enh-other",
+      "name": "",
+      "type": "text",
+      "value": "",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-mit-imag-merge-theory",
+      "id": "chk-mit-imag-merge-theory",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "@fraud-ml-mit-mode:confess_no_proceeds",
+      "id": "",
+      "name": "fraud-ml-mit-mode",
+      "type": "radio",
+      "value": "confess_no_proceeds",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "@fraud-ml-mit-mode:confess_paid_proceeds",
+      "id": "",
+      "name": "fraud-ml-mit-mode",
+      "type": "radio",
+      "value": "confess_paid_proceeds",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-mit-paid-amt",
+      "id": "val-mit-paid-amt",
+      "name": "",
+      "type": "text",
+      "value": "O元",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "@fraud-ml-mit-mode:confess_unpaid_proceeds",
+      "id": "",
+      "name": "fraud-ml-mit-mode",
+      "type": "radio",
+      "value": "confess_unpaid_proceeds",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-mit-unpaid-amt",
+      "id": "val-mit-unpaid-amt",
+      "name": "",
+      "type": "text",
+      "value": "O元",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "@fraud-ml-mit-mode:no_confess_in_investigation",
+      "id": "",
+      "name": "fraud-ml-mit-mode",
+      "type": "radio",
+      "value": "no_confess_in_investigation",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "@fraud-ml-mit-mode:omit",
+      "id": "",
+      "name": "fraud-ml-mit-mode",
+      "type": "radio",
+      "value": "omit",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "@ml23-mit-mode:deny",
+      "id": "",
+      "name": "ml23-mit-mode",
+      "type": "radio",
+      "value": "deny",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "@ml23-mit-mode:confess",
+      "id": "",
+      "name": "ml23-mit-mode",
+      "type": "radio",
+      "value": "confess",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "@ml23-mit-mode:omit",
+      "id": "",
+      "name": "ml23-mit-mode",
+      "type": "radio",
+      "value": "omit",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "mit-attempt-25",
+      "id": "mit-attempt-25",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "mit-accessory-30",
+      "id": "mit-accessory-30",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "mit-org-8",
+      "id": "mit-org-8",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "mit-surrender-62",
+      "id": "mit-surrender-62",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "mit-ml-old16",
+      "id": "mit-ml-old16",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "mit-ml-old16-sentonly",
+      "id": "mit-ml-old16-sentonly",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "mit-ml-new23",
+      "id": "mit-ml-new23",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "mit-ml-new23-sentonly",
+      "id": "mit-ml-new23-sentonly",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "mit-org-8-sentonly",
+      "id": "mit-org-8-sentonly",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "mit-fpa-old47",
+      "id": "mit-fpa-old47",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "mit-fpa-old47-court",
+      "id": "mit-fpa-old47-court",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "mit-fpa-new47",
+      "id": "mit-fpa-new47",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "mit-fpa-new47-deemed",
+      "id": "mit-fpa-new47-deemed",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-surrender-reason",
+      "id": "val-surrender-reason",
+      "name": "",
+      "type": "text",
+      "value": "",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "mit-art59",
+      "id": "mit-art59",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-art59-reason",
+      "id": "val-art59-reason",
+      "name": "",
+      "type": "text",
+      "value": "",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-art70-71",
+      "id": "chk-art70-71",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "@sentencing-style:driver_full",
+      "id": "",
+      "name": "sentencing-style",
+      "type": "radio",
+      "value": "driver_full",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "@sentencing-style:accessory_full",
+      "id": "",
+      "name": "sentencing-style",
+      "type": "radio",
+      "value": "accessory_full",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "@sentencing-style:short",
+      "id": "",
+      "name": "sentencing-style",
+      "type": "radio",
+      "value": "short",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-sent-age",
+      "id": "val-sent-age",
+      "name": "",
+      "type": "text",
+      "value": "正值壯年",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-sentencing-factors",
+      "id": "val-sentencing-factors",
+      "name": "",
+      "type": "text",
+      "value": "OO之智識程度、家庭及經濟狀況",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-sent-prosecutor-ask",
+      "id": "val-sent-prosecutor-ask",
+      "name": "",
+      "type": "text",
+      "value": "有期徒刑O年以上刑度",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-sent-no-fine",
+      "id": "chk-sent-no-fine",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "@probation-mode:omit",
+      "id": "",
+      "name": "probation-mode",
+      "type": "radio",
+      "value": "omit",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "@probation-mode:deny",
+      "id": "",
+      "name": "probation-mode",
+      "type": "radio",
+      "value": "deny",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "@probation-mode:grant",
+      "id": "",
+      "name": "probation-mode",
+      "type": "radio",
+      "value": "grant",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "prob-deny-5yr",
+      "id": "prob-deny-5yr",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "val-prob-deny-other",
+      "id": "val-prob-deny-other",
+      "name": "",
+      "type": "text",
+      "value": "",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-prob-clause",
+      "id": "val-prob-clause",
+      "name": "",
+      "type": "select-one",
+      "value": "第1款",
+      "disabled": false
+    },
+    {
+      "key": "val-prob-years",
+      "id": "val-prob-years",
+      "name": "",
+      "type": "text",
+      "value": "O",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "prob-reason-confess",
+      "id": "prob-reason-confess",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "prob-reason-settle",
+      "id": "prob-reason-settle",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "prob-supervision",
+      "id": "prob-supervision",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "prob-cond-3",
+      "id": "prob-cond-3",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "val-prob-cond-3",
+      "id": "val-prob-cond-3",
+      "name": "",
+      "type": "text",
+      "value": "應向告訴人支付共計O萬元，自O年O月O日起，於每月O日前匯款O元至告訴人指定之帳戶。",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "prob-cond-4",
+      "id": "prob-cond-4",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-prob-cond-4",
+      "id": "val-prob-cond-4",
+      "name": "",
+      "type": "text",
+      "value": "應於本判決確定後O個月內向公庫支付新臺幣O萬元。",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "prob-cond-5",
+      "id": "prob-cond-5",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-prob-cond-5",
+      "id": "val-prob-cond-5",
+      "name": "",
+      "type": "text",
+      "value": "並應於本案判決確定後O年內，向執行檢察官指定之政府機關、政府機構、行政法人、社區或其他符合公益目的之機構或團體提供OO小時之義務勞務。",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "@conf-role-mode:principal",
+      "id": "",
+      "name": "conf-role-mode",
+      "type": "radio",
+      "value": "principal",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "@conf-role-mode:accessory",
+      "id": "",
+      "name": "conf-role-mode",
+      "type": "radio",
+      "value": "accessory",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "@accessory-conf-income:none",
+      "id": "",
+      "name": "accessory-conf-income",
+      "type": "radio",
+      "value": "none",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "@accessory-conf-income:received",
+      "id": "",
+      "name": "accessory-conf-income",
+      "type": "radio",
+      "value": "received",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-accessory-proceeds",
+      "id": "val-accessory-proceeds",
+      "name": "",
+      "type": "text",
+      "value": "O元",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-conf-ml25-intro",
+      "id": "chk-conf-ml25-intro",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "chk-conf-proceeds-section",
+      "id": "chk-conf-proceeds-section",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "@conf-proc-mode:no_proceeds",
+      "id": "",
+      "name": "conf-proc-mode",
+      "type": "radio",
+      "value": "no_proceeds",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "@conf-proc-mode:unseized_proceeds",
+      "id": "",
+      "name": "conf-proc-mode",
+      "type": "radio",
+      "value": "unseized_proceeds",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-conf-proc-unseized",
+      "id": "val-conf-proc-unseized",
+      "name": "",
+      "type": "text",
+      "value": "O元",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "@conf-proc-mode:paid_proceeds",
+      "id": "",
+      "name": "conf-proc-mode",
+      "type": "radio",
+      "value": "paid_proceeds",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-conf-proc-seized",
+      "id": "val-conf-proc-seized",
+      "name": "",
+      "type": "text",
+      "value": "O元",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "conf-fpa48",
+      "id": "conf-fpa48",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "conf-adj-fpa-lowcost",
+      "id": "conf-adj-fpa-lowcost",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-conf-adj-lowcost-item",
+      "id": "val-conf-adj-lowcost-item",
+      "name": "",
+      "type": "text",
+      "value": "偽造工作證",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "conf-v9-no-proceeds",
+      "id": "conf-v9-no-proceeds",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "conf-v9-no-ml-prop",
+      "id": "conf-v9-no-ml-prop",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-conf-fpa48-seized",
+      "id": "val-conf-fpa48-seized",
+      "name": "",
+      "type": "text",
+      "value": "",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-conf-fpa48-unseized",
+      "id": "val-conf-fpa48-unseized",
+      "name": "",
+      "type": "text",
+      "value": "",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "conf-proceeds-38-1",
+      "id": "conf-proceeds-38-1",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "conf-collect-38-1-3",
+      "id": "conf-collect-38-1-3",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "conf-collect-except",
+      "id": "conf-collect-except",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-conf-collect-except-item",
+      "id": "val-conf-collect-except-item",
+      "name": "",
+      "type": "text",
+      "value": "",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "conf-ml-25",
+      "id": "conf-ml-25",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-conf-ml25-amt",
+      "id": "val-conf-ml25-amt",
+      "name": "",
+      "type": "text",
+      "value": "",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-conf-ml25-acct",
+      "id": "val-conf-ml25-acct",
+      "name": "",
+      "type": "text",
+      "value": "",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "conf-adj-proceeds",
+      "id": "conf-adj-proceeds",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-conf-adj-proceeds",
+      "id": "val-conf-adj-proceeds",
+      "name": "",
+      "type": "text",
+      "value": "",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "conf-adj-ml25",
+      "id": "conf-adj-ml25",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-conf-adj-ml25-amt",
+      "id": "val-conf-adj-ml25-amt",
+      "name": "",
+      "type": "text",
+      "value": "",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "stat-criminal-339-4",
+      "id": "stat-criminal-339-4",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "stat-criminal-216",
+      "id": "stat-criminal-216",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "stat-criminal-212",
+      "id": "stat-criminal-212",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "stat-criminal-210",
+      "id": "stat-criminal-210",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "stat-ml-new19",
+      "id": "stat-ml-new19",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "stat-ml-old14",
+      "id": "stat-ml-old14",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "stat-criminal-30",
+      "id": "stat-criminal-30",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "stat-criminal-339",
+      "id": "stat-criminal-339",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true,
+      "disabled": false
+    },
+    {
+      "key": "stat-org-3",
+      "id": "stat-org-3",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "stat-org-4",
+      "id": "stat-org-4",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "stat-fpa-44",
+      "id": "stat-fpa-44",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "chk-include-schedule",
+      "id": "chk-include-schedule",
+      "name": "",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "key": "val-schedule-text",
+      "id": "val-schedule-text",
+      "name": "",
+      "type": "textarea",
+      "value": "編號1：偽造之「OO股份有限公司收據」1張（上有偽造之「OO股份有限公司」公司印文1枚、「OOO」印文1枚）（O號偵卷第O頁）",
+      "disabled": false
+    },
+    {
+      "key": "input-appeal-text",
+      "id": "input-appeal-text",
+      "name": "",
+      "type": "text",
+      "value": "如不服本判決應於收受本判決後20日內向本院提出上訴書狀，上訴書狀應敘述具體理由。上訴書狀未敘述上訴理由者，應於上訴期間屆滿後20日內補提理由書狀於本院(均須按他造當事人之人數附繕本 )「切勿逕送上級法院」。",
+      "checked": false,
+      "disabled": false
+    }
+  ],
+  "snapshotHash": "b948c8ba98e5f731970b11d2e986d0108fd909175794a1fd9350a2664eb7b723"
+}

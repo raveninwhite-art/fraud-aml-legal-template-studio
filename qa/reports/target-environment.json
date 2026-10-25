@@ -1,0 +1,17 @@
+{
+  "requestedNodeMajor": 22,
+  "requestedPlaywright": "1.58.2",
+  "actualNode": "v22.23.4",
+  "actualPlaywright": "1.58.2",
+  "actualBrowser": "153.0.8010.0",
+  "actualRunAt": "2026-10-25T14:39:27.991Z",
+  "actualFullSuite": true,
+  "defaultBrowserForPlaywright": "145.0.7632.6",
+  "defaultBrowserFullSuiteStatus": "NOT_EXECUTED",
+  "defaultBrowserReason": "This run did not exercise the default Chromium 145 engine.",
+  "githubExistingSmoke": "USER_REPORTED_PASSED",
+  "githubFrameworkL0L5": "NOT_EXECUTED",
+  "githubRunId": null,
+  "githubCommit": null,
+  "remoteRepositoryMutations": 0
+}

@@ -1,0 +1,34 @@
+{
+  "staticAudit": {
+    "verified": true,
+    "imageCount": 2,
+    "sourceSha256": "2d990428e4ce6a60576189745e5c5b2d3440151142ea0eebc90bcb35eb85729c",
+    "liteSha256": "3b65e5537975b1f49ec8fc16e400c630685a95bdad7d997cbf5a24b3f0ff7734",
+    "checks": [
+      "exact byte-range replacement",
+      "all inline scripts identical",
+      "full DOM equal except image src",
+      "all input attributes/defaults/events unchanged",
+      "all other base64 unchanged"
+    ]
+  },
+  "smoke": [
+    {
+      "id": "original-default",
+      "status": "PASS",
+      "snapshotHash": "3180123844bc6ee78dc892218a087923ada3fe056ae0efdeef2ccf782aab9485"
+    },
+    {
+      "id": "original-attempt",
+      "status": "PASS",
+      "snapshotHash": "cfb2056ebfc4dcd229c039648dd4bf0dd752202234226786faeefaad886b4bc7"
+    },
+    {
+      "id": "original-accessory",
+      "status": "PASS",
+      "snapshotHash": "eba97ee2ef7daf22059d435cdb3a2486ef2f3d3974ad9234261c25612b7af221"
+    }
+  ],
+  "browser": "153.0.8010.0",
+  "runAt": "2026-10-25T14:39:26.605Z"
+}

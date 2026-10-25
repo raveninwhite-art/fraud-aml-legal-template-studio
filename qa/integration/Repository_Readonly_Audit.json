@@ -1,0 +1,13 @@
+{
+  "repository": "raveninwhite-art/fraud-aml-legal-template-studio",
+  "branch": "qa-playwright",
+  "access": "READ_ONLY",
+  "remoteMutations": 0,
+  "observedFiles": {
+    "package.json": "176375262f694da1f36a8c90757437c10b032a60",
+    "package-lock.json": "439badfe7d0603e3847502b50e231508be3dd79a",
+    "playwright.config.js": "f1b90562b81a64f3e060195fb859956a9b4567e9",
+    ".github/workflows/playwright.yml": "2e9877525269b424643dee3248397f90c56c9742"
+  },
+  "htmlPolicy": "No remote HTML read or used; uploaded file remains the only tested program."
+}

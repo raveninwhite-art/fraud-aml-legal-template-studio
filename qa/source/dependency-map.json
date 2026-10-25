@@ -1,0 +1,2844 @@
+[
+  {
+    "key": "show-all-sections-toggle",
+    "lines": [
+      1974,
+      1988,
+      2210
+    ],
+    "outputs": [
+      "無直接產文讀取；僅事件／同步／介面引用"
+    ],
+    "visible": true,
+    "panel": null
+  },
+  {
+    "key": "input-court-name",
+    "lines": [
+      1371,
+      2077,
+      2108,
+      2145,
+      2176,
+      2221
+    ],
+    "outputs": [
+      "首部 headerBlock / caseNo"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "input-case-no",
+    "lines": [
+      1373,
+      2068,
+      2077,
+      2109,
+      2146,
+      2222
+    ],
+    "outputs": [
+      "首部 headerBlock / caseNo"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "input-case-cause",
+    "lines": [
+      1374,
+      2215
+    ],
+    "outputs": [
+      "首部 headerBlock / caseNo"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "input-defendant-name",
+    "lines": [
+      1375,
+      2214
+    ],
+    "outputs": [
+      "首部 headerBlock / caseNo"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "input-lawyer-name",
+    "lines": [
+      1377
+    ],
+    "outputs": [
+      "首部 headerBlock / caseNo"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "input-judgment-date",
+    "lines": [
+      1859
+    ],
+    "outputs": [
+      "結尾 closingBlock"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "input-court-div",
+    "lines": [
+      1865
+    ],
+    "outputs": [
+      "結尾 closingBlock"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "input-judge-name",
+    "lines": [
+      1866,
+      2216
+    ],
+    "outputs": [
+      "結尾 closingBlock"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "input-clerk-name",
+    "lines": [
+      1867,
+      2217
+    ],
+    "outputs": [
+      "結尾 closingBlock"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "chk-pros-indict",
+    "lines": [
+      1382
+    ],
+    "outputs": [
+      "首部 headerBlock / caseNo"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "val-pros-indict",
+    "lines": [
+      1382
+    ],
+    "outputs": [
+      "首部 headerBlock / caseNo"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "chk-pros-add",
+    "lines": [
+      1383
+    ],
+    "outputs": [
+      "首部 headerBlock / caseNo"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "val-pros-add",
+    "lines": [
+      1383
+    ],
+    "outputs": [
+      "首部 headerBlock / caseNo"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "chk-pros-merge",
+    "lines": [
+      1384
+    ],
+    "outputs": [
+      "首部 headerBlock / caseNo"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "val-pros-merge",
+    "lines": [
+      1384
+    ],
+    "outputs": [
+      "首部 headerBlock / caseNo"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "chk-prosecutor-indict",
+    "lines": [
+      1853,
+      1855
+    ],
+    "outputs": [
+      "結尾 closingBlock"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "val-prosecutor-indict",
+    "lines": [
+      1848,
+      2218
+    ],
+    "outputs": [
+      "結尾 closingBlock"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "chk-prosecutor-trial",
+    "lines": [
+      1853
+    ],
+    "outputs": [
+      "結尾 closingBlock"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "val-prosecutor-trial",
+    "lines": [
+      1849,
+      2219
+    ],
+    "outputs": [
+      "結尾 closingBlock"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "rad-proc-summary-trial",
+    "lines": [
+      2102
+    ],
+    "outputs": [
+      "無直接產文讀取；僅事件／同步／介面引用"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "chk-include-reason-one",
+    "lines": [
+      1480
+    ],
+    "outputs": [
+      "事實 factText"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "rad-proc-simple-judgment",
+    "lines": [
+      2103
+    ],
+    "outputs": [
+      "無直接產文讀取；僅事件／同步／介面引用"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "chk-v9-proc-449-1",
+    "lines": [
+      1841
+    ],
+    "outputs": [
+      "沒收 confText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "chk-v9-proc-449-2",
+    "lines": [
+      1841
+    ],
+    "outputs": [
+      "沒收 confText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "chk-v9-proc-450",
+    "lines": [
+      1842
+    ],
+    "outputs": [
+      "沒收 confText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "chk-holding-recidivist",
+    "lines": [
+      1400
+    ],
+    "outputs": [
+      "首部 headerBlock / caseNo"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "chk-holding-1",
+    "lines": [
+      1403,
+      2110,
+      2147,
+      2177
+    ],
+    "outputs": [
+      "主文 holdingText"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "val-h1-crime-title",
+    "lines": [
+      1404
+    ],
+    "outputs": [
+      "主文 holdingText"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "val-h1-sentence",
+    "lines": [
+      1404,
+      2111
+    ],
+    "outputs": [
+      "主文 holdingText"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "chk-h1-sub1",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "chk-h1-sub2",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "chk-h1-sub3",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "chk-h1-sub4",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "chk-holding-2",
+    "lines": [
+      1406,
+      2112,
+      2148,
+      2178
+    ],
+    "outputs": [
+      "主文 holdingText"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "val-h2-crime-title",
+    "lines": [
+      1407
+    ],
+    "outputs": [
+      "主文 holdingText"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "val-h2-sentence",
+    "lines": [
+      1407,
+      2149
+    ],
+    "outputs": [
+      "主文 holdingText"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "chk-h2-sub1",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "chk-h2-sub2",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "chk-h2-sub3",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "chk-h2-sub4",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "chk-holding-3",
+    "lines": [
+      1355,
+      1409,
+      2179
+    ],
+    "outputs": [
+      "主文 holdingText",
+      "法條同步 → appendixText"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "chk-h3-sub1",
+    "lines": [
+      1410
+    ],
+    "outputs": [
+      "主文 holdingText"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "chk-h3-sub2",
+    "lines": [
+      1410
+    ],
+    "outputs": [
+      "主文 holdingText"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "chk-h3-sub3",
+    "lines": [
+      1410
+    ],
+    "outputs": [
+      "主文 holdingText"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "val-h3-sentence",
+    "lines": [
+      1411
+    ],
+    "outputs": [
+      "主文 holdingText"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "chk-v9-holding-recidivist",
+    "lines": [
+      1401,
+      2115,
+      2152
+    ],
+    "outputs": [
+      "首部 headerBlock / caseNo"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "chk-v9-h1",
+    "lines": [
+      1413,
+      2113,
+      2150
+    ],
+    "outputs": [
+      "主文 holdingText"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "val-v9-h1-term",
+    "lines": [
+      1414
+    ],
+    "outputs": [
+      "主文 holdingText"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "chk-v9-h2",
+    "lines": [
+      1416
+    ],
+    "outputs": [
+      "主文 holdingText"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "val-v9-h2-term",
+    "lines": [
+      1417
+    ],
+    "outputs": [
+      "主文 holdingText"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "val-v9-h2-fine",
+    "lines": [
+      1417
+    ],
+    "outputs": [
+      "主文 holdingText"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "chk-v9-h3",
+    "lines": [
+      1419,
+      2114,
+      2151,
+      2180
+    ],
+    "outputs": [
+      "主文 holdingText"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "val-v9-h3-term",
+    "lines": [
+      1420,
+      2181
+    ],
+    "outputs": [
+      "主文 holdingText"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "val-v9-h3-fine",
+    "lines": [
+      1420,
+      2182
+    ],
+    "outputs": [
+      "主文 holdingText"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "chk-v9-h4",
+    "lines": [
+      1422
+    ],
+    "outputs": [
+      "主文 holdingText"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "val-v9-h4-term",
+    "lines": [
+      1423
+    ],
+    "outputs": [
+      "主文 holdingText"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "chk-v9-h5",
+    "lines": [
+      1425
+    ],
+    "outputs": [
+      "主文 holdingText"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "val-v9-h5-term",
+    "lines": [
+      1426
+    ],
+    "outputs": [
+      "主文 holdingText"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "val-v9-h5-fine",
+    "lines": [
+      1426
+    ],
+    "outputs": [
+      "主文 holdingText"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "chk-v9-h6",
+    "lines": [
+      1428
+    ],
+    "outputs": [
+      "主文 holdingText"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "val-v9-h6-term",
+    "lines": [
+      1429
+    ],
+    "outputs": [
+      "主文 holdingText"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "val-v9-h6-fine",
+    "lines": [
+      1429
+    ],
+    "outputs": [
+      "主文 holdingText"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "chk-h-conf-table",
+    "lines": [
+      1434,
+      1437,
+      2116,
+      2183
+    ],
+    "outputs": [
+      "主文 holdingText"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "chk-h-conf-unseized",
+    "lines": [
+      1438,
+      1444,
+      2117,
+      2184
+    ],
+    "outputs": [
+      "主文 holdingText"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "val-h-unseized-amt",
+    "lines": [
+      1445
+    ],
+    "outputs": [
+      "主文 holdingText"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "chk-h-conf-paid",
+    "lines": [
+      1434,
+      1440
+    ],
+    "outputs": [
+      "主文 holdingText"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "val-h-paid-amt",
+    "lines": [
+      1435,
+      1441
+    ],
+    "outputs": [
+      "主文 holdingText"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "holding-probation-grant",
+    "lines": [
+      2000,
+      2012
+    ],
+    "outputs": [
+      "無直接產文讀取；僅事件／同步／介面引用"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "holding-probation-years",
+    "lines": [
+      1453,
+      2008,
+      2013,
+      2014
+    ],
+    "outputs": [
+      "主文 holdingText"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "val-holding-extra",
+    "lines": [
+      1447,
+      1448
+    ],
+    "outputs": [
+      "主文 holdingText"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "rad-fact-standard",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "rad-fact-quote",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "rad-fact-amend",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "val-fact-amend",
+    "lines": [
+      1470,
+      1472
+    ],
+    "outputs": [
+      "主文 holdingText"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "rad-evid-standard",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "rad-evid-quote",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "rad-evid-amend",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "val-evid-amend",
+    "lines": [
+      1489,
+      1491
+    ],
+    "outputs": [
+      "理由 reasonFullText：程序與證據"
+    ],
+    "visible": true,
+    "panel": "tab-basic"
+  },
+  {
+    "key": "auto-sync-statutes",
+    "lines": [
+      1347,
+      2210
+    ],
+    "outputs": [
+      "法條同步 → appendixText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "crime-fraud-339-4",
+    "lines": [
+      1354,
+      1509,
+      2118,
+      2153,
+      2185
+    ],
+    "outputs": [
+      "法條同步 → appendixText",
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "c3394-sub1",
+    "lines": [
+      1510,
+      1511
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "c3394-sub2",
+    "lines": [
+      1510,
+      1511
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "c3394-sub3",
+    "lines": [
+      1510,
+      1511
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "c3394-sub4",
+    "lines": [
+      1510,
+      1511
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "crime-fpa-44",
+    "lines": [
+      1355,
+      1512,
+      1517
+    ],
+    "outputs": [
+      "法條同步 → appendixText",
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "cfpa44-sub1",
+    "lines": [
+      1518
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "cfpa44-sub2",
+    "lines": [
+      1518
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "cfpa44-sub3",
+    "lines": [
+      1518
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "cfpa44-del-sub3",
+    "lines": [
+      1613
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "crime-fraud-339-4-att",
+    "lines": [
+      1354,
+      1526,
+      2154
+    ],
+    "outputs": [
+      "法條同步 → appendixText",
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "c3394att-sub1",
+    "lines": [
+      1527
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "c3394att-sub2",
+    "lines": [
+      1527
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "c3394att-sub3",
+    "lines": [
+      1527
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "c3394att-sub4",
+    "lines": [
+      1527
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "crime-forgery-210",
+    "lines": [
+      1356,
+      1358,
+      1532,
+      1632,
+      1633,
+      1635,
+      2119,
+      2155,
+      2186
+    ],
+    "outputs": [
+      "法條同步 → appendixText",
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "crime-forgery-220",
+    "lines": [
+      1534
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "val-forgery-220-part",
+    "lines": [
+      1535
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "crime-forgery-212",
+    "lines": [
+      1357,
+      1358,
+      1541,
+      1632,
+      1633,
+      2120,
+      2156,
+      2187
+    ],
+    "outputs": [
+      "法條同步 → appendixText",
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "crime-ml-new19",
+    "lines": [
+      1349,
+      1546,
+      2121,
+      2157,
+      2188
+    ],
+    "outputs": [
+      "法條同步 → appendixText",
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "crime-ml-old14",
+    "lines": [
+      1348,
+      1550
+    ],
+    "outputs": [
+      "法條同步 → appendixText",
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "crime-fraud-339",
+    "lines": [
+      1353,
+      1555
+    ],
+    "outputs": [
+      "法條同步 → appendixText",
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "crime-fraud-339-att",
+    "lines": [
+      1353,
+      1559
+    ],
+    "outputs": [
+      "法條同步 → appendixText",
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "crime-org-join",
+    "lines": [
+      1351,
+      1564
+    ],
+    "outputs": [
+      "法條同步 → appendixText",
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "crime-org-join-dup",
+    "lines": [
+      1610
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "crime-org-recruit",
+    "lines": [
+      1352,
+      1568
+    ],
+    "outputs": [
+      "法條同步 → appendixText",
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "crime-org-recruit-abroad",
+    "lines": [
+      1570
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "crime-org-recruit-minor",
+    "lines": [
+      1571
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "crime-org-force",
+    "lines": [
+      1352,
+      1575
+    ],
+    "outputs": [
+      "法條同步 → appendixText",
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "crime-org-force-join",
+    "lines": [
+      1576
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "crime-org-force-leave",
+    "lines": [
+      1576
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "crime-v9-30-1",
+    "lines": [
+      1350,
+      2122,
+      2158,
+      2189
+    ],
+    "outputs": [
+      "法條同步 → appendixText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "crime-v9-339",
+    "lines": [
+      1350,
+      1353,
+      1582,
+      2123,
+      2159,
+      2190
+    ],
+    "outputs": [
+      "法條同步 → appendixText",
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "crime-v9-ml-old14",
+    "lines": [
+      1348,
+      1350,
+      1586
+    ],
+    "outputs": [
+      "法條同步 → appendixText",
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "crime-v9-ml-new19",
+    "lines": [
+      1349,
+      1350,
+      1590,
+      2124,
+      2160,
+      2191
+    ],
+    "outputs": [
+      "法條同步 → appendixText",
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "crime-v9-339-att",
+    "lines": [
+      1350,
+      1353,
+      1594
+    ],
+    "outputs": [
+      "法條同步 → appendixText",
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "crime-v9-ml-old14-att",
+    "lines": [
+      1348,
+      1350,
+      1598
+    ],
+    "outputs": [
+      "法條同步 → appendixText",
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "crime-v9-ml-new19-att",
+    "lines": [
+      1349,
+      1350,
+      1602
+    ],
+    "outputs": [
+      "法條同步 → appendixText",
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "chk-coprincipal",
+    "lines": [
+      1620,
+      2125,
+      2161,
+      2192
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "coprincipal-style",
+    "lines": [
+      1621
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "coprincipal-style",
+    "lines": [
+      1621
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "val-coprincipal-members",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "chk-forgery-absorb",
+    "lines": [
+      1632,
+      2126,
+      2193
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "chk-imag-concur",
+    "lines": [
+      1645
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "chk-imag-diff-victims",
+    "lines": [
+      1647,
+      2194
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "val-imag-heavy-crime",
+    "lines": [
+      1648,
+      2127,
+      2164,
+      2195
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "rad-multi-none",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "rad-multi-yes",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "val-multi-crimes",
+    "lines": [
+      1654
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "chk-fact-expand",
+    "lines": [
+      1656
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "chk-expand-indict",
+    "lines": [
+      1657
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "chk-expand-summary",
+    "lines": [
+      1657
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-crimes"
+  },
+  {
+    "key": "input-custom-law-compare",
+    "lines": [
+      1500,
+      2220
+    ],
+    "outputs": [
+      "理由 reasonFullText：程序與證據"
+    ],
+    "visible": true,
+    "panel": "tab-lawcompare"
+  },
+  {
+    "key": "chk-enable-ml-compare",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-lawcompare"
+  },
+  {
+    "key": "chk-enable-fpa-compare",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-lawcompare"
+  },
+  {
+    "key": "chk-law-compare-summary",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-lawcompare"
+  },
+  {
+    "key": "val-law-compare-summary",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-lawcompare"
+  },
+  {
+    "key": "chk-v9-row1",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-lawcompare"
+  },
+  {
+    "key": "chk-v9-row2",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-lawcompare"
+  },
+  {
+    "key": "chk-v9-row3",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-lawcompare"
+  },
+  {
+    "key": "chk-v9-row4",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-lawcompare"
+  },
+  {
+    "key": "chk-v9-row5",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-lawcompare"
+  },
+  {
+    "key": "chk-v9-row6",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-lawcompare"
+  },
+  {
+    "key": "enh-recidivist",
+    "lines": [
+      1663
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "val-recid-detail",
+    "lines": [
+      1666,
+      1668
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "recid-enhance-opt",
+    "lines": [
+      1664
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "recid-enhance-opt",
+    "lines": [
+      1664
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "val-recid-date",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "val-recid-case",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "enh-fpa44",
+    "lines": [
+      1672
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "enh-other",
+    "lines": [
+      1675
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "val-enh-other",
+    "lines": [
+      1675,
+      1676
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "chk-mit-imag-merge-theory",
+    "lines": [
+      1684
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "fraud-ml-mit-mode",
+    "lines": [
+      1681,
+      2128,
+      2196
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "fraud-ml-mit-mode",
+    "lines": [
+      1681,
+      2128,
+      2196
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "val-mit-paid-amt",
+    "lines": [
+      1695
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "fraud-ml-mit-mode",
+    "lines": [
+      1681,
+      2128,
+      2196
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "val-mit-unpaid-amt",
+    "lines": [
+      1697
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "fraud-ml-mit-mode",
+    "lines": [
+      1681,
+      2128,
+      2196
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "fraud-ml-mit-mode",
+    "lines": [
+      1681,
+      2128,
+      2196
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "ml23-mit-mode",
+    "lines": [
+      1682
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "ml23-mit-mode",
+    "lines": [
+      1682
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "ml23-mit-mode",
+    "lines": [
+      1682
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "mit-attempt-25",
+    "lines": [
+      1703,
+      2162
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "mit-accessory-30",
+    "lines": [
+      1706,
+      2163,
+      2197
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "mit-org-8",
+    "lines": [
+      1709
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "mit-surrender-62",
+    "lines": [
+      1712
+    ],
+    "outputs": [
+      "論罪／加重／減輕 crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "mit-ml-old16",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "mit-ml-old16-sentonly",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "mit-ml-new23",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "mit-ml-new23-sentonly",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "mit-org-8-sentonly",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "mit-fpa-old47",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "mit-fpa-old47-court",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "mit-fpa-new47",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "mit-fpa-new47-deemed",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "val-surrender-reason",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "mit-art59",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "val-art59-reason",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "chk-art70-71",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "sentencing-style",
+    "lines": [
+      1734,
+      2129,
+      2198
+    ],
+    "outputs": [
+      "量刑 sentencingText / crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "sentencing-style",
+    "lines": [
+      1734,
+      2129,
+      2198
+    ],
+    "outputs": [
+      "量刑 sentencingText / crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "sentencing-style",
+    "lines": [
+      1734,
+      2129,
+      2198
+    ],
+    "outputs": [
+      "量刑 sentencingText / crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "val-sent-age",
+    "lines": [
+      1735
+    ],
+    "outputs": [
+      "量刑 sentencingText / crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "val-sentencing-factors",
+    "lines": [
+      1736
+    ],
+    "outputs": [
+      "量刑 sentencingText / crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "val-sent-prosecutor-ask",
+    "lines": [
+      1737,
+      2130
+    ],
+    "outputs": [
+      "量刑 sentencingText / crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "chk-sent-no-fine",
+    "lines": [
+      1738
+    ],
+    "outputs": [
+      "量刑 sentencingText / crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "probation-mode",
+    "lines": [
+      1452,
+      1755,
+      2001,
+      2002,
+      2009,
+      2010,
+      2016,
+      2018,
+      2135,
+      2166,
+      2223
+    ],
+    "outputs": [
+      "主文 holdingText",
+      "量刑 sentencingText / crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "probation-mode",
+    "lines": [
+      1452,
+      1755,
+      2001,
+      2002,
+      2009,
+      2010,
+      2016,
+      2018,
+      2135,
+      2166,
+      2223
+    ],
+    "outputs": [
+      "主文 holdingText",
+      "量刑 sentencingText / crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "probation-mode",
+    "lines": [
+      1452,
+      1755,
+      2001,
+      2002,
+      2009,
+      2010,
+      2016,
+      2018,
+      2135,
+      2166,
+      2223
+    ],
+    "outputs": [
+      "主文 holdingText",
+      "量刑 sentencingText / crimeText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "prob-deny-5yr",
+    "lines": [
+      1759
+    ],
+    "outputs": [
+      "緩刑 probationText / crimeText / reasonFullText"
+    ],
+    "visible": false,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "val-prob-deny-other",
+    "lines": [
+      1760
+    ],
+    "outputs": [
+      "緩刑 probationText / crimeText / reasonFullText"
+    ],
+    "visible": false,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "val-prob-clause",
+    "lines": [
+      1767
+    ],
+    "outputs": [
+      "緩刑 probationText / crimeText / reasonFullText"
+    ],
+    "visible": false,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "val-prob-years",
+    "lines": [
+      1453,
+      1767,
+      2008,
+      2013,
+      2014,
+      2165
+    ],
+    "outputs": [
+      "主文 holdingText",
+      "緩刑 probationText / crimeText / reasonFullText"
+    ],
+    "visible": false,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "prob-reason-confess",
+    "lines": [
+      1764
+    ],
+    "outputs": [
+      "緩刑 probationText / crimeText / reasonFullText"
+    ],
+    "visible": false,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "prob-reason-settle",
+    "lines": [
+      1765
+    ],
+    "outputs": [
+      "緩刑 probationText / crimeText / reasonFullText"
+    ],
+    "visible": false,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "prob-supervision",
+    "lines": [
+      1455,
+      1768
+    ],
+    "outputs": [
+      "主文 holdingText",
+      "緩刑 probationText / crimeText / reasonFullText"
+    ],
+    "visible": false,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "prob-cond-3",
+    "lines": [
+      1457,
+      1772
+    ],
+    "outputs": [
+      "主文 holdingText",
+      "緩刑 probationText / crimeText / reasonFullText"
+    ],
+    "visible": false,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "val-prob-cond-3",
+    "lines": [
+      1457,
+      1772
+    ],
+    "outputs": [
+      "主文 holdingText",
+      "緩刑 probationText / crimeText / reasonFullText"
+    ],
+    "visible": false,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "prob-cond-4",
+    "lines": [
+      1458,
+      1773
+    ],
+    "outputs": [
+      "主文 holdingText",
+      "緩刑 probationText / crimeText / reasonFullText"
+    ],
+    "visible": false,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "val-prob-cond-4",
+    "lines": [
+      1458,
+      1773
+    ],
+    "outputs": [
+      "主文 holdingText",
+      "緩刑 probationText / crimeText / reasonFullText"
+    ],
+    "visible": false,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "prob-cond-5",
+    "lines": [
+      1459,
+      1774
+    ],
+    "outputs": [
+      "主文 holdingText",
+      "緩刑 probationText / crimeText / reasonFullText"
+    ],
+    "visible": false,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "val-prob-cond-5",
+    "lines": [
+      1459,
+      1774
+    ],
+    "outputs": [
+      "主文 holdingText",
+      "緩刑 probationText / crimeText / reasonFullText"
+    ],
+    "visible": false,
+    "panel": "tab-sentencing"
+  },
+  {
+    "key": "conf-role-mode",
+    "lines": [
+      1819,
+      2132,
+      2199
+    ],
+    "outputs": [
+      "沒收 confText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-confiscation"
+  },
+  {
+    "key": "conf-role-mode",
+    "lines": [
+      1819,
+      2132,
+      2199
+    ],
+    "outputs": [
+      "沒收 confText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-confiscation"
+  },
+  {
+    "key": "accessory-conf-income",
+    "lines": [
+      1822
+    ],
+    "outputs": [
+      "沒收 confText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-confiscation"
+  },
+  {
+    "key": "accessory-conf-income",
+    "lines": [
+      1822
+    ],
+    "outputs": [
+      "沒收 confText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-confiscation"
+  },
+  {
+    "key": "val-accessory-proceeds",
+    "lines": [
+      1824
+    ],
+    "outputs": [
+      "沒收 confText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-confiscation"
+  },
+  {
+    "key": "chk-conf-ml25-intro",
+    "lines": [
+      1791
+    ],
+    "outputs": [
+      "沒收 confText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-confiscation"
+  },
+  {
+    "key": "chk-conf-proceeds-section",
+    "lines": [
+      1795
+    ],
+    "outputs": [
+      "沒收 confText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-confiscation"
+  },
+  {
+    "key": "conf-proc-mode",
+    "lines": [
+      1796,
+      2131
+    ],
+    "outputs": [
+      "沒收 confText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-confiscation"
+  },
+  {
+    "key": "conf-proc-mode",
+    "lines": [
+      1796,
+      2131
+    ],
+    "outputs": [
+      "沒收 confText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-confiscation"
+  },
+  {
+    "key": "val-conf-proc-unseized",
+    "lines": [
+      1801
+    ],
+    "outputs": [
+      "沒收 confText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-confiscation"
+  },
+  {
+    "key": "conf-proc-mode",
+    "lines": [
+      1796,
+      2131
+    ],
+    "outputs": [
+      "沒收 confText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-confiscation"
+  },
+  {
+    "key": "val-conf-proc-seized",
+    "lines": [
+      1804
+    ],
+    "outputs": [
+      "沒收 confText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-confiscation"
+  },
+  {
+    "key": "conf-fpa48",
+    "lines": [
+      1810,
+      2133,
+      2200
+    ],
+    "outputs": [
+      "沒收 confText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-confiscation"
+  },
+  {
+    "key": "conf-adj-fpa-lowcost",
+    "lines": [
+      1814,
+      2134,
+      2201
+    ],
+    "outputs": [
+      "沒收 confText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-confiscation"
+  },
+  {
+    "key": "val-conf-adj-lowcost-item",
+    "lines": [
+      1815
+    ],
+    "outputs": [
+      "沒收 confText / reasonFullText"
+    ],
+    "visible": true,
+    "panel": "tab-confiscation"
+  },
+  {
+    "key": "conf-v9-no-proceeds",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-confiscation"
+  },
+  {
+    "key": "conf-v9-no-ml-prop",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-confiscation"
+  },
+  {
+    "key": "val-conf-fpa48-seized",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-confiscation"
+  },
+  {
+    "key": "val-conf-fpa48-unseized",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-confiscation"
+  },
+  {
+    "key": "conf-proceeds-38-1",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-confiscation"
+  },
+  {
+    "key": "conf-collect-38-1-3",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-confiscation"
+  },
+  {
+    "key": "conf-collect-except",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-confiscation"
+  },
+  {
+    "key": "val-conf-collect-except-item",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-confiscation"
+  },
+  {
+    "key": "conf-ml-25",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-confiscation"
+  },
+  {
+    "key": "val-conf-ml25-amt",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-confiscation"
+  },
+  {
+    "key": "val-conf-ml25-acct",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-confiscation"
+  },
+  {
+    "key": "conf-adj-proceeds",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-confiscation"
+  },
+  {
+    "key": "val-conf-adj-proceeds",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-confiscation"
+  },
+  {
+    "key": "conf-adj-ml25",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-confiscation"
+  },
+  {
+    "key": "val-conf-adj-ml25-amt",
+    "lines": [],
+    "outputs": [
+      "無直接產文讀取；保留控制項"
+    ],
+    "visible": false,
+    "panel": "tab-confiscation"
+  },
+  {
+    "key": "stat-criminal-339-4",
+    "lines": [
+      1293,
+      1354
+    ],
+    "outputs": [
+      "法條同步 → appendixText"
+    ],
+    "visible": true,
+    "panel": "tab-appendix"
+  },
+  {
+    "key": "stat-criminal-216",
+    "lines": [
+      1294,
+      1358
+    ],
+    "outputs": [
+      "法條同步 → appendixText"
+    ],
+    "visible": true,
+    "panel": "tab-appendix"
+  },
+  {
+    "key": "stat-criminal-212",
+    "lines": [
+      1295,
+      1357
+    ],
+    "outputs": [
+      "法條同步 → appendixText"
+    ],
+    "visible": true,
+    "panel": "tab-appendix"
+  },
+  {
+    "key": "stat-criminal-210",
+    "lines": [
+      1296,
+      1356
+    ],
+    "outputs": [
+      "法條同步 → appendixText"
+    ],
+    "visible": true,
+    "panel": "tab-appendix"
+  },
+  {
+    "key": "stat-ml-new19",
+    "lines": [
+      1297,
+      1349
+    ],
+    "outputs": [
+      "法條同步 → appendixText"
+    ],
+    "visible": true,
+    "panel": "tab-appendix"
+  },
+  {
+    "key": "stat-ml-old14",
+    "lines": [
+      1298,
+      1348
+    ],
+    "outputs": [
+      "法條同步 → appendixText"
+    ],
+    "visible": true,
+    "panel": "tab-appendix"
+  },
+  {
+    "key": "stat-criminal-30",
+    "lines": [
+      1299,
+      1350
+    ],
+    "outputs": [
+      "法條同步 → appendixText"
+    ],
+    "visible": true,
+    "panel": "tab-appendix"
+  },
+  {
+    "key": "stat-criminal-339",
+    "lines": [
+      1300,
+      1353
+    ],
+    "outputs": [
+      "法條同步 → appendixText"
+    ],
+    "visible": true,
+    "panel": "tab-appendix"
+  },
+  {
+    "key": "stat-org-3",
+    "lines": [
+      1301,
+      1351
+    ],
+    "outputs": [
+      "法條同步 → appendixText"
+    ],
+    "visible": true,
+    "panel": "tab-appendix"
+  },
+  {
+    "key": "stat-org-4",
+    "lines": [
+      1302,
+      1352
+    ],
+    "outputs": [
+      "法條同步 → appendixText"
+    ],
+    "visible": true,
+    "panel": "tab-appendix"
+  },
+  {
+    "key": "stat-fpa-44",
+    "lines": [
+      1303,
+      1355
+    ],
+    "outputs": [
+      "法條同步 → appendixText"
+    ],
+    "visible": true,
+    "panel": "tab-appendix"
+  },
+  {
+    "key": "chk-include-schedule",
+    "lines": [
+      1889
+    ],
+    "outputs": [
+      "附錄 appendixText"
+    ],
+    "visible": true,
+    "panel": "tab-appendix"
+  },
+  {
+    "key": "val-schedule-text",
+    "lines": [
+      1889,
+      1890
+    ],
+    "outputs": [
+      "附錄 appendixText"
+    ],
+    "visible": true,
+    "panel": "tab-appendix"
+  },
+  {
+    "key": "input-appeal-text",
+    "lines": [
+      1868
+    ],
+    "outputs": [
+      "結尾 closingBlock"
+    ],
+    "visible": false,
+    "panel": "tab-appendix"
+  }
+]

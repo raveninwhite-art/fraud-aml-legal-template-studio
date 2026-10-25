@@ -1,0 +1,11 @@
+{
+  "status": "TEMPLATE_NOT_APPROVED",
+  "issueId": "",
+  "sourceSha256": "",
+  "risk": "",
+  "approver": "",
+  "approvalReference": "",
+  "expiresAt": "",
+  "compensatingChecks": [],
+  "machineGateRemainsBlocked": true
+}

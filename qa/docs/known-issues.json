@@ -1,0 +1,73 @@
+{
+  "sourceSha256": "2d990428e4ce6a60576189745e5c5b2d3440151142ea0eebc90bcb35eb85729c",
+  "issues": [
+    {
+      "id": "K01",
+      "priority": "P0",
+      "title": "子段編號超過十個後產生undefined",
+      "tests": [
+        "F29"
+      ],
+      "detail": "PAREN_NUMS僅㈠至㈩；自填比較、競合、數罪、擴張審理及多項加重並存時，量刑及緩刑前綴輸出undefined。",
+      "category": "既有程式缺陷",
+      "location": "1290, 1718–1789"
+    },
+    {
+      "id": "K02",
+      "priority": "P0",
+      "title": "偵查未自白與量刑自始均坦承相衝突",
+      "tests": [
+        "F19",
+        "G03"
+      ],
+      "detail": "選no_confess_in_investigation時減刑段載偵查未自白；driver_full量刑固定寫自始均坦承。F19失敗，G03候選禁止規則亦不符。",
+      "category": "既有程式缺陷／待法律文句核准",
+      "location": "1699–1700, 1746"
+    },
+    {
+      "id": "K03",
+      "priority": "P0",
+      "title": "同一犯罪所得的主文與理由金額可互相矛盾",
+      "tests": [
+        "F30"
+      ],
+      "detail": "主文填肆仟元後只改沒收理由為5,000元，仍可產文與匯出，沒有同步或阻擋。這是缺少一致性防護的風險，並非程式算錯金額。防護採同步、警示或阻擋，須使用者決定。",
+      "category": "缺少一致性防護",
+      "location": "1448, 1806"
+    },
+    {
+      "id": "K04",
+      "priority": "P0",
+      "title": "案件預設局部覆寫導致前案條件殘留",
+      "tests": [
+        "S02",
+        "S03"
+      ],
+      "detail": "未遂→典型仍勾未遂罪名與25條；幫助→典型仍勾幫助減刑與不同被害人。與重新載入直接套典型的最終狀態及產文不同。S02/S03歸State Regression P1測試，問題的潛在法律影響列P0風險。",
+      "category": "既有狀態污染",
+      "location": "2106–2141"
+    },
+    {
+      "id": "K05",
+      "priority": "P1",
+      "title": "預設重設緩刑時核取狀態與面板未同步",
+      "tests": [
+        "S14"
+      ],
+      "detail": "先勾主文緩刑，再套未遂預設，probation-mode改omit，但主文緩刑checkbox仍勾、grant面板仍顯示。主文實際依radio不產生緩刑，介面與輸出易誤讀。",
+      "category": "既有互動缺陷",
+      "location": "2165–2168"
+    },
+    {
+      "id": "K06",
+      "priority": "P1",
+      "title": "清空後套預設不等同乾淨載入套預設",
+      "tests": [
+        "S08"
+      ],
+      "detail": "清空取消大量預設checkbox，典型預設未補回，造成理由一、想像競合及沒收所得／法理段消失等。完整差異附QA Report。清空的設計語意須使用者確認。",
+      "category": "既有狀態問題／規格待確認",
+      "location": "2207–2228"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "name": "repair-regression-qa",
+  "version": "1.0.1",
+  "private": true,
+  "description": "最新版例稿整合器的隔離式 DOM Regression 與候選 Golden QA",
+  "scripts": {
+    "prepare-source": "node scripts/strip-images.js",
+    "verify-source": "node scripts/verify-source.js",
+    "test": "node scripts/run-tests.js",
+    "test:smoke": "node scripts/run-tests.js tests/smoke",
+    "test:behavior": "node scripts/run-tests.js tests/behavior",
+    "test:golden": "node scripts/run-tests.js tests/golden",
+    "test:functional": "node scripts/run-tests.js tests/functional",
+    "test:state": "node scripts/run-tests.js tests/state",
+    "test:metamorphic": "node scripts/run-tests.js tests/metamorphic",
+    "baseline:candidate": "node scripts/capture-behavior.js",
+    "baseline:accept": "node scripts/accept-behavior.js",
+    "golden:approve": "node scripts/approve-golden.js",
+    "report": "node scripts/report.js",
+    "gate": "node scripts/gate.js",
+    "mutations": "node scripts/mutations.js",
+    "qa": "node scripts/qa.js",
+    "audit-source": "node scripts/audit-source.js",
+    "release:signoff": "node scripts/signoff.js"
+  },
+  "devDependencies": {
+    "parse5": "7.2.1",
+    "diff": "8.0.2",
+    "tailwindcss": "3.4.17",
+    "@playwright/test": "1.58.2"
+  },
+  "engines": {
+    "node": ">=22 <23"
+  }
+}

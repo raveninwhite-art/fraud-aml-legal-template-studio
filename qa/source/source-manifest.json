@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "programVersionId": "html-2d990428e4ce",
+  "sourceName": "index.html",
+  "sourcePath": "/workspace/scratch/8a53860ed9e7/integration-check/index.html",
+  "sourceBytes": 1086745,
+  "sourceSha256": "2d990428e4ce6a60576189745e5c5b2d3440151142ea0eebc90bcb35eb85729c",
+  "expectedInitialSha256": "2d990428e4ce6a60576189745e5c5b2d3440151142ea0eebc90bcb35eb85729c",
+  "liteName": "index.qa-lite.html",
+  "liteBytes": 160601,
+  "liteSha256": "3b65e5537975b1f49ec8fc16e400c630685a95bdad7d997cbf5a24b3f0ff7734",
+  "testedAt": "2026-10-25T14:39:21.682Z",
+  "timezone": "Asia/Taipei",
+  "frameworkVersion": "1.0.0",
+  "nodeVersion": "v22.23.4",
+  "playwrightVersion": "1.58.2",
+  "images": [
+    {
+      "start": 3235,
+      "end": 466385,
+      "line": 85,
+      "srcHash": "d465b3514aba52ff1ebfe51a5f93d17a3cf72e66ae371bcd6022a65e9b1c47d5",
+      "originalCharacters": 463150
+    },
+    {
+      "start": 543094,
+      "end": 1006244,
+      "line": 1250,
+      "srcHash": "d465b3514aba52ff1ebfe51a5f93d17a3cf72e66ae371bcd6022a65e9b1c47d5",
+      "originalCharacters": 463150
+    }
+  ],
+  "placeholder": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+}

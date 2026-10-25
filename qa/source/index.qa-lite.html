@@ -1,0 +1,2237 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>詐欺洗錢案件例稿整合器</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream-bg: #FAF6F0;
+      --cream-card: #FFFDF9;
+      --cream-panel: #F5EFE6;
+      --cream-border: #E6DEC8;
+      --latte-accent: #8C6239;
+      --latte-hover: #734F2C;
+      --latte-soft: #EFE6D8;
+      --espresso-text: #4A3B32;
+      --cocoa-muted: #7D685A;
+    }
+    body {
+      font-family: 'Noto Sans TC', 'Inter', sans-serif;
+      background-color: var(--cream-bg);
+      color: var(--espresso-text);
+    }
+    .serif-doc {
+      font-family: 'Noto Serif TC', 'PMingLiU', 'DFKai-SB', serif;
+    }
+    .cream-card {
+      background-color: var(--cream-card);
+      border-color: var(--cream-border);
+      box-shadow: 0 4px 20px -2px rgba(74, 59, 50, 0.05);
+    }
+    .cream-subcard {
+      background-color: #FAF5EE;
+      border-color: #E8DFD1;
+    }
+    .cream-input {
+      background-color: #FFFDF9;
+      border-color: #D8CBB8;
+      color: var(--espresso-text);
+    }
+    .cream-input:focus {
+      border-color: var(--latte-accent);
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(140, 98, 57, 0.15);
+    }
+    input[type="checkbox"], input[type="radio"] {
+      accent-color: #8C6239;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scroll::-webkit-scrollbar-track {
+      background: #F5EFE6;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #D5C7B4;
+      border-radius: 3px;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb:hover {
+      background: #B8A690;
+    }
+    @media print {
+      .no-print { display: none !important; }
+      .print-full { width: 100% !important; max-width: 100% !important; box-shadow: none !important; border: none !important; }
+    }
+  
+    .quick-preset { background:#F7F0E7; border:1px solid transparent; }
+    .quick-preset:hover { background:#DFD2C0; }
+    .quick-preset.is-active { background:#6F4E37 !important; color:#FFFDF9 !important; border-color:#5B3F2D; box-shadow:0 1px 3px rgba(74,59,50,.25); }
+    .quick-preset:focus-visible { outline:3px solid rgba(140,98,57,.35); outline-offset:2px; }
+</style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- Top Navigation Header (Japanese Creamy Aesthetic + Custom Cat Logo) -->
+  <header class="bg-[#F4ECE1]/95 backdrop-blur-sm text-[#4A3B32] border-b border-[#E2D5C3] sticky top-0 z-30 no-print shadow-sm">
+    <div class="max-w-[1600px] mx-auto px-4 py-2.5 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-3.5">
+        <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-[#FFFDF9] border-2 border-[#DECBB3] shadow-sm overflow-hidden flex items-center justify-center shrink-0 p-0.5">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="House of Nini & Momo Logo" class="max-w-full h-auto rounded-xl object-contain">
+        </div>
+        <div>
+          <div class="flex flex-wrap items-center gap-2">
+            <h1 class="text-base sm:text-lg font-bold tracking-tight text-[#4A3B32]">詐欺洗錢案件例稿整合器</h1>
+            <span id="badge-current-tpl" class="text-xs px-2.5 py-0.5 rounded-full bg-[#E6D7C3] text-[#5C4433] border border-[#D5C2A8] font-medium">
+              正犯與幫助犯整合版
+            </span>
+          </div>
+          <p class="text-xs text-[#7D685A] hidden sm:block" id="header-subtitle">點選各區塊項目即可自動串接生成流暢之判決書內文</p>
+        </div>
+      </div>
+
+      <!-- Quick Presets & Action Buttons -->
+      <div class="flex flex-wrap items-center gap-2">
+        <div class="flex flex-wrap items-center gap-1 bg-[#EBE1D4] rounded-xl p-1 border border-[#DCD0C0] text-xs">
+          <span class="px-2 text-[#7D685A] font-bold">案件類型：</span>
+          <button type="button" id="preset-typical-btn" data-preset-group="case" class="quick-preset px-2.5 py-1 rounded-lg text-[#4A3B32] font-medium transition">加重詐欺＋洗錢＋組織</button>
+          <button type="button" id="preset-attempt-btn" data-preset-group="case" class="quick-preset px-2.5 py-1 rounded-lg text-[#4A3B32] font-medium transition">加重詐欺未遂</button>
+          <button type="button" id="preset-v9-account-btn" data-preset-group="case" class="quick-preset px-2.5 py-1 rounded-lg text-[#4A3B32] font-medium transition">幫助詐欺＋幫助洗錢（提供帳戶）</button>
+          <span class="mx-1 h-5 border-l border-[#C8B8A2]"></span>
+          <span class="px-2 text-[#7D685A] font-bold">適用程序：</span>
+          <button type="button" id="preset-proc-summary-btn" data-preset-group="procedure" class="quick-preset px-2.5 py-1 rounded-lg text-[#4A3B32] font-medium transition">簡式審判程序</button>
+          <button type="button" id="preset-proc-simple-btn" data-preset-group="procedure" class="quick-preset px-2.5 py-1 rounded-lg text-[#4A3B32] font-medium transition">簡易判決處刑</button>
+          <button type="button" id="preset-clear-btn" class="px-2.5 py-1 rounded-lg hover:bg-[#F2D6D0] text-[#9E4738] font-medium transition">清空重填</button>
+        </div>
+
+        <div class="px-3 py-1.5 rounded-xl bg-[#FFFDF9] border border-[#D5C2A8] text-xs text-[#5C493E] shadow-sm" title="以此瀏覽器的 localStorage 累計；非跨裝置全站統計">本裝置使用次數：<strong id="usage-counter">0</strong></div>
+
+        <button type="button" id="copy-all-btn" class="px-3.5 py-1.5 rounded-xl bg-[#8C6239] hover:bg-[#734F2C] text-[#FFFDF9] font-semibold text-xs sm:text-sm flex items-center gap-1.5 shadow-sm transition">
+          <span>📋 複製目前判決文字</span>
+        </button>
+        <button type="button" id="export-doc-btn" class="px-3 py-1.5 rounded-xl bg-[#FFFDF9] hover:bg-[#F5EFE6] border border-[#D5C2A8] text-[#4A3B32] font-medium text-xs sm:text-sm flex items-center gap-1 transition shadow-sm">
+          <span>📥 匯出 Word (.doc)</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Workspace -->
+  <main class="flex-1 max-w-[1600px] w-full mx-auto px-3 sm:px-4 py-4 grid grid-cols-1 lg:grid-cols-12 gap-4 items-start">
+
+    <!-- Left Column: Unified Single-Page Interactive Form Builder (7 cols on lg) -->
+    <section class="lg:col-span-7 cream-card rounded-2xl border overflow-hidden no-print flex flex-col">
+      <!-- Quick Section Jump Bar -->
+      <div class="bg-[#F5EFE6] border-b border-[#E6DEC8] px-3 py-2.5 flex items-center justify-between gap-2 overflow-x-auto">
+        <div class="flex items-center gap-1" id="section-tabs">
+          <button type="button" data-tab="tab-basic" class="tab-btn px-3 py-1.5 rounded-xl text-xs sm:text-sm font-semibold bg-[#8C6239] text-[#FFFDF9] transition whitespace-nowrap shadow-sm">1. 案號與主文</button>
+          <button type="button" data-tab="tab-crimes" class="tab-btn px-3 py-1.5 rounded-xl text-xs sm:text-sm font-medium text-[#5C493E] hover:bg-[#E8DFD1] transition whitespace-nowrap">2. 所犯罪名與競合</button>
+          <button type="button" data-tab="tab-lawcompare" class="tab-btn px-3 py-1.5 rounded-xl text-xs sm:text-sm font-medium text-[#5C493E] hover:bg-[#E8DFD1] transition whitespace-nowrap">3. 修法比較</button>
+          <button type="button" data-tab="tab-sentencing" class="tab-btn px-3 py-1.5 rounded-xl text-xs sm:text-sm font-medium text-[#5C493E] hover:bg-[#E8DFD1] transition whitespace-nowrap">4. 加重減輕與量刑</button>
+          <button type="button" data-tab="tab-confiscation" class="tab-btn px-3 py-1.5 rounded-xl text-xs sm:text-sm font-medium text-[#5C493E] hover:bg-[#E8DFD1] transition whitespace-nowrap">5. 沒收</button>
+          <button type="button" data-tab="tab-appendix" class="tab-btn px-3 py-1.5 rounded-xl text-xs sm:text-sm font-medium text-[#5C493E] hover:bg-[#E8DFD1] transition whitespace-nowrap">6. 附錄法條</button>
+        </div>
+        <label class="flex items-center gap-1.5 text-xs text-[#5C493E] font-medium whitespace-nowrap cursor-pointer select-none pl-2 border-l border-[#DFD3C3]">
+          <input type="checkbox" id="show-all-sections-toggle" checked class="rounded border-[#C8B8A2]">
+          <span>單頁展開全部區塊</span>
+        </label>
+      </div>
+
+      <!-- Form Panels Container -->
+      <div class="p-4 sm:p-5 space-y-8 max-h-[calc(100vh-155px)] overflow-y-auto custom-scroll" id="form-panels">
+
+        <!-- SECTION 1: 案件基本資料、主文、事實及證據 -->
+        <div id="tab-basic" class="form-panel space-y-5">
+          <div class="flex items-center justify-between border-b border-[#E6DEC8] pb-2">
+            <h2 class="text-base font-bold text-[#4A3B32] flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-[#8C6239] text-[#FFFDF9] text-xs flex items-center justify-center">1</span>
+              法院案號、當事人、主文與事實證據
+            </h2>
+            <span class="text-xs text-[#7D685A]">正犯・幫助犯共通欄位</span>
+          </div>
+
+          <!-- 基本資料 Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 cream-subcard p-3.5 rounded-xl border">
+            <div>
+              <label class="block text-xs font-semibold text-[#5C493E] mb-1">法院名稱</label>
+              <input type="text" id="input-court-name" value="臺灣OO地方法院" placeholder="臺灣OO地方法院" class="w-full px-3 py-1.5 text-sm rounded-lg border cream-input">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-[#5C493E] mb-1">判決年度字號</label>
+              <input type="text" id="input-case-no" value="O年度訴字第O號" placeholder="例如：O年度訴字第O號" class="w-full px-3 py-1.5 text-sm rounded-lg border cream-input">
+            </div>
+            <div id="wrap-case-cause">
+              <label class="block text-xs font-semibold text-[#5C493E] mb-1">起訴／聲請案由</label>
+              <input type="text" id="input-case-cause" value="" placeholder="請自行輸入起訴／聲請案由" class="w-full px-3 py-1.5 text-sm rounded-lg border cream-input">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-[#5C493E] mb-1">被告姓名（留空待填）</label>
+              <input type="text" id="input-defendant-name" value="" placeholder="請輸入被告姓名" class="w-full px-3 py-1.5 text-sm rounded-lg border-2 border-[#D4A373] bg-[#FFFDF9] font-medium cream-input">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-[#5C493E] mb-1">選任／指定辯護人（選填）</label>
+              <input type="text" id="input-lawyer-name" value="" placeholder="無則留空" class="w-full px-3 py-1.5 text-sm rounded-lg border cream-input">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-[#5C493E] mb-1">宣判日期</label>
+              <input type="date" id="input-judgment-date" value="" class="w-full px-3 py-1.5 text-xs sm:text-sm rounded-lg border cream-input">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-[#5C493E] mb-1">庭別名稱</label>
+              <input type="text" id="input-court-div" value="刑事第O庭" placeholder="例如：刑事第O庭" class="w-full px-3 py-1.5 text-sm rounded-lg border cream-input">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-[#5C493E] mb-1">法官姓名（留空待填）</label>
+              <input type="text" id="input-judge-name" value="" placeholder="請輸入法官姓名" class="w-full px-3 py-1.5 text-sm rounded-lg border-2 border-[#D4A373] bg-[#FFFDF9] cream-input">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-[#5C493E] mb-1">書記官姓名（留空待填）</label>
+              <input type="text" id="input-clerk-name" value="" placeholder="請輸入書記官姓名" class="w-full px-3 py-1.5 text-sm rounded-lg border cream-input">
+            </div>
+          </div>
+
+          <!-- 偵查案號 & 檢察官（姓名留空） -->
+          <div id="v11-pros-block" class="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+            <div class="p-3.5 rounded-xl border border-[#E6DEC8] bg-[#FFFDF9] space-y-2.5">
+              <div class="text-xs font-bold text-[#5C493E]">偵查起訴／併辦案號</div>
+              <label class="flex items-start gap-2 text-xs sm:text-sm cursor-pointer">
+                <input type="checkbox" id="chk-pros-indict" checked class="mt-1 rounded">
+                <div class="flex-1">
+                  <span class="font-medium text-[#4A3B32]">起訴／聲請偵查案號：</span>
+                  <input type="text" id="val-pros-indict" value="O年度偵字第O號" class="mt-1 w-full px-2.5 py-1 text-xs rounded-lg border cream-input">
+                </div>
+              </label>
+              <label class="flex items-start gap-2 text-xs sm:text-sm cursor-pointer">
+                <input type="checkbox" id="chk-pros-add" class="mt-1 rounded">
+                <div class="flex-1">
+                  <span class="font-medium text-[#4A3B32]">追加起訴案號：</span>
+                  <input type="text" id="val-pros-add" value="O年度O字第O號" class="mt-1 w-full px-2.5 py-1 text-xs rounded-lg border cream-input">
+                </div>
+              </label>
+              <label class="flex items-start gap-2 text-xs sm:text-sm cursor-pointer">
+                <input type="checkbox" id="chk-pros-merge" class="mt-1 rounded">
+                <div class="flex-1">
+                  <span class="font-medium text-[#4A3B32]">移送併辦案號：</span>
+                  <input type="text" id="val-pros-merge" value="O年度O字第O號" class="mt-1 w-full px-2.5 py-1 text-xs rounded-lg border cream-input">
+                </div>
+              </label>
+            </div>
+
+            <div class="p-3.5 rounded-xl border border-[#E6DEC8] bg-[#FFFDF9] space-y-2.5">
+              <div class="text-xs font-bold text-[#5C493E]">檢察官姓名（留空由使用者填寫）</div>
+              <label class="flex items-start gap-2 text-xs sm:text-sm cursor-pointer">
+                <input type="checkbox" id="chk-prosecutor-indict" checked class="mt-1 rounded">
+                <div class="flex-1">
+                  <span class="font-medium text-[#4A3B32]">提起公訴／聲請簡判檢察官：</span>
+                  <input type="text" id="val-prosecutor-indict" value="" placeholder="請輸入起訴檢察官姓名（不含職稱）" class="mt-1 w-full px-2.5 py-1 text-xs rounded-lg border-2 border-[#D4A373] cream-input">
+                </div>
+              </label>
+              <label class="flex items-start gap-2 text-xs sm:text-sm cursor-pointer">
+                <input type="checkbox" id="chk-prosecutor-trial" checked class="mt-1 rounded">
+                <div class="flex-1">
+                  <span class="font-medium text-[#4A3B32]">到庭執行職務檢察官：</span>
+                  <input type="text" id="val-prosecutor-trial" value="" placeholder="請輸入到庭執行職務檢察官姓名（不含職稱）" class="mt-1 w-full px-2.5 py-1 text-xs rounded-lg border-2 border-[#D4A373] cream-input">
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- 審判程序選擇 -->
+          <div id="v9-proc-block" class="p-3.5 rounded-xl border cream-subcard space-y-2.5">
+            <div class="text-xs font-bold text-[#4A3B32]">審判程序與「理由一」簡式審判裁定說明</div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-sm">
+              <div class="p-2.5 rounded-xl bg-[#FFFDF9] border border-[#E6DEC8] space-y-1.5">
+                <label class="flex items-start gap-2 cursor-pointer">
+                  <input type="radio" name="proc-type-mode" id="rad-proc-summary-trial" value="summary_trial" checked class="mt-1">
+                  <div>
+                    <div class="font-semibold text-[#4A3B32]">簡式審判程序（刑事訴訟法第273條之1第1項、第299條第1項前段）</div>
+                  </div>
+                </label>
+                <label class="flex items-center gap-1.5 pl-6 text-xs text-[#7D685A] cursor-pointer">
+                  <input type="checkbox" id="chk-include-reason-one" checked class="rounded">
+                  <span>於「理由一」列出簡式審判程序合致要件說明段落</span>
+                </label>
+              </div>
+
+              <div class="p-2.5 rounded-xl bg-[#FFFDF9] border border-[#E6DEC8] space-y-1.5">
+                <label class="flex items-start gap-2 cursor-pointer">
+                  <input type="radio" name="proc-type-mode" id="rad-proc-simple-judgment" value="simple_judgment" class="mt-1">
+                  <div>
+                    <div class="font-semibold text-[#4A3B32]">簡易判決處刑（刑事訴訟法第449條、第454條）</div>
+                  </div>
+                </label>
+                <div class="pl-6 flex flex-wrap items-center gap-2 text-xs text-[#7D685A]">
+                  <span>適用條項：第449條</span>
+                  <label class="inline-flex items-center gap-1 cursor-pointer"><input type="checkbox" id="chk-v9-proc-449-1" checked class="rounded"> 第1項</label>
+                  <label class="inline-flex items-center gap-1 cursor-pointer"><input type="checkbox" id="chk-v9-proc-449-2" class="rounded"> 第2項</label>
+                  <label class="inline-flex items-center gap-1 cursor-pointer"><input type="checkbox" id="chk-v9-proc-450" checked class="rounded"> 、第450條第1項</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 主文設定 -->
+          <div class="grid grid-cols-1 gap-4">
+            <!-- A. 正犯類主文 -->
+            <div id="v11-holding-block" class="p-4 rounded-xl border border-[#DFC9B0] bg-[#FAF3E8] space-y-3">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <h3 class="text-sm font-bold text-[#4A3B32]">一、正犯類主文宣告選項</h3>
+                <label class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#8C4A39] bg-[#F5E1DA] px-2.5 py-1 rounded-lg border border-[#E4C2B7] cursor-pointer">
+                  <input type="checkbox" id="chk-holding-recidivist" class="rounded">
+                  <span>主文罪名後加註「，累犯，」</span>
+                </label>
+              </div>
+
+              <!-- 主文 1: 339-4 既遂 -->
+              <div class="p-3 bg-[#FFFDF9] rounded-xl border border-[#E6DEC8] space-y-2">
+                <label class="flex items-center gap-2 text-sm font-semibold text-[#4A3B32] cursor-pointer">
+                  <input type="checkbox" id="chk-holding-1" checked class="rounded">
+                  <span>加重詐欺取財罪（既遂）</span>
+                </label>
+                <div class="pl-6 space-y-2 text-xs sm:text-sm">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <span class="text-[#7D685A] font-medium">主文罪名表述：</span>
+                    <input type="text" id="val-h1-crime-title" value="三人以上共同詐欺取財罪" class="px-2.5 py-1 rounded-lg border cream-input text-xs sm:text-sm w-64">
+                    <span class="text-[#7D685A] font-medium">宣告刑：</span>
+                    <input type="text" id="val-h1-sentence" value="處有期徒刑O年O月。" class="flex-1 min-w-[180px] px-2.5 py-1 rounded-lg border cream-input text-xs sm:text-sm">
+                  </div>
+                  <div class="flex flex-wrap items-center gap-3 text-xs text-[#7D685A]">
+                    <span>對應款次標記：</span>
+                    <label class="inline-flex items-center gap-1 cursor-pointer"><input type="checkbox" id="chk-h1-sub1" class="rounded"> 第1款</label>
+                    <label class="inline-flex items-center gap-1 cursor-pointer"><input type="checkbox" id="chk-h1-sub2" checked class="rounded"> 第2款（三人以上）</label>
+                    <label class="inline-flex items-center gap-1 cursor-pointer"><input type="checkbox" id="chk-h1-sub3" class="rounded"> 第3款</label>
+                    <label class="inline-flex items-center gap-1 cursor-pointer"><input type="checkbox" id="chk-h1-sub4" class="rounded"> 第4款</label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 主文 2: 339-4 未遂 -->
+              <div class="p-3 bg-[#FFFDF9] rounded-xl border border-[#E6DEC8] space-y-2">
+                <label class="flex items-center gap-2 text-sm font-semibold text-[#4A3B32] cursor-pointer">
+                  <input type="checkbox" id="chk-holding-2" class="rounded">
+                  <span>加重詐欺取財未遂罪</span>
+                </label>
+                <div class="pl-6 space-y-2 text-xs sm:text-sm">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <span class="text-[#7D685A] font-medium">主文罪名表述：</span>
+                    <input type="text" id="val-h2-crime-title" value="三人以上共同詐欺取財未遂罪" class="px-2.5 py-1 rounded-lg border cream-input text-xs sm:text-sm w-64">
+                    <span class="text-[#7D685A] font-medium">宣告刑：</span>
+                    <input type="text" id="val-h2-sentence" value="處有期徒刑O年O月。" class="flex-1 min-w-[180px] px-2.5 py-1 rounded-lg border cream-input text-xs sm:text-sm">
+                  </div>
+                  <div class="hidden">
+                    <input type="checkbox" id="chk-h2-sub1"><input type="checkbox" id="chk-h2-sub2" checked><input type="checkbox" id="chk-h2-sub3"><input type="checkbox" id="chk-h2-sub4">
+                  </div>
+                </div>
+              </div>
+
+              <!-- 主文 3: 詐防條例第44條第1項 -->
+              <div class="p-3 bg-[#FFFDF9] rounded-xl border border-[#E6DEC8] space-y-2">
+                <label class="flex items-center gap-2 text-sm font-semibold text-[#4A3B32] cursor-pointer">
+                  <input type="checkbox" id="chk-holding-3" class="rounded">
+                  <span>詐欺犯罪危害防制條例第44條第1項 分則加重罪</span>
+                </label>
+                <div class="pl-6 space-y-2 text-xs sm:text-sm">
+                  <div class="flex flex-wrap items-center gap-3">
+                    <span class="text-[#7D685A] font-medium">適用款次：</span>
+                    <label class="inline-flex items-center gap-1 cursor-pointer"><input type="checkbox" id="chk-h3-sub1" checked class="rounded"> 第1款</label>
+                    <label class="inline-flex items-center gap-1 cursor-pointer"><input type="checkbox" id="chk-h3-sub2" class="rounded"> 第2款</label>
+                    <label class="inline-flex items-center gap-1 cursor-pointer"><input type="checkbox" id="chk-h3-sub3" class="rounded"> 第3款</label>
+                  </div>
+                  <div class="flex flex-wrap items-center gap-2">
+                    <span class="text-[#7D685A] font-medium">宣告刑：</span>
+                    <input type="text" id="val-h3-sentence" value="處有期徒刑O年O月。" class="flex-1 min-w-[220px] px-2.5 py-1 rounded-lg border cream-input text-xs sm:text-sm">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- B. 幫助犯類主文 -->
+            <div id="v9-holding-block" class="p-4 rounded-xl border border-[#D8CBB8] bg-[#F5EFE6] space-y-3">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <h3 class="text-sm font-bold text-[#4A3B32]">二、幫助犯類主文宣告選項（單純幫助詐欺／幫助一般洗錢）</h3>
+                <div class="flex flex-wrap items-center justify-end gap-2">
+                  <span class="text-xs text-[#5C493E] bg-[#E8DFD1] px-2.5 py-0.5 rounded-full">含易科罰金／併科罰金／易服勞役折算</span>
+                  <label class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#8C4A39] bg-[#F5E1DA] px-2.5 py-1 rounded-lg border border-[#E4C2B7] cursor-pointer">
+                    <input type="checkbox" id="chk-v9-holding-recidivist" class="rounded">
+                    <span>主文罪名後加註「，累犯，」</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 gap-2.5">
+                <div class="p-2.5 bg-[#FFFDF9] rounded-xl border border-[#E6DEC8] space-y-1.5 text-xs sm:text-sm">
+                  <label class="flex items-center gap-2 font-semibold text-[#4A3B32] cursor-pointer">
+                    <input type="checkbox" id="chk-v9-h1" class="rounded">
+                    <span>幫助犯詐欺取財罪（既遂）</span>
+                  </label>
+                  <div class="pl-6 flex flex-wrap items-center gap-1.5">
+                    <span>處有期徒刑</span>
+                    <input type="text" id="val-v9-h1-term" value="O月" class="w-20 px-2 py-0.5 rounded-lg border cream-input text-center">
+                    <span>，如易科罰金，以新臺幣壹仟元折算壹日。</span>
+                  </div>
+                </div>
+
+                <div class="p-2.5 bg-[#FFFDF9] rounded-xl border border-[#E6DEC8] space-y-1.5 text-xs sm:text-sm">
+                  <label class="flex items-center gap-2 font-semibold text-[#4A3B32] cursor-pointer">
+                    <input type="checkbox" id="chk-v9-h2" class="rounded">
+                    <span>幫助犯修正前洗錢防制法第十四條第一項一般洗錢罪（既遂）</span>
+                  </label>
+                  <div class="pl-6 flex flex-wrap items-center gap-1.5">
+                    <span>處有期徒刑</span>
+                    <input type="text" id="val-v9-h2-term" value="O月" class="w-20 px-2 py-0.5 rounded-lg border cream-input text-center">
+                    <span>，併科罰金新臺幣</span>
+                    <input type="text" id="val-v9-h2-fine" value="O元" class="w-24 px-2 py-0.5 rounded-lg border cream-input text-center">
+                    <span>，罰金如易服勞役，以新臺幣壹仟元折算壹日。</span>
+                  </div>
+                </div>
+
+                <div class="p-2.5 bg-[#FFFDF9] rounded-xl border border-[#E6DEC8] space-y-1.5 text-xs sm:text-sm">
+                  <label class="flex items-center gap-2 font-semibold text-[#4A3B32] cursor-pointer">
+                    <input type="checkbox" id="chk-v9-h3" class="rounded">
+                    <span>幫助犯洗錢防制法第十九條第一項後段一般洗錢罪（既遂）</span>
+                  </label>
+                  <div class="pl-6 flex flex-wrap items-center gap-1.5">
+                    <span>處有期徒刑</span>
+                    <input type="text" id="val-v9-h3-term" value="O月" class="w-20 px-2 py-0.5 rounded-lg border cream-input text-center">
+                    <span>，併科罰金新臺幣</span>
+                    <input type="text" id="val-v9-h3-fine" value="O元" class="w-24 px-2 py-0.5 rounded-lg border cream-input text-center">
+                    <span>，徒刑如易科罰金、罰金如易服勞役，均以新臺幣壹仟元折算壹日。</span>
+                  </div>
+                </div>
+
+                <div class="p-2.5 bg-[#FFFDF9] rounded-xl border border-[#E6DEC8] space-y-1.5 text-xs sm:text-sm">
+                  <label class="flex items-center gap-2 font-semibold text-[#4A3B32] cursor-pointer">
+                    <input type="checkbox" id="chk-v9-h4" class="rounded">
+                    <span>幫助犯詐欺取財未遂罪</span>
+                  </label>
+                  <div class="pl-6 flex flex-wrap items-center gap-1.5">
+                    <span>處有期徒刑</span>
+                    <input type="text" id="val-v9-h4-term" value="O月" class="w-20 px-2 py-0.5 rounded-lg border cream-input text-center">
+                    <span>，如易科罰金，以新臺幣壹仟元折算壹日。</span>
+                  </div>
+                </div>
+
+                <div class="p-2.5 bg-[#FFFDF9] rounded-xl border border-[#E6DEC8] space-y-1.5 text-xs sm:text-sm">
+                  <label class="flex items-center gap-2 font-semibold text-[#4A3B32] cursor-pointer">
+                    <input type="checkbox" id="chk-v9-h5" class="rounded">
+                    <span>幫助犯修正前洗錢防制法第十四條第一項一般洗錢未遂罪</span>
+                  </label>
+                  <div class="pl-6 flex flex-wrap items-center gap-1.5">
+                    <span>處有期徒刑</span>
+                    <input type="text" id="val-v9-h5-term" value="O月" class="w-20 px-2 py-0.5 rounded-lg border cream-input text-center">
+                    <span>，併科罰金新臺幣</span>
+                    <input type="text" id="val-v9-h5-fine" value="O元" class="w-24 px-2 py-0.5 rounded-lg border cream-input text-center">
+                    <span>，罰金如易服勞役，以新臺幣壹仟元折算壹日。</span>
+                  </div>
+                </div>
+
+                <div class="p-2.5 bg-[#FFFDF9] rounded-xl border border-[#E6DEC8] space-y-1.5 text-xs sm:text-sm">
+                  <label class="flex items-center gap-2 font-semibold text-[#4A3B32] cursor-pointer">
+                    <input type="checkbox" id="chk-v9-h6" class="rounded">
+                    <span>幫助犯洗錢防制法第十九條第一項後段一般洗錢未遂罪</span>
+                  </label>
+                  <div class="pl-6 flex flex-wrap items-center gap-1.5">
+                    <span>處有期徒刑</span>
+                    <input type="text" id="val-v9-h6-term" value="O月" class="w-20 px-2 py-0.5 rounded-lg border cream-input text-center">
+                    <span>，併科罰金新臺幣</span>
+                    <input type="text" id="val-v9-h6-fine" value="O元" class="w-24 px-2 py-0.5 rounded-lg border cream-input text-center">
+                    <span>，徒刑如易科罰金、罰金如易服勞役，均以新臺幣壹仟元折算壹日。</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 主文沒收與附隨宣告 -->
+          <div class="p-3.5 cream-subcard rounded-xl border space-y-2">
+            <div class="text-xs font-bold text-[#4A3B32]">主文後段沒收／追徵／緩刑記載：</div>
+            <div class="flex flex-wrap gap-3 text-xs sm:text-sm">
+              <label class="inline-flex items-center gap-1.5 cursor-pointer">
+                <input type="checkbox" id="chk-h-conf-table" checked class="rounded">
+                <span>扣案如附表所示之物，沒收之</span>
+              </label>
+              <label class="inline-flex items-center gap-1.5 cursor-pointer">
+                <input type="checkbox" id="chk-h-conf-unseized" class="rounded">
+                <span>未扣案之犯罪所得沒收追徵：新臺幣</span>
+              </label>
+              <input type="text" id="val-h-unseized-amt" value="O元" class="w-24 px-2 py-0.5 text-xs rounded-lg border cream-input">
+              <label class="inline-flex items-center gap-1.5 cursor-pointer">
+                <input type="checkbox" id="chk-h-conf-paid" class="rounded">
+                <span>已繳交之犯罪所得沒收：新臺幣</span>
+              </label>
+              <input type="text" id="val-h-paid-amt" value="O元" class="w-24 px-2 py-0.5 text-xs rounded-lg border cream-input">
+            </div>
+            <div>
+              <div class="p-3 rounded-xl border border-[#D8C8B5] bg-[#FAF3E8] space-y-2 mb-3">
+                <label class="flex items-center gap-2 font-semibold text-[#4A3B32] cursor-pointer">
+                  <input type="checkbox" id="holding-probation-grant" class="rounded">
+                  <span>主文宣告緩刑（與「四、緩刑宣告」雙向連動）</span>
+                </label>
+                <div class="flex flex-wrap items-center gap-2 text-xs pl-6">
+                  <span>緩刑期間</span><input type="text" id="holding-probation-years" value="O" class="w-16 px-2 py-1 rounded-lg border cream-input"><span>年</span>
+                </div>
+              </div>
+              <label class="block text-xs text-[#7D685A] mb-1">其他主文後段補充記載（選填）：</label>
+              <input type="text" id="val-holding-extra" value="" placeholder="例如：緩刑O年，緩刑期間付保護管束..." class="w-full px-2.5 py-1.5 rounded-lg border cream-input text-xs sm:text-sm">
+            </div>
+          </div>
+
+          <!-- 事實與證據名稱 -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+            <div class="p-3.5 rounded-xl border border-[#E6DEC8] bg-[#FFFDF9] space-y-2">
+              <div class="text-xs font-bold text-[#5C493E]">事實欄記載方式</div>
+              <label class="flex items-center gap-2 text-xs sm:text-sm cursor-pointer">
+                <input type="radio" name="fact-mode" id="rad-fact-standard" value="standard" checked>
+                <span>自行填寫犯罪事實與起訴機關</span>
+              </label>
+              <label class="flex items-center gap-2 text-xs sm:text-sm cursor-pointer">
+                <input type="radio" name="fact-mode" id="rad-fact-quote" value="quote">
+                <span>引用起訴書犯罪事實所載</span>
+              </label>
+              <label class="flex items-center gap-2 text-xs sm:text-sm cursor-pointer">
+                <input type="radio" name="fact-mode" id="rad-fact-amend" value="amend">
+                <span>除補充及更正外，餘引用起訴書犯罪事實所載</span>
+              </label>
+              <textarea id="val-fact-amend" rows="4" placeholder="請輸入犯罪事實內容..." class="w-full px-2.5 py-1.5 text-xs rounded-lg border cream-input">一、（請於此處貼入或填寫本案犯罪事實）
+二、案經告訴人訴由警察局報告臺灣OO地方檢察署檢察官偵查起訴。</textarea>
+            </div>
+
+            <div class="p-3.5 rounded-xl border border-[#E6DEC8] bg-[#FFFDF9] space-y-2">
+              <div class="text-xs font-bold text-[#5C493E]">認定犯罪事實所憑證據及理由</div>
+              <label class="flex items-center gap-2 text-xs sm:text-sm cursor-pointer">
+                <input type="radio" name="evid-mode" id="rad-evid-standard" value="standard" checked>
+                <span>完整敘述被告自白與卷證資料</span>
+              </label>
+              <label class="flex items-center gap-2 text-xs sm:text-sm cursor-pointer">
+                <input type="radio" name="evid-mode" id="rad-evid-quote" value="quote">
+                <span>引用起訴書證據清單所載</span>
+              </label>
+              <label class="flex items-center gap-2 text-xs sm:text-sm cursor-pointer">
+                <input type="radio" name="evid-mode" id="rad-evid-amend" value="amend">
+                <span>除補充及更正外，餘引用起訴書證據清單所載</span>
+              </label>
+              <textarea id="val-evid-amend" rows="4" placeholder="輸入證據內容..." class="w-full px-2.5 py-1.5 text-xs rounded-lg border cream-input">上開犯罪事實，業據被告於警詢、偵查、本院準備程序及簡式審判程序中均坦承不諱，核與證人即告訴人於警詢中之證述大致相符，並有扣押筆錄、扣押物品目錄表、對話紀錄截圖、偽造之收據在卷可查，足認被告上開任意性之自白與事實相符，堪以採信。</textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 2: 所犯罪名、共同正犯、吸收關係、想像競合 -->
+        <div id="tab-crimes" class="form-panel space-y-5 pt-4 border-t-2 border-[#E6DEC8]">
+          <div class="flex flex-wrap items-center justify-between gap-2 border-b border-[#E6DEC8] pb-2">
+            <h2 class="text-base font-bold text-[#4A3B32] flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-[#8C6239] text-[#FFFDF9] text-xs flex items-center justify-center">2</span>
+              論罪科刑：所犯罪名、共犯、吸收與競合
+            </h2>
+            <label class="inline-flex items-center gap-1.5 text-xs bg-[#EFE6D8] text-[#5C4433] px-2.5 py-1 rounded-full border border-[#D5C2A8] cursor-pointer">
+              <input type="checkbox" id="auto-sync-statutes" checked class="rounded">
+              <span class="font-medium">勾選罪名時自動連動「附錄法條」與「想像競合罪名」</span>
+            </label>
+          </div>
+
+          <!-- 正犯類罪名勾選清單 -->
+          <div id="v11-crimes-group" class="space-y-3">
+            <div class="text-xs font-bold text-[#5C4433] bg-[#EFE6D8] px-2.5 py-1 rounded-lg inline-block">A. 正犯類罪名（勾選後自動合成：「核被告所為，係犯...、...及...。」）</div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs sm:text-sm">
+              <!-- 339-4 既遂 -->
+              <div class="p-3 rounded-xl border border-[#E6DEC8] space-y-2 sm:col-span-2 cream-subcard">
+                <label class="flex items-center gap-2 font-semibold text-[#4A3B32] cursor-pointer">
+                  <input type="checkbox" id="crime-fraud-339-4" checked class="rounded crime-checkbox">
+                  <span>刑法第339條之4第1項 加重詐欺取財罪</span>
+                </label>
+                <div class="pl-6 space-y-2 text-xs">
+                  <div class="flex flex-wrap items-center gap-3">
+                    <span class="text-[#7D685A]">款次：</span>
+                    <label class="inline-flex items-center gap-1 cursor-pointer"><input type="checkbox" id="c3394-sub1" class="rounded"> 第1款（冒用公務員）</label>
+                    <label class="inline-flex items-center gap-1 cursor-pointer"><input type="checkbox" id="c3394-sub2" checked class="rounded"> 第2款（三人以上共同詐欺取財罪）</label>
+                    <label class="inline-flex items-center gap-1 cursor-pointer"><input type="checkbox" id="c3394-sub3" class="rounded"> 第3款（傳播工具）</label>
+                    <label class="inline-flex items-center gap-1 cursor-pointer"><input type="checkbox" id="c3394-sub4" class="rounded"> 第4款（深偽科技）</label>
+                  </div>
+                  <div class="pt-1 border-t border-[#E6DEC8] flex flex-wrap items-center gap-3">
+                    <label class="inline-flex items-center gap-1.5 font-medium text-[#4A3B32] cursor-pointer">
+                      <input type="checkbox" id="crime-fpa-44" class="rounded crime-checkbox">
+                      <span>併犯詐欺犯罪危害防制條例第44條第1項分則加重罪：</span>
+                    </label>
+                    <label class="inline-flex items-center gap-1 cursor-pointer"><input type="checkbox" id="cfpa44-sub1" checked class="rounded"> 第1款</label>
+                    <label class="inline-flex items-center gap-1 cursor-pointer"><input type="checkbox" id="cfpa44-sub2" class="rounded"> 第2款</label>
+                    <label class="inline-flex items-center gap-1 cursor-pointer"><input type="checkbox" id="cfpa44-sub3" class="rounded"> 第3款</label>
+                    <label class="inline-flex items-center gap-1 text-[#7D685A] cursor-pointer">
+                      <input type="checkbox" id="cfpa44-del-sub3" class="rounded">
+                      <span>（公訴意旨贅論第3款應予刪除）</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 339-4 未遂 -->
+              <div class="p-2.5 rounded-xl border border-[#E6DEC8] bg-[#FFFDF9] space-y-1.5 sm:col-span-2">
+                <label class="flex items-center gap-2 font-semibold text-[#4A3B32] cursor-pointer">
+                  <input type="checkbox" id="crime-fraud-339-4-att" class="rounded crime-checkbox">
+                  <span>刑法第339條之4第2項、第1項 加重詐欺取財未遂罪</span>
+                </label>
+                <div class="pl-6 flex flex-wrap items-center gap-3 text-xs">
+                  <span class="text-[#7D685A]">款次：</span>
+                  <label class="inline-flex items-center gap-1 cursor-pointer"><input type="checkbox" id="c3394att-sub1" class="rounded"> 第1款</label>
+                  <label class="inline-flex items-center gap-1 cursor-pointer"><input type="checkbox" id="c3394att-sub2" checked class="rounded"> 第2款（三人以上）</label>
+                  <label class="inline-flex items-center gap-1 cursor-pointer"><input type="checkbox" id="c3394att-sub3" class="rounded"> 第3款</label>
+                  <label class="inline-flex items-center gap-1 cursor-pointer"><input type="checkbox" id="c3394att-sub4" class="rounded"> 第4款</label>
+                </div>
+              </div>
+
+              <!-- 偽造文書 -->
+              <div class="p-2.5 rounded-xl border border-[#E6DEC8] bg-[#FFFDF9] space-y-1.5">
+                <label class="flex items-center gap-2 font-medium cursor-pointer">
+                  <input type="checkbox" id="crime-forgery-210" checked class="rounded crime-checkbox">
+                  <span>刑法第216條、第210條之行使偽造私文書罪</span>
+                </label>
+                <div class="pl-6 flex flex-wrap items-center gap-1.5 text-xs text-[#7D685A]">
+                  <label class="inline-flex items-center gap-1 cursor-pointer">
+                    <input type="checkbox" id="crime-forgery-220" class="rounded">
+                    <span>準文書（第220條第1項）：</span>
+                  </label>
+                  <input type="text" id="val-forgery-220-part" value="O" class="px-1.5 py-0.5 rounded border cream-input text-xs w-28">
+                </div>
+              </div>
+
+              <label class="flex items-center gap-2 p-2.5 rounded-xl border border-[#E6DEC8] bg-[#FFFDF9] hover:bg-[#FAF5EE] cursor-pointer font-medium">
+                <input type="checkbox" id="crime-forgery-212" checked class="rounded crime-checkbox">
+                <span>刑法第216條、第212條之行使偽造特種文書罪</span>
+              </label>
+
+              <!-- 洗錢 -->
+              <label class="flex items-center gap-2 p-2.5 rounded-xl border border-[#E6DEC8] bg-[#FFFDF9] hover:bg-[#FAF5EE] cursor-pointer font-medium">
+                <input type="checkbox" id="crime-ml-new19" checked class="rounded crime-checkbox">
+                <span>洗錢防制法第19條第1項後段之洗錢罪</span>
+              </label>
+              <label class="flex items-center gap-2 p-2.5 rounded-xl border border-[#E6DEC8] bg-[#FFFDF9] hover:bg-[#FAF5EE] cursor-pointer">
+                <input type="checkbox" id="crime-ml-old14" class="rounded crime-checkbox">
+                <span>修正前洗錢防制法第14條第1項後段之一般洗錢罪</span>
+              </label>
+
+              <!-- 普通詐欺 -->
+              <label class="flex items-center gap-2 p-2.5 rounded-xl border border-[#E6DEC8] bg-[#FFFDF9] hover:bg-[#FAF5EE] cursor-pointer">
+                <input type="checkbox" id="crime-fraud-339" class="rounded crime-checkbox">
+                <span>刑法第339條第1項之詐欺取財罪</span>
+              </label>
+              <label class="flex items-center gap-2 p-2.5 rounded-xl border border-[#E6DEC8] bg-[#FFFDF9] hover:bg-[#FAF5EE] cursor-pointer">
+                <input type="checkbox" id="crime-fraud-339-att" class="rounded crime-checkbox">
+                <span>刑法第339條第3項、第1項之詐欺取財未遂罪</span>
+              </label>
+
+              <!-- 組織犯罪 -->
+              <div class="p-2.5 rounded-xl border border-[#E6DEC8] bg-[#FFFDF9] space-y-1 sm:col-span-2">
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                  <label class="flex items-center gap-2 font-medium cursor-pointer">
+                    <input type="checkbox" id="crime-org-join" class="rounded crime-checkbox">
+                    <span>組織犯罪防制條例第3條第1項後段之參與犯罪組織罪</span>
+                  </label>
+                  <label class="flex items-center gap-1.5 text-xs text-[#7D685A] cursor-pointer">
+                    <input type="checkbox" id="crime-org-join-dup" class="rounded">
+                    <span>加註：前經另案論處參與犯罪組織罪，起訴書贅載，本案不另論</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="p-2.5 rounded-xl border border-[#E6DEC8] bg-[#FFFDF9] space-y-1 sm:col-span-2">
+                <label class="flex items-center gap-2 font-medium cursor-pointer">
+                  <input type="checkbox" id="crime-org-recruit" class="rounded crime-checkbox">
+                  <span>組織犯罪防制條例第4條第1項之招募他人加入犯罪組織罪</span>
+                </label>
+                <div class="pl-6 flex flex-wrap gap-4 text-xs text-[#7D685A]">
+                  <label class="inline-flex items-center gap-1 cursor-pointer"><input type="checkbox" id="crime-org-recruit-abroad" class="rounded"> 同條第2項意圖使他人出國實行犯罪而招募罪</label>
+                  <label class="inline-flex items-center gap-1 cursor-pointer"><input type="checkbox" id="crime-org-recruit-minor" class="rounded"> 同條第3項成年人招募未滿18歲之人加入分則加重罪</label>
+                </div>
+              </div>
+
+              <div class="p-2.5 rounded-xl border border-[#E6DEC8] bg-[#FFFDF9] space-y-1 sm:col-span-2">
+                <label class="flex items-center gap-2 font-medium cursor-pointer">
+                  <input type="checkbox" id="crime-org-force" class="rounded crime-checkbox">
+                  <span>組織犯罪防制條例第4條第4項之強暴、脅迫或他法：</span>
+                </label>
+                <div class="pl-6 flex flex-wrap gap-4 text-xs text-[#7D685A]">
+                  <label class="inline-flex items-center gap-1 cursor-pointer"><input type="checkbox" id="crime-org-force-join" checked class="rounded"> 使他人加入犯罪組織罪</label>
+                  <label class="inline-flex items-center gap-1 cursor-pointer"><input type="checkbox" id="crime-org-force-leave" class="rounded"> 妨害成員脫離犯罪組織罪</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 幫助犯類罪名勾選清單 -->
+          <div id="v9-crimes-group" class="p-3.5 rounded-xl border border-[#D8CBB8] bg-[#F5EFE6] space-y-2.5">
+            <div class="text-xs font-bold text-[#4A3B32] bg-[#E6D7C3] px-2.5 py-1 rounded-lg inline-block">B. 幫助犯類罪名（刑法第30條第1項・單純幫助詐欺洗錢）</div>
+            <label class="flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#4A3B32] cursor-pointer block">
+              <input type="checkbox" id="crime-v9-30-1" class="rounded crime-checkbox">
+              <span>適用刑法第30條第1項幫助犯，勾選所犯之罪：</span>
+            </label>
+            <div class="pl-5 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm">
+              <label class="flex items-start gap-2 p-2 rounded-xl bg-[#FFFDF9] border border-[#E6DEC8] cursor-pointer">
+                <input type="checkbox" id="crime-v9-339" class="mt-0.5 rounded crime-checkbox">
+                <span>刑法第30條第1項、第339條第1項之幫助詐欺取財罪</span>
+              </label>
+              <label class="flex items-start gap-2 p-2 rounded-xl bg-[#FFFDF9] border border-[#E6DEC8] cursor-pointer">
+                <input type="checkbox" id="crime-v9-ml-old14" class="mt-0.5 rounded crime-checkbox">
+                <span>刑法第30條第1項、修正前洗錢防制法第14條第1項後段之幫助一般洗錢罪</span>
+              </label>
+              <label class="flex items-start gap-2 p-2 rounded-xl bg-[#FFFDF9] border border-[#E6DEC8] cursor-pointer">
+                <input type="checkbox" id="crime-v9-ml-new19" class="mt-0.5 rounded crime-checkbox">
+                <span>刑法第30條第1項、洗錢防制法第19條第1項後段之幫助一般洗錢罪</span>
+              </label>
+              <label class="flex items-start gap-2 p-2 rounded-xl bg-[#FFFDF9] border border-[#E6DEC8] cursor-pointer">
+                <input type="checkbox" id="crime-v9-339-att" class="mt-0.5 rounded crime-checkbox">
+                <span>刑法第30條第1項、第339條第3項、第1項之幫助詐欺取財未遂罪</span>
+              </label>
+              <label class="flex items-start gap-2 p-2 rounded-xl bg-[#FFFDF9] border border-[#E6DEC8] cursor-pointer">
+                <input type="checkbox" id="crime-v9-ml-old14-att" class="mt-0.5 rounded crime-checkbox">
+                <span>刑法第30條第1項、修正前洗錢防制法第14條第2項、第1項後段之幫助一般洗錢未遂罪</span>
+              </label>
+              <label class="flex items-start gap-2 p-2 rounded-xl bg-[#FFFDF9] border border-[#E6DEC8] cursor-pointer">
+                <input type="checkbox" id="crime-v9-ml-new19-att" class="mt-0.5 rounded crime-checkbox">
+                <span>刑法第30條第1項、洗錢防制法第19條第2項、第1項後段之幫助一般洗錢未遂罪</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- 共同正犯、吸收關係、想像競合 -->
+          <div class="space-y-3 pt-3 border-t border-[#E6DEC8]">
+            <!-- 共同正犯 -->
+            <div id="v11-coprincipal-box" class="p-3.5 rounded-xl cream-subcard border space-y-2">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <label class="flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#4A3B32] cursor-pointer">
+                  <input type="checkbox" id="chk-coprincipal" checked class="rounded">
+                  <span>共同正犯論述（刑法第28條）</span>
+                </label>
+                <div class="flex items-center gap-3 text-xs">
+                  <label class="inline-flex items-center gap-1 cursor-pointer">
+                    <input type="radio" name="coprincipal-style" value="detailed" checked>
+                    <span>完整論述版</span>
+                  </label>
+                  <label class="inline-flex items-center gap-1 cursor-pointer">
+                    <input type="radio" name="coprincipal-style" value="concise">
+                    <span>精簡版</span>
+                  </label>
+                </div>
+              </div>
+              <input type="text" id="val-coprincipal-members" value="所屬詐欺集團成員" class="hidden">
+            </div>
+
+            <!-- 偽造印文署押及低度行為吸收關係 -->
+            <div class="p-3.5 rounded-xl cream-subcard border space-y-1.5">
+              <label class="flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#4A3B32] cursor-pointer">
+                <input type="checkbox" id="chk-forgery-absorb" checked class="rounded">
+                <span>階段行為與高度行為吸收不另論罪（依所勾選之私文書／特種文書自動對應）</span>
+              </label>
+            </div>
+
+            <!-- 想像競合 -->
+            <div class="p-3.5 rounded-xl cream-subcard border space-y-2">
+              <label class="flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#4A3B32] cursor-pointer">
+                <input type="checkbox" id="chk-imag-concur" checked class="rounded">
+                <span>想像競合犯結論（自動帶入上方已勾選之罪名簡稱）</span>
+              </label>
+              <div class="pl-6 space-y-2 text-xs sm:text-sm">
+                <label class="flex items-center gap-2 cursor-pointer text-xs text-[#7D685A]">
+                  <input type="checkbox" id="chk-imag-diff-victims" class="rounded">
+                  <span>加註侵害數財產法益（「並侵害不同之財產法益」）</span>
+                </label>
+                <div class="flex flex-wrap items-center gap-2">
+                  <span>應依刑法第55條之規定，從一重之</span>
+                  <input type="text" id="val-imag-heavy-crime" value="刑法第339條之4第1項第2款三人以上共同詐欺取財" class="px-2.5 py-1 rounded-lg border cream-input font-medium flex-1 min-w-[240px]">
+                  <span>罪處斷。</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 數罪併罰 & 事實擴張 -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div class="p-3 rounded-xl border border-[#E6DEC8] bg-[#FFFDF9] space-y-2">
+                <div class="text-xs font-bold text-[#5C493E]">數罪併罰（數次犯行時勾選）</div>
+                <label class="flex items-center gap-2 text-xs cursor-pointer">
+                  <input type="radio" name="multi-crime-mode" id="rad-multi-none" value="none" checked>
+                  <span>無（單一犯行）</span>
+                </label>
+                <label class="flex items-center gap-2 text-xs cursor-pointer">
+                  <input type="radio" name="multi-crime-mode" id="rad-multi-yes" value="yes">
+                  <span>分論併罰：</span>
+                </label>
+                <input type="text" id="val-multi-crimes" value="上開各次犯行" class="w-full px-2 py-1 text-xs rounded-lg border cream-input">
+              </div>
+
+              <div class="p-3 rounded-xl border border-[#E6DEC8] bg-[#FFFDF9] space-y-2">
+                <div class="text-xs font-bold text-[#5C493E]">擴張審理（移送併辦）</div>
+                <label class="flex items-start gap-2 text-xs cursor-pointer">
+                  <input type="checkbox" id="chk-fact-expand" class="mt-0.5 rounded">
+                  <span>檢察官移送併辦部分，與本案經起訴部分有想像競合犯之裁判上一罪關係，應由本院擴張審理之。</span>
+                </label>
+                <div class="pl-5 flex flex-wrap gap-3 text-xs text-[#7D685A]">
+                  <label class="inline-flex items-center gap-1 cursor-pointer"><input type="checkbox" id="chk-expand-indict" checked class="rounded"> 起訴效力所及</label>
+                  <label class="inline-flex items-center gap-1 cursor-pointer"><input type="checkbox" id="chk-expand-summary" class="rounded"> 聲請簡易判決處刑效力所及</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 3: 新舊法比較（完全由使用者自行填寫，預設留空） -->
+        <div id="tab-lawcompare" class="form-panel space-y-3 pt-4 border-t-2 border-[#E6DEC8]">
+          <div class="flex items-center justify-between border-b border-[#E6DEC8] pb-2">
+            <h2 class="text-base font-bold text-[#4A3B32] flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-[#8C6239] text-[#FFFDF9] text-xs flex items-center justify-center">3</span>
+              新舊法比較（由使用者自行填寫）
+            </h2>
+            <span class="text-xs text-[#7D685A]">留空則自動省略此段，並自動調整論罪科刑款次編號</span>
+          </div>
+
+          <div class="p-3.5 rounded-xl cream-subcard border space-y-2">
+            <label class="block text-xs font-semibold text-[#5C493E]">新舊法比較內文（若本案無庸比較新舊法，保持空白即可；若有填寫，將自動排入「三、論罪科刑：㈠新舊法比較：」）：</label>
+            <textarea id="input-custom-law-compare" rows="4" placeholder="請在此自行填寫或貼入新舊法比較內容（留空則不顯示新舊法比較段落）..." class="w-full px-3 py-2 text-xs sm:text-sm rounded-xl border cream-input"></textarea>
+          </div>
+
+          <!-- Hidden legacy elements for static check compatibility -->
+          <div id="v11-lawcompare-box" class="hidden">
+            <input type="checkbox" id="chk-enable-ml-compare">
+            <input type="checkbox" id="chk-enable-fpa-compare">
+            <input type="checkbox" id="chk-law-compare-summary">
+            <input type="text" id="val-law-compare-summary" value="">
+          </div>
+          <div id="v9-lawcompare-box" class="hidden">
+            <input type="checkbox" id="chk-v9-row1"><input type="checkbox" id="chk-v9-row2"><input type="checkbox" id="chk-v9-row3">
+            <input type="checkbox" id="chk-v9-row4"><input type="checkbox" id="chk-v9-row5"><input type="checkbox" id="chk-v9-row6">
+          </div>
+        </div>
+
+        <!-- SECTION 4: 加重減輕與量刑審酌 -->
+        <div id="tab-sentencing" class="form-panel space-y-5 pt-4 border-t-2 border-[#E6DEC8]">
+          <div class="flex items-center justify-between border-b border-[#E6DEC8] pb-2">
+            <h2 class="text-base font-bold text-[#4A3B32] flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-[#8C6239] text-[#FFFDF9] text-xs flex items-center justify-center">4</span>
+              刑之加重、減輕事由與量刑審酌
+            </h2>
+          </div>
+
+          <!-- 一、刑之加重（累犯等） -->
+          <div class="p-3.5 rounded-xl border border-[#E6DEC8] bg-[#FFFDF9] space-y-2.5">
+            <div class="text-xs font-bold text-[#5C493E] uppercase tracking-wider">一、刑之加重事由（累犯／分則加重）</div>
+
+            <div class="p-3 rounded-xl cream-subcard border space-y-2">
+              <label class="flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#4A3B32] cursor-pointer">
+                <input type="checkbox" id="enh-recidivist" class="rounded">
+                <span>構成刑法第47條第1項累犯</span>
+              </label>
+              <div class="pl-6 space-y-2 text-xs">
+                <div>
+                  <span class="text-[#7D685A]">前案紀錄與執行完畢情形（可直接修改）：</span>
+                  <textarea id="val-recid-detail" rows="2" class="w-full mt-1 px-2.5 py-1.5 rounded-lg border cream-input">被告前因OO案件，經法院判處有期徒刑O月確定，於民國O年O月O日執行完畢等情，有法院前案紀錄表在卷可參</textarea>
+                </div>
+                <div class="space-y-1">
+                  <div class="font-medium text-[#5C493E]">是否依累犯規定加重最低本刑：</div>
+                  <label class="flex items-start gap-1.5 cursor-pointer">
+                    <input type="radio" name="recid-enhance-opt" value="yes" checked class="mt-0.5">
+                    <span><strong>加重其刑：</strong>衡以被告前曾經因案件經判刑確定並執行完畢，卻未能戒慎其行，猶於前開罪刑執行完畢後之5年內，又再度為本案犯行，顯見其刑罰反應力顯然薄弱，是認依刑法第47條第1項之規定加重被告之最低本刑，尚不生行為人所受的刑罰超過其所應負擔罪責的情形，乃依前揭規定加重其刑。</span>
+                  </label>
+                  <label class="flex items-start gap-1.5 cursor-pointer">
+                    <input type="radio" name="recid-enhance-opt" value="no" class="mt-0.5">
+                    <span><strong>不予加重（納為素行審酌）：</strong>審酌被告前案之罪名及執行情形、本案之犯罪情節等情，不認為被告有何等特殊之不法與罪責非難必要，相關前科紀錄於量刑審酌中之素行部分予以確實審酌即為已足，不另加重其刑。</span>
+                  </label>
+                </div>
+                <div class="hidden">
+                  <input type="text" id="val-recid-date" value="O年O月O日">
+                  <input type="text" id="val-recid-case" value="O年度O字第O號">
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-4 text-xs sm:text-sm">
+              <label class="inline-flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" id="enh-fpa44" class="rounded">
+                <span>詐欺犯罪危害防制條例第44條第1項（加重其刑二分之一）</span>
+              </label>
+              <div class="flex items-center gap-2 flex-1 min-w-[220px]">
+                <input type="checkbox" id="enh-other" class="rounded">
+                <span>其他加重事由：</span>
+                <input type="text" id="val-enh-other" placeholder="選填..." class="flex-1 px-2 py-1 rounded-lg border cream-input text-xs">
+              </div>
+            </div>
+          </div>
+
+          <!-- 二、刑之減輕事由 -->
+          <div class="p-3.5 rounded-xl border border-[#E6DEC8] bg-[#FFFDF9] space-y-3">
+            <div class="text-xs font-bold text-[#5C493E] uppercase tracking-wider">二、刑之減輕事由</div>
+
+            <label class="flex items-start gap-2 text-xs sm:text-sm bg-[#FAF3E8] p-2.5 rounded-xl border border-[#DFC9B0] cursor-pointer">
+              <input type="checkbox" id="chk-mit-imag-merge-theory" checked class="mt-0.5 rounded">
+              <span><strong>包含「想像競合犯輕重罪合併評價」說明段落</strong>（於適用減刑時一併說明輕罪減刑事由併入量刑衡酌）</span>
+            </label>
+
+            <div class="space-y-2 text-xs sm:text-sm">
+              <div class="font-semibold text-[#4A3B32]">詐欺犯罪危害防制條例第47條新舊法比較及減刑認定：</div>
+
+              <label class="flex items-start gap-2 p-2.5 rounded-xl cream-subcard border cursor-pointer">
+                <input type="radio" name="fraud-ml-mit-mode" value="confess_no_proceeds" checked class="mt-1">
+                <div>
+                  <div class="font-semibold text-[#4A3B32]">洗錢防制法第23條第3項：偵查、審理均自白＋無犯罪所得 ➔ 適用減輕其刑</div>
+                  <div class="text-xs text-[#7D685A] mt-0.5">被告於偵查及本院審理中均自白犯行，且供稱未領到報酬，查無獲有任何報酬或利益，自無繳交犯罪所得之問題，爰依修正前詐欺犯罪危害防制條例第47條前段減輕其刑；想像競合輕罪符合洗錢防制法第23條第3項前段部分，由本院依刑法第57條量刑時一併衡酌。</div>
+                </div>
+              </label>
+
+              <label class="flex items-start gap-2 p-2.5 rounded-xl cream-subcard border cursor-pointer">
+                <input type="radio" name="fraud-ml-mit-mode" value="confess_paid_proceeds" class="mt-1">
+                <div class="flex-1">
+                  <div class="font-semibold text-[#4A3B32]">態樣 2：偵審均自白 ＋ 已自動繳交犯罪所得 ➔ 適用減輕其刑</div>
+                  <div class="flex flex-wrap items-center gap-2 mt-1 text-xs">
+                    <span>被告本案犯罪所得金額為新臺幣：</span>
+                    <input type="text" id="val-mit-paid-amt" value="O元" class="w-28 px-2 py-0.5 rounded-lg border cream-input">
+                    <span>，業已於本院自動繳交上開犯罪所得，符合減輕其刑之適用。</span>
+                  </div>
+                </div>
+              </label>
+
+              <label class="flex items-start gap-2 p-2.5 rounded-xl cream-subcard border cursor-pointer">
+                <input type="radio" name="fraud-ml-mit-mode" value="confess_unpaid_proceeds" class="mt-1">
+                <div class="flex-1">
+                  <div class="font-semibold text-[#8C4A39]">態樣 3：偵審均自白 ＋ 有犯罪所得惟未繳交 ➔ 無減刑規定之適用</div>
+                  <div class="flex flex-wrap items-center gap-2 mt-1 text-xs">
+                    <span>被告自承獲取報酬新臺幣：</span>
+                    <input type="text" id="val-mit-unpaid-amt" value="O元" class="w-28 px-2 py-0.5 rounded-lg border cream-input">
+                    <span>，而其並未繳交犯罪所得，無洗錢防制法第23條第3項前段、修正前詐欺犯罪危害防制條例第47條前段減輕其刑之適用。</span>
+                  </div>
+                </div>
+              </label>
+
+              <label class="flex items-start gap-2 p-2.5 rounded-xl cream-subcard border cursor-pointer">
+                <input type="radio" name="fraud-ml-mit-mode" value="no_confess_in_investigation" class="mt-1">
+                <div>
+                  <div class="font-semibold text-[#8C4A39]">洗錢防制法第23條第3項：偵查否認、審理自白 ➔ 不適用減刑</div>
+                  <div class="text-xs text-[#7D685A] mt-0.5">被告雖於本院審理時自白犯行，然其於偵查中未自白犯行，而無洗錢防制法第23條第3項前段、修正前詐欺犯罪危害防制條例第47條前段減輕其刑之適用。</div>
+                </div>
+              </label>
+
+              <label class="flex items-start gap-2 p-2.5 rounded-xl cream-subcard border cursor-pointer">
+                <input type="radio" name="fraud-ml-mit-mode" value="omit" class="mt-1">
+                <div>
+                  <div class="font-semibold text-[#5C493E]">不列出上述詐防第47條／洗錢第23條段落（僅使用下方其他減輕事由）</div>
+                </div>
+              </label>
+              <div class="mt-4 pt-3 border-t border-[#E6DEC8] space-y-2">
+                <div class="font-semibold text-[#4A3B32]">單獨適用洗錢防制法第23條第3項規定：</div>
+                <label class="flex items-start gap-2 p-2.5 rounded-xl cream-subcard border cursor-pointer"><input type="radio" name="ml23-mit-mode" value="deny" class="mt-1"><span><strong>偵查否認、審理自白：</strong>不適用減刑</span></label>
+                <label class="flex items-start gap-2 p-2.5 rounded-xl cream-subcard border cursor-pointer"><input type="radio" name="ml23-mit-mode" value="confess" class="mt-1"><span><strong>偵查、審理均自白：</strong>適用減輕其刑</span></label>
+                <label class="flex items-start gap-2 p-2 rounded-xl border cursor-pointer"><input type="radio" name="ml23-mit-mode" value="omit" checked class="mt-1"><span>不另列本項段落</span></label>
+              </div>
+            </div>
+
+            <!-- 其他減輕事由勾選 -->
+            <div class="pt-2 border-t border-[#E6DEC8] grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm">
+              <label class="flex items-center gap-2 p-2 rounded-xl cream-subcard border cursor-pointer">
+                <input type="checkbox" id="mit-attempt-25" class="rounded">
+                <span>刑法第25條第2項（未遂犯按既遂犯之刑減輕之）</span>
+              </label>
+              <label class="flex items-center gap-2 p-2 rounded-xl bg-[#EFE6D8] border border-[#D5C2A8] font-medium text-[#4A3B32] cursor-pointer">
+                <input type="checkbox" id="mit-accessory-30" class="rounded">
+                <span>刑法第30條第2項（幫助犯按正犯之刑減輕之）</span>
+              </label>
+              <label class="flex items-center gap-2 p-2 rounded-xl cream-subcard border cursor-pointer">
+                <input type="checkbox" id="mit-org-8" class="rounded">
+                <span>組織犯罪防制條例第8條第1項後段（自白減輕）</span>
+              </label>
+              <label class="flex items-center gap-2 p-2 rounded-xl cream-subcard border cursor-pointer">
+                <input type="checkbox" id="mit-surrender-62" class="rounded">
+                <span>刑法第62條第1項前段（自首減輕其刑）</span>
+              </label>
+            </div>
+
+            <!-- Hidden legacy IDs for static checker -->
+            <div class="hidden">
+              <input type="checkbox" id="mit-ml-old16"><input type="checkbox" id="mit-ml-old16-sentonly">
+              <input type="checkbox" id="mit-ml-new23"><input type="checkbox" id="mit-ml-new23-sentonly">
+              <input type="checkbox" id="mit-org-8-sentonly">
+              <input type="checkbox" id="mit-fpa-old47"><input type="checkbox" id="mit-fpa-old47-court">
+              <input type="checkbox" id="mit-fpa-new47"><input type="checkbox" id="mit-fpa-new47-deemed">
+              <input type="text" id="val-surrender-reason" value="">
+              <input type="checkbox" id="mit-art59"><input type="text" id="val-art59-reason" value="">
+              <input type="checkbox" id="chk-art70-71" checked>
+            </div>
+          </div>
+
+          <!-- 三、量刑審酌 -->
+          <div class="p-3.5 rounded-xl border border-[#DFC9B0] space-y-3 bg-[#FAF3E8]">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <div class="text-xs font-bold text-[#4A3B32]">三、量刑審酌（刑法第57條）</div>
+              <div class="flex items-center gap-3 text-xs">
+                <label class="inline-flex items-center gap-1 cursor-pointer">
+                  <input type="radio" name="sentencing-style" value="driver_full" checked>
+                  <span>車手正犯完整版</span>
+                </label>
+                <label class="inline-flex items-center gap-1 cursor-pointer">
+                  <input type="radio" name="sentencing-style" value="accessory_full">
+                  <span>提供帳戶幫助犯版</span>
+                </label>
+                <label class="inline-flex items-center gap-1 cursor-pointer">
+                  <input type="radio" name="sentencing-style" value="short">
+                  <span>簡要記載版</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-xs">
+              <div>
+                <label class="block font-medium text-[#5C493E] mb-0.5">被告年齡階段稱謂</label>
+                <input type="text" id="val-sent-age" value="正值壯年" placeholder="例如：正值壯年／正值青年" class="w-full px-2.5 py-1 rounded-lg border cream-input">
+              </div>
+              <div class="sm:col-span-2">
+                <label class="block font-medium text-[#5C493E] mb-0.5">兼衡智識程度、職業、家庭及經濟狀況</label>
+                <input type="text" id="val-sentencing-factors" value="OO之智識程度、家庭及經濟狀況" class="w-full px-2.5 py-1 rounded-lg border cream-input">
+              </div>
+              <div class="sm:col-span-2">
+                <label class="block font-medium text-[#5C493E] mb-0.5">公訴人具體求刑回應（留空則不顯示求刑回應句）</label>
+                <input type="text" id="val-sent-prosecutor-ask" value="有期徒刑O年以上刑度" placeholder="例如：有期徒刑O年以上刑度（若無求刑可清空）" class="w-full px-2.5 py-1 rounded-lg border cream-input">
+              </div>
+              <div class="flex items-end pb-1">
+                <label class="inline-flex items-center gap-1.5 cursor-pointer font-medium text-[#5C493E]">
+                  <input type="checkbox" id="chk-sent-no-fine" checked class="rounded">
+                  <span>加註「尚無併科罰金之必要」</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- 緩刑 -->
+          <div class="p-3.5 rounded-xl border border-[#E6DEC8] bg-[#FFFDF9] space-y-2.5">
+            <div class="text-xs font-bold text-[#5C493E] uppercase tracking-wider">四、緩刑宣告（選填）</div>
+            <div class="flex flex-wrap gap-4 text-xs sm:text-sm">
+              <label class="inline-flex items-center gap-1.5 cursor-pointer">
+                <input type="radio" name="probation-mode" value="omit" checked>
+                <span>不記載緩刑段落（無緩刑）</span>
+              </label>
+              <label class="inline-flex items-center gap-1.5 cursor-pointer">
+                <input type="radio" name="probation-mode" value="deny">
+                <span>記載不予緩刑理由</span>
+              </label>
+              <label class="inline-flex items-center gap-1.5 cursor-pointer">
+                <input type="radio" name="probation-mode" value="grant">
+                <span>宣告緩刑（刑法第74條）</span>
+              </label>
+            </div>
+
+            <div id="probation-deny-box" class="pl-4 space-y-1.5 text-xs hidden">
+              <label class="flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" id="prob-deny-5yr" checked class="rounded">
+                <span>5年內曾因故意犯罪受有期徒刑以上刑之宣告確定。</span>
+              </label>
+              <input type="text" id="val-prob-deny-other" placeholder="其他不予緩刑理由..." class="w-full px-2 py-1 rounded-lg border cream-input">
+            </div>
+
+            <div id="probation-grant-box" class="pl-4 space-y-2 text-xs hidden">
+              <div class="flex flex-wrap items-center gap-2">
+                <span>依刑法第74條第1項</span>
+                <select id="val-prob-clause" class="px-2 py-1 rounded-lg border cream-input">
+                  <option value="第1款">第1款（未曾受有期徒刑以上宣告）</option>
+                  <option value="第2款">第2款（5年內未再受有期徒刑以上宣告）</option>
+                </select>
+                <span>規定，宣告緩刑</span>
+                <input type="text" id="val-prob-years" value="O" class="w-14 px-2 py-1 rounded-lg border cream-input text-center">
+                <span>年。</span>
+              </div>
+              <div class="flex flex-wrap items-center gap-3 text-[#5C493E]">
+                <span class="font-medium">緩刑理由：</span>
+                <label class="inline-flex items-center gap-1 cursor-pointer"><input type="checkbox" id="prob-reason-confess" checked class="rounded"> 被告已知坦承犯行</label>
+                <label class="inline-flex items-center gap-1 cursor-pointer"><input type="checkbox" id="prob-reason-settle" checked class="rounded"> 已與被害人達成和（調）解並依約賠償</label>
+              </div>
+              <label class="flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" id="prob-supervision" checked class="rounded">
+                <span>依刑法第93條第1項第2款規定緩刑期內付保護管束。</span>
+              </label>
+              <label class="flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" id="prob-cond-3" checked class="rounded">
+                <span>第74條第2項第3款（分期賠償）：</span>
+              </label>
+              <input type="text" id="val-prob-cond-3" value="應向告訴人支付共計O萬元，自O年O月O日起，於每月O日前匯款O元至告訴人指定之帳戶。" class="w-full px-2 py-1 rounded-lg border cream-input">
+              <label class="flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" id="prob-cond-4" class="rounded">
+                <span>第74條第2項第4款（向公庫支付）：</span>
+              </label>
+              <input type="text" id="val-prob-cond-4" value="應於本判決確定後O個月內向公庫支付新臺幣O萬元。" class="w-full px-2 py-1 rounded-lg border cream-input">
+              <label class="flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" id="prob-cond-5" class="rounded">
+                <span>第74條第2項第5款（義務勞務）：</span>
+              </label>
+              <input type="text" id="val-prob-cond-5" value="並應於本案判決確定後O年內，向執行檢察官指定之政府機關、政府機構、行政法人、社區或其他符合公益目的之機構或團體提供OO小時之義務勞務。" class="w-full px-2 py-1 rounded-lg border cream-input">
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 5: 沒收 -->
+        <div id="tab-confiscation" class="form-panel space-y-5 pt-4 border-t-2 border-[#E6DEC8]">
+          <div class="flex items-center justify-between border-b border-[#E6DEC8] pb-2">
+            <h2 class="text-base font-bold text-[#4A3B32] flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-[#8C6239] text-[#FFFDF9] text-xs flex items-center justify-center">5</span>
+              沒收
+            </h2>
+          </div>
+
+          <div class="p-3.5 rounded-xl border border-[#D8C8B5] bg-[#FAF3E8] space-y-3">
+            <div class="text-xs font-bold text-[#5C493E]">沒收撰寫類型</div>
+            <div class="space-y-3 text-xs sm:text-sm">
+              <label class="flex items-center gap-2 cursor-pointer font-semibold"><input type="radio" name="conf-role-mode" value="principal" checked> 一、正犯沒收</label>
+              <div class="border-t border-[#E6DEC8] pt-3 space-y-2">
+                <label class="flex items-center gap-2 cursor-pointer font-semibold"><input type="radio" name="conf-role-mode" value="accessory"> 二、幫助犯沒收</label>
+                <div class="pl-6 flex flex-wrap items-center gap-3">
+                  <span class="font-semibold">犯罪所得：</span>
+                  <label class="inline-flex items-center gap-1 cursor-pointer"><input type="radio" name="accessory-conf-income" value="none" checked> 未獲得報酬</label>
+                  <label class="inline-flex items-center gap-1 cursor-pointer"><input type="radio" name="accessory-conf-income" value="received"> 有獲得報酬</label>
+                </div>
+                <div class="pl-6 flex flex-wrap items-center gap-2">
+                  <span>犯罪所得：</span><input type="text" id="val-accessory-proceeds" value="O元" class="w-28 px-2 py-1 rounded-lg border cream-input">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-3.5 rounded-xl border border-[#E6DEC8] bg-[#FFFDF9] space-y-3">
+            <div class="text-xs font-bold text-[#5C493E] uppercase tracking-wider">一、正犯沒收</div>
+
+            <label class="flex items-start gap-2 text-xs sm:text-sm p-2.5 rounded-xl cream-subcard border cursor-pointer">
+              <input type="checkbox" id="chk-conf-ml25-intro" checked class="mt-0.5 rounded">
+              <div>
+                <div class="font-semibold text-[#4A3B32]">㈠洗錢防制法第25條第1項義務沒收與刑法第38條之2第2項過苛調節條款法理說明</div>
+              </div>
+            </label>
+
+            <div class="p-3 rounded-xl cream-subcard border space-y-2 text-xs sm:text-sm">
+              <label class="flex items-center gap-2 font-semibold text-[#4A3B32] cursor-pointer">
+                <input type="checkbox" id="chk-conf-proceeds-section" checked class="rounded">
+                <span>㈡共同正犯犯罪所得沒收原則（各人實際分得數）暨本案犯罪所得與洗錢財物不予沒收說明：</span>
+              </label>
+              <div class="pl-6 space-y-2">
+                <label class="flex items-start gap-2 cursor-pointer">
+                  <input type="radio" name="conf-proc-mode" value="no_proceeds" checked class="mt-1">
+                  <span><strong>1. 未領到報酬（無犯罪所得）：</strong>被告供稱本件未領到相關報酬等語，尚難認其有獲得犯罪所得；且洗錢財物均由詐騙集團上游拿取，對被告宣告沒收有過苛之虞，不予宣告沒收。</span>
+                </label>
+                <label class="flex items-start gap-2 cursor-pointer">
+                  <input type="radio" name="conf-proc-mode" value="unseized_proceeds" class="mt-1">
+                  <div class="flex-1">
+                    <span><strong>2. 獲得報酬惟未扣案（依刑法第38條之1第1項、第3項宣告沒收追徵）：</strong></span>
+                    <div class="flex flex-wrap items-center gap-2 mt-1 text-xs">
+                      <span>認定犯罪所得金額：新臺幣</span>
+                      <input type="text" id="val-conf-proc-unseized" value="O元" class="w-28 px-2 py-0.5 rounded-lg border cream-input">
+                      <span>（未據扣案，宣告沒收並追徵價額；洗錢財物過苛不予沒收）</span>
+                    </div>
+                  </div>
+                </label>
+                <label class="flex items-start gap-2 cursor-pointer">
+                  <input type="radio" name="conf-proc-mode" value="paid_proceeds" class="mt-1">
+                  <div class="flex-1">
+                    <span><strong>3. 獲得報酬且已於審理中自動繳交（依刑法第38條之1第1項前段宣告沒收）：</strong></span>
+                    <div class="flex flex-wrap items-center gap-2 mt-1 text-xs">
+                      <span>已自動繳交之犯罪所得金額：新臺幣</span>
+                      <input type="text" id="val-conf-proc-seized" value="O元" class="w-28 px-2 py-0.5 rounded-lg border cream-input">
+                      <span>（於被告罪刑項下宣告沒收；洗錢財物過苛不予沒收）</span>
+                    </div>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- ㈢ 詐欺犯罪危害防制條例第48條第1項供犯罪所用之物沒收 -->
+            <div class="p-3 rounded-xl cream-subcard border space-y-1.5 text-xs sm:text-sm">
+              <label class="flex items-center gap-2 font-semibold text-[#4A3B32] cursor-pointer">
+                <input type="checkbox" id="conf-fpa48" checked class="rounded">
+                <span>㈢ 扣案如附表所示之物沒收（詐欺犯罪危害防制條例第48條第1項，偽造私文書全紙沒收無庸再就署押印文沒收）</span>
+              </label>
+            </div>
+
+            <!-- ㈣ 未扣案偽造工作證不予沒收 -->
+            <div class="p-3 rounded-xl cream-subcard border space-y-1.5 text-xs sm:text-sm">
+              <label class="flex items-center gap-2 font-semibold text-[#4A3B32] cursor-pointer">
+                <input type="checkbox" id="conf-adj-fpa-lowcost" checked class="rounded">
+                <span>㈣ 未扣案之偽造工作證（或收據）依刑法第38條之2第2項不予宣告沒收或追徵</span>
+              </label>
+              <div class="pl-6 flex flex-wrap items-center gap-2 text-xs text-[#7D685A]">
+                <span>未扣案物品名稱：</span>
+                <input type="text" id="val-conf-adj-lowcost-item" value="偽造工作證" class="px-2 py-0.5 rounded-lg border cream-input w-48">
+                <span>（僅屬事先以電腦製作、列印，取得容易、替代性高，欠缺刑法上之重要性）</span>
+              </div>
+            </div>
+
+            <!-- Hidden legacy confiscation IDs for checker compatibility -->
+            <div class="hidden">
+              <input type="checkbox" id="conf-v9-no-proceeds"><input type="checkbox" id="conf-v9-no-ml-prop">
+              <input type="text" id="val-conf-fpa48-seized" value=""><input type="text" id="val-conf-fpa48-unseized" value="">
+              <input type="checkbox" id="conf-proceeds-38-1"><input type="checkbox" id="conf-collect-38-1-3">
+              <input type="checkbox" id="conf-collect-except"><input type="text" id="val-conf-collect-except-item" value="">
+              <input type="checkbox" id="conf-ml-25"><input type="text" id="val-conf-ml25-amt" value=""><input type="text" id="val-conf-ml25-acct" value="">
+              <input type="checkbox" id="conf-adj-proceeds"><input type="text" id="val-conf-adj-proceeds" value="">
+              <input type="checkbox" id="conf-adj-ml25"><input type="text" id="val-conf-adj-ml25-amt" value="">
+            </div>
+          </div>
+
+
+        </div>
+
+        <!-- SECTION 6: 附錄法條與附表 -->
+        <div id="tab-appendix" class="form-panel space-y-4 pt-4 border-t-2 border-[#E6DEC8]">
+          <div class="flex items-center justify-between border-b border-[#E6DEC8] pb-2">
+            <h2 class="text-base font-bold text-[#4A3B32] flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-[#8C6239] text-[#FFFDF9] text-xs flex items-center justify-center">6</span>
+              附錄本案論罪科刑法條與扣案物附表
+            </h2>
+            <span class="text-xs text-[#8C6239] font-medium">已依所犯罪名自動勾選，可手動增減</span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs sm:text-sm">
+            <label class="flex items-start gap-2 p-2.5 rounded-xl border border-[#E6DEC8] bg-[#FFFDF9] cursor-pointer">
+              <input type="checkbox" id="stat-criminal-339-4" checked class="mt-0.5 rounded">
+              <span>中華民國刑法第339條之4（加重詐欺罪）</span>
+            </label>
+            <label class="flex items-start gap-2 p-2.5 rounded-xl border border-[#E6DEC8] bg-[#FFFDF9] cursor-pointer">
+              <input type="checkbox" id="stat-criminal-216" checked class="mt-0.5 rounded">
+              <span>中華民國刑法第216條（行使偽造文書罪）</span>
+            </label>
+            <label class="flex items-start gap-2 p-2.5 rounded-xl border border-[#E6DEC8] bg-[#FFFDF9] cursor-pointer">
+              <input type="checkbox" id="stat-criminal-212" checked class="mt-0.5 rounded">
+              <span>中華民國刑法第212條（偽造特種文書罪）</span>
+            </label>
+            <label class="flex items-start gap-2 p-2.5 rounded-xl border border-[#E6DEC8] bg-[#FFFDF9] cursor-pointer">
+              <input type="checkbox" id="stat-criminal-210" checked class="mt-0.5 rounded">
+              <span>中華民國刑法第210條（偽造私文書罪）</span>
+            </label>
+            <label class="flex items-start gap-2 p-2.5 rounded-xl border border-[#E6DEC8] bg-[#FFFDF9] cursor-pointer">
+              <input type="checkbox" id="stat-ml-new19" checked class="mt-0.5 rounded">
+              <span>洗錢防制法第19條（一般洗錢罪）</span>
+            </label>
+            <label class="flex items-start gap-2 p-2.5 rounded-xl border border-[#E6DEC8] bg-[#FFFDF9] cursor-pointer">
+              <input type="checkbox" id="stat-ml-old14" class="mt-0.5 rounded">
+              <span>修正前洗錢防制法第14條第1項、第2項</span>
+            </label>
+            <label class="flex items-start gap-2 p-2.5 rounded-xl border border-[#D5C2A8] bg-[#F5EFE6] cursor-pointer">
+              <input type="checkbox" id="stat-criminal-30" class="mt-0.5 rounded">
+              <span>中華民國刑法第30條第1項（幫助犯）</span>
+            </label>
+            <label class="flex items-start gap-2 p-2.5 rounded-xl border border-[#E6DEC8] bg-[#FFFDF9] cursor-pointer">
+              <input type="checkbox" id="stat-criminal-339" class="mt-0.5 rounded">
+              <span>中華民國刑法第339條（普通詐欺罪）</span>
+            </label>
+            <label class="flex items-start gap-2 p-2.5 rounded-xl border border-[#E6DEC8] bg-[#FFFDF9] cursor-pointer">
+              <input type="checkbox" id="stat-org-3" class="mt-0.5 rounded">
+              <span>組織犯罪防制條例第3條第1項</span>
+            </label>
+            <label class="flex items-start gap-2 p-2.5 rounded-xl border border-[#E6DEC8] bg-[#FFFDF9] cursor-pointer">
+              <input type="checkbox" id="stat-org-4" class="mt-0.5 rounded">
+              <span>組織犯罪防制條例第4條第1至4項</span>
+            </label>
+            <label class="flex items-start gap-2 p-2.5 rounded-xl border border-[#E6DEC8] bg-[#FFFDF9] cursor-pointer">
+              <input type="checkbox" id="stat-fpa-44" class="mt-0.5 rounded">
+              <span>詐欺犯罪危害防制條例第44條第1項</span>
+            </label>
+          </div>
+
+          <div class="p-3 rounded-xl cream-subcard border space-y-1.5 text-xs">
+            <label class="flex items-center gap-2 font-semibold text-[#5C493E] cursor-pointer">
+              <input type="checkbox" id="chk-include-schedule" class="rounded">
+              <span>於判決書末附上「附表（扣案物品名稱、數量及所在卷頁）」：</span>
+            </label>
+            <textarea id="val-schedule-text" rows="2" class="w-full px-2.5 py-1.5 rounded-lg border cream-input">編號1：偽造之「OO股份有限公司收據」1張（上有偽造之「OO股份有限公司」公司印文1枚、「OOO」印文1枚）（O號偵卷第O頁）</textarea>
+          </div>
+          <input type="text" id="input-appeal-text" value="如不服本判決應於收受本判決後20日內向本院提出上訴書狀，上訴書狀應敘述具體理由。上訴書狀未敘述上訴理由者，應於上訴期間屆滿後20日內補提理由書狀於本院(均須按他造當事人之人數附繕本 )「切勿逕送上級法院」。" class="hidden">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Right Column: Pure Judgment Text Output (5 cols on lg) -->
+    <section class="lg:col-span-5 cream-card rounded-2xl border overflow-hidden flex flex-col print-full lg:sticky lg:top-20">
+      <!-- Header Bar -->
+      <div class="bg-[#EBE1D4] text-[#4A3B32] border-b border-[#DCD0C0] px-4 py-2.5 flex flex-wrap items-center justify-between gap-2 no-print">
+        <div class="flex items-center gap-2">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Logo" class="w-6 h-6 rounded-md object-contain bg-[#FFFDF9] border border-[#D5C2A8]">
+          <span class="text-xs sm:text-sm font-bold tracking-wide text-[#4A3B32]">判決內文即時預覽</span>
+        </div>
+      </div>
+
+      <!-- Quick Copy Bar for Individual Sections -->
+      <div class="bg-[#F5EFE6] border-b border-[#E6DEC8] px-3 py-1.5 flex items-center gap-1.5 overflow-x-auto text-xs no-print">
+        <span class="text-[#7D685A] font-medium whitespace-nowrap">快速複製區塊：</span>
+        <button type="button" data-copy-sec="holding" class="sec-copy-btn px-2 py-0.5 bg-[#FFFDF9] hover:bg-[#EFE6D8] border border-[#D8CBB8] rounded-lg text-[#4A3B32] whitespace-nowrap transition">主文</button>
+        <button type="button" data-copy-sec="crimes" class="sec-copy-btn px-2 py-0.5 bg-[#FFFDF9] hover:bg-[#EFE6D8] border border-[#D8CBB8] rounded-lg text-[#4A3B32] whitespace-nowrap transition">所犯罪名與競合</button>
+        <button type="button" data-copy-sec="lawcompare" class="sec-copy-btn px-2 py-0.5 bg-[#FFFDF9] hover:bg-[#EFE6D8] border border-[#D8CBB8] rounded-lg text-[#4A3B32] whitespace-nowrap transition">修法比較</button>
+        <button type="button" data-copy-sec="sentencing" class="sec-copy-btn px-2 py-0.5 bg-[#FFFDF9] hover:bg-[#EFE6D8] border border-[#D8CBB8] rounded-lg text-[#4A3B32] whitespace-nowrap transition">加重減輕與量刑</button>
+        <button type="button" data-copy-sec="confiscation" class="sec-copy-btn px-2 py-0.5 bg-[#FFFDF9] hover:bg-[#EFE6D8] border border-[#D8CBB8] rounded-lg text-[#4A3B32] whitespace-nowrap transition">沒收與緩刑</button>
+        <button type="button" data-copy-sec="appendix" class="sec-copy-btn px-2 py-0.5 bg-[#FFFDF9] hover:bg-[#EFE6D8] border border-[#D8CBB8] rounded-lg text-[#4A3B32] whitespace-nowrap transition">附錄法條</button>
+      </div>
+
+      <!-- Output Preview Container -->
+      <div class="p-5 sm:p-6 max-h-[calc(100vh-185px)] overflow-y-auto custom-scroll serif-doc bg-[#FFFDF9]" id="preview-container">
+        <!-- Populated dynamically by JS -->
+      </div>
+
+      <!-- Hidden legacy buttons preserved for backward check compatibility -->
+      <div class="hidden" aria-hidden="true">
+        <button type="button" id="tpl-v11-btn">V11 正犯類（簡式審判）</button>
+        <button type="button" id="tpl-v9-btn">V9 單純幫助詐欺洗錢類（簡易判決）</button>
+        <button type="button" data-mode="table-clean" class="mode-btn">簡化表格（僅已勾選）</button>
+        <button type="button" data-mode="prose" class="mode-btn">判決內文段落（純文字）</button>
+        <button type="button" data-mode="table-check" class="mode-btn">完整檢核表（含 ■/□）</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-5 right-5 z-50 hidden bg-[#4A3B32] text-[#FFFDF9] px-4 py-2.5 rounded-xl shadow-lg border border-[#7D685A] text-sm flex items-center gap-2">
+    <span class="text-[#E6C79C]">✔</span>
+    <span id="toast-msg">已複製到剪貼簿</span>
+  </div>
+
+  <script>
+    const PAREN_NUMS = ['㈠', '㈡', '㈢', '㈣', '㈤', '㈥', '㈦', '㈧', '㈨', '㈩'];
+
+    const STATUTE_TEXTS = {
+      'stat-criminal-339-4': '中華民國刑法第339條之4\n犯第339條詐欺罪而有下列情形之一者，處1年以上7年以下有期徒刑，得併科1百萬元以下罰金：\n一、冒用政府機關或公務員名義犯之。\n二、三人以上共同犯之。\n三、以廣播電視、電子通訊、網際網路或其他媒體等傳播工具，對公眾散布而犯之。\n四、以電腦合成或其他科技方法製作關於他人不實影像、聲音或電磁紀錄之方法犯之。\n前項之未遂犯罰之。',
+      'stat-criminal-216': '中華民國刑法第216條\n（行使偽造變造或登載不實之文書罪）\n行使第210條至第215條之文書者，依偽造、變造文書或登載不實事項或使登載不實事項之規定處斷。',
+      'stat-criminal-212': '中華民國刑法第212條\n偽造、變造護照、旅券、免許證、特許證及關於品行、能力、服務或其他相類之證書、介紹書，足以生損害於公眾或他人者，處1年以下有期徒刑、拘役或9千元以下罰金。',
+      'stat-criminal-210': '中華民國刑法第210條\n（偽造變造私文書罪）\n偽造、變造私文書，足以生損害於公眾或他人者，處5年以下有期徒刑。',
+      'stat-ml-new19': '洗錢防制法第19條\n有第2條各款所列洗錢行為者，處3年以上10年以下有期徒刑，併科新臺幣1億元以下罰金。其洗錢之財物或財產上利益未達新臺幣一億元者，處6月以上5年以下有期徒刑，併科新臺幣5千萬元以下罰金。\n前項之未遂犯罰之。',
+      'stat-ml-old14': '修正前洗錢防制法第14條第1項、第2項\n有第二條各款所列洗錢行為者，處7年以下有期徒刑，併科新臺幣5百萬元以下罰金。\n前項之未遂犯罰之。',
+      'stat-criminal-30': '中華民國刑法第30條第1項\n幫助他人實行犯罪行為者，為幫助犯。雖他人不知幫助之情者，亦同。',
+      'stat-criminal-339': '中華民國刑法第339條\n意圖為自己或第三人不法之所有，以詐術使人將本人或第三人之物交付者，處5年以下有期徒刑、拘役或科或併科50萬元以下罰金。\n以前項方法得財產上不法之利益或使第三人得之者，亦同。\n前二項之未遂犯罰之。',
+      'stat-org-3': '組織犯罪防制條例第3條第1項\n發起、主持、操縱或指揮犯罪組織者，處3年以上10年以下有期徒刑，得併科新臺幣1億元以下罰金；參與者，處6月以上5年以下有期徒刑，得併科新臺幣1千萬元以下罰金。但參與情節輕微者，得減輕或免除其刑。',
+      'stat-org-4': '組織犯罪防制條例第4條第1至4項\n招募他人加入犯罪組織者，處6月以上5年以下有期徒刑，得併科新臺幣1千萬元以下罰金。\n意圖使他人出中華民國領域外實行犯罪，而犯前項之罪者，處1年以上7年以下有期徒刑，得併科新臺幣2千萬元以下罰金。\n成年人招募未滿十八歲之人加入犯罪組織，而犯前二項之罪者，加重其刑至二分之一。\n以強暴、脅迫或其他非法之方法，使他人加入犯罪組織或妨害其成員脫離者，處1年以上7年以下有期徒刑，得併科新臺幣2千萬元以下罰金。',
+      'stat-fpa-44': '詐欺犯罪危害防制條例第44條第1項\n犯刑法第339條之4第1項第2款之罪，有下列情形之一者，依該條項規定加重其刑二分之一：\n一、並犯同條項第1款、第3款或第4款之一。\n二、在中華民國領域外以供詐欺犯罪所用之設備，對於中華民國領域內之人犯之。\n三、教唆、幫助或利用未滿十八歲、滿八十歲或非本國籍人士犯罪或與之共同實施犯罪。'
+    };
+
+    function el(id) {
+      return document.getElementById(id);
+    }
+
+    function isChecked(id) {
+      const node = el(id);
+      return node ? node.checked : false;
+    }
+
+    function val(id) {
+      const node = el(id);
+      return node ? node.value.trim() : '';
+    }
+
+    function radioVal(name) {
+      const node = document.querySelector(`input[name="${name}"]:checked`);
+      return node ? node.value : '';
+    }
+
+    function showToast(msg) {
+      const t = el('toast');
+      el('toast-msg').textContent = msg;
+      t.classList.remove('hidden');
+      clearTimeout(window._toastTimer);
+      window._toastTimer = setTimeout(() => {
+        t.classList.add('hidden');
+      }, 2400);
+    }
+
+    function joinWithAnd(items) {
+      if (!items.length) return '';
+      if (items.length === 1) return items[0];
+      return items.slice(0, -1).join('、') + '及' + items[items.length - 1];
+    }
+
+    function formatSubclauses(ids, labels) {
+      const selected = ids.map((id, idx) => isChecked(id) ? labels[idx] : null).filter(Boolean);
+      return selected.length ? selected.join('、') : '第2款';
+    }
+
+    function syncAppendixStatutes() {
+      if (!isChecked('auto-sync-statutes')) return;
+      el('stat-ml-old14').checked = isChecked('crime-ml-old14') || isChecked('crime-v9-ml-old14') || isChecked('crime-v9-ml-old14-att');
+      el('stat-ml-new19').checked = isChecked('crime-ml-new19') || isChecked('crime-v9-ml-new19') || isChecked('crime-v9-ml-new19-att');
+      el('stat-criminal-30').checked = isChecked('crime-v9-30-1') || isChecked('crime-v9-339') || isChecked('crime-v9-ml-old14') || isChecked('crime-v9-ml-new19') || isChecked('crime-v9-339-att') || isChecked('crime-v9-ml-old14-att') || isChecked('crime-v9-ml-new19-att');
+      el('stat-org-3').checked = isChecked('crime-org-join');
+      el('stat-org-4').checked = isChecked('crime-org-recruit') || isChecked('crime-org-force');
+      el('stat-criminal-339').checked = isChecked('crime-fraud-339') || isChecked('crime-fraud-339-att') || isChecked('crime-v9-339') || isChecked('crime-v9-339-att');
+      el('stat-criminal-339-4').checked = isChecked('crime-fraud-339-4') || isChecked('crime-fraud-339-4-att');
+      el('stat-fpa-44').checked = isChecked('crime-fpa-44') || isChecked('chk-holding-3');
+      el('stat-criminal-210').checked = isChecked('crime-forgery-210');
+      el('stat-criminal-212').checked = isChecked('crime-forgery-212');
+      el('stat-criminal-216').checked = isChecked('crime-forgery-210') || isChecked('crime-forgery-212');
+    }
+
+
+    function toFinancialChineseNumber(value) {
+      const d=['零','壹','貳','參','肆','伍','陸','柒','捌','玖']; const n=parseInt(value,10);
+      if(!Number.isFinite(n)||n<0)return value; if(n<10)return d[n]; if(n<20)return '拾'+(n%10?d[n%10]:'');
+      if(n<100)return d[Math.floor(n/10)]+'拾'+(n%10?d[n%10]:'');
+      if(n<1000){let r=d[Math.floor(n/100)]+'佰',x=n%100;if(!x)return r;if(x<10)return r+'零'+d[x];return r+(x<20?'拾'+(x%10?d[x%10]:''):d[Math.floor(x/10)]+'拾'+(x%10?d[x%10]:''));} return String(n);
+    }
+    function uppercaseHoldingCondition(text){return String(text||'').replace(/(確定後)(\d+)(年內|個月內)/g,(_,a,n,b)=>a+toFinancialChineseNumber(n)+b).replace(/(提供)(\d+)(小時)/g,(_,a,n,b)=>a+toFinancialChineseNumber(n)+b).replace(/(新臺幣)(\d+)(萬元)/g,(_,a,n,b)=>a+toFinancialChineseNumber(n)+b);}
+
+    function buildSectionsData() {
+      const courtName = val('input-court-name') || '臺灣OO地方法院';
+      const prosecutorOffice = courtName.replace('法院', '檢察署');
+      const caseNo = val('input-case-no') || 'O年度訴字第O號';
+      const caseCause = val('input-case-cause');
+      const rawDefName = val('input-defendant-name');
+      const defName = rawDefName || 'OOO';
+      const lawyerName = val('input-lawyer-name');
+      const isSimpleProc = radioVal('proc-type-mode') === 'simple_judgment';
+
+      // 偵查案號串接
+      const prosList = [];
+      if (isChecked('chk-pros-indict') && val('val-pros-indict')) prosList.push(val('val-pros-indict'));
+      if (isChecked('chk-pros-add') && val('val-pros-add')) prosList.push(`追加起訴：${val('val-pros-add')}`);
+      if (isChecked('chk-pros-merge') && val('val-pros-merge')) prosList.push(`移送併辦：${val('val-pros-merge')}`);
+      const prosCaseStr = prosList.length ? `（${prosList.join('、')}）` : '';
+
+      // 首部
+      const headerTitle = isSimpleProc ? `${courtName}刑事簡易判決` : `${courtName}刑事判決`;
+      const prosRoleLabel = isSimpleProc ? `聲　請　人　${prosecutorOffice}檢察官` : `公　訴　人　${prosecutorOffice}檢察官`;
+      const defLine = `被　　　告　${rawDefName || ''}`;
+      const lawyerLine = lawyerName ? `選任辯護人　${lawyerName}` : '';
+      const introLine = isSimpleProc
+        ? `上列被告因${caseCause}案件，經檢察官聲請以簡易判決處刑${prosCaseStr}，本院判決如下︰`
+        : `上列被告因${caseCause}案件，經檢察官提起公訴${prosCaseStr}，本院依簡式審判程序判決如下︰`;
+
+      const headerBlock = [headerTitle, caseNo, prosRoleLabel, defLine, lawyerLine, introLine].filter(Boolean).join('\n');
+
+      // 主文
+      const holdingParts = [];
+      const recidTag = isChecked('chk-holding-recidivist') ? '，累犯' : '';
+      const v9RecidTag = isChecked('chk-v9-holding-recidivist') ? '，累犯' : '';
+
+      if (isChecked('chk-holding-1')) {
+        holdingParts.push(`${defName}犯${val('val-h1-crime-title') || '三人以上共同詐欺取財罪'}${recidTag}，${val('val-h1-sentence') || '處有期徒刑O年O月。'}`);
+      }
+      if (isChecked('chk-holding-2')) {
+        holdingParts.push(`${defName}犯${val('val-h2-crime-title') || '三人以上共同詐欺取財未遂罪'}${recidTag}，${val('val-h2-sentence') || '處有期徒刑O年O月。'}`);
+      }
+      if (isChecked('chk-holding-3')) {
+        const h3Subs = formatSubclauses(['chk-h3-sub1', 'chk-h3-sub2', 'chk-h3-sub3'], ['第1款', '第2款', '第3款']);
+        holdingParts.push(`${defName}犯詐欺犯罪危害防制條例第44條第1項${h3Subs}之分則加重罪${recidTag}，${val('val-h3-sentence') || '處有期徒刑O年O月。'}`);
+      }
+      if (isChecked('chk-v9-h1')) {
+        holdingParts.push(`${defName}幫助犯詐欺取財罪${v9RecidTag}，處有期徒刑${val('val-v9-h1-term') || 'O月'}，如易科罰金，以新臺幣壹仟元折算壹日。`);
+      }
+      if (isChecked('chk-v9-h2')) {
+        holdingParts.push(`${defName}幫助犯修正前洗錢防制法第十四條第一項一般洗錢罪${v9RecidTag}，處有期徒刑${val('val-v9-h2-term') || 'O月'}，併科罰金新臺幣${val('val-v9-h2-fine') || 'O元'}，罰金如易服勞役，以新臺幣壹仟元折算壹日。`);
+      }
+      if (isChecked('chk-v9-h3')) {
+        holdingParts.push(`${defName}幫助犯洗錢防制法第十九條第一項後段一般洗錢罪${v9RecidTag}，處有期徒刑${val('val-v9-h3-term') || 'O月'}，併科罰金新臺幣${val('val-v9-h3-fine') || 'O元'}，徒刑如易科罰金、罰金如易服勞役，均以新臺幣壹仟元折算壹日。`);
+      }
+      if (isChecked('chk-v9-h4')) {
+        holdingParts.push(`${defName}幫助犯詐欺取財未遂罪${v9RecidTag}，處有期徒刑${val('val-v9-h4-term') || 'O月'}，如易科罰金，以新臺幣壹仟元折算壹日。`);
+      }
+      if (isChecked('chk-v9-h5')) {
+        holdingParts.push(`${defName}幫助犯修正前洗錢防制法第十四條第一項一般洗錢未遂罪${v9RecidTag}，處有期徒刑${val('val-v9-h5-term') || 'O月'}，併科罰金新臺幣${val('val-v9-h5-fine') || 'O元'}，罰金如易服勞役，以新臺幣壹仟元折算壹日。`);
+      }
+      if (isChecked('chk-v9-h6')) {
+        holdingParts.push(`${defName}幫助犯洗錢防制法第十九條第一項後段一般洗錢未遂罪${v9RecidTag}，處有期徒刑${val('val-v9-h6-term') || 'O月'}，併科罰金新臺幣${val('val-v9-h6-fine') || 'O元'}，徒刑如易科罰金、罰金如易服勞役，均以新臺幣壹仟元折算壹日。`);
+      }
+
+      // 主文沒收附隨宣告
+      const confHoldings = [];
+      if (isChecked('chk-h-conf-table') && isChecked('chk-h-conf-paid')) {
+        confHoldings.push(`扣案如附表所示之物、已繳交之犯罪所得新臺幣${val('val-h-paid-amt') || 'O元'}，均沒收之。`);
+      } else {
+        if (isChecked('chk-h-conf-table')) {
+          confHoldings.push(isChecked('chk-h-conf-unseized') ? '扣案如附表所示之物，沒收之；' : '扣案如附表所示之物，沒收之。');
+        }
+        if (isChecked('chk-h-conf-paid')) {
+          confHoldings.push(`已繳交之犯罪所得新臺幣${val('val-h-paid-amt') || 'O元'}沒收之。`);
+        }
+      }
+      if (isChecked('chk-h-conf-unseized')) {
+        confHoldings.push(`未扣案之犯罪所得新臺幣${val('val-h-unseized-amt') || 'O元'}沒收，於全部或一部不能沒收或不宜執行沒收時，追徵其價額。`);
+      }
+      if (val('val-holding-extra')) {
+        confHoldings.push(val('val-holding-extra'));
+      }
+
+      const probationHoldingParts = [];
+      if (radioVal('probation-mode') === 'grant') {
+        const probationYears=val('val-prob-years')||val('holding-probation-years')||'O';
+        let probationLead=`緩刑${/^\d+$/.test(probationYears)?toFinancialChineseNumber(probationYears):probationYears}年`;
+        if (isChecked('prob-supervision')) probationLead += '，緩刑期內付保護管束';
+        probationHoldingParts.push(probationLead);
+        if (isChecked('prob-cond-3') && val('val-prob-cond-3')) probationHoldingParts.push(val('val-prob-cond-3'));
+        if (isChecked('prob-cond-4') && val('val-prob-cond-4')) probationHoldingParts.push(uppercaseHoldingCondition(val('val-prob-cond-4')));
+        if (isChecked('prob-cond-5')) probationHoldingParts.push(val('val-prob-cond-5') || '並應於本案判決確定後O年內，向執行檢察官指定之政府機關、政府機構、行政法人、社區或其他符合公益目的之機構或團體提供OO小時之義務勞務。');
+      }
+      const probationHolding = probationHoldingParts.length ? probationHoldingParts.join('，').replace(/。，/g,'，').replace(/。$/,'') + '。' : '';
+      const holdingText = holdingParts.join('\n') + (confHoldings.length ? confHoldings.join('') : '') + (probationHolding ? `\n${probationHolding}` : '');
+
+      // 事實
+      const factMode = radioVal('fact-mode');
+      let factText = '';
+      if (factMode === 'quote') {
+        factText = '引用起訴書（或聲請簡易判決處刑書）犯罪事實所載。';
+      } else if (factMode === 'amend') {
+        factText = `除下列補充及更正外，餘引用起訴書犯罪事實所載：\n${val('val-fact-amend')}`;
+      } else {
+        factText = val('val-fact-amend');
+      }
+
+      // 理由一、二
+      const chineseTopNums = ['一', '二', '三', '四', '五', '六'];
+      let topIdx = 0;
+      const reasonSections = [];
+
+      if (!isSimpleProc && isChecked('chk-include-reason-one')) {
+        reasonSections.push(`${chineseTopNums[topIdx++]}、本件被告${defName}所犯之罪，非死刑、無期徒刑、最輕本刑為3年以上有期徒刑之罪，或高等法院管轄第一審之案件，被告於本院準備程序進行中，就被訴事實為有罪之陳述，經本院認合於刑事訴訟法第273條之1第1項之規定，裁定進行簡式審判程序，併予敘明。`);
+      }
+
+      const evidMode = radioVal('evid-mode');
+      let evidBody = '';
+      if (evidMode === 'quote') {
+        evidBody = '引用起訴書（或聲請簡易判決處刑書）證據清單所載。';
+      } else if (evidMode === 'amend') {
+        evidBody = `除下列補充及更正外，餘引用起訴書證據清單所載：\n　　${val('val-evid-amend')}`;
+      } else {
+        evidBody = `　　${val('val-evid-amend')}`;
+      }
+      reasonSections.push(`${chineseTopNums[topIdx++]}、認定犯罪事實所憑證據及理由：\n${evidBody}`);
+
+      // 理由三：論罪科刑
+      const crimeSubSections = [];
+      let subIdx = 0;
+
+      // 1. 新舊法比較（由使用者自行填寫，若空白則不產生）
+      const customLawCompare = val('input-custom-law-compare');
+      if (customLawCompare) {
+        crimeSubSections.push(`${PAREN_NUMS[subIdx++]}新舊法比較：\n　　${customLawCompare.replace(/\n/g, '\n　　')}`);
+      }
+
+      // 2. 核被告所為
+      const fullCrimeNames = [];
+      const shortCrimeNames = [];
+
+      if (isChecked('crime-fraud-339-4')) {
+        const c2Only = !isChecked('c3394-sub1') && isChecked('c3394-sub2') && !isChecked('c3394-sub3') && !isChecked('c3394-sub4');
+        const cSubs = formatSubclauses(['c3394-sub1', 'c3394-sub2', 'c3394-sub3', 'c3394-sub4'], ['第1款', '第2款', '第3款', '第4款']);
+        if (c2Only && !isChecked('crime-fpa-44')) {
+          fullCrimeNames.push('刑法第339條之4第1項第2款之三人以上共同詐欺取財罪');
+          shortCrimeNames.push('三人以上共同詐欺取財罪');
+        } else {
+          let cname = `刑法第339條之4第1項${cSubs}之加重詐欺取財罪`;
+          if (isChecked('crime-fpa-44')) {
+            const fpaSubs = formatSubclauses(['cfpa44-sub1', 'cfpa44-sub2', 'cfpa44-sub3'], ['第1款', '第2款', '第3款']);
+            cname += `（暨詐欺犯罪危害防制條例第44條第1項${fpaSubs}之分則加重罪）`;
+          }
+          fullCrimeNames.push(cname);
+          shortCrimeNames.push('加重詐欺取財罪');
+        }
+      }
+
+      if (isChecked('crime-fraud-339-4-att')) {
+        const cAttSubs = formatSubclauses(['c3394att-sub1', 'c3394att-sub2', 'c3394att-sub3', 'c3394att-sub4'], ['第1款', '第2款', '第3款', '第4款']);
+        fullCrimeNames.push(`刑法第339條之4第2項、第1項${cAttSubs}之三人以上共同詐欺取財未遂罪`);
+        shortCrimeNames.push('三人以上共同詐欺取財未遂罪');
+      }
+
+      if (isChecked('crime-forgery-210')) {
+        let f210 = '刑法第216條、第210條之行使偽造私文書罪';
+        if (isChecked('crime-forgery-220')) {
+          f210 += `（其中${val('val-forgery-220-part') || 'O'}部分，依刑法第220條第1項規定，以文書論）`;
+        }
+        fullCrimeNames.push(f210);
+        shortCrimeNames.push('行使偽造私文書罪');
+      }
+
+      if (isChecked('crime-forgery-212')) {
+        fullCrimeNames.push('刑法第216條、第212條之行使偽造特種文書罪');
+        shortCrimeNames.push('行使偽造特種文書罪');
+      }
+
+      if (isChecked('crime-ml-new19')) {
+        fullCrimeNames.push('洗錢防制法第19條第1項後段之洗錢罪');
+        shortCrimeNames.push('洗錢罪');
+      }
+      if (isChecked('crime-ml-old14')) {
+        fullCrimeNames.push('修正前洗錢防制法第14條第1項後段之一般洗錢罪');
+        shortCrimeNames.push('一般洗錢罪');
+      }
+
+      if (isChecked('crime-fraud-339')) {
+        fullCrimeNames.push('刑法第339條第1項之詐欺取財罪');
+        shortCrimeNames.push('詐欺取財罪');
+      }
+      if (isChecked('crime-fraud-339-att')) {
+        fullCrimeNames.push('刑法第339條第3項、第1項之詐欺取財未遂罪');
+        shortCrimeNames.push('詐欺取財未遂罪');
+      }
+
+      if (isChecked('crime-org-join')) {
+        fullCrimeNames.push('組織犯罪防制條例第3條第1項後段之參與犯罪組織罪');
+        shortCrimeNames.push('參與犯罪組織罪');
+      }
+      if (isChecked('crime-org-recruit')) {
+        let rName = '組織犯罪防制條例第4條第1項之招募他人加入犯罪組織罪';
+        if (isChecked('crime-org-recruit-abroad')) rName += '（及同條第2項意圖使他人出國實行犯罪而招募罪）';
+        if (isChecked('crime-org-recruit-minor')) rName += '（及同條第3項成年人招募未滿18歲之人加入分則加重罪）';
+        fullCrimeNames.push(rName);
+        shortCrimeNames.push('招募他人加入犯罪組織罪');
+      }
+      if (isChecked('crime-org-force')) {
+        const fSub = formatSubclauses(['crime-org-force-join', 'crime-org-force-leave'], ['使他人加入犯罪組織罪', '妨害成員脫離犯罪組織罪']);
+        fullCrimeNames.push(`組織犯罪防制條例第4條第4項之${fSub}`);
+        shortCrimeNames.push(fSub);
+      }
+
+      // 幫助犯類罪名
+      if (isChecked('crime-v9-339')) {
+        fullCrimeNames.push('刑法第30條第1項、第339條第1項之幫助詐欺取財罪');
+        shortCrimeNames.push('幫助詐欺取財罪');
+      }
+      if (isChecked('crime-v9-ml-old14')) {
+        fullCrimeNames.push('刑法第30條第1項、修正前洗錢防制法第14條第1項後段之幫助一般洗錢罪');
+        shortCrimeNames.push('幫助一般洗錢罪');
+      }
+      if (isChecked('crime-v9-ml-new19')) {
+        fullCrimeNames.push('刑法第30條第1項、洗錢防制法第19條第1項後段之幫助一般洗錢罪');
+        shortCrimeNames.push('幫助一般洗錢罪');
+      }
+      if (isChecked('crime-v9-339-att')) {
+        fullCrimeNames.push('刑法第30條第1項、第339條第3項、第1項之幫助詐欺取財未遂罪');
+        shortCrimeNames.push('幫助詐欺取財未遂罪');
+      }
+      if (isChecked('crime-v9-ml-old14-att')) {
+        fullCrimeNames.push('刑法第30條第1項、修正前洗錢防制法第14條第2項、第1項後段之幫助一般洗錢未遂罪');
+        shortCrimeNames.push('幫助一般洗錢未遂罪');
+      }
+      if (isChecked('crime-v9-ml-new19-att')) {
+        fullCrimeNames.push('刑法第30條第1項、洗錢防制法第19條第2項、第1項後段之幫助一般洗錢未遂罪');
+        shortCrimeNames.push('幫助一般洗錢未遂罪');
+      }
+
+      let crimeSentence = fullCrimeNames.length
+        ? `核被告所為，係犯${joinWithAnd(fullCrimeNames)}。`
+        : '核被告所為，係犯（請於左側勾選所犯罪名）。';
+      if (isChecked('crime-org-join-dup')) {
+        crimeSentence += '（至起訴書雖贅載參與犯罪組織罪嫌，惟此部分前經另案論處，本案爰不另論）';
+      }
+      if (isChecked('cfpa44-del-sub3')) {
+        crimeSentence += '（公訴意旨贅論115年1月23日修法前所無之詐欺犯罪危害防制條例第44條第1項第3款，應予刪除）';
+      }
+      crimeSubSections.push(`${PAREN_NUMS[subIdx++]}${crimeSentence}`);
+
+      // 3. 共同正犯
+      let coprincipalBlock = '';
+      if (isChecked('chk-coprincipal')) {
+        const cpStyle = radioVal('coprincipal-style');
+        if (cpStyle === 'concise') {
+          coprincipalBlock = '被告與所屬詐欺集團成員間，有犯意聯絡及行為分擔，依刑法第28條之規定，論以共同正犯。';
+        } else {
+          coprincipalBlock = '按共同實施犯罪行為之人，在合同意思範圍以內，各自分擔犯罪行為之一部，相互利用他人之行為，以達其犯罪之目的者，即應對於全部所發生之結果，共同負責。而共同正犯之成立，祇須具有犯意之聯絡及行為之分擔，既不問犯罪動機起於何人，亦不必每一階段犯行，均須參與。又共同正犯之意思聯絡，原不以數人間直接發生者為限，若有間接之聯絡者，亦包括在內，如甲分別邀約乙、丙犯罪，雖乙、丙間彼此並無直接之聯絡，亦無礙於其為共同正犯之成立。是以，行為人參與構成要件行為之實施，並不以參與構成犯罪事實之全部或始終參與為必要，即使僅參與構成犯罪事實之一部分，或僅參與某一階段之行為，亦足以成立共同正犯。經查，被告雖非親自向告訴人實施訛詐，而未自始至終參與各階段之犯行，然被告依該詐欺集團成員指示擔任車手工作，則被告與詐欺集團其他成員間既為詐騙告訴人而彼此分工，堪認其等係在合同意思範圍內，分擔犯罪行為之一部，並相互利用他人之行為，以達犯罪之目的，從而被告與所屬詐欺集團成員間，有犯意聯絡及行為分擔，依刑法第28條之規定，論以共同正犯。';
+        }
+        crimeSubSections.push(`${PAREN_NUMS[subIdx++]}${coprincipalBlock}`);
+      }
+
+      // 4. 偽造印文署押階段行為及高度行為吸收關係
+      let absorbBlock = '';
+      if (isChecked('chk-forgery-absorb') && (isChecked('crime-forgery-210') || isChecked('crime-forgery-212'))) {
+        if (isChecked('crime-forgery-210') && isChecked('crime-forgery-212')) {
+          absorbBlock = '又被告與詐欺集團成員於收據上偽造如附表所示之印文、署押，係偽造私文書之階段行為；又偽造私文書、工作證之特種文書後，復持以向告訴人行使，其偽造私文書、特種文書之低度行為亦為行使之高度行為所吸收，均不另論罪。';
+        } else if (isChecked('crime-forgery-210')) {
+          absorbBlock = '又被告與詐欺集團成員於收據上偽造如附表所示之印文、署押，係偽造私文書之階段行為；又偽造私文書後，復持以向告訴人行使，其偽造私文書之低度行為亦為行使之高度行為所吸收，不另論罪。';
+        } else {
+          absorbBlock = '又被告與詐欺集團成員偽造工作證之特種文書後，復持以向告訴人行使，其偽造特種文書之低度行為為行使之高度行為所吸收，不另論罪。';
+        }
+        crimeSubSections.push(`${PAREN_NUMS[subIdx++]}${absorbBlock}`);
+      }
+
+      // 5. 想像競合犯
+      let imagBlock = '';
+      if (isChecked('chk-imag-concur')) {
+        const shortListStr = shortCrimeNames.length ? shortCrimeNames.join('、') : '上開各罪';
+        const diffV = isChecked('chk-imag-diff-victims') ? '，並侵害不同之財產法益' : '';
+        imagBlock = `被告所犯${shortListStr}，均係在同一犯罪決意及預定計畫下所為行為，乃一行為觸犯數罪名${diffV}，為想像競合犯，應依刑法第55條之規定，從一重之${val('val-imag-heavy-crime') || '刑法第339條之4第1項第2款三人以上共同詐欺取財'}罪處斷。`;
+        crimeSubSections.push(`${PAREN_NUMS[subIdx++]}${imagBlock}`);
+      }
+
+      // 6. 數罪併罰 & 擴張審理
+      if (radioVal('multi-crime-mode') === 'yes') {
+        crimeSubSections.push(`${PAREN_NUMS[subIdx++]}被告所為${val('val-multi-crimes') || '上開各次犯行'}間，犯意各別、行為互殊，應予分論併罰。`);
+      }
+      if (isChecked('chk-fact-expand')) {
+        const expScope = formatSubclauses(['chk-expand-indict', 'chk-expand-summary'], ['起訴', '聲請簡易判決處刑']);
+        crimeSubSections.push(`${PAREN_NUMS[subIdx++]}檢察官移送併辦部分，與本案經起訴部分有想像競合犯之裁判上一罪關係，為${expScope}效力所及，應由本院擴張審理之。`);
+      }
+
+      // 7. 累犯加重事由
+      let enhBlock = '';
+      if (isChecked('enh-recidivist')) {
+        const rOpt = radioVal('recid-enhance-opt');
+        if (rOpt === 'yes') {
+          enhBlock = `${val('val-recid-detail')}，是被告於有期徒刑執行完畢後之5年以內，故意再犯本案有期徒刑以上之罪，當屬刑法第47條第1項之累犯，衡以被告前曾經因案件經判刑確定並執行完畢，卻未能戒慎其行，猶於前開罪刑執行完畢後之5年內，又再度為本案犯行，顯見其刑罰反應力顯然薄弱，是認依刑法第47條第1項之規定加重被告之最低本刑，尚不生行為人所受的刑罰超過其所應負擔罪責的情形，乃依前揭規定加重其刑。`;
+        } else {
+          enhBlock = `${val('val-recid-detail')}，構成刑法第47條第1項之累犯；惟審酌被告前案之罪名及執行情形、本案之犯罪情節等情，不認為被告有何等特殊之不法與罪責非難必要，相關前科紀錄於量刑審酌中之素行部分予以確實審酌即為已足，不另加重其刑。`;
+        }
+        crimeSubSections.push(`${PAREN_NUMS[subIdx++]}${enhBlock}`);
+      }
+      if (isChecked('enh-fpa44')) {
+        crimeSubSections.push(`${PAREN_NUMS[subIdx++]}被告所犯詐欺犯罪危害防制條例第44條第1項之罪，應依該條項規定加重其刑二分之一。`);
+      }
+      if (isChecked('enh-other') && val('val-enh-other')) {
+        crimeSubSections.push(`${PAREN_NUMS[subIdx++]}${val('val-enh-other')}`);
+      }
+
+      // 8. 刑之減輕事由
+      const mitSubItems = [];
+      const mitMode = radioVal('fraud-ml-mit-mode');
+      const ml23Mode = radioVal('ml23-mit-mode') || 'omit';
+
+      if (isChecked('chk-mit-imag-merge-theory') && (mitMode === 'confess_no_proceeds' || mitMode === 'confess_paid_proceeds')) {
+        mitSubItems.push('想像競合犯之處斷刑，本質上係「刑之合併」。其所謂從一重處斷，乃將想像競合犯組成之評價上數罪，合併為科刑一罪，其所對應之刑罰，亦合併其評價上數罪之數法定刑，而為一個處斷刑。易言之，想像競合犯侵害數法益者皆成立犯罪，論罪時必須輕、重罪併舉論述，同時宣告所犯各罪名，包括各罪有無加重、減免其刑之情形，亦應說明論列，量刑時併衡酌輕罪部分量刑事由，評價始為充足，然後依刑法第55條前段規定「從一重處斷」，非謂對於其餘各罪可置而不論。因此，法院決定處斷刑時，雖以其中最重罪名之法定刑，做為裁量之準據，惟於裁量其輕重時，仍應將輕罪合併評價在內。');
+      }
+
+      if (mitMode !== 'omit') {
+        mitSubItems.push('被告於本案行為後，詐欺犯罪危害防制條例於115年1月21日修正公布，並自同年月23日施行。修正前之詐欺犯罪危害防制條例第47條前段規定：「犯詐欺犯罪，在偵查及歷次審判中均自白，如有犯罪所得，自動繳交其犯罪所得者，減輕其刑」；修正後第47條第1項規定：「犯詐欺犯罪，在偵查及歷次審判中均自白，並於檢察官偵查中首次自白之日起六個月內，支付與被害人達成調解或和解之全部金額者，得減輕其刑。」經整體比較結果，修正後詐欺犯罪危害防制條例第47條第1項增加減刑之要件，是適用修正前詐欺犯罪危害防制條例第47條規定較有利於被告。');
+      }
+
+      if (mitMode === 'confess_no_proceeds') {
+        mitSubItems.push('被告於偵查及本院審理中均自白犯行，且供稱未領到報酬，查無獲有任何報酬或利益，自無繳交犯罪所得之問題，爰依修正前詐欺犯罪危害防制條例第47條前段減輕其刑；想像競合輕罪符合洗錢防制法第23條第3項前段部分，由本院依刑法第57條量刑時一併衡酌。');
+      } else if (mitMode === 'confess_paid_proceeds') {
+        mitSubItems.push(`犯前四條之罪，在偵查及歷次審判中均自白者，如有所得並自動繳交全部所得財物者，減輕其刑，洗錢防制法第23條第3項前段規定甚明；犯詐欺犯罪，在偵查及歷次審判中均自白，如有犯罪所得，自動繳交其犯罪所得者，減輕其刑，修正前之詐欺犯罪危害防制條例第47條前段亦有明文。經查，被告於偵查及本院審理中均自白上開犯行不諱，又被告本案犯罪所得為${val('val-mit-paid-amt') || 'O元'}等情，業據其供述在卷，而被告業已於本院自動繳交上開犯罪所得，此有本院收據1份在卷可按，而符合修正前之詐欺犯罪危害防制條例第47條前段減輕其刑之適用。至被告想像競合所犯輕罪符合洗錢防制法第23條第3項前段規定部分，僅由本院依刑法第57條量刑時，一併衡酌該部分減輕其刑事由，附此敘明。`);
+      } else if (mitMode === 'confess_unpaid_proceeds') {
+        mitSubItems.push(`犯前四條之罪，在偵查及歷次審判中均自白者，如有所得並自動繳交全部所得財物者，減輕其刑，洗錢防制法第23條第3項前段規定甚明；犯詐欺犯罪，在偵查及歷次審判中均自白，如有犯罪所得，自動繳交其犯罪所得者，減輕其刑，修正前之詐欺犯罪危害防制條例第47條前段亦有明文。經查，被告於偵訊、本院審理時，雖均已坦承本案犯行，然其自承獲取報酬${val('val-mit-unpaid-amt') || 'O元'}等語，而其並未繳交犯罪所得，而無洗錢防制法第23條第3項前段、115年1月21日修正前之詐欺犯罪危害防制條例第47條前段減輕其刑之適用。`);
+      } else if (mitMode === 'no_confess_in_investigation') {
+        mitSubItems.push('犯前四條之罪，在偵查及歷次審判中均自白者，如有所得並自動繳交全部所得財物者，減輕其刑，洗錢防制法第23條第3項前段規定甚明；犯詐欺犯罪，在偵查及歷次審判中均自白，如有犯罪所得，自動繳交其犯罪所得者，減輕其刑，修正前之詐欺犯罪危害防制條例第47條前段亦有明文。經查，被告雖於本院審理時自白犯行，然其於偵查中未自白犯行，而無洗錢防制法第23條第3項前段、修正前之詐欺犯罪危害防制條例第47條前段減輕其刑之適用。');
+      }
+
+      const generalMitItems = [];
+      if (isChecked('mit-attempt-25')) {
+        generalMitItems.push('被告已著手於詐欺取財犯行之實行而不遂，為未遂犯，爰依刑法第25條第2項規定，按既遂犯之刑減輕之。');
+      }
+      if (isChecked('mit-accessory-30')) {
+        generalMitItems.push('被告係幫助他人犯前開之罪，爰依刑法第30條第2項之規定減輕其刑。');
+      }
+      if (isChecked('mit-org-8')) {
+        mitSubItems.push('被告於偵查及歷次審判中均自白參與犯罪組織犯行，應依組織犯罪防制條例第8條第1項後段規定減輕其刑。');
+      }
+      if (isChecked('mit-surrender-62')) {
+        generalMitItems.push('被告對於未發覺之罪自首而受裁判，爰依刑法第62條第1項前段規定減輕其刑。');
+      }
+
+      if (generalMitItems.length) mitSubItems.push(generalMitItems.join(' '));
+      if (ml23Mode === 'deny') {
+        mitSubItems.push('洗錢防制法第23條第3項規定，需偵查及歷次審判中均自白始得減輕其刑，查被告於偵查中否認本案犯行，固然其於本院審理中業已就上開洗錢犯行自白犯罪，仍無上開減刑規定適用。');
+      } else if (ml23Mode === 'confess') {
+        mitSubItems.push('被告於偵查及本院審理程序中均自白犯行，爰依洗錢防制法第23條第3項規定減輕其刑，並依法遞減其刑。');
+      }
+      let mitBlock = '';
+      if (mitSubItems.length === 1) {
+        mitBlock = `刑之減輕事由：\n　　${mitSubItems[0]}`;
+        crimeSubSections.push(`${PAREN_NUMS[subIdx++]}${mitBlock}`);
+      } else if (mitSubItems.length > 1) {
+        const dotNums = ['⒈', '⒉', '⒊', '⒋', '⒌', '⒍'];
+        const numberedMit = mitSubItems.map((txt, i) => `${dotNums[i] || (i + 1) + '.'}${txt}`).join('\n');
+        mitBlock = `刑之減輕事由：\n${numberedMit}`;
+        crimeSubSections.push(`${PAREN_NUMS[subIdx++]}${mitBlock}`);
+      }
+
+      // 9. 量刑審酌
+      const sentStyle = radioVal('sentencing-style');
+      const ageStr = val('val-sent-age') || '正值壯年';
+      const factorsStr = val('val-sentencing-factors') || 'OO之智識程度、家庭及經濟狀況';
+      const prosAskStr = val('val-sent-prosecutor-ask');
+      const noFineStr = isChecked('chk-sent-no-fine') ? '，又被告所受自由刑之宣告，已經充分評價被告的行為，而尚無併科罰金之必要' : '';
+      const hasMit47 = (mitMode === 'confess_no_proceeds' || mitMode === 'confess_paid_proceeds') ? '，且被告有修正前之詐欺犯罪危害防制條例第47條前段之適用' : '';
+
+      let sentencingText = '';
+      if (sentStyle === 'driver_full') {
+        const askClause = prosAskStr
+          ? `，固然公訴人具體求刑${prosAskStr}等語，被告擔任車手固有非是，然屬該詐欺集團之末端成員${hasMit47}，是應考量個案情節量刑`
+          : `，考量被告屬該詐欺集團之末端成員${hasMit47}`;
+        sentencingText = `爰審酌被告${ageStr}，非無工作能力賺取所需，然不知守法慎行正道取財，為圖暴利而擔任車手工作，侵害告訴人財產法益，助長原已猖獗之詐騙歪風，所為非是，應予嚴厲非難，被告雖未實際參與全程詐騙行為，尚非詐欺集團之核心成員，然被告為圖自己私益，擔任詐騙集團之車手，嚴重損害財產交易安全及社會經濟秩序，於本案之客觀犯罪情節並非輕微，又考量被告犯後自始均坦承犯行，並未實際參與全程詐騙行為，亦非詐欺集團之核心成員，並兼衡被告${factorsStr}等一切情狀${askClause}${noFineStr}，故本院參酌上開一切情形，量處如主文所示之刑。`;
+      } else if (sentStyle === 'accessory_full') {
+        sentencingText = `爰審酌被告依其經驗及智識，已預見提供其金融帳戶予他人使用，亟可能涉及財產犯罪，恐掩飾、隱匿他人詐欺犯罪所得之去向或所在，竟提供自己申辦之金融帳戶資料予詐欺集團成員，其所為除造成被害人財產法益受損外，亦增加政府查緝此類犯罪或將來所衍生金融犯罪之困難，更助長原已猖獗之詐欺歪風，其行為當難認有何可取之處，惟念及被告犯後坦認犯行，並兼衡被告${factorsStr}等一切情狀，量處如主文所示之刑，並諭知有期徒刑易科罰金、罰金易服勞役之折算標準。`;
+      } else {
+        sentencingText = `爰以行為人之行為責任為基礎，審酌本案與刑法第57條各款規定相適合之事實暨其他一切情狀（如${factorsStr}等），量處如主文所示之刑。`;
+      }
+      crimeSubSections.push(`${PAREN_NUMS[subIdx++]}${sentencingText}`);
+
+      // 緩刑
+      const probMode = radioVal('probation-mode');
+      let probationText = '';
+      if (probMode === 'deny') {
+        const reasons = [];
+        if (isChecked('prob-deny-5yr')) reasons.push('5年內曾因故意犯罪受有期徒刑以上刑之宣告確定。');
+        if (val('val-prob-deny-other')) reasons.push(val('val-prob-deny-other'));
+        probationText = `不予緩刑理由：${reasons.join(' ')}`;
+      } else if (probMode === 'grant') {
+        const pReasons = [];
+        if (isChecked('prob-reason-confess')) pReasons.push('被告犯後已知坦承犯行');
+        if (isChecked('prob-reason-settle')) pReasons.push('已與被害人達成和（調）解並依約賠償');
+        const rSuffix = pReasons.length ? `審酌${pReasons.join('、')}，經此偵審程序當知所警惕，信無再犯之虞，` : '';
+        const pLines = [`${rSuffix}爰依刑法第74條第1項${val('val-prob-clause')}規定，宣告緩刑${val('val-prob-years') || 'O'}年。`];
+        if (isChecked('prob-supervision')) {
+          pLines.push('並依刑法第93條第1項第2款規定，諭知於緩刑期間付保護管束。');
+        }
+        const conds = [];
+        if (isChecked('prob-cond-3')) conds.push(`刑法第74條第2項第3款：${val('val-prob-cond-3')}`);
+        if (isChecked('prob-cond-4')) conds.push(`刑法第74條第2項第4款：${val('val-prob-cond-4')}`);
+        if (isChecked('prob-cond-5')) conds.push(`刑法第74條第2項第5款：${val('val-prob-cond-5')}`);
+        if (conds.length) {
+          pLines.push('緩刑期內應履行事項（被告如有違反下列事項且情節重大者，得依刑法第75條之1第1項第4款之規定，撤銷其緩刑之宣告，執行宣告刑）：\n' + conds.join('\n'));
+        }
+        probationText = pLines.join('\n');
+      }
+      if (probationText) {
+        crimeSubSections.push(`${PAREN_NUMS[subIdx++]}${probationText}`);
+      }
+
+
+      reasonSections.push(`${chineseTopNums[topIdx++]}、論罪科刑：\n${crimeSubSections.join('\n')}`);
+
+      // 理由四：沒收
+      const confSubSections = [];
+      let confIdx = 0;
+
+      if (isChecked('chk-conf-ml25-intro')) {
+        confSubSections.push(`${PAREN_NUMS[confIdx++]}按洗錢防制法第25條第1項規定：「犯第19條、第20條之罪，洗錢之財物或財產上利益，不問屬於犯罪行為人與否，沒收之」，而將洗錢之沒收改採義務沒收。惟按，沒收或追徵，有過苛之虞、欠缺刑法上之重要性、犯罪所得價值低微，或為維持受宣告人生活條件之必要者，得不宣告或酌減之，刑法第38條之2第2項定有明文。學理上稱此規定為過苛調節條款，乃將憲法上比例原則予以具體化，不問實體規範為刑法或特別刑法中之義務沒收，亦不分沒收主體為犯罪行為人或第三人之沒收，復不論沒收標的為原客體或追徵其替代價額，同有其適用。洗錢防制法第25條第1項採義務沒收主義，固為刑法第38條第2項前段關於職權沒收之特別規定，惟依前說明，仍有上述過苛條款之調節適用。`);
+      }
+
+      if (isChecked('chk-conf-proceeds-section')) {
+        const procMode = radioVal('conf-proc-mode');
+        let procDetail = '';
+        if (procMode === 'no_proceeds') {
+          procDetail = '經查，被告為本案收取詐欺款項之犯行，於偵查及本院準備程序中供稱本件未領到相關報酬等語，而尚難認其有獲得犯罪所得。至其雖為本案犯行，然考量本案尚有其他共犯，且洗錢之財物均由詐騙集團上游成員拿取，如認本案全部洗錢財物均應依洗錢防制法第25條第1項規定對被告宣告沒收，恐有違比例原則而有過苛之虞，是以，本院不依此項規定對被告就本案洗錢財物宣告沒收。';
+        } else if (procMode === 'unseized_proceeds') {
+          const uAmt = val('val-conf-proc-unseized') || 'O元';
+          procDetail = `經查，被告為本案收取詐欺款項之犯行，據被告供稱其獲得報酬${uAmt}等情，業經本院說明如前，上開犯罪所得未據扣案，應依刑法第38條之1第1項、第3項之規定宣告沒收，並於全部或一部不能沒收或不宜執行沒收時，追徵其價額。又本院考量本案有其他共犯，且洗錢之財物均由詐騙集團上游成員拿取，如認本案全部洗錢財物均應依洗錢防制法第25條第1項規定對被告宣告沒收，恐有違比例原則而有過苛之虞，是以，本院不依此項規定對被告就本案洗錢財物宣告沒收。`;
+        } else {
+          const pAmt = val('val-conf-proc-seized') || 'O元';
+          procDetail = `經查，被告為本案收取詐欺款項之犯行，據被告供稱其獲得報酬${pAmt}等情，業經本院說明如前，再被告業已於本院審理中自動繳交上開犯罪所得，自應依刑法第38條之1第1項前段規定，於被告罪刑項下宣告沒收。又本院考量本案有其他共犯，且洗錢之財物均由詐騙集團上游成員拿取，如認本案全部洗錢財物均應依洗錢防制法第25條第1項規定對被告宣告沒收，恐有違比例原則而有過苛之虞，是以，本院不依此項規定對被告就本案洗錢財物宣告沒收。`;
+        }
+        confSubSections.push(`${PAREN_NUMS[confIdx++]}再者，倘為共同犯罪，因共同正犯相互間利用他方之行為，以遂行其犯意之實現，本於責任共同原則，有關犯罪所得，應於其本身所處主刑之後，併為沒收之諭知；然共同犯罪行為人之組織分工及不法所得，未必相同，彼此間犯罪所得之分配懸殊，其分配較少甚或未受分配之人，如仍應就全部犯罪所得負連帶沒收之責，超過其個人所得之剝奪，無異代替其他犯罪參與者承擔刑罰，顯失公平，因共犯連帶沒收與罪刑相當原則相齟齬，故共同犯罪，所得之物之沒收，應就各人分得之數為之，亦即沒收或追徵應就各人所實際分得者為之。${procDetail}`);
+      }
+
+      if (isChecked('conf-fpa48')) {
+        confSubSections.push(`${PAREN_NUMS[confIdx++]}又按，犯詐欺犯罪，其供犯罪所用之物，不問屬於犯罪行為人與否，均沒收之，詐欺犯罪危害防制條例第48條第1項定有明文。扣案如附表所示之物，屬犯刑法第339條之4之詐欺犯罪，供犯罪所用之物，應不問屬於犯罪行為人與否，應依前開規定宣告沒收。而如附表所示偽造之私文書既已全紙沒收，自無庸就其上偽造之署押、印文再予沒收。`);
+      }
+
+      if (isChecked('conf-adj-fpa-lowcost')) {
+        const lowItem = val('val-conf-adj-lowcost-item') || '偽造工作證';
+        confSubSections.push(`${PAREN_NUMS[confIdx++]}至本案被告供犯罪所用之${lowItem}，未據扣案，復無證據證明仍存在，審酌該${lowItem}僅屬事先以電腦製作、列印，取得容易、替代性高，欠缺刑法上之重要性，縱宣告沒收所能達到預防及遏止犯罪之目的甚微，爰依刑法第38條之2第2項規定，不予宣告沒收或追徵其價額。`);
+      }
+
+      if (radioVal('conf-role-mode') === 'accessory') {
+        confSubSections.length = 0;
+        confIdx = 0;
+        const accessoryIncomeMode = radioVal('accessory-conf-income') || 'none';
+        if (accessoryIncomeMode === 'received') {
+          const proceeds = val('val-accessory-proceeds') || 'O元';
+          confSubSections.push('　㈠按犯罪所得，屬於犯罪行為人者，沒收之；前二項之沒收，於全部或一部不能沒收或不宜執行沒收時，追徵其價額，刑法第38條之1第1項前段、第3項分別定有明文。經查，被告提供上開帳戶並收受' + proceeds + '之報酬等情，業經本院認定如前，故被告本案之犯罪所得為' + proceeds + '，應依上開規定宣告沒收，並於全部或一部不能沒收或不宜執行沒收時，追徵其價額。');
+        } else {
+          confSubSections.push('　㈠按犯罪所得，屬於犯罪行為人者，沒收之，於全部或一部不能沒收或不宜執行沒收時，追徵其價額，刑法第38條之1第1項前段、第3項分別定有明文。經查，被告供稱提供本案帳戶資料並未獲得報酬，且依卷內證據，亦無從認定被告因本案有獲取犯罪所得之情形，故不予宣告沒收或追徵。');
+        }
+        confSubSections.push('　㈡又洗錢防制法第25條第1項規定：「犯第19條、第20條之罪，洗錢之財物或財產上利益，不問屬於犯罪行為人與否，沒收之」。經查，本案詐欺集團成員固然向被害人或告訴人詐得款項，然款項旋經詐欺集團成員提領或轉出，被告已不具有管領、使用權限，是若再就被告上開洗錢之財物部分宣告沒收，顯有過苛之虞，爰依刑法第38條之2第2項規定，不予宣告沒收、追徵。');
+      }
+
+      const confText = confSubSections.join('\n');
+      if (confSubSections.length) {
+        reasonSections.push(`${chineseTopNums[topIdx++]}、沒收：\n${confText}`);
+      }
+
+
+      // 結尾據上論斷與檢察官、法官、書記官簽名欄
+      let closingStatuteLine = '';
+      if (isSimpleProc) {
+        const p449 = formatSubclauses(['chk-v9-proc-449-1', 'chk-v9-proc-449-2'], ['第1項', '第2項']);
+        const p450 = isChecked('chk-v9-proc-450') ? '、第450條第1項' : '';
+        closingStatuteLine = `據上論斷，應依刑事訴訟法第449條${p449}${p450}、第454條第1項，逕以簡易判決處刑如主文。`;
+      } else {
+        closingStatuteLine = '據上論斷，應依刑事訴訟法第273條之1第1項、第299條第1項前段，判決如主文。';
+      }
+
+      const pIndictName = val('val-prosecutor-indict') || 'OOO';
+      const pTrialName = val('val-prosecutor-trial') || 'OOO';
+      let prosecutorClosingLine = '';
+      if (isSimpleProc) {
+        prosecutorClosingLine = `本案經檢察官${pIndictName}聲請以簡易判決處刑。`;
+      } else if (isChecked('chk-prosecutor-indict') && isChecked('chk-prosecutor-trial')) {
+        prosecutorClosingLine = `本案經檢察官${pIndictName}提起公訴，檢察官${pTrialName}到庭執行職務。`;
+      } else if (isChecked('chk-prosecutor-indict')) {
+        prosecutorClosingLine = `本案經檢察官${pIndictName}提起公訴。`;
+      }
+
+      const rawJudgmentDate = val('input-judgment-date');
+      let dateLine = '中　　華　　民　　國　　O　年　　O　月　　O　日';
+      if (rawJudgmentDate) {
+        const [y, m, d] = rawJudgmentDate.split('-').map(Number);
+        dateLine = `中　　華　　民　　國　　${y - 1911}　年　　${m}　月　　${d}　日`;
+      }
+      const divName = val('input-court-div') || '刑事第O庭';
+      const judgeName = val('input-judge-name') || '';
+      const clerkName = val('input-clerk-name') || '';
+      const appealNotice = val('input-appeal-text');
+
+      const closingBlock = [
+        closingStatuteLine,
+        prosecutorClosingLine,
+        dateLine,
+        `　　　　　　　　　${divName}　法　官　 ${judgeName}`,
+        '以上正本證明與原本無異。',
+        appealNotice,
+        dateLine,
+        `　　　　　　　　　　　　　　　書記官　 ${clerkName}`
+      ].filter(Boolean).join('\n');
+
+      // 附錄法條與附表
+      const appendixLines = [];
+      Object.keys(STATUTE_TEXTS).forEach((statId) => {
+        if (isChecked(statId)) {
+          appendixLines.push(STATUTE_TEXTS[statId]);
+        }
+      });
+      const appendixText = appendixLines.join('\n\n');
+      const scheduleBlock = (isChecked('chk-include-schedule') && val('val-schedule-text'))
+        ? `\n附表：\n${val('val-schedule-text')}`
+        : '';
+
+      return {
+        caseNo: `${courtName}${caseNo}`,
+        headerBlock,
+        holdingText,
+        factText,
+        reasonFullText: reasonSections.join('\n'),
+        crimeText: crimeSubSections.join('\n'),
+        lawCompareText: customLawCompare,
+        enhText: enhBlock,
+        mitText: mitBlock,
+        sentencingText,
+        confText,
+        probationText,
+        closingBlock,
+        appendixText: appendixText + scheduleBlock
+      };
+    }
+
+    function escapeHtml(str) {
+      return String(str || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/\n/g, '<br>');
+    }
+
+    function renderPreview() {
+      const container = el('preview-container');
+      const d = buildSectionsData();
+
+      const fullDoc = [
+        d.headerBlock,
+        `　　主　文\n${d.holdingText || '（請於左側勾選主文項目）'}`,
+        `　　事　實\n${d.factText}`,
+        `　　理　由\n${d.reasonFullText}`,
+        d.closingBlock,
+        d.appendixText ? `附錄本案論罪科刑法條：\n${d.appendixText}` : ''
+      ].filter(Boolean).join('\n');
+
+      const lines=fullDoc.split('\n'); container.innerHTML=`<div class="leading-relaxed text-[15px] text-[#4A3B32] p-1"><div class="font-bold text-center text-lg">${escapeHtml(lines[0])}</div><div class="text-right">${escapeHtml(lines[1])}</div><div class="whitespace-pre-wrap">${escapeHtml(lines.slice(2).join('\n'))}</div></div>`;
+    }
+
+    function copyTextToClipboard(text, label) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+          showToast(`已複製「${label}」至剪貼簿！`);
+        }).catch(() => fallbackCopy(text, label));
+      } else {
+        fallbackCopy(text, label);
+      }
+    }
+
+    function fallbackCopy(text, label) {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try {
+        document.execCommand('copy');
+        showToast(`已複製「${label}」至剪貼簿！`);
+      } catch (err) {
+        showToast('複製失敗，請手動選取複製');
+      }
+      document.body.removeChild(ta);
+    }
+
+    function initApp() {
+      try { const key='criminalJudgmentGeneratorUsageCount'; const current=Math.max(0,parseInt(localStorage.getItem(key)||'0',10)||0)+1; localStorage.setItem(key,String(current)); el('usage-counter').textContent=current.toLocaleString('zh-TW'); } catch(e) { el('usage-counter').textContent='無法儲存'; }
+      // Navigation tabs
+      const tabBtns = document.querySelectorAll('.tab-btn');
+      const panels = document.querySelectorAll('.form-panel');
+      tabBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const targetId = btn.getAttribute('data-tab');
+          tabBtns.forEach((b) => {
+            b.className = 'tab-btn px-3 py-1.5 rounded-xl text-xs sm:text-sm font-medium text-[#5C493E] hover:bg-[#E8DFD1] transition whitespace-nowrap';
+          });
+          btn.className = 'tab-btn px-3 py-1.5 rounded-xl text-xs sm:text-sm font-semibold bg-[#8C6239] text-[#FFFDF9] transition whitespace-nowrap shadow-sm';
+
+          if (el('show-all-sections-toggle').checked) {
+            const targetEl = el(targetId);
+            if (targetEl) {
+              targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          } else {
+            panels.forEach((p) => {
+              p.classList.toggle('hidden', p.id !== targetId);
+            });
+          }
+        });
+      });
+
+      // Expand all toggle
+      el('show-all-sections-toggle').addEventListener('change', (e) => {
+        if (e.target.checked) {
+          panels.forEach((p) => p.classList.remove('hidden'));
+        } else {
+          const activeBtn = document.querySelector('.tab-btn.bg-\\[\\#8C6239\\]');
+          const activeId = activeBtn ? activeBtn.getAttribute('data-tab') : 'tab-basic';
+          panels.forEach((p) => p.classList.toggle('hidden', p.id !== activeId));
+        }
+      });
+
+      // Probation mode conditional boxes
+      const syncProbationControls = (source) => {
+        const holdingCheck = el('holding-probation-grant');
+        const grantRadio = document.querySelector('input[name="probation-mode"][value="grant"]');
+        const omitRadio = document.querySelector('input[name="probation-mode"][value="omit"]');
+        if (source === 'holding') {
+          (holdingCheck.checked ? grantRadio : omitRadio).checked = true;
+        } else {
+          holdingCheck.checked = grantRadio.checked;
+        }
+        el('holding-probation-years').value = val('val-prob-years') || val('holding-probation-years') || 'O';
+        el('probation-deny-box').classList.toggle('hidden', radioVal('probation-mode') !== 'deny');
+        el('probation-grant-box').classList.toggle('hidden', radioVal('probation-mode') !== 'grant');
+      };
+      el('holding-probation-grant').addEventListener('change', () => { syncProbationControls('holding'); renderPreview(); });
+      el('holding-probation-years').addEventListener('input', () => { el('val-prob-years').value = val('holding-probation-years'); renderPreview(); });
+      el('val-prob-years').addEventListener('input', () => { el('holding-probation-years').value = val('val-prob-years'); renderPreview(); });
+
+      document.querySelectorAll('input[name="probation-mode"]').forEach((r) => {
+        r.addEventListener('change', () => {
+          const m = radioVal('probation-mode');
+          syncProbationControls('reason');
+          el('probation-deny-box').classList.toggle('hidden', m !== 'deny');
+          el('probation-grant-box').classList.toggle('hidden', m !== 'grant');
+          renderPreview();
+        });
+      });
+
+      // Crime checkboxes auto-sync
+      document.querySelectorAll('.crime-checkbox, #chk-holding-3, #auto-sync-statutes').forEach((chk) => {
+        chk.addEventListener('change', () => {
+          syncAppendixStatutes();
+          renderPreview();
+        });
+      });
+
+      // All inputs & checkboxes re-render preview
+      document.querySelectorAll('#form-panels input, #form-panels textarea, #form-panels select').forEach((inp) => {
+        inp.addEventListener('input', renderPreview);
+        inp.addEventListener('change', renderPreview);
+      });
+
+      // Section copy buttons
+      document.querySelectorAll('.sec-copy-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const sec = btn.getAttribute('data-copy-sec');
+          const d = buildSectionsData();
+          const map = {
+            holding: d.holdingText,
+            crimes: d.crimeText,
+            lawcompare: d.lawCompareText || '（未填寫新舊法比較內容）',
+            sentencing: [d.enhText, d.mitText, d.sentencingText].filter(Boolean).join('\n\n'),
+            confiscation: [d.confText, d.probationText].filter(Boolean).join('\n\n'),
+            appendix: d.appendixText
+          };
+          copyTextToClipboard(map[sec] || '（此區塊目前無內容）', btn.textContent);
+        });
+      });
+
+      // Copy all button
+      el('copy-all-btn').addEventListener('click', () => {
+        const text = el('preview-container').innerText;
+        copyTextToClipboard(text, '完整判決內文');
+      });
+
+      // Export Word (.doc)
+      el('export-doc-btn').addEventListener('click', () => {
+        const exportRoot=el('preview-container').cloneNode(true); const ct=exportRoot.querySelector('.text-center'), cn=exportRoot.querySelector('.text-right'); if(ct)ct.style.cssText='text-align:center;font-weight:bold;width:100%'; if(cn)cn.style.cssText='text-align:right;width:100%'; const contentHtml=exportRoot.innerHTML;
+        const docFile = `
+          <html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">
+          <head><meta charset="utf-8"><title>${val('input-case-no')}</title>
+          <style>
+            body { font-family: 'DFKai-SB', 'PMingLiU', serif; font-size: 14pt; line-height: 1.8; }
+          </style></head>
+          <body>${contentHtml}</body></html>`;
+        const blob = new Blob(['\ufeff', docFile], { type: 'application/msword' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `${val('input-court-name')}${val('input-case-no') || '刑事判決'}.doc`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        showToast('已匯出判決內文 Word (.doc) 檔案！');
+      });
+
+      // Print button
+
+      // Legacy hidden buttons handlers
+      el('tpl-v11-btn').addEventListener('click', () => renderPreview());
+      el('tpl-v9-btn').addEventListener('click', () => renderPreview());
+      document.querySelectorAll('.mode-btn').forEach((b) => {
+        b.addEventListener('click', () => renderPreview());
+      });
+
+      const setQuickPresetActive = (buttonId) => {
+        const btn = el(buttonId);
+        const group = btn.dataset.presetGroup;
+        document.querySelectorAll(`.quick-preset[data-preset-group="${group}"]`).forEach((b) => {
+          b.classList.toggle('is-active', b.id === buttonId);
+          b.setAttribute('aria-pressed', b.id === buttonId ? 'true' : 'false');
+        });
+      };
+      el('preset-proc-summary-btn').addEventListener('click', () => { el('rad-proc-summary-trial').checked = true; setQuickPresetActive('preset-proc-summary-btn'); renderPreview(); showToast('已套用「簡式審判程序」'); });
+      el('preset-proc-simple-btn').addEventListener('click', () => { el('rad-proc-simple-judgment').checked = true; setQuickPresetActive('preset-proc-simple-btn'); renderPreview(); showToast('已套用「簡易判決處刑」'); });
+
+      // Presets (Keeping sentencing terms as O年O月 and amounts as O元)
+      el('preset-typical-btn').addEventListener('click', () => {
+        setQuickPresetActive('preset-typical-btn');
+        el('input-court-name').value = '臺灣OO地方法院';
+        el('input-case-no').value = 'O年度訴字第O號';
+        el('chk-holding-1').checked = true;
+        el('val-h1-sentence').value = '處有期徒刑O年O月。';
+        el('chk-holding-2').checked = false;
+        el('chk-v9-h1').checked = false;
+        el('chk-v9-h3').checked = false;
+        el('chk-v9-holding-recidivist').checked = false;
+        el('chk-h-conf-table').checked = true;
+        el('chk-h-conf-unseized').checked = false;
+        el('crime-fraud-339-4').checked = true;
+        el('crime-forgery-210').checked = true;
+        el('crime-forgery-212').checked = true;
+        el('crime-ml-new19').checked = true;
+        el('crime-v9-30-1').checked = false;
+        el('crime-v9-339').checked = false;
+        el('crime-v9-ml-new19').checked = false;
+        el('chk-coprincipal').checked = true;
+        el('chk-forgery-absorb').checked = true;
+        el('val-imag-heavy-crime').value = '刑法第339條之4第1項第2款三人以上共同詐欺取財';
+        document.querySelector('input[name="fraud-ml-mit-mode"][value="confess_no_proceeds"]').checked = true;
+        document.querySelector('input[name="sentencing-style"][value="driver_full"]').checked = true;
+        el('val-sent-prosecutor-ask').value = '有期徒刑O年以上刑度';
+        document.querySelector('input[name="conf-proc-mode"][value="no_proceeds"]').checked = true;
+        document.querySelector('input[name="conf-role-mode"][value="principal"]').checked = true;
+        el('conf-fpa48').checked = true;
+        el('conf-adj-fpa-lowcost').checked = true;
+        document.querySelector('input[name="probation-mode"][value="omit"]').checked = true;
+        el('probation-deny-box').classList.add('hidden');
+        el('probation-grant-box').classList.add('hidden');
+        syncAppendixStatutes();
+        renderPreview();
+        showToast('已套用「典型車手案（加重詐欺+偽造文書+洗錢）」勾選設定');
+      });
+
+      el('preset-attempt-btn').addEventListener('click', () => {
+        setQuickPresetActive('preset-attempt-btn');
+        el('input-court-name').value = '臺灣OO地方法院';
+        el('input-case-no').value = 'O年度訴字第O號';
+        el('chk-holding-1').checked = false;
+        el('chk-holding-2').checked = true;
+        el('val-h2-sentence').value = '處有期徒刑O年O月。';
+        el('chk-v9-h1').checked = false;
+        el('chk-v9-h3').checked = false;
+        el('chk-v9-holding-recidivist').checked = false;
+        el('crime-fraud-339-4').checked = false;
+        el('crime-fraud-339-4-att').checked = true;
+        el('crime-forgery-210').checked = true;
+        el('crime-forgery-212').checked = false;
+        el('crime-ml-new19').checked = false;
+        el('crime-v9-30-1').checked = false;
+        el('crime-v9-339').checked = false;
+        el('crime-v9-ml-new19').checked = false;
+        el('chk-coprincipal').checked = true;
+        el('mit-attempt-25').checked = true;
+        el('mit-accessory-30').checked = false;
+        el('val-imag-heavy-crime').value = '刑法第339條之4第2項、第1項第2款三人以上共同詐欺取財未遂';
+        el('val-prob-years').value = 'O';
+        document.querySelector('input[name="probation-mode"][value="omit"]').checked = true;
+        el('probation-deny-box').classList.add('hidden');
+        el('probation-grant-box').classList.remove('hidden');
+        syncAppendixStatutes();
+        renderPreview();
+        showToast('已套用「加重詐欺未遂+緩刑」勾選設定');
+      });
+
+      el('preset-v9-account-btn').addEventListener('click', () => {
+        setQuickPresetActive('preset-v9-account-btn');
+        el('input-court-name').value = '臺灣OO地方法院';
+        el('chk-holding-1').checked = false;
+        el('chk-holding-2').checked = false;
+        el('chk-holding-3').checked = false;
+        el('chk-v9-h3').checked = true;
+        el('val-v9-h3-term').value = 'O月';
+        el('val-v9-h3-fine').value = 'O元';
+        el('chk-h-conf-table').checked = false;
+        el('chk-h-conf-unseized').checked = false;
+        el('crime-fraud-339-4').checked = false;
+        el('crime-forgery-210').checked = false;
+        el('crime-forgery-212').checked = false;
+        el('crime-ml-new19').checked = false;
+        el('crime-v9-30-1').checked = true;
+        el('crime-v9-339').checked = true;
+        el('crime-v9-ml-new19').checked = true;
+        el('chk-coprincipal').checked = false;
+        el('chk-forgery-absorb').checked = false;
+        el('chk-imag-diff-victims').checked = true;
+        el('val-imag-heavy-crime').value = '幫助洗錢防制法第19條第1項後段之一般洗錢';
+        document.querySelector('input[name="fraud-ml-mit-mode"][value="omit"]').checked = true;
+        el('mit-accessory-30').checked = true;
+        document.querySelector('input[name="sentencing-style"][value="accessory_full"]').checked = true;
+        document.querySelector('input[name="conf-role-mode"][value="accessory"]').checked = true;
+        el('conf-fpa48').checked = false;
+        el('conf-adj-fpa-lowcost').checked = false;
+        syncAppendixStatutes();
+        renderPreview();
+        showToast('已套用「幫助詐欺＋幫助洗錢（提供帳戶）」案件類型');
+      });
+
+      el('preset-clear-btn').addEventListener('click', () => {
+        document.querySelectorAll('.quick-preset').forEach((b) => { b.classList.remove('is-active'); b.setAttribute('aria-pressed','false'); });
+        document.querySelectorAll('#form-panels input[type="checkbox"]').forEach((c) => {
+          if (c.id !== 'auto-sync-statutes' && c.id !== 'show-all-sections-toggle') {
+            c.checked = false;
+          }
+        });
+        el('input-defendant-name').value = '';
+        el('input-case-cause').value = '';
+        el('input-judge-name').value = '';
+        el('input-clerk-name').value = '';
+        el('val-prosecutor-indict').value = '';
+        el('val-prosecutor-trial').value = '';
+        el('input-custom-law-compare').value = '';
+        el('input-court-name').value = '臺灣OO地方法院';
+        el('input-case-no').value = 'O年度訴字第O號';
+        document.querySelector('input[name="probation-mode"][value="omit"]').checked = true;
+        el('probation-deny-box').classList.add('hidden');
+        el('probation-grant-box').classList.add('hidden');
+        renderPreview();
+        showToast('已清空所有勾選項目');
+      });
+
+      syncProbationControls('reason');
+      renderPreview();
+    }
+
+    window.addEventListener('DOMContentLoaded', initApp);
+  </script>
+</body>
+</html>

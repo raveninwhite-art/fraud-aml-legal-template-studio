@@ -1,0 +1,761 @@
+[
+  {
+    "id": "B01",
+    "title": "預設初始狀態",
+    "steps": [
+      {
+        "set": [
+          "input-defendant-name",
+          "測試被告甲"
+        ]
+      },
+      {
+        "set": [
+          "input-case-cause",
+          "加重詐欺等"
+        ]
+      },
+      {
+        "set": [
+          "input-judge-name",
+          "測試法官"
+        ]
+      },
+      {
+        "set": [
+          "input-clerk-name",
+          "測試書記官"
+        ]
+      },
+      {
+        "set": [
+          "val-prosecutor-indict",
+          "測試檢察官甲"
+        ]
+      },
+      {
+        "set": [
+          "val-prosecutor-trial",
+          "測試檢察官乙"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "B02",
+    "title": "典型車手",
+    "steps": [
+      {
+        "click": "preset-typical-btn"
+      },
+      {
+        "set": [
+          "input-defendant-name",
+          "測試被告甲"
+        ]
+      },
+      {
+        "set": [
+          "input-case-cause",
+          "加重詐欺等"
+        ]
+      },
+      {
+        "set": [
+          "input-judge-name",
+          "測試法官"
+        ]
+      },
+      {
+        "set": [
+          "input-clerk-name",
+          "測試書記官"
+        ]
+      },
+      {
+        "set": [
+          "val-prosecutor-indict",
+          "測試檢察官甲"
+        ]
+      },
+      {
+        "set": [
+          "val-prosecutor-trial",
+          "測試檢察官乙"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "B03",
+    "title": "加重詐欺未遂",
+    "steps": [
+      {
+        "click": "preset-attempt-btn"
+      },
+      {
+        "set": [
+          "input-defendant-name",
+          "測試被告甲"
+        ]
+      },
+      {
+        "set": [
+          "input-case-cause",
+          "加重詐欺等"
+        ]
+      },
+      {
+        "set": [
+          "input-judge-name",
+          "測試法官"
+        ]
+      },
+      {
+        "set": [
+          "input-clerk-name",
+          "測試書記官"
+        ]
+      },
+      {
+        "set": [
+          "val-prosecutor-indict",
+          "測試檢察官甲"
+        ]
+      },
+      {
+        "set": [
+          "val-prosecutor-trial",
+          "測試檢察官乙"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "B04",
+    "title": "帳戶幫助犯",
+    "steps": [
+      {
+        "click": "preset-v9-account-btn"
+      },
+      {
+        "set": [
+          "input-defendant-name",
+          "測試被告甲"
+        ]
+      },
+      {
+        "set": [
+          "input-case-cause",
+          "加重詐欺等"
+        ]
+      },
+      {
+        "set": [
+          "input-judge-name",
+          "測試法官"
+        ]
+      },
+      {
+        "set": [
+          "input-clerk-name",
+          "測試書記官"
+        ]
+      },
+      {
+        "set": [
+          "val-prosecutor-indict",
+          "測試檢察官甲"
+        ]
+      },
+      {
+        "set": [
+          "val-prosecutor-trial",
+          "測試檢察官乙"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "B05",
+    "title": "簡易判決帳戶案",
+    "steps": [
+      {
+        "click": "preset-v9-account-btn"
+      },
+      {
+        "click": "preset-proc-simple-btn"
+      },
+      {
+        "set": [
+          "input-defendant-name",
+          "測試被告甲"
+        ]
+      },
+      {
+        "set": [
+          "input-case-cause",
+          "加重詐欺等"
+        ]
+      },
+      {
+        "set": [
+          "input-judge-name",
+          "測試法官"
+        ]
+      },
+      {
+        "set": [
+          "input-clerk-name",
+          "測試書記官"
+        ]
+      },
+      {
+        "set": [
+          "val-prosecutor-indict",
+          "測試檢察官甲"
+        ]
+      },
+      {
+        "set": [
+          "val-prosecutor-trial",
+          "測試檢察官乙"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "B06",
+    "title": "未扣案所得",
+    "steps": [
+      {
+        "click": "preset-typical-btn"
+      },
+      {
+        "set": [
+          "input-defendant-name",
+          "測試被告甲"
+        ]
+      },
+      {
+        "set": [
+          "input-case-cause",
+          "加重詐欺等"
+        ]
+      },
+      {
+        "set": [
+          "input-judge-name",
+          "測試法官"
+        ]
+      },
+      {
+        "set": [
+          "input-clerk-name",
+          "測試書記官"
+        ]
+      },
+      {
+        "set": [
+          "val-prosecutor-indict",
+          "測試檢察官甲"
+        ]
+      },
+      {
+        "set": [
+          "val-prosecutor-trial",
+          "測試檢察官乙"
+        ]
+      },
+      {
+        "set": [
+          "@fraud-ml-mit-mode",
+          "confess_unpaid_proceeds"
+        ]
+      },
+      {
+        "set": [
+          "val-mit-unpaid-amt",
+          "4,000元"
+        ]
+      },
+      {
+        "set": [
+          "@conf-proc-mode",
+          "unseized_proceeds"
+        ]
+      },
+      {
+        "set": [
+          "val-conf-proc-unseized",
+          "4,000元"
+        ]
+      },
+      {
+        "set": [
+          "chk-h-conf-unseized",
+          true
+        ]
+      },
+      {
+        "set": [
+          "val-h-unseized-amt",
+          "肆仟元"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "B07",
+    "title": "已繳交所得",
+    "steps": [
+      {
+        "click": "preset-typical-btn"
+      },
+      {
+        "set": [
+          "input-defendant-name",
+          "測試被告甲"
+        ]
+      },
+      {
+        "set": [
+          "input-case-cause",
+          "加重詐欺等"
+        ]
+      },
+      {
+        "set": [
+          "input-judge-name",
+          "測試法官"
+        ]
+      },
+      {
+        "set": [
+          "input-clerk-name",
+          "測試書記官"
+        ]
+      },
+      {
+        "set": [
+          "val-prosecutor-indict",
+          "測試檢察官甲"
+        ]
+      },
+      {
+        "set": [
+          "val-prosecutor-trial",
+          "測試檢察官乙"
+        ]
+      },
+      {
+        "set": [
+          "@fraud-ml-mit-mode",
+          "confess_paid_proceeds"
+        ]
+      },
+      {
+        "set": [
+          "val-mit-paid-amt",
+          "1,000元"
+        ]
+      },
+      {
+        "set": [
+          "@conf-proc-mode",
+          "paid_proceeds"
+        ]
+      },
+      {
+        "set": [
+          "val-conf-proc-seized",
+          "1,000元"
+        ]
+      },
+      {
+        "set": [
+          "chk-h-conf-paid",
+          true
+        ]
+      },
+      {
+        "set": [
+          "val-h-paid-amt",
+          "壹仟元"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "B08",
+    "title": "累犯不加重",
+    "steps": [
+      {
+        "click": "preset-typical-btn"
+      },
+      {
+        "set": [
+          "input-defendant-name",
+          "測試被告甲"
+        ]
+      },
+      {
+        "set": [
+          "input-case-cause",
+          "加重詐欺等"
+        ]
+      },
+      {
+        "set": [
+          "input-judge-name",
+          "測試法官"
+        ]
+      },
+      {
+        "set": [
+          "input-clerk-name",
+          "測試書記官"
+        ]
+      },
+      {
+        "set": [
+          "val-prosecutor-indict",
+          "測試檢察官甲"
+        ]
+      },
+      {
+        "set": [
+          "val-prosecutor-trial",
+          "測試檢察官乙"
+        ]
+      },
+      {
+        "set": [
+          "chk-holding-recidivist",
+          true
+        ]
+      },
+      {
+        "set": [
+          "enh-recidivist",
+          true
+        ]
+      },
+      {
+        "set": [
+          "val-recid-detail",
+          "虛構前案於本案行為前五年內執行完畢"
+        ]
+      },
+      {
+        "set": [
+          "@recid-enhance-opt",
+          "no"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "B09",
+    "title": "緩刑及向公庫支付",
+    "steps": [
+      {
+        "click": "preset-typical-btn"
+      },
+      {
+        "set": [
+          "input-defendant-name",
+          "測試被告甲"
+        ]
+      },
+      {
+        "set": [
+          "input-case-cause",
+          "加重詐欺等"
+        ]
+      },
+      {
+        "set": [
+          "input-judge-name",
+          "測試法官"
+        ]
+      },
+      {
+        "set": [
+          "input-clerk-name",
+          "測試書記官"
+        ]
+      },
+      {
+        "set": [
+          "val-prosecutor-indict",
+          "測試檢察官甲"
+        ]
+      },
+      {
+        "set": [
+          "val-prosecutor-trial",
+          "測試檢察官乙"
+        ]
+      },
+      {
+        "set": [
+          "@probation-mode",
+          "grant"
+        ]
+      },
+      {
+        "set": [
+          "val-prob-years",
+          "2"
+        ]
+      },
+      {
+        "set": [
+          "prob-cond-3",
+          false
+        ]
+      },
+      {
+        "set": [
+          "prob-cond-4",
+          true
+        ]
+      },
+      {
+        "set": [
+          "val-prob-cond-4",
+          "應於本判決確定後6個月內向公庫支付新臺幣10萬元。"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "B10",
+    "title": "自填比較及附表",
+    "steps": [
+      {
+        "set": [
+          "input-defendant-name",
+          "測試被告甲"
+        ]
+      },
+      {
+        "set": [
+          "input-case-cause",
+          "加重詐欺等"
+        ]
+      },
+      {
+        "set": [
+          "input-judge-name",
+          "測試法官"
+        ]
+      },
+      {
+        "set": [
+          "input-clerk-name",
+          "測試書記官"
+        ]
+      },
+      {
+        "set": [
+          "val-prosecutor-indict",
+          "測試檢察官甲"
+        ]
+      },
+      {
+        "set": [
+          "val-prosecutor-trial",
+          "測試檢察官乙"
+        ]
+      },
+      {
+        "set": [
+          "input-custom-law-compare",
+          "【虛構測試】依刑法第2條第1項比較後適用行為時法。"
+        ]
+      },
+      {
+        "set": [
+          "chk-include-schedule",
+          true
+        ]
+      },
+      {
+        "set": [
+          "val-schedule-text",
+          "1 測試收據1張（測試卷第1頁）"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "B11",
+    "title": "幫助洗錢舊法",
+    "steps": [
+      {
+        "click": "preset-v9-account-btn"
+      },
+      {
+        "set": [
+          "input-defendant-name",
+          "測試被告甲"
+        ]
+      },
+      {
+        "set": [
+          "input-case-cause",
+          "加重詐欺等"
+        ]
+      },
+      {
+        "set": [
+          "input-judge-name",
+          "測試法官"
+        ]
+      },
+      {
+        "set": [
+          "input-clerk-name",
+          "測試書記官"
+        ]
+      },
+      {
+        "set": [
+          "val-prosecutor-indict",
+          "測試檢察官甲"
+        ]
+      },
+      {
+        "set": [
+          "val-prosecutor-trial",
+          "測試檢察官乙"
+        ]
+      },
+      {
+        "set": [
+          "crime-v9-ml-new19",
+          false
+        ]
+      },
+      {
+        "set": [
+          "crime-v9-ml-old14",
+          true
+        ]
+      },
+      {
+        "set": [
+          "chk-v9-h3",
+          false
+        ]
+      },
+      {
+        "set": [
+          "chk-v9-h2",
+          true
+        ]
+      },
+      {
+        "set": [
+          "val-imag-heavy-crime",
+          "幫助修正前洗錢防制法第14條第1項之一般洗錢"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "B12",
+    "title": "幫助未遂",
+    "steps": [
+      {
+        "click": "preset-v9-account-btn"
+      },
+      {
+        "set": [
+          "input-defendant-name",
+          "測試被告甲"
+        ]
+      },
+      {
+        "set": [
+          "input-case-cause",
+          "加重詐欺等"
+        ]
+      },
+      {
+        "set": [
+          "input-judge-name",
+          "測試法官"
+        ]
+      },
+      {
+        "set": [
+          "input-clerk-name",
+          "測試書記官"
+        ]
+      },
+      {
+        "set": [
+          "val-prosecutor-indict",
+          "測試檢察官甲"
+        ]
+      },
+      {
+        "set": [
+          "val-prosecutor-trial",
+          "測試檢察官乙"
+        ]
+      },
+      {
+        "set": [
+          "crime-v9-339",
+          false
+        ]
+      },
+      {
+        "set": [
+          "crime-v9-ml-new19",
+          false
+        ]
+      },
+      {
+        "set": [
+          "crime-v9-339-att",
+          true
+        ]
+      },
+      {
+        "set": [
+          "crime-v9-ml-new19-att",
+          true
+        ]
+      },
+      {
+        "set": [
+          "chk-v9-h3",
+          false
+        ]
+      },
+      {
+        "set": [
+          "chk-v9-h6",
+          true
+        ]
+      },
+      {
+        "set": [
+          "mit-attempt-25",
+          true
+        ]
+      },
+      {
+        "set": [
+          "val-imag-heavy-crime",
+          "幫助洗錢防制法第19條第2項、第1項後段之一般洗錢未遂"
+        ]
+      }
+    ]
+  }
+]

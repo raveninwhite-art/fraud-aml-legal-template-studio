@@ -1,0 +1,6 @@
+{
+  "previousSourceSha256": null,
+  "improved": [],
+  "regressions": [],
+  "note": "狀態變化仍須核對測試規則、修復及Baseline核准紀錄，不能單憑轉綠認定法律正確。"
+}

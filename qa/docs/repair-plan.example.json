@@ -1,0 +1,8 @@
+{
+  "repairId": "R-EXAMPLE",
+  "problem": "修改前先填入可重現的具體問題",
+  "allowedCases": ["B01", "B02"],
+  "allowedSections": ["sentencingText", "crimeText", "reasonFullText"],
+  "humanApprovalReference": "待核准，請勿直接當作核准紀錄",
+  "note": "只分類差異是否在預定範圍內；不會自動更新Expected，也不會放行Baseline差異。"
+}

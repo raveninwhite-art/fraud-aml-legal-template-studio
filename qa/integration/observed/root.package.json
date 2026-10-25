@@ -1,0 +1,17 @@
+
+{
+  "name": "fraud-aml-legal-template-studio-tests",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Automated regression tests for the legal template studio",
+  "scripts": {
+    "test": "playwright test",
+    "test:smoke": "playwright test tests/smoke.spec.js",
+    "test:report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.58.2",
+    "http-server": "14.1.1"
+  }
+}
+

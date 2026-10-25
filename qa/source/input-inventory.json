@@ -1,0 +1,5288 @@
+{
+  "inputs": [
+    {
+      "tag": "input",
+      "id": "show-all-sections-toggle",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "attributes": {
+        "type": "checkbox",
+        "id": "show-all-sections-toggle",
+        "checked": "",
+        "class": "rounded border-[#C8B8A2]"
+      },
+      "label": "單頁展開全部區塊"
+    },
+    {
+      "tag": "input",
+      "id": "input-court-name",
+      "name": "",
+      "type": "text",
+      "defaultValue": "臺灣OO地方法院",
+      "value": "臺灣OO地方法院",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "text",
+        "id": "input-court-name",
+        "value": "臺灣OO地方法院",
+        "placeholder": "臺灣OO地方法院",
+        "class": "w-full px-3 py-1.5 text-sm rounded-lg border cream-input"
+      },
+      "label": "法院名稱"
+    },
+    {
+      "tag": "input",
+      "id": "input-case-no",
+      "name": "",
+      "type": "text",
+      "defaultValue": "O年度訴字第O號",
+      "value": "O年度訴字第O號",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "text",
+        "id": "input-case-no",
+        "value": "O年度訴字第O號",
+        "placeholder": "例如：O年度訴字第O號",
+        "class": "w-full px-3 py-1.5 text-sm rounded-lg border cream-input"
+      },
+      "label": "判決年度字號"
+    },
+    {
+      "tag": "input",
+      "id": "input-case-cause",
+      "name": "",
+      "type": "text",
+      "defaultValue": "",
+      "value": "",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "text",
+        "id": "input-case-cause",
+        "value": "",
+        "placeholder": "請自行輸入起訴／聲請案由",
+        "class": "w-full px-3 py-1.5 text-sm rounded-lg border cream-input"
+      },
+      "label": "起訴／聲請案由"
+    },
+    {
+      "tag": "input",
+      "id": "input-defendant-name",
+      "name": "",
+      "type": "text",
+      "defaultValue": "",
+      "value": "",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "text",
+        "id": "input-defendant-name",
+        "value": "",
+        "placeholder": "請輸入被告姓名",
+        "class": "w-full px-3 py-1.5 text-sm rounded-lg border-2 border-[#D4A373] bg-[#FFFDF9] font-medium cream-input"
+      },
+      "label": "被告姓名（留空待填）"
+    },
+    {
+      "tag": "input",
+      "id": "input-lawyer-name",
+      "name": "",
+      "type": "text",
+      "defaultValue": "",
+      "value": "",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "text",
+        "id": "input-lawyer-name",
+        "value": "",
+        "placeholder": "無則留空",
+        "class": "w-full px-3 py-1.5 text-sm rounded-lg border cream-input"
+      },
+      "label": "選任／指定辯護人（選填）"
+    },
+    {
+      "tag": "input",
+      "id": "input-judgment-date",
+      "name": "",
+      "type": "date",
+      "defaultValue": "",
+      "value": "",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "date",
+        "id": "input-judgment-date",
+        "value": "",
+        "class": "w-full px-3 py-1.5 text-xs sm:text-sm rounded-lg border cream-input"
+      },
+      "label": "宣判日期"
+    },
+    {
+      "tag": "input",
+      "id": "input-court-div",
+      "name": "",
+      "type": "text",
+      "defaultValue": "刑事第O庭",
+      "value": "刑事第O庭",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "text",
+        "id": "input-court-div",
+        "value": "刑事第O庭",
+        "placeholder": "例如：刑事第O庭",
+        "class": "w-full px-3 py-1.5 text-sm rounded-lg border cream-input"
+      },
+      "label": "庭別名稱"
+    },
+    {
+      "tag": "input",
+      "id": "input-judge-name",
+      "name": "",
+      "type": "text",
+      "defaultValue": "",
+      "value": "",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "text",
+        "id": "input-judge-name",
+        "value": "",
+        "placeholder": "請輸入法官姓名",
+        "class": "w-full px-3 py-1.5 text-sm rounded-lg border-2 border-[#D4A373] bg-[#FFFDF9] cream-input"
+      },
+      "label": "法官姓名（留空待填）"
+    },
+    {
+      "tag": "input",
+      "id": "input-clerk-name",
+      "name": "",
+      "type": "text",
+      "defaultValue": "",
+      "value": "",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "text",
+        "id": "input-clerk-name",
+        "value": "",
+        "placeholder": "請輸入書記官姓名",
+        "class": "w-full px-3 py-1.5 text-sm rounded-lg border cream-input"
+      },
+      "label": "書記官姓名（留空待填）"
+    },
+    {
+      "tag": "input",
+      "id": "chk-pros-indict",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-pros-indict",
+        "checked": "",
+        "class": "mt-1 rounded"
+      },
+      "label": "起訴／聲請偵查案號："
+    },
+    {
+      "tag": "input",
+      "id": "val-pros-indict",
+      "name": "",
+      "type": "text",
+      "defaultValue": "O年度偵字第O號",
+      "value": "O年度偵字第O號",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "text",
+        "id": "val-pros-indict",
+        "value": "O年度偵字第O號",
+        "class": "mt-1 w-full px-2.5 py-1 text-xs rounded-lg border cream-input"
+      },
+      "label": "起訴／聲請偵查案號："
+    },
+    {
+      "tag": "input",
+      "id": "chk-pros-add",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-pros-add",
+        "class": "mt-1 rounded"
+      },
+      "label": "追加起訴案號："
+    },
+    {
+      "tag": "input",
+      "id": "val-pros-add",
+      "name": "",
+      "type": "text",
+      "defaultValue": "O年度O字第O號",
+      "value": "O年度O字第O號",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "text",
+        "id": "val-pros-add",
+        "value": "O年度O字第O號",
+        "class": "mt-1 w-full px-2.5 py-1 text-xs rounded-lg border cream-input"
+      },
+      "label": "追加起訴案號："
+    },
+    {
+      "tag": "input",
+      "id": "chk-pros-merge",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-pros-merge",
+        "class": "mt-1 rounded"
+      },
+      "label": "移送併辦案號："
+    },
+    {
+      "tag": "input",
+      "id": "val-pros-merge",
+      "name": "",
+      "type": "text",
+      "defaultValue": "O年度O字第O號",
+      "value": "O年度O字第O號",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "text",
+        "id": "val-pros-merge",
+        "value": "O年度O字第O號",
+        "class": "mt-1 w-full px-2.5 py-1 text-xs rounded-lg border cream-input"
+      },
+      "label": "移送併辦案號："
+    },
+    {
+      "tag": "input",
+      "id": "chk-prosecutor-indict",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-prosecutor-indict",
+        "checked": "",
+        "class": "mt-1 rounded"
+      },
+      "label": "提起公訴／聲請簡判檢察官："
+    },
+    {
+      "tag": "input",
+      "id": "val-prosecutor-indict",
+      "name": "",
+      "type": "text",
+      "defaultValue": "",
+      "value": "",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "text",
+        "id": "val-prosecutor-indict",
+        "value": "",
+        "placeholder": "請輸入起訴檢察官姓名（不含職稱）",
+        "class": "mt-1 w-full px-2.5 py-1 text-xs rounded-lg border-2 border-[#D4A373] cream-input"
+      },
+      "label": "提起公訴／聲請簡判檢察官："
+    },
+    {
+      "tag": "input",
+      "id": "chk-prosecutor-trial",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-prosecutor-trial",
+        "checked": "",
+        "class": "mt-1 rounded"
+      },
+      "label": "到庭執行職務檢察官："
+    },
+    {
+      "tag": "input",
+      "id": "val-prosecutor-trial",
+      "name": "",
+      "type": "text",
+      "defaultValue": "",
+      "value": "",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "text",
+        "id": "val-prosecutor-trial",
+        "value": "",
+        "placeholder": "請輸入到庭執行職務檢察官姓名（不含職稱）",
+        "class": "mt-1 w-full px-2.5 py-1 text-xs rounded-lg border-2 border-[#D4A373] cream-input"
+      },
+      "label": "到庭執行職務檢察官："
+    },
+    {
+      "tag": "input",
+      "id": "rad-proc-summary-trial",
+      "name": "proc-type-mode",
+      "type": "radio",
+      "defaultValue": "summary_trial",
+      "value": "summary_trial",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "radio",
+        "name": "proc-type-mode",
+        "id": "rad-proc-summary-trial",
+        "value": "summary_trial",
+        "checked": "",
+        "class": "mt-1"
+      },
+      "label": "簡式審判程序（刑事訴訟法第273條之1第1項、第299條第1項前段）"
+    },
+    {
+      "tag": "input",
+      "id": "chk-include-reason-one",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-include-reason-one",
+        "checked": "",
+        "class": "rounded"
+      },
+      "label": "於「理由一」列出簡式審判程序合致要件說明段落"
+    },
+    {
+      "tag": "input",
+      "id": "rad-proc-simple-judgment",
+      "name": "proc-type-mode",
+      "type": "radio",
+      "defaultValue": "simple_judgment",
+      "value": "simple_judgment",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "radio",
+        "name": "proc-type-mode",
+        "id": "rad-proc-simple-judgment",
+        "value": "simple_judgment",
+        "class": "mt-1"
+      },
+      "label": "簡易判決處刑（刑事訴訟法第449條、第454條）"
+    },
+    {
+      "tag": "input",
+      "id": "chk-v9-proc-449-1",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-v9-proc-449-1",
+        "checked": "",
+        "class": "rounded"
+      },
+      "label": "第1項"
+    },
+    {
+      "tag": "input",
+      "id": "chk-v9-proc-449-2",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-v9-proc-449-2",
+        "class": "rounded"
+      },
+      "label": "第2項"
+    },
+    {
+      "tag": "input",
+      "id": "chk-v9-proc-450",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-v9-proc-450",
+        "checked": "",
+        "class": "rounded"
+      },
+      "label": "、第450條第1項"
+    },
+    {
+      "tag": "input",
+      "id": "chk-holding-recidivist",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-holding-recidivist",
+        "class": "rounded"
+      },
+      "label": "主文罪名後加註「，累犯，」"
+    },
+    {
+      "tag": "input",
+      "id": "chk-holding-1",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-holding-1",
+        "checked": "",
+        "class": "rounded"
+      },
+      "label": "加重詐欺取財罪（既遂）"
+    },
+    {
+      "tag": "input",
+      "id": "val-h1-crime-title",
+      "name": "",
+      "type": "text",
+      "defaultValue": "三人以上共同詐欺取財罪",
+      "value": "三人以上共同詐欺取財罪",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "text",
+        "id": "val-h1-crime-title",
+        "value": "三人以上共同詐欺取財罪",
+        "class": "px-2.5 py-1 rounded-lg border cream-input text-xs sm:text-sm w-64"
+      },
+      "label": "主文罪名表述："
+    },
+    {
+      "tag": "input",
+      "id": "val-h1-sentence",
+      "name": "",
+      "type": "text",
+      "defaultValue": "處有期徒刑O年O月。",
+      "value": "處有期徒刑O年O月。",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "text",
+        "id": "val-h1-sentence",
+        "value": "處有期徒刑O年O月。",
+        "class": "flex-1 min-w-[180px] px-2.5 py-1 rounded-lg border cream-input text-xs sm:text-sm"
+      },
+      "label": "宣告刑："
+    },
+    {
+      "tag": "input",
+      "id": "chk-h1-sub1",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-h1-sub1",
+        "class": "rounded"
+      },
+      "label": "第1款"
+    },
+    {
+      "tag": "input",
+      "id": "chk-h1-sub2",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-h1-sub2",
+        "checked": "",
+        "class": "rounded"
+      },
+      "label": "第2款（三人以上）"
+    },
+    {
+      "tag": "input",
+      "id": "chk-h1-sub3",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-h1-sub3",
+        "class": "rounded"
+      },
+      "label": "第3款"
+    },
+    {
+      "tag": "input",
+      "id": "chk-h1-sub4",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-h1-sub4",
+        "class": "rounded"
+      },
+      "label": "第4款"
+    },
+    {
+      "tag": "input",
+      "id": "chk-holding-2",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-holding-2",
+        "class": "rounded"
+      },
+      "label": "加重詐欺取財未遂罪"
+    },
+    {
+      "tag": "input",
+      "id": "val-h2-crime-title",
+      "name": "",
+      "type": "text",
+      "defaultValue": "三人以上共同詐欺取財未遂罪",
+      "value": "三人以上共同詐欺取財未遂罪",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "text",
+        "id": "val-h2-crime-title",
+        "value": "三人以上共同詐欺取財未遂罪",
+        "class": "px-2.5 py-1 rounded-lg border cream-input text-xs sm:text-sm w-64"
+      },
+      "label": "主文罪名表述："
+    },
+    {
+      "tag": "input",
+      "id": "val-h2-sentence",
+      "name": "",
+      "type": "text",
+      "defaultValue": "處有期徒刑O年O月。",
+      "value": "處有期徒刑O年O月。",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "text",
+        "id": "val-h2-sentence",
+        "value": "處有期徒刑O年O月。",
+        "class": "flex-1 min-w-[180px] px-2.5 py-1 rounded-lg border cream-input text-xs sm:text-sm"
+      },
+      "label": "宣告刑："
+    },
+    {
+      "tag": "input",
+      "id": "chk-h2-sub1",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-h2-sub1"
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "chk-h2-sub2",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-h2-sub2",
+        "checked": ""
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "chk-h2-sub3",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-h2-sub3"
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "chk-h2-sub4",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-h2-sub4"
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "chk-holding-3",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-holding-3",
+        "class": "rounded"
+      },
+      "label": "詐欺犯罪危害防制條例第44條第1項 分則加重罪"
+    },
+    {
+      "tag": "input",
+      "id": "chk-h3-sub1",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-h3-sub1",
+        "checked": "",
+        "class": "rounded"
+      },
+      "label": "第1款"
+    },
+    {
+      "tag": "input",
+      "id": "chk-h3-sub2",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-h3-sub2",
+        "class": "rounded"
+      },
+      "label": "第2款"
+    },
+    {
+      "tag": "input",
+      "id": "chk-h3-sub3",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-h3-sub3",
+        "class": "rounded"
+      },
+      "label": "第3款"
+    },
+    {
+      "tag": "input",
+      "id": "val-h3-sentence",
+      "name": "",
+      "type": "text",
+      "defaultValue": "處有期徒刑O年O月。",
+      "value": "處有期徒刑O年O月。",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "text",
+        "id": "val-h3-sentence",
+        "value": "處有期徒刑O年O月。",
+        "class": "flex-1 min-w-[220px] px-2.5 py-1 rounded-lg border cream-input text-xs sm:text-sm"
+      },
+      "label": "宣告刑："
+    },
+    {
+      "tag": "input",
+      "id": "chk-v9-holding-recidivist",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-v9-holding-recidivist",
+        "class": "rounded"
+      },
+      "label": "主文罪名後加註「，累犯，」"
+    },
+    {
+      "tag": "input",
+      "id": "chk-v9-h1",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-v9-h1",
+        "class": "rounded"
+      },
+      "label": "幫助犯詐欺取財罪（既遂）"
+    },
+    {
+      "tag": "input",
+      "id": "val-v9-h1-term",
+      "name": "",
+      "type": "text",
+      "defaultValue": "O月",
+      "value": "O月",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "text",
+        "id": "val-v9-h1-term",
+        "value": "O月",
+        "class": "w-20 px-2 py-0.5 rounded-lg border cream-input text-center"
+      },
+      "label": "處有期徒刑"
+    },
+    {
+      "tag": "input",
+      "id": "chk-v9-h2",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-v9-h2",
+        "class": "rounded"
+      },
+      "label": "幫助犯修正前洗錢防制法第十四條第一項一般洗錢罪（既遂）"
+    },
+    {
+      "tag": "input",
+      "id": "val-v9-h2-term",
+      "name": "",
+      "type": "text",
+      "defaultValue": "O月",
+      "value": "O月",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "text",
+        "id": "val-v9-h2-term",
+        "value": "O月",
+        "class": "w-20 px-2 py-0.5 rounded-lg border cream-input text-center"
+      },
+      "label": "處有期徒刑"
+    },
+    {
+      "tag": "input",
+      "id": "val-v9-h2-fine",
+      "name": "",
+      "type": "text",
+      "defaultValue": "O元",
+      "value": "O元",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "text",
+        "id": "val-v9-h2-fine",
+        "value": "O元",
+        "class": "w-24 px-2 py-0.5 rounded-lg border cream-input text-center"
+      },
+      "label": "，併科罰金新臺幣"
+    },
+    {
+      "tag": "input",
+      "id": "chk-v9-h3",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-v9-h3",
+        "class": "rounded"
+      },
+      "label": "幫助犯洗錢防制法第十九條第一項後段一般洗錢罪（既遂）"
+    },
+    {
+      "tag": "input",
+      "id": "val-v9-h3-term",
+      "name": "",
+      "type": "text",
+      "defaultValue": "O月",
+      "value": "O月",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "text",
+        "id": "val-v9-h3-term",
+        "value": "O月",
+        "class": "w-20 px-2 py-0.5 rounded-lg border cream-input text-center"
+      },
+      "label": "處有期徒刑"
+    },
+    {
+      "tag": "input",
+      "id": "val-v9-h3-fine",
+      "name": "",
+      "type": "text",
+      "defaultValue": "O元",
+      "value": "O元",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "text",
+        "id": "val-v9-h3-fine",
+        "value": "O元",
+        "class": "w-24 px-2 py-0.5 rounded-lg border cream-input text-center"
+      },
+      "label": "，併科罰金新臺幣"
+    },
+    {
+      "tag": "input",
+      "id": "chk-v9-h4",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-v9-h4",
+        "class": "rounded"
+      },
+      "label": "幫助犯詐欺取財未遂罪"
+    },
+    {
+      "tag": "input",
+      "id": "val-v9-h4-term",
+      "name": "",
+      "type": "text",
+      "defaultValue": "O月",
+      "value": "O月",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "text",
+        "id": "val-v9-h4-term",
+        "value": "O月",
+        "class": "w-20 px-2 py-0.5 rounded-lg border cream-input text-center"
+      },
+      "label": "處有期徒刑"
+    },
+    {
+      "tag": "input",
+      "id": "chk-v9-h5",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-v9-h5",
+        "class": "rounded"
+      },
+      "label": "幫助犯修正前洗錢防制法第十四條第一項一般洗錢未遂罪"
+    },
+    {
+      "tag": "input",
+      "id": "val-v9-h5-term",
+      "name": "",
+      "type": "text",
+      "defaultValue": "O月",
+      "value": "O月",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "text",
+        "id": "val-v9-h5-term",
+        "value": "O月",
+        "class": "w-20 px-2 py-0.5 rounded-lg border cream-input text-center"
+      },
+      "label": "處有期徒刑"
+    },
+    {
+      "tag": "input",
+      "id": "val-v9-h5-fine",
+      "name": "",
+      "type": "text",
+      "defaultValue": "O元",
+      "value": "O元",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "text",
+        "id": "val-v9-h5-fine",
+        "value": "O元",
+        "class": "w-24 px-2 py-0.5 rounded-lg border cream-input text-center"
+      },
+      "label": "，併科罰金新臺幣"
+    },
+    {
+      "tag": "input",
+      "id": "chk-v9-h6",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-v9-h6",
+        "class": "rounded"
+      },
+      "label": "幫助犯洗錢防制法第十九條第一項後段一般洗錢未遂罪"
+    },
+    {
+      "tag": "input",
+      "id": "val-v9-h6-term",
+      "name": "",
+      "type": "text",
+      "defaultValue": "O月",
+      "value": "O月",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "text",
+        "id": "val-v9-h6-term",
+        "value": "O月",
+        "class": "w-20 px-2 py-0.5 rounded-lg border cream-input text-center"
+      },
+      "label": "處有期徒刑"
+    },
+    {
+      "tag": "input",
+      "id": "val-v9-h6-fine",
+      "name": "",
+      "type": "text",
+      "defaultValue": "O元",
+      "value": "O元",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "text",
+        "id": "val-v9-h6-fine",
+        "value": "O元",
+        "class": "w-24 px-2 py-0.5 rounded-lg border cream-input text-center"
+      },
+      "label": "，併科罰金新臺幣"
+    },
+    {
+      "tag": "input",
+      "id": "chk-h-conf-table",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-h-conf-table",
+        "checked": "",
+        "class": "rounded"
+      },
+      "label": "扣案如附表所示之物，沒收之"
+    },
+    {
+      "tag": "input",
+      "id": "chk-h-conf-unseized",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-h-conf-unseized",
+        "class": "rounded"
+      },
+      "label": "未扣案之犯罪所得沒收追徵：新臺幣"
+    },
+    {
+      "tag": "input",
+      "id": "val-h-unseized-amt",
+      "name": "",
+      "type": "text",
+      "defaultValue": "O元",
+      "value": "O元",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "text",
+        "id": "val-h-unseized-amt",
+        "value": "O元",
+        "class": "w-24 px-2 py-0.5 text-xs rounded-lg border cream-input"
+      },
+      "label": "未扣案之犯罪所得沒收追徵：新臺幣"
+    },
+    {
+      "tag": "input",
+      "id": "chk-h-conf-paid",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-h-conf-paid",
+        "class": "rounded"
+      },
+      "label": "已繳交之犯罪所得沒收：新臺幣"
+    },
+    {
+      "tag": "input",
+      "id": "val-h-paid-amt",
+      "name": "",
+      "type": "text",
+      "defaultValue": "O元",
+      "value": "O元",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "text",
+        "id": "val-h-paid-amt",
+        "value": "O元",
+        "class": "w-24 px-2 py-0.5 text-xs rounded-lg border cream-input"
+      },
+      "label": "已繳交之犯罪所得沒收：新臺幣"
+    },
+    {
+      "tag": "input",
+      "id": "holding-probation-grant",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "checkbox",
+        "id": "holding-probation-grant",
+        "class": "rounded"
+      },
+      "label": "主文宣告緩刑（與「四、緩刑宣告」雙向連動）"
+    },
+    {
+      "tag": "input",
+      "id": "holding-probation-years",
+      "name": "",
+      "type": "text",
+      "defaultValue": "O",
+      "value": "O",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "text",
+        "id": "holding-probation-years",
+        "value": "O",
+        "class": "w-16 px-2 py-1 rounded-lg border cream-input"
+      },
+      "label": "緩刑期間"
+    },
+    {
+      "tag": "input",
+      "id": "val-holding-extra",
+      "name": "",
+      "type": "text",
+      "defaultValue": "",
+      "value": "",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "text",
+        "id": "val-holding-extra",
+        "value": "",
+        "placeholder": "例如：緩刑O年，緩刑期間付保護管束...",
+        "class": "w-full px-2.5 py-1.5 rounded-lg border cream-input text-xs sm:text-sm"
+      },
+      "label": "其他主文後段補充記載（選填）："
+    },
+    {
+      "tag": "input",
+      "id": "rad-fact-standard",
+      "name": "fact-mode",
+      "type": "radio",
+      "defaultValue": "standard",
+      "value": "standard",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "radio",
+        "name": "fact-mode",
+        "id": "rad-fact-standard",
+        "value": "standard",
+        "checked": ""
+      },
+      "label": "自行填寫犯罪事實與起訴機關"
+    },
+    {
+      "tag": "input",
+      "id": "rad-fact-quote",
+      "name": "fact-mode",
+      "type": "radio",
+      "defaultValue": "quote",
+      "value": "quote",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "radio",
+        "name": "fact-mode",
+        "id": "rad-fact-quote",
+        "value": "quote"
+      },
+      "label": "引用起訴書犯罪事實所載"
+    },
+    {
+      "tag": "input",
+      "id": "rad-fact-amend",
+      "name": "fact-mode",
+      "type": "radio",
+      "defaultValue": "amend",
+      "value": "amend",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "radio",
+        "name": "fact-mode",
+        "id": "rad-fact-amend",
+        "value": "amend"
+      },
+      "label": "除補充及更正外，餘引用起訴書犯罪事實所載"
+    },
+    {
+      "tag": "textarea",
+      "id": "val-fact-amend",
+      "name": "",
+      "type": "textarea",
+      "defaultValue": "一、（請於此處貼入或填寫本案犯罪事實）\n二、案經告訴人訴由警察局報告臺灣OO地方檢察署檢察官偵查起訴。",
+      "value": "一、（請於此處貼入或填寫本案犯罪事實）\n二、案經告訴人訴由警察局報告臺灣OO地方檢察署檢察官偵查起訴。",
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "id": "val-fact-amend",
+        "rows": "4",
+        "placeholder": "請輸入犯罪事實內容...",
+        "class": "w-full px-2.5 py-1.5 text-xs rounded-lg border cream-input"
+      },
+      "label": "除補充及更正外，餘引用起訴書犯罪事實所載"
+    },
+    {
+      "tag": "input",
+      "id": "rad-evid-standard",
+      "name": "evid-mode",
+      "type": "radio",
+      "defaultValue": "standard",
+      "value": "standard",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "radio",
+        "name": "evid-mode",
+        "id": "rad-evid-standard",
+        "value": "standard",
+        "checked": ""
+      },
+      "label": "完整敘述被告自白與卷證資料"
+    },
+    {
+      "tag": "input",
+      "id": "rad-evid-quote",
+      "name": "evid-mode",
+      "type": "radio",
+      "defaultValue": "quote",
+      "value": "quote",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "radio",
+        "name": "evid-mode",
+        "id": "rad-evid-quote",
+        "value": "quote"
+      },
+      "label": "引用起訴書證據清單所載"
+    },
+    {
+      "tag": "input",
+      "id": "rad-evid-amend",
+      "name": "evid-mode",
+      "type": "radio",
+      "defaultValue": "amend",
+      "value": "amend",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "type": "radio",
+        "name": "evid-mode",
+        "id": "rad-evid-amend",
+        "value": "amend"
+      },
+      "label": "除補充及更正外，餘引用起訴書證據清單所載"
+    },
+    {
+      "tag": "textarea",
+      "id": "val-evid-amend",
+      "name": "",
+      "type": "textarea",
+      "defaultValue": "上開犯罪事實，業據被告於警詢、偵查、本院準備程序及簡式審判程序中均坦承不諱，核與證人即告訴人於警詢中之證述大致相符，並有扣押筆錄、扣押物品目錄表、對話紀錄截圖、偽造之收據在卷可查，足認被告上開任意性之自白與事實相符，堪以採信。",
+      "value": "上開犯罪事實，業據被告於警詢、偵查、本院準備程序及簡式審判程序中均坦承不諱，核與證人即告訴人於警詢中之證述大致相符，並有扣押筆錄、扣押物品目錄表、對話紀錄截圖、偽造之收據在卷可查，足認被告上開任意性之自白與事實相符，堪以採信。",
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-basic",
+      "attributes": {
+        "id": "val-evid-amend",
+        "rows": "4",
+        "placeholder": "輸入證據內容...",
+        "class": "w-full px-2.5 py-1.5 text-xs rounded-lg border cream-input"
+      },
+      "label": "除補充及更正外，餘引用起訴書證據清單所載"
+    },
+    {
+      "tag": "input",
+      "id": "auto-sync-statutes",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "auto-sync-statutes",
+        "checked": "",
+        "class": "rounded"
+      },
+      "label": "勾選罪名時自動連動「附錄法條」與「想像競合罪名」"
+    },
+    {
+      "tag": "input",
+      "id": "crime-fraud-339-4",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "crime-fraud-339-4",
+        "checked": "",
+        "class": "rounded crime-checkbox"
+      },
+      "label": "刑法第339條之4第1項 加重詐欺取財罪"
+    },
+    {
+      "tag": "input",
+      "id": "c3394-sub1",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "c3394-sub1",
+        "class": "rounded"
+      },
+      "label": "第1款（冒用公務員）"
+    },
+    {
+      "tag": "input",
+      "id": "c3394-sub2",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "c3394-sub2",
+        "checked": "",
+        "class": "rounded"
+      },
+      "label": "第2款（三人以上共同詐欺取財罪）"
+    },
+    {
+      "tag": "input",
+      "id": "c3394-sub3",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "c3394-sub3",
+        "class": "rounded"
+      },
+      "label": "第3款（傳播工具）"
+    },
+    {
+      "tag": "input",
+      "id": "c3394-sub4",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "c3394-sub4",
+        "class": "rounded"
+      },
+      "label": "第4款（深偽科技）"
+    },
+    {
+      "tag": "input",
+      "id": "crime-fpa-44",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "crime-fpa-44",
+        "class": "rounded crime-checkbox"
+      },
+      "label": "併犯詐欺犯罪危害防制條例第44條第1項分則加重罪："
+    },
+    {
+      "tag": "input",
+      "id": "cfpa44-sub1",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "cfpa44-sub1",
+        "checked": "",
+        "class": "rounded"
+      },
+      "label": "第1款"
+    },
+    {
+      "tag": "input",
+      "id": "cfpa44-sub2",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "cfpa44-sub2",
+        "class": "rounded"
+      },
+      "label": "第2款"
+    },
+    {
+      "tag": "input",
+      "id": "cfpa44-sub3",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "cfpa44-sub3",
+        "class": "rounded"
+      },
+      "label": "第3款"
+    },
+    {
+      "tag": "input",
+      "id": "cfpa44-del-sub3",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "cfpa44-del-sub3",
+        "class": "rounded"
+      },
+      "label": "（公訴意旨贅論第3款應予刪除）"
+    },
+    {
+      "tag": "input",
+      "id": "crime-fraud-339-4-att",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "crime-fraud-339-4-att",
+        "class": "rounded crime-checkbox"
+      },
+      "label": "刑法第339條之4第2項、第1項 加重詐欺取財未遂罪"
+    },
+    {
+      "tag": "input",
+      "id": "c3394att-sub1",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "c3394att-sub1",
+        "class": "rounded"
+      },
+      "label": "第1款"
+    },
+    {
+      "tag": "input",
+      "id": "c3394att-sub2",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "c3394att-sub2",
+        "checked": "",
+        "class": "rounded"
+      },
+      "label": "第2款（三人以上）"
+    },
+    {
+      "tag": "input",
+      "id": "c3394att-sub3",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "c3394att-sub3",
+        "class": "rounded"
+      },
+      "label": "第3款"
+    },
+    {
+      "tag": "input",
+      "id": "c3394att-sub4",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "c3394att-sub4",
+        "class": "rounded"
+      },
+      "label": "第4款"
+    },
+    {
+      "tag": "input",
+      "id": "crime-forgery-210",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "crime-forgery-210",
+        "checked": "",
+        "class": "rounded crime-checkbox"
+      },
+      "label": "刑法第216條、第210條之行使偽造私文書罪"
+    },
+    {
+      "tag": "input",
+      "id": "crime-forgery-220",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "crime-forgery-220",
+        "class": "rounded"
+      },
+      "label": "準文書（第220條第1項）："
+    },
+    {
+      "tag": "input",
+      "id": "val-forgery-220-part",
+      "name": "",
+      "type": "text",
+      "defaultValue": "O",
+      "value": "O",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "text",
+        "id": "val-forgery-220-part",
+        "value": "O",
+        "class": "px-1.5 py-0.5 rounded border cream-input text-xs w-28"
+      },
+      "label": "準文書（第220條第1項）："
+    },
+    {
+      "tag": "input",
+      "id": "crime-forgery-212",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "crime-forgery-212",
+        "checked": "",
+        "class": "rounded crime-checkbox"
+      },
+      "label": "刑法第216條、第212條之行使偽造特種文書罪"
+    },
+    {
+      "tag": "input",
+      "id": "crime-ml-new19",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "crime-ml-new19",
+        "checked": "",
+        "class": "rounded crime-checkbox"
+      },
+      "label": "洗錢防制法第19條第1項後段之洗錢罪"
+    },
+    {
+      "tag": "input",
+      "id": "crime-ml-old14",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "crime-ml-old14",
+        "class": "rounded crime-checkbox"
+      },
+      "label": "修正前洗錢防制法第14條第1項後段之一般洗錢罪"
+    },
+    {
+      "tag": "input",
+      "id": "crime-fraud-339",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "crime-fraud-339",
+        "class": "rounded crime-checkbox"
+      },
+      "label": "刑法第339條第1項之詐欺取財罪"
+    },
+    {
+      "tag": "input",
+      "id": "crime-fraud-339-att",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "crime-fraud-339-att",
+        "class": "rounded crime-checkbox"
+      },
+      "label": "刑法第339條第3項、第1項之詐欺取財未遂罪"
+    },
+    {
+      "tag": "input",
+      "id": "crime-org-join",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "crime-org-join",
+        "class": "rounded crime-checkbox"
+      },
+      "label": "組織犯罪防制條例第3條第1項後段之參與犯罪組織罪"
+    },
+    {
+      "tag": "input",
+      "id": "crime-org-join-dup",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "crime-org-join-dup",
+        "class": "rounded"
+      },
+      "label": "加註：前經另案論處參與犯罪組織罪，起訴書贅載，本案不另論"
+    },
+    {
+      "tag": "input",
+      "id": "crime-org-recruit",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "crime-org-recruit",
+        "class": "rounded crime-checkbox"
+      },
+      "label": "組織犯罪防制條例第4條第1項之招募他人加入犯罪組織罪"
+    },
+    {
+      "tag": "input",
+      "id": "crime-org-recruit-abroad",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "crime-org-recruit-abroad",
+        "class": "rounded"
+      },
+      "label": "同條第2項意圖使他人出國實行犯罪而招募罪"
+    },
+    {
+      "tag": "input",
+      "id": "crime-org-recruit-minor",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "crime-org-recruit-minor",
+        "class": "rounded"
+      },
+      "label": "同條第3項成年人招募未滿18歲之人加入分則加重罪"
+    },
+    {
+      "tag": "input",
+      "id": "crime-org-force",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "crime-org-force",
+        "class": "rounded crime-checkbox"
+      },
+      "label": "組織犯罪防制條例第4條第4項之強暴、脅迫或他法："
+    },
+    {
+      "tag": "input",
+      "id": "crime-org-force-join",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "crime-org-force-join",
+        "checked": "",
+        "class": "rounded"
+      },
+      "label": "使他人加入犯罪組織罪"
+    },
+    {
+      "tag": "input",
+      "id": "crime-org-force-leave",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "crime-org-force-leave",
+        "class": "rounded"
+      },
+      "label": "妨害成員脫離犯罪組織罪"
+    },
+    {
+      "tag": "input",
+      "id": "crime-v9-30-1",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "crime-v9-30-1",
+        "class": "rounded crime-checkbox"
+      },
+      "label": "適用刑法第30條第1項幫助犯，勾選所犯之罪："
+    },
+    {
+      "tag": "input",
+      "id": "crime-v9-339",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "crime-v9-339",
+        "class": "mt-0.5 rounded crime-checkbox"
+      },
+      "label": "刑法第30條第1項、第339條第1項之幫助詐欺取財罪"
+    },
+    {
+      "tag": "input",
+      "id": "crime-v9-ml-old14",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "crime-v9-ml-old14",
+        "class": "mt-0.5 rounded crime-checkbox"
+      },
+      "label": "刑法第30條第1項、修正前洗錢防制法第14條第1項後段之幫助一般洗錢罪"
+    },
+    {
+      "tag": "input",
+      "id": "crime-v9-ml-new19",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "crime-v9-ml-new19",
+        "class": "mt-0.5 rounded crime-checkbox"
+      },
+      "label": "刑法第30條第1項、洗錢防制法第19條第1項後段之幫助一般洗錢罪"
+    },
+    {
+      "tag": "input",
+      "id": "crime-v9-339-att",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "crime-v9-339-att",
+        "class": "mt-0.5 rounded crime-checkbox"
+      },
+      "label": "刑法第30條第1項、第339條第3項、第1項之幫助詐欺取財未遂罪"
+    },
+    {
+      "tag": "input",
+      "id": "crime-v9-ml-old14-att",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "crime-v9-ml-old14-att",
+        "class": "mt-0.5 rounded crime-checkbox"
+      },
+      "label": "刑法第30條第1項、修正前洗錢防制法第14條第2項、第1項後段之幫助一般洗錢未遂罪"
+    },
+    {
+      "tag": "input",
+      "id": "crime-v9-ml-new19-att",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "crime-v9-ml-new19-att",
+        "class": "mt-0.5 rounded crime-checkbox"
+      },
+      "label": "刑法第30條第1項、洗錢防制法第19條第2項、第1項後段之幫助一般洗錢未遂罪"
+    },
+    {
+      "tag": "input",
+      "id": "chk-coprincipal",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-coprincipal",
+        "checked": "",
+        "class": "rounded"
+      },
+      "label": "共同正犯論述（刑法第28條）"
+    },
+    {
+      "tag": "input",
+      "id": "",
+      "name": "coprincipal-style",
+      "type": "radio",
+      "defaultValue": "detailed",
+      "value": "detailed",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "radio",
+        "name": "coprincipal-style",
+        "value": "detailed",
+        "checked": ""
+      },
+      "label": "完整論述版"
+    },
+    {
+      "tag": "input",
+      "id": "",
+      "name": "coprincipal-style",
+      "type": "radio",
+      "defaultValue": "concise",
+      "value": "concise",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "radio",
+        "name": "coprincipal-style",
+        "value": "concise"
+      },
+      "label": "精簡版"
+    },
+    {
+      "tag": "input",
+      "id": "val-coprincipal-members",
+      "name": "",
+      "type": "text",
+      "defaultValue": "所屬詐欺集團成員",
+      "value": "所屬詐欺集團成員",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "text",
+        "id": "val-coprincipal-members",
+        "value": "所屬詐欺集團成員",
+        "class": "hidden"
+      },
+      "label": "共同正犯論述（刑法第28條）\n                \n                \n                  \n                    \n                    完整論述版\n                  \n                  \n                    \n      "
+    },
+    {
+      "tag": "input",
+      "id": "chk-forgery-absorb",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-forgery-absorb",
+        "checked": "",
+        "class": "rounded"
+      },
+      "label": "階段行為與高度行為吸收不另論罪（依所勾選之私文書／特種文書自動對應）"
+    },
+    {
+      "tag": "input",
+      "id": "chk-imag-concur",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-imag-concur",
+        "checked": "",
+        "class": "rounded"
+      },
+      "label": "想像競合犯結論（自動帶入上方已勾選之罪名簡稱）"
+    },
+    {
+      "tag": "input",
+      "id": "chk-imag-diff-victims",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-imag-diff-victims",
+        "class": "rounded"
+      },
+      "label": "加註侵害數財產法益（「並侵害不同之財產法益」）"
+    },
+    {
+      "tag": "input",
+      "id": "val-imag-heavy-crime",
+      "name": "",
+      "type": "text",
+      "defaultValue": "刑法第339條之4第1項第2款三人以上共同詐欺取財",
+      "value": "刑法第339條之4第1項第2款三人以上共同詐欺取財",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "text",
+        "id": "val-imag-heavy-crime",
+        "value": "刑法第339條之4第1項第2款三人以上共同詐欺取財",
+        "class": "px-2.5 py-1 rounded-lg border cream-input font-medium flex-1 min-w-[240px]"
+      },
+      "label": "應依刑法第55條之規定，從一重之"
+    },
+    {
+      "tag": "input",
+      "id": "rad-multi-none",
+      "name": "multi-crime-mode",
+      "type": "radio",
+      "defaultValue": "none",
+      "value": "none",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "radio",
+        "name": "multi-crime-mode",
+        "id": "rad-multi-none",
+        "value": "none",
+        "checked": ""
+      },
+      "label": "無（單一犯行）"
+    },
+    {
+      "tag": "input",
+      "id": "rad-multi-yes",
+      "name": "multi-crime-mode",
+      "type": "radio",
+      "defaultValue": "yes",
+      "value": "yes",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "radio",
+        "name": "multi-crime-mode",
+        "id": "rad-multi-yes",
+        "value": "yes"
+      },
+      "label": "分論併罰："
+    },
+    {
+      "tag": "input",
+      "id": "val-multi-crimes",
+      "name": "",
+      "type": "text",
+      "defaultValue": "上開各次犯行",
+      "value": "上開各次犯行",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "text",
+        "id": "val-multi-crimes",
+        "value": "上開各次犯行",
+        "class": "w-full px-2 py-1 text-xs rounded-lg border cream-input"
+      },
+      "label": "分論併罰："
+    },
+    {
+      "tag": "input",
+      "id": "chk-fact-expand",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-fact-expand",
+        "class": "mt-0.5 rounded"
+      },
+      "label": "檢察官移送併辦部分，與本案經起訴部分有想像競合犯之裁判上一罪關係，應由本院擴張審理之。"
+    },
+    {
+      "tag": "input",
+      "id": "chk-expand-indict",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-expand-indict",
+        "checked": "",
+        "class": "rounded"
+      },
+      "label": "起訴效力所及"
+    },
+    {
+      "tag": "input",
+      "id": "chk-expand-summary",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-crimes",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-expand-summary",
+        "class": "rounded"
+      },
+      "label": "聲請簡易判決處刑效力所及"
+    },
+    {
+      "tag": "textarea",
+      "id": "input-custom-law-compare",
+      "name": "",
+      "type": "textarea",
+      "defaultValue": "",
+      "value": "",
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-lawcompare",
+      "attributes": {
+        "id": "input-custom-law-compare",
+        "rows": "4",
+        "placeholder": "請在此自行填寫或貼入新舊法比較內容（留空則不顯示新舊法比較段落）...",
+        "class": "w-full px-3 py-2 text-xs sm:text-sm rounded-xl border cream-input"
+      },
+      "label": "新舊法比較內文（若本案無庸比較新舊法，保持空白即可；若有填寫，將自動排入「三、論罪科刑：㈠新舊法比較：」）："
+    },
+    {
+      "tag": "input",
+      "id": "chk-enable-ml-compare",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-lawcompare",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-enable-ml-compare"
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "chk-enable-fpa-compare",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-lawcompare",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-enable-fpa-compare"
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "chk-law-compare-summary",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-lawcompare",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-law-compare-summary"
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "val-law-compare-summary",
+      "name": "",
+      "type": "text",
+      "defaultValue": "",
+      "value": "",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-lawcompare",
+      "attributes": {
+        "type": "text",
+        "id": "val-law-compare-summary",
+        "value": ""
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "chk-v9-row1",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-lawcompare",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-v9-row1"
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "chk-v9-row2",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-lawcompare",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-v9-row2"
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "chk-v9-row3",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-lawcompare",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-v9-row3"
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "chk-v9-row4",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-lawcompare",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-v9-row4"
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "chk-v9-row5",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-lawcompare",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-v9-row5"
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "chk-v9-row6",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-lawcompare",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-v9-row6"
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "enh-recidivist",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "checkbox",
+        "id": "enh-recidivist",
+        "class": "rounded"
+      },
+      "label": "構成刑法第47條第1項累犯"
+    },
+    {
+      "tag": "textarea",
+      "id": "val-recid-detail",
+      "name": "",
+      "type": "textarea",
+      "defaultValue": "被告前因OO案件，經法院判處有期徒刑O月確定，於民國O年O月O日執行完畢等情，有法院前案紀錄表在卷可參",
+      "value": "被告前因OO案件，經法院判處有期徒刑O月確定，於民國O年O月O日執行完畢等情，有法院前案紀錄表在卷可參",
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "id": "val-recid-detail",
+        "rows": "2",
+        "class": "w-full mt-1 px-2.5 py-1.5 rounded-lg border cream-input"
+      },
+      "label": "前案紀錄與執行完畢情形（可直接修改）："
+    },
+    {
+      "tag": "input",
+      "id": "",
+      "name": "recid-enhance-opt",
+      "type": "radio",
+      "defaultValue": "yes",
+      "value": "yes",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "radio",
+        "name": "recid-enhance-opt",
+        "value": "yes",
+        "checked": "",
+        "class": "mt-0.5"
+      },
+      "label": "加重其刑：衡以被告前曾經因案件經判刑確定並執行完畢，卻未能戒慎其行，猶於前開罪刑執行完畢後之5年內，又再度為本案犯行，顯見其刑罰反應力顯然薄弱，是認依刑法第47條第1項之規定加重被告之最低本刑，尚不生行為人所受的刑罰超過其所應負擔罪責的情形，乃依前揭規定加重其刑。"
+    },
+    {
+      "tag": "input",
+      "id": "",
+      "name": "recid-enhance-opt",
+      "type": "radio",
+      "defaultValue": "no",
+      "value": "no",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "radio",
+        "name": "recid-enhance-opt",
+        "value": "no",
+        "class": "mt-0.5"
+      },
+      "label": "不予加重（納為素行審酌）：審酌被告前案之罪名及執行情形、本案之犯罪情節等情，不認為被告有何等特殊之不法與罪責非難必要，相關前科紀錄於量刑審酌中之素行部分予以確實審酌即為已足，不另加重其刑。"
+    },
+    {
+      "tag": "input",
+      "id": "val-recid-date",
+      "name": "",
+      "type": "text",
+      "defaultValue": "O年O月O日",
+      "value": "O年O月O日",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "text",
+        "id": "val-recid-date",
+        "value": "O年O月O日"
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "val-recid-case",
+      "name": "",
+      "type": "text",
+      "defaultValue": "O年度O字第O號",
+      "value": "O年度O字第O號",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "text",
+        "id": "val-recid-case",
+        "value": "O年度O字第O號"
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "enh-fpa44",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "checkbox",
+        "id": "enh-fpa44",
+        "class": "rounded"
+      },
+      "label": "詐欺犯罪危害防制條例第44條第1項（加重其刑二分之一）"
+    },
+    {
+      "tag": "input",
+      "id": "enh-other",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "checkbox",
+        "id": "enh-other",
+        "class": "rounded"
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "val-enh-other",
+      "name": "",
+      "type": "text",
+      "defaultValue": "",
+      "value": "",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "text",
+        "id": "val-enh-other",
+        "placeholder": "選填...",
+        "class": "flex-1 px-2 py-1 rounded-lg border cream-input text-xs"
+      },
+      "label": "其他加重事由："
+    },
+    {
+      "tag": "input",
+      "id": "chk-mit-imag-merge-theory",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-mit-imag-merge-theory",
+        "checked": "",
+        "class": "mt-0.5 rounded"
+      },
+      "label": "包含「想像競合犯輕重罪合併評價」說明段落（於適用減刑時一併說明輕罪減刑事由併入量刑衡酌）"
+    },
+    {
+      "tag": "input",
+      "id": "",
+      "name": "fraud-ml-mit-mode",
+      "type": "radio",
+      "defaultValue": "confess_no_proceeds",
+      "value": "confess_no_proceeds",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "radio",
+        "name": "fraud-ml-mit-mode",
+        "value": "confess_no_proceeds",
+        "checked": "",
+        "class": "mt-1"
+      },
+      "label": "洗錢防制法第23條第3項：偵查、審理均自白＋無犯罪所得 ➔ 適用減輕其刑\n                  被告於偵查及本院審理中均自白犯行，且供稱未領到報酬，查無獲有任何報酬或利益，自無繳交犯罪所得之問題，爰依修正前詐欺犯罪危害防制條例第47條前段減輕其刑；想像競合輕罪符合洗錢防制法第23條第3項前段部分，由本院依刑法第57條量刑時一併衡酌。"
+    },
+    {
+      "tag": "input",
+      "id": "",
+      "name": "fraud-ml-mit-mode",
+      "type": "radio",
+      "defaultValue": "confess_paid_proceeds",
+      "value": "confess_paid_proceeds",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "radio",
+        "name": "fraud-ml-mit-mode",
+        "value": "confess_paid_proceeds",
+        "class": "mt-1"
+      },
+      "label": "態樣 2：偵審均自白 ＋ 已自動繳交犯罪所得 ➔ 適用減輕其刑\n                  \n                    被告本案犯罪所得金額為新臺幣：\n                    \n                    ，業已於本院自動繳交上開犯罪所得，符合減輕其刑之適用。"
+    },
+    {
+      "tag": "input",
+      "id": "val-mit-paid-amt",
+      "name": "",
+      "type": "text",
+      "defaultValue": "O元",
+      "value": "O元",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "text",
+        "id": "val-mit-paid-amt",
+        "value": "O元",
+        "class": "w-28 px-2 py-0.5 rounded-lg border cream-input"
+      },
+      "label": "態樣 2：偵審均自白 ＋ 已自動繳交犯罪所得 ➔ 適用減輕其刑\n                  \n                    被告本案犯罪所得金額為新臺幣：\n                    \n                    ，業已於本院自動繳交上開犯罪所得，符合減輕其刑之適用。"
+    },
+    {
+      "tag": "input",
+      "id": "",
+      "name": "fraud-ml-mit-mode",
+      "type": "radio",
+      "defaultValue": "confess_unpaid_proceeds",
+      "value": "confess_unpaid_proceeds",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "radio",
+        "name": "fraud-ml-mit-mode",
+        "value": "confess_unpaid_proceeds",
+        "class": "mt-1"
+      },
+      "label": "態樣 3：偵審均自白 ＋ 有犯罪所得惟未繳交 ➔ 無減刑規定之適用\n                  \n                    被告自承獲取報酬新臺幣：\n                    \n                    ，而其並未繳交犯罪所得，無洗錢防制法第23條第3項前段、修正前詐欺犯罪危害防制條例第47條前段減輕其刑之適"
+    },
+    {
+      "tag": "input",
+      "id": "val-mit-unpaid-amt",
+      "name": "",
+      "type": "text",
+      "defaultValue": "O元",
+      "value": "O元",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "text",
+        "id": "val-mit-unpaid-amt",
+        "value": "O元",
+        "class": "w-28 px-2 py-0.5 rounded-lg border cream-input"
+      },
+      "label": "態樣 3：偵審均自白 ＋ 有犯罪所得惟未繳交 ➔ 無減刑規定之適用\n                  \n                    被告自承獲取報酬新臺幣：\n                    \n                    ，而其並未繳交犯罪所得，無洗錢防制法第23條第3項前段、修正前詐欺犯罪危害防制條例第47條前段減輕其刑之適"
+    },
+    {
+      "tag": "input",
+      "id": "",
+      "name": "fraud-ml-mit-mode",
+      "type": "radio",
+      "defaultValue": "no_confess_in_investigation",
+      "value": "no_confess_in_investigation",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "radio",
+        "name": "fraud-ml-mit-mode",
+        "value": "no_confess_in_investigation",
+        "class": "mt-1"
+      },
+      "label": "洗錢防制法第23條第3項：偵查否認、審理自白 ➔ 不適用減刑\n                  被告雖於本院審理時自白犯行，然其於偵查中未自白犯行，而無洗錢防制法第23條第3項前段、修正前詐欺犯罪危害防制條例第47條前段減輕其刑之適用。"
+    },
+    {
+      "tag": "input",
+      "id": "",
+      "name": "fraud-ml-mit-mode",
+      "type": "radio",
+      "defaultValue": "omit",
+      "value": "omit",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "radio",
+        "name": "fraud-ml-mit-mode",
+        "value": "omit",
+        "class": "mt-1"
+      },
+      "label": "不列出上述詐防第47條／洗錢第23條段落（僅使用下方其他減輕事由）"
+    },
+    {
+      "tag": "input",
+      "id": "",
+      "name": "ml23-mit-mode",
+      "type": "radio",
+      "defaultValue": "deny",
+      "value": "deny",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "radio",
+        "name": "ml23-mit-mode",
+        "value": "deny",
+        "class": "mt-1"
+      },
+      "label": "偵查否認、審理自白：不適用減刑"
+    },
+    {
+      "tag": "input",
+      "id": "",
+      "name": "ml23-mit-mode",
+      "type": "radio",
+      "defaultValue": "confess",
+      "value": "confess",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "radio",
+        "name": "ml23-mit-mode",
+        "value": "confess",
+        "class": "mt-1"
+      },
+      "label": "偵查、審理均自白：適用減輕其刑"
+    },
+    {
+      "tag": "input",
+      "id": "",
+      "name": "ml23-mit-mode",
+      "type": "radio",
+      "defaultValue": "omit",
+      "value": "omit",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "radio",
+        "name": "ml23-mit-mode",
+        "value": "omit",
+        "checked": "",
+        "class": "mt-1"
+      },
+      "label": "不另列本項段落"
+    },
+    {
+      "tag": "input",
+      "id": "mit-attempt-25",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "checkbox",
+        "id": "mit-attempt-25",
+        "class": "rounded"
+      },
+      "label": "刑法第25條第2項（未遂犯按既遂犯之刑減輕之）"
+    },
+    {
+      "tag": "input",
+      "id": "mit-accessory-30",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "checkbox",
+        "id": "mit-accessory-30",
+        "class": "rounded"
+      },
+      "label": "刑法第30條第2項（幫助犯按正犯之刑減輕之）"
+    },
+    {
+      "tag": "input",
+      "id": "mit-org-8",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "checkbox",
+        "id": "mit-org-8",
+        "class": "rounded"
+      },
+      "label": "組織犯罪防制條例第8條第1項後段（自白減輕）"
+    },
+    {
+      "tag": "input",
+      "id": "mit-surrender-62",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "checkbox",
+        "id": "mit-surrender-62",
+        "class": "rounded"
+      },
+      "label": "刑法第62條第1項前段（自首減輕其刑）"
+    },
+    {
+      "tag": "input",
+      "id": "mit-ml-old16",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "checkbox",
+        "id": "mit-ml-old16"
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "mit-ml-old16-sentonly",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "checkbox",
+        "id": "mit-ml-old16-sentonly"
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "mit-ml-new23",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "checkbox",
+        "id": "mit-ml-new23"
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "mit-ml-new23-sentonly",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "checkbox",
+        "id": "mit-ml-new23-sentonly"
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "mit-org-8-sentonly",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "checkbox",
+        "id": "mit-org-8-sentonly"
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "mit-fpa-old47",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "checkbox",
+        "id": "mit-fpa-old47"
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "mit-fpa-old47-court",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "checkbox",
+        "id": "mit-fpa-old47-court"
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "mit-fpa-new47",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "checkbox",
+        "id": "mit-fpa-new47"
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "mit-fpa-new47-deemed",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "checkbox",
+        "id": "mit-fpa-new47-deemed"
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "val-surrender-reason",
+      "name": "",
+      "type": "text",
+      "defaultValue": "",
+      "value": "",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "text",
+        "id": "val-surrender-reason",
+        "value": ""
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "mit-art59",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "checkbox",
+        "id": "mit-art59"
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "val-art59-reason",
+      "name": "",
+      "type": "text",
+      "defaultValue": "",
+      "value": "",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "text",
+        "id": "val-art59-reason",
+        "value": ""
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "chk-art70-71",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-art70-71",
+        "checked": ""
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "",
+      "name": "sentencing-style",
+      "type": "radio",
+      "defaultValue": "driver_full",
+      "value": "driver_full",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "radio",
+        "name": "sentencing-style",
+        "value": "driver_full",
+        "checked": ""
+      },
+      "label": "車手正犯完整版"
+    },
+    {
+      "tag": "input",
+      "id": "",
+      "name": "sentencing-style",
+      "type": "radio",
+      "defaultValue": "accessory_full",
+      "value": "accessory_full",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "radio",
+        "name": "sentencing-style",
+        "value": "accessory_full"
+      },
+      "label": "提供帳戶幫助犯版"
+    },
+    {
+      "tag": "input",
+      "id": "",
+      "name": "sentencing-style",
+      "type": "radio",
+      "defaultValue": "short",
+      "value": "short",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "radio",
+        "name": "sentencing-style",
+        "value": "short"
+      },
+      "label": "簡要記載版"
+    },
+    {
+      "tag": "input",
+      "id": "val-sent-age",
+      "name": "",
+      "type": "text",
+      "defaultValue": "正值壯年",
+      "value": "正值壯年",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "text",
+        "id": "val-sent-age",
+        "value": "正值壯年",
+        "placeholder": "例如：正值壯年／正值青年",
+        "class": "w-full px-2.5 py-1 rounded-lg border cream-input"
+      },
+      "label": "被告年齡階段稱謂"
+    },
+    {
+      "tag": "input",
+      "id": "val-sentencing-factors",
+      "name": "",
+      "type": "text",
+      "defaultValue": "OO之智識程度、家庭及經濟狀況",
+      "value": "OO之智識程度、家庭及經濟狀況",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "text",
+        "id": "val-sentencing-factors",
+        "value": "OO之智識程度、家庭及經濟狀況",
+        "class": "w-full px-2.5 py-1 rounded-lg border cream-input"
+      },
+      "label": "兼衡智識程度、職業、家庭及經濟狀況"
+    },
+    {
+      "tag": "input",
+      "id": "val-sent-prosecutor-ask",
+      "name": "",
+      "type": "text",
+      "defaultValue": "有期徒刑O年以上刑度",
+      "value": "有期徒刑O年以上刑度",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "text",
+        "id": "val-sent-prosecutor-ask",
+        "value": "有期徒刑O年以上刑度",
+        "placeholder": "例如：有期徒刑O年以上刑度（若無求刑可清空）",
+        "class": "w-full px-2.5 py-1 rounded-lg border cream-input"
+      },
+      "label": "公訴人具體求刑回應（留空則不顯示求刑回應句）"
+    },
+    {
+      "tag": "input",
+      "id": "chk-sent-no-fine",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-sent-no-fine",
+        "checked": "",
+        "class": "rounded"
+      },
+      "label": "加註「尚無併科罰金之必要」"
+    },
+    {
+      "tag": "input",
+      "id": "",
+      "name": "probation-mode",
+      "type": "radio",
+      "defaultValue": "omit",
+      "value": "omit",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "radio",
+        "name": "probation-mode",
+        "value": "omit",
+        "checked": ""
+      },
+      "label": "不記載緩刑段落（無緩刑）"
+    },
+    {
+      "tag": "input",
+      "id": "",
+      "name": "probation-mode",
+      "type": "radio",
+      "defaultValue": "deny",
+      "value": "deny",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "radio",
+        "name": "probation-mode",
+        "value": "deny"
+      },
+      "label": "記載不予緩刑理由"
+    },
+    {
+      "tag": "input",
+      "id": "",
+      "name": "probation-mode",
+      "type": "radio",
+      "defaultValue": "grant",
+      "value": "grant",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "radio",
+        "name": "probation-mode",
+        "value": "grant"
+      },
+      "label": "宣告緩刑（刑法第74條）"
+    },
+    {
+      "tag": "input",
+      "id": "prob-deny-5yr",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "checkbox",
+        "id": "prob-deny-5yr",
+        "checked": "",
+        "class": "rounded"
+      },
+      "label": "5年內曾因故意犯罪受有期徒刑以上刑之宣告確定。"
+    },
+    {
+      "tag": "input",
+      "id": "val-prob-deny-other",
+      "name": "",
+      "type": "text",
+      "defaultValue": "",
+      "value": "",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "text",
+        "id": "val-prob-deny-other",
+        "placeholder": "其他不予緩刑理由...",
+        "class": "w-full px-2 py-1 rounded-lg border cream-input"
+      },
+      "label": "5年內曾因故意犯罪受有期徒刑以上刑之宣告確定。"
+    },
+    {
+      "tag": "select",
+      "id": "val-prob-clause",
+      "name": "",
+      "type": "select-one",
+      "defaultValue": "第1款",
+      "value": "第1款",
+      "disabled": false,
+      "visible": false,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "id": "val-prob-clause",
+        "class": "px-2 py-1 rounded-lg border cream-input"
+      },
+      "options": [
+        {
+          "value": "第1款",
+          "text": "第1款（未曾受有期徒刑以上宣告）",
+          "selected": true
+        },
+        {
+          "value": "第2款",
+          "text": "第2款（5年內未再受有期徒刑以上宣告）",
+          "selected": false
+        }
+      ],
+      "label": "依刑法第74條第1項"
+    },
+    {
+      "tag": "input",
+      "id": "val-prob-years",
+      "name": "",
+      "type": "text",
+      "defaultValue": "O",
+      "value": "O",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "text",
+        "id": "val-prob-years",
+        "value": "O",
+        "class": "w-14 px-2 py-1 rounded-lg border cream-input text-center"
+      },
+      "label": "規定，宣告緩刑"
+    },
+    {
+      "tag": "input",
+      "id": "prob-reason-confess",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "checkbox",
+        "id": "prob-reason-confess",
+        "checked": "",
+        "class": "rounded"
+      },
+      "label": "被告已知坦承犯行"
+    },
+    {
+      "tag": "input",
+      "id": "prob-reason-settle",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "checkbox",
+        "id": "prob-reason-settle",
+        "checked": "",
+        "class": "rounded"
+      },
+      "label": "已與被害人達成和（調）解並依約賠償"
+    },
+    {
+      "tag": "input",
+      "id": "prob-supervision",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "checkbox",
+        "id": "prob-supervision",
+        "checked": "",
+        "class": "rounded"
+      },
+      "label": "依刑法第93條第1項第2款規定緩刑期內付保護管束。"
+    },
+    {
+      "tag": "input",
+      "id": "prob-cond-3",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "checkbox",
+        "id": "prob-cond-3",
+        "checked": "",
+        "class": "rounded"
+      },
+      "label": "第74條第2項第3款（分期賠償）："
+    },
+    {
+      "tag": "input",
+      "id": "val-prob-cond-3",
+      "name": "",
+      "type": "text",
+      "defaultValue": "應向告訴人支付共計O萬元，自O年O月O日起，於每月O日前匯款O元至告訴人指定之帳戶。",
+      "value": "應向告訴人支付共計O萬元，自O年O月O日起，於每月O日前匯款O元至告訴人指定之帳戶。",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "text",
+        "id": "val-prob-cond-3",
+        "value": "應向告訴人支付共計O萬元，自O年O月O日起，於每月O日前匯款O元至告訴人指定之帳戶。",
+        "class": "w-full px-2 py-1 rounded-lg border cream-input"
+      },
+      "label": "第74條第2項第3款（分期賠償）："
+    },
+    {
+      "tag": "input",
+      "id": "prob-cond-4",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "checkbox",
+        "id": "prob-cond-4",
+        "class": "rounded"
+      },
+      "label": "第74條第2項第4款（向公庫支付）："
+    },
+    {
+      "tag": "input",
+      "id": "val-prob-cond-4",
+      "name": "",
+      "type": "text",
+      "defaultValue": "應於本判決確定後O個月內向公庫支付新臺幣O萬元。",
+      "value": "應於本判決確定後O個月內向公庫支付新臺幣O萬元。",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "text",
+        "id": "val-prob-cond-4",
+        "value": "應於本判決確定後O個月內向公庫支付新臺幣O萬元。",
+        "class": "w-full px-2 py-1 rounded-lg border cream-input"
+      },
+      "label": "第74條第2項第4款（向公庫支付）："
+    },
+    {
+      "tag": "input",
+      "id": "prob-cond-5",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "checkbox",
+        "id": "prob-cond-5",
+        "class": "rounded"
+      },
+      "label": "第74條第2項第5款（義務勞務）："
+    },
+    {
+      "tag": "input",
+      "id": "val-prob-cond-5",
+      "name": "",
+      "type": "text",
+      "defaultValue": "並應於本案判決確定後O年內，向執行檢察官指定之政府機關、政府機構、行政法人、社區或其他符合公益目的之機構或團體提供OO小時之義務勞務。",
+      "value": "並應於本案判決確定後O年內，向執行檢察官指定之政府機關、政府機構、行政法人、社區或其他符合公益目的之機構或團體提供OO小時之義務勞務。",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-sentencing",
+      "attributes": {
+        "type": "text",
+        "id": "val-prob-cond-5",
+        "value": "並應於本案判決確定後O年內，向執行檢察官指定之政府機關、政府機構、行政法人、社區或其他符合公益目的之機構或團體提供OO小時之義務勞務。",
+        "class": "w-full px-2 py-1 rounded-lg border cream-input"
+      },
+      "label": "第74條第2項第5款（義務勞務）："
+    },
+    {
+      "tag": "input",
+      "id": "",
+      "name": "conf-role-mode",
+      "type": "radio",
+      "defaultValue": "principal",
+      "value": "principal",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-confiscation",
+      "attributes": {
+        "type": "radio",
+        "name": "conf-role-mode",
+        "value": "principal",
+        "checked": ""
+      },
+      "label": "一、正犯沒收"
+    },
+    {
+      "tag": "input",
+      "id": "",
+      "name": "conf-role-mode",
+      "type": "radio",
+      "defaultValue": "accessory",
+      "value": "accessory",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-confiscation",
+      "attributes": {
+        "type": "radio",
+        "name": "conf-role-mode",
+        "value": "accessory"
+      },
+      "label": "二、幫助犯沒收"
+    },
+    {
+      "tag": "input",
+      "id": "",
+      "name": "accessory-conf-income",
+      "type": "radio",
+      "defaultValue": "none",
+      "value": "none",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-confiscation",
+      "attributes": {
+        "type": "radio",
+        "name": "accessory-conf-income",
+        "value": "none",
+        "checked": ""
+      },
+      "label": "未獲得報酬"
+    },
+    {
+      "tag": "input",
+      "id": "",
+      "name": "accessory-conf-income",
+      "type": "radio",
+      "defaultValue": "received",
+      "value": "received",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-confiscation",
+      "attributes": {
+        "type": "radio",
+        "name": "accessory-conf-income",
+        "value": "received"
+      },
+      "label": "有獲得報酬"
+    },
+    {
+      "tag": "input",
+      "id": "val-accessory-proceeds",
+      "name": "",
+      "type": "text",
+      "defaultValue": "O元",
+      "value": "O元",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-confiscation",
+      "attributes": {
+        "type": "text",
+        "id": "val-accessory-proceeds",
+        "value": "O元",
+        "class": "w-28 px-2 py-1 rounded-lg border cream-input"
+      },
+      "label": "犯罪所得："
+    },
+    {
+      "tag": "input",
+      "id": "chk-conf-ml25-intro",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-confiscation",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-conf-ml25-intro",
+        "checked": "",
+        "class": "mt-0.5 rounded"
+      },
+      "label": "㈠洗錢防制法第25條第1項義務沒收與刑法第38條之2第2項過苛調節條款法理說明"
+    },
+    {
+      "tag": "input",
+      "id": "chk-conf-proceeds-section",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-confiscation",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-conf-proceeds-section",
+        "checked": "",
+        "class": "rounded"
+      },
+      "label": "㈡共同正犯犯罪所得沒收原則（各人實際分得數）暨本案犯罪所得與洗錢財物不予沒收說明："
+    },
+    {
+      "tag": "input",
+      "id": "",
+      "name": "conf-proc-mode",
+      "type": "radio",
+      "defaultValue": "no_proceeds",
+      "value": "no_proceeds",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-confiscation",
+      "attributes": {
+        "type": "radio",
+        "name": "conf-proc-mode",
+        "value": "no_proceeds",
+        "checked": "",
+        "class": "mt-1"
+      },
+      "label": "1. 未領到報酬（無犯罪所得）：被告供稱本件未領到相關報酬等語，尚難認其有獲得犯罪所得；且洗錢財物均由詐騙集團上游拿取，對被告宣告沒收有過苛之虞，不予宣告沒收。"
+    },
+    {
+      "tag": "input",
+      "id": "",
+      "name": "conf-proc-mode",
+      "type": "radio",
+      "defaultValue": "unseized_proceeds",
+      "value": "unseized_proceeds",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-confiscation",
+      "attributes": {
+        "type": "radio",
+        "name": "conf-proc-mode",
+        "value": "unseized_proceeds",
+        "class": "mt-1"
+      },
+      "label": "2. 獲得報酬惟未扣案（依刑法第38條之1第1項、第3項宣告沒收追徵）：\n                    \n                      認定犯罪所得金額：新臺幣\n                      \n                      （未據扣案，宣告沒收並追徵價額；洗錢財物過苛不予沒收）"
+    },
+    {
+      "tag": "input",
+      "id": "val-conf-proc-unseized",
+      "name": "",
+      "type": "text",
+      "defaultValue": "O元",
+      "value": "O元",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-confiscation",
+      "attributes": {
+        "type": "text",
+        "id": "val-conf-proc-unseized",
+        "value": "O元",
+        "class": "w-28 px-2 py-0.5 rounded-lg border cream-input"
+      },
+      "label": "2. 獲得報酬惟未扣案（依刑法第38條之1第1項、第3項宣告沒收追徵）：\n                    \n                      認定犯罪所得金額：新臺幣\n                      \n                      （未據扣案，宣告沒收並追徵價額；洗錢財物過苛不予沒收）"
+    },
+    {
+      "tag": "input",
+      "id": "",
+      "name": "conf-proc-mode",
+      "type": "radio",
+      "defaultValue": "paid_proceeds",
+      "value": "paid_proceeds",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-confiscation",
+      "attributes": {
+        "type": "radio",
+        "name": "conf-proc-mode",
+        "value": "paid_proceeds",
+        "class": "mt-1"
+      },
+      "label": "3. 獲得報酬且已於審理中自動繳交（依刑法第38條之1第1項前段宣告沒收）：\n                    \n                      已自動繳交之犯罪所得金額：新臺幣\n                      \n                      （於被告罪刑項下宣告沒收；洗錢財物過苛不予沒收）"
+    },
+    {
+      "tag": "input",
+      "id": "val-conf-proc-seized",
+      "name": "",
+      "type": "text",
+      "defaultValue": "O元",
+      "value": "O元",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-confiscation",
+      "attributes": {
+        "type": "text",
+        "id": "val-conf-proc-seized",
+        "value": "O元",
+        "class": "w-28 px-2 py-0.5 rounded-lg border cream-input"
+      },
+      "label": "3. 獲得報酬且已於審理中自動繳交（依刑法第38條之1第1項前段宣告沒收）：\n                    \n                      已自動繳交之犯罪所得金額：新臺幣\n                      \n                      （於被告罪刑項下宣告沒收；洗錢財物過苛不予沒收）"
+    },
+    {
+      "tag": "input",
+      "id": "conf-fpa48",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-confiscation",
+      "attributes": {
+        "type": "checkbox",
+        "id": "conf-fpa48",
+        "checked": "",
+        "class": "rounded"
+      },
+      "label": "㈢ 扣案如附表所示之物沒收（詐欺犯罪危害防制條例第48條第1項，偽造私文書全紙沒收無庸再就署押印文沒收）"
+    },
+    {
+      "tag": "input",
+      "id": "conf-adj-fpa-lowcost",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-confiscation",
+      "attributes": {
+        "type": "checkbox",
+        "id": "conf-adj-fpa-lowcost",
+        "checked": "",
+        "class": "rounded"
+      },
+      "label": "㈣ 未扣案之偽造工作證（或收據）依刑法第38條之2第2項不予宣告沒收或追徵"
+    },
+    {
+      "tag": "input",
+      "id": "val-conf-adj-lowcost-item",
+      "name": "",
+      "type": "text",
+      "defaultValue": "偽造工作證",
+      "value": "偽造工作證",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-confiscation",
+      "attributes": {
+        "type": "text",
+        "id": "val-conf-adj-lowcost-item",
+        "value": "偽造工作證",
+        "class": "px-2 py-0.5 rounded-lg border cream-input w-48"
+      },
+      "label": "未扣案物品名稱："
+    },
+    {
+      "tag": "input",
+      "id": "conf-v9-no-proceeds",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-confiscation",
+      "attributes": {
+        "type": "checkbox",
+        "id": "conf-v9-no-proceeds"
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "conf-v9-no-ml-prop",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-confiscation",
+      "attributes": {
+        "type": "checkbox",
+        "id": "conf-v9-no-ml-prop"
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "val-conf-fpa48-seized",
+      "name": "",
+      "type": "text",
+      "defaultValue": "",
+      "value": "",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-confiscation",
+      "attributes": {
+        "type": "text",
+        "id": "val-conf-fpa48-seized",
+        "value": ""
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "val-conf-fpa48-unseized",
+      "name": "",
+      "type": "text",
+      "defaultValue": "",
+      "value": "",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-confiscation",
+      "attributes": {
+        "type": "text",
+        "id": "val-conf-fpa48-unseized",
+        "value": ""
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "conf-proceeds-38-1",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-confiscation",
+      "attributes": {
+        "type": "checkbox",
+        "id": "conf-proceeds-38-1"
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "conf-collect-38-1-3",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-confiscation",
+      "attributes": {
+        "type": "checkbox",
+        "id": "conf-collect-38-1-3"
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "conf-collect-except",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-confiscation",
+      "attributes": {
+        "type": "checkbox",
+        "id": "conf-collect-except"
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "val-conf-collect-except-item",
+      "name": "",
+      "type": "text",
+      "defaultValue": "",
+      "value": "",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-confiscation",
+      "attributes": {
+        "type": "text",
+        "id": "val-conf-collect-except-item",
+        "value": ""
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "conf-ml-25",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-confiscation",
+      "attributes": {
+        "type": "checkbox",
+        "id": "conf-ml-25"
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "val-conf-ml25-amt",
+      "name": "",
+      "type": "text",
+      "defaultValue": "",
+      "value": "",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-confiscation",
+      "attributes": {
+        "type": "text",
+        "id": "val-conf-ml25-amt",
+        "value": ""
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "val-conf-ml25-acct",
+      "name": "",
+      "type": "text",
+      "defaultValue": "",
+      "value": "",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-confiscation",
+      "attributes": {
+        "type": "text",
+        "id": "val-conf-ml25-acct",
+        "value": ""
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "conf-adj-proceeds",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-confiscation",
+      "attributes": {
+        "type": "checkbox",
+        "id": "conf-adj-proceeds"
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "val-conf-adj-proceeds",
+      "name": "",
+      "type": "text",
+      "defaultValue": "",
+      "value": "",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-confiscation",
+      "attributes": {
+        "type": "text",
+        "id": "val-conf-adj-proceeds",
+        "value": ""
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "conf-adj-ml25",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-confiscation",
+      "attributes": {
+        "type": "checkbox",
+        "id": "conf-adj-ml25"
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "val-conf-adj-ml25-amt",
+      "name": "",
+      "type": "text",
+      "defaultValue": "",
+      "value": "",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-confiscation",
+      "attributes": {
+        "type": "text",
+        "id": "val-conf-adj-ml25-amt",
+        "value": ""
+      },
+      "label": ""
+    },
+    {
+      "tag": "input",
+      "id": "stat-criminal-339-4",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-appendix",
+      "attributes": {
+        "type": "checkbox",
+        "id": "stat-criminal-339-4",
+        "checked": "",
+        "class": "mt-0.5 rounded"
+      },
+      "label": "中華民國刑法第339條之4（加重詐欺罪）"
+    },
+    {
+      "tag": "input",
+      "id": "stat-criminal-216",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-appendix",
+      "attributes": {
+        "type": "checkbox",
+        "id": "stat-criminal-216",
+        "checked": "",
+        "class": "mt-0.5 rounded"
+      },
+      "label": "中華民國刑法第216條（行使偽造文書罪）"
+    },
+    {
+      "tag": "input",
+      "id": "stat-criminal-212",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-appendix",
+      "attributes": {
+        "type": "checkbox",
+        "id": "stat-criminal-212",
+        "checked": "",
+        "class": "mt-0.5 rounded"
+      },
+      "label": "中華民國刑法第212條（偽造特種文書罪）"
+    },
+    {
+      "tag": "input",
+      "id": "stat-criminal-210",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-appendix",
+      "attributes": {
+        "type": "checkbox",
+        "id": "stat-criminal-210",
+        "checked": "",
+        "class": "mt-0.5 rounded"
+      },
+      "label": "中華民國刑法第210條（偽造私文書罪）"
+    },
+    {
+      "tag": "input",
+      "id": "stat-ml-new19",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": true,
+      "defaultChecked": true,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-appendix",
+      "attributes": {
+        "type": "checkbox",
+        "id": "stat-ml-new19",
+        "checked": "",
+        "class": "mt-0.5 rounded"
+      },
+      "label": "洗錢防制法第19條（一般洗錢罪）"
+    },
+    {
+      "tag": "input",
+      "id": "stat-ml-old14",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-appendix",
+      "attributes": {
+        "type": "checkbox",
+        "id": "stat-ml-old14",
+        "class": "mt-0.5 rounded"
+      },
+      "label": "修正前洗錢防制法第14條第1項、第2項"
+    },
+    {
+      "tag": "input",
+      "id": "stat-criminal-30",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-appendix",
+      "attributes": {
+        "type": "checkbox",
+        "id": "stat-criminal-30",
+        "class": "mt-0.5 rounded"
+      },
+      "label": "中華民國刑法第30條第1項（幫助犯）"
+    },
+    {
+      "tag": "input",
+      "id": "stat-criminal-339",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-appendix",
+      "attributes": {
+        "type": "checkbox",
+        "id": "stat-criminal-339",
+        "class": "mt-0.5 rounded"
+      },
+      "label": "中華民國刑法第339條（普通詐欺罪）"
+    },
+    {
+      "tag": "input",
+      "id": "stat-org-3",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-appendix",
+      "attributes": {
+        "type": "checkbox",
+        "id": "stat-org-3",
+        "class": "mt-0.5 rounded"
+      },
+      "label": "組織犯罪防制條例第3條第1項"
+    },
+    {
+      "tag": "input",
+      "id": "stat-org-4",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-appendix",
+      "attributes": {
+        "type": "checkbox",
+        "id": "stat-org-4",
+        "class": "mt-0.5 rounded"
+      },
+      "label": "組織犯罪防制條例第4條第1至4項"
+    },
+    {
+      "tag": "input",
+      "id": "stat-fpa-44",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-appendix",
+      "attributes": {
+        "type": "checkbox",
+        "id": "stat-fpa-44",
+        "class": "mt-0.5 rounded"
+      },
+      "label": "詐欺犯罪危害防制條例第44條第1項"
+    },
+    {
+      "tag": "input",
+      "id": "chk-include-schedule",
+      "name": "",
+      "type": "checkbox",
+      "defaultValue": "",
+      "value": "on",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-appendix",
+      "attributes": {
+        "type": "checkbox",
+        "id": "chk-include-schedule",
+        "class": "rounded"
+      },
+      "label": "於判決書末附上「附表（扣案物品名稱、數量及所在卷頁）」："
+    },
+    {
+      "tag": "textarea",
+      "id": "val-schedule-text",
+      "name": "",
+      "type": "textarea",
+      "defaultValue": "編號1：偽造之「OO股份有限公司收據」1張（上有偽造之「OO股份有限公司」公司印文1枚、「OOO」印文1枚）（O號偵卷第O頁）",
+      "value": "編號1：偽造之「OO股份有限公司收據」1張（上有偽造之「OO股份有限公司」公司印文1枚、「OOO」印文1枚）（O號偵卷第O頁）",
+      "disabled": false,
+      "readOnly": false,
+      "visible": true,
+      "panel": "tab-appendix",
+      "attributes": {
+        "id": "val-schedule-text",
+        "rows": "2",
+        "class": "w-full px-2.5 py-1.5 rounded-lg border cream-input"
+      },
+      "label": "於判決書末附上「附表（扣案物品名稱、數量及所在卷頁）」："
+    },
+    {
+      "tag": "input",
+      "id": "input-appeal-text",
+      "name": "",
+      "type": "text",
+      "defaultValue": "如不服本判決應於收受本判決後20日內向本院提出上訴書狀，上訴書狀應敘述具體理由。上訴書狀未敘述上訴理由者，應於上訴期間屆滿後20日內補提理由書狀於本院(均須按他造當事人之人數附繕本 )「切勿逕送上級法院」。",
+      "value": "如不服本判決應於收受本判決後20日內向本院提出上訴書狀，上訴書狀應敘述具體理由。上訴書狀未敘述上訴理由者，應於上訴期間屆滿後20日內補提理由書狀於本院(均須按他造當事人之人數附繕本 )「切勿逕送上級法院」。",
+      "checked": false,
+      "defaultChecked": false,
+      "disabled": false,
+      "readOnly": false,
+      "visible": false,
+      "panel": "tab-appendix",
+      "attributes": {
+        "type": "text",
+        "id": "input-appeal-text",
+        "value": "如不服本判決應於收受本判決後20日內向本院提出上訴書狀，上訴書狀應敘述具體理由。上訴書狀未敘述上訴理由者，應於上訴期間屆滿後20日內補提理由書狀於本院(均須按他造當事人之人數附繕本 )「切勿逕送上級法院」。",
+        "class": "hidden"
+      },
+      "label": "於判決書末附上「附表（扣案物品名稱、數量及所在卷頁）」：\n            \n            編號1：偽造之「OO股份有限公司收據」1張（上有偽造之「OO股份有限公司」公司印文1枚、「OOO」印文1枚）（O號偵卷第O頁）"
+    }
+  ],
+  "buttons": [
+    {
+      "id": "preset-typical-btn",
+      "text": "加重詐欺＋洗錢＋組織",
+      "attributes": {
+        "type": "button",
+        "id": "preset-typical-btn",
+        "data-preset-group": "case",
+        "class": "quick-preset px-2.5 py-1 rounded-lg text-[#4A3B32] font-medium transition"
+      }
+    },
+    {
+      "id": "preset-attempt-btn",
+      "text": "加重詐欺未遂",
+      "attributes": {
+        "type": "button",
+        "id": "preset-attempt-btn",
+        "data-preset-group": "case",
+        "class": "quick-preset px-2.5 py-1 rounded-lg text-[#4A3B32] font-medium transition"
+      }
+    },
+    {
+      "id": "preset-v9-account-btn",
+      "text": "幫助詐欺＋幫助洗錢（提供帳戶）",
+      "attributes": {
+        "type": "button",
+        "id": "preset-v9-account-btn",
+        "data-preset-group": "case",
+        "class": "quick-preset px-2.5 py-1 rounded-lg text-[#4A3B32] font-medium transition"
+      }
+    },
+    {
+      "id": "preset-proc-summary-btn",
+      "text": "簡式審判程序",
+      "attributes": {
+        "type": "button",
+        "id": "preset-proc-summary-btn",
+        "data-preset-group": "procedure",
+        "class": "quick-preset px-2.5 py-1 rounded-lg text-[#4A3B32] font-medium transition"
+      }
+    },
+    {
+      "id": "preset-proc-simple-btn",
+      "text": "簡易判決處刑",
+      "attributes": {
+        "type": "button",
+        "id": "preset-proc-simple-btn",
+        "data-preset-group": "procedure",
+        "class": "quick-preset px-2.5 py-1 rounded-lg text-[#4A3B32] font-medium transition"
+      }
+    },
+    {
+      "id": "preset-clear-btn",
+      "text": "清空重填",
+      "attributes": {
+        "type": "button",
+        "id": "preset-clear-btn",
+        "class": "px-2.5 py-1 rounded-lg hover:bg-[#F2D6D0] text-[#9E4738] font-medium transition"
+      }
+    },
+    {
+      "id": "copy-all-btn",
+      "text": "📋 複製目前判決文字",
+      "attributes": {
+        "type": "button",
+        "id": "copy-all-btn",
+        "class": "px-3.5 py-1.5 rounded-xl bg-[#8C6239] hover:bg-[#734F2C] text-[#FFFDF9] font-semibold text-xs sm:text-sm flex items-center gap-1.5 shadow-sm transition"
+      }
+    },
+    {
+      "id": "export-doc-btn",
+      "text": "📥 匯出 Word (.doc)",
+      "attributes": {
+        "type": "button",
+        "id": "export-doc-btn",
+        "class": "px-3 py-1.5 rounded-xl bg-[#FFFDF9] hover:bg-[#F5EFE6] border border-[#D5C2A8] text-[#4A3B32] font-medium text-xs sm:text-sm flex items-center gap-1 transition shadow-sm"
+      }
+    },
+    {
+      "id": "",
+      "text": "1. 案號與主文",
+      "attributes": {
+        "type": "button",
+        "data-tab": "tab-basic",
+        "class": "tab-btn px-3 py-1.5 rounded-xl text-xs sm:text-sm font-semibold bg-[#8C6239] text-[#FFFDF9] transition whitespace-nowrap shadow-sm"
+      }
+    },
+    {
+      "id": "",
+      "text": "2. 所犯罪名與競合",
+      "attributes": {
+        "type": "button",
+        "data-tab": "tab-crimes",
+        "class": "tab-btn px-3 py-1.5 rounded-xl text-xs sm:text-sm font-medium text-[#5C493E] hover:bg-[#E8DFD1] transition whitespace-nowrap"
+      }
+    },
+    {
+      "id": "",
+      "text": "3. 修法比較",
+      "attributes": {
+        "type": "button",
+        "data-tab": "tab-lawcompare",
+        "class": "tab-btn px-3 py-1.5 rounded-xl text-xs sm:text-sm font-medium text-[#5C493E] hover:bg-[#E8DFD1] transition whitespace-nowrap"
+      }
+    },
+    {
+      "id": "",
+      "text": "4. 加重減輕與量刑",
+      "attributes": {
+        "type": "button",
+        "data-tab": "tab-sentencing",
+        "class": "tab-btn px-3 py-1.5 rounded-xl text-xs sm:text-sm font-medium text-[#5C493E] hover:bg-[#E8DFD1] transition whitespace-nowrap"
+      }
+    },
+    {
+      "id": "",
+      "text": "5. 沒收",
+      "attributes": {
+        "type": "button",
+        "data-tab": "tab-confiscation",
+        "class": "tab-btn px-3 py-1.5 rounded-xl text-xs sm:text-sm font-medium text-[#5C493E] hover:bg-[#E8DFD1] transition whitespace-nowrap"
+      }
+    },
+    {
+      "id": "",
+      "text": "6. 附錄法條",
+      "attributes": {
+        "type": "button",
+        "data-tab": "tab-appendix",
+        "class": "tab-btn px-3 py-1.5 rounded-xl text-xs sm:text-sm font-medium text-[#5C493E] hover:bg-[#E8DFD1] transition whitespace-nowrap"
+      }
+    },
+    {
+      "id": "",
+      "text": "主文",
+      "attributes": {
+        "type": "button",
+        "data-copy-sec": "holding",
+        "class": "sec-copy-btn px-2 py-0.5 bg-[#FFFDF9] hover:bg-[#EFE6D8] border border-[#D8CBB8] rounded-lg text-[#4A3B32] whitespace-nowrap transition"
+      }
+    },
+    {
+      "id": "",
+      "text": "所犯罪名與競合",
+      "attributes": {
+        "type": "button",
+        "data-copy-sec": "crimes",
+        "class": "sec-copy-btn px-2 py-0.5 bg-[#FFFDF9] hover:bg-[#EFE6D8] border border-[#D8CBB8] rounded-lg text-[#4A3B32] whitespace-nowrap transition"
+      }
+    },
+    {
+      "id": "",
+      "text": "修法比較",
+      "attributes": {
+        "type": "button",
+        "data-copy-sec": "lawcompare",
+        "class": "sec-copy-btn px-2 py-0.5 bg-[#FFFDF9] hover:bg-[#EFE6D8] border border-[#D8CBB8] rounded-lg text-[#4A3B32] whitespace-nowrap transition"
+      }
+    },
+    {
+      "id": "",
+      "text": "加重減輕與量刑",
+      "attributes": {
+        "type": "button",
+        "data-copy-sec": "sentencing",
+        "class": "sec-copy-btn px-2 py-0.5 bg-[#FFFDF9] hover:bg-[#EFE6D8] border border-[#D8CBB8] rounded-lg text-[#4A3B32] whitespace-nowrap transition"
+      }
+    },
+    {
+      "id": "",
+      "text": "沒收與緩刑",
+      "attributes": {
+        "type": "button",
+        "data-copy-sec": "confiscation",
+        "class": "sec-copy-btn px-2 py-0.5 bg-[#FFFDF9] hover:bg-[#EFE6D8] border border-[#D8CBB8] rounded-lg text-[#4A3B32] whitespace-nowrap transition"
+      }
+    },
+    {
+      "id": "",
+      "text": "附錄法條",
+      "attributes": {
+        "type": "button",
+        "data-copy-sec": "appendix",
+        "class": "sec-copy-btn px-2 py-0.5 bg-[#FFFDF9] hover:bg-[#EFE6D8] border border-[#D8CBB8] rounded-lg text-[#4A3B32] whitespace-nowrap transition"
+      }
+    },
+    {
+      "id": "tpl-v11-btn",
+      "text": "V11 正犯類（簡式審判）",
+      "attributes": {
+        "type": "button",
+        "id": "tpl-v11-btn"
+      }
+    },
+    {
+      "id": "tpl-v9-btn",
+      "text": "V9 單純幫助詐欺洗錢類（簡易判決）",
+      "attributes": {
+        "type": "button",
+        "id": "tpl-v9-btn"
+      }
+    },
+    {
+      "id": "",
+      "text": "簡化表格（僅已勾選）",
+      "attributes": {
+        "type": "button",
+        "data-mode": "table-clean",
+        "class": "mode-btn"
+      }
+    },
+    {
+      "id": "",
+      "text": "判決內文段落（純文字）",
+      "attributes": {
+        "type": "button",
+        "data-mode": "prose",
+        "class": "mode-btn"
+      }
+    },
+    {
+      "id": "",
+      "text": "完整檢核表（含 ■/□）",
+      "attributes": {
+        "type": "button",
+        "data-mode": "table-check",
+        "class": "mode-btn"
+      }
+    }
+  ]
+}

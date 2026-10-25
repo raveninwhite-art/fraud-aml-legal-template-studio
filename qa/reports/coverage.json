@@ -1,0 +1,2171 @@
+{
+  "totalControls": 247,
+  "visibleControls": 188,
+  "directControls": 102,
+  "directVisibleControls": 98,
+  "definition": "事件紀錄之直接DOM操作；非程式碼、法律或組合覆蓋率。defaultObserved僅表示快照包含預設值。",
+  "rows": [
+    {
+      "key": "show-all-sections-toggle",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "S13"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "input-court-name",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "M02"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "input-case-no",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "G01",
+        "G02",
+        "G03",
+        "G04",
+        "G05"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "input-case-cause",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "B01",
+        "B02",
+        "B03",
+        "B04",
+        "B05",
+        "B06",
+        "B07",
+        "B08",
+        "B09",
+        "B10",
+        "B11",
+        "B12",
+        "G01",
+        "G02",
+        "G03",
+        "G04",
+        "G05"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "input-defendant-name",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "B01",
+        "B02",
+        "B03",
+        "B04",
+        "B05",
+        "B06",
+        "B07",
+        "B08",
+        "B09",
+        "B10",
+        "B11",
+        "B12",
+        "G01",
+        "G02",
+        "G03",
+        "G04",
+        "G05",
+        "M01",
+        "S09",
+        "S12"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "input-lawyer-name",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "input-judgment-date",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "input-court-div",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "input-judge-name",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "B01",
+        "B02",
+        "B03",
+        "B04",
+        "B05",
+        "B06",
+        "B07",
+        "B08",
+        "B09",
+        "B10",
+        "B11",
+        "B12",
+        "G01",
+        "G02",
+        "G03",
+        "G04",
+        "G05"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "input-clerk-name",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "B01",
+        "B02",
+        "B03",
+        "B04",
+        "B05",
+        "B06",
+        "B07",
+        "B08",
+        "B09",
+        "B10",
+        "B11",
+        "B12",
+        "G01",
+        "G02",
+        "G03",
+        "G04",
+        "G05"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-pros-indict",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-pros-indict",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-pros-add",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-pros-add",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-pros-merge",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-pros-merge",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-prosecutor-indict",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-prosecutor-indict",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "B01",
+        "B02",
+        "B03",
+        "B04",
+        "B05",
+        "B06",
+        "B07",
+        "B08",
+        "B09",
+        "B10",
+        "B11",
+        "B12",
+        "G01",
+        "G02",
+        "G03",
+        "G04",
+        "G05"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-prosecutor-trial",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-prosecutor-trial",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "B01",
+        "B02",
+        "B03",
+        "B04",
+        "B05",
+        "B06",
+        "B07",
+        "B08",
+        "B09",
+        "B10",
+        "B11",
+        "B12",
+        "G01",
+        "G02",
+        "G03",
+        "G04",
+        "G05"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "rad-proc-summary-trial",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-include-reason-one",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "G03"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "rad-proc-simple-judgment",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "M09"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-v9-proc-449-1",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-v9-proc-449-2",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-v9-proc-450",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-holding-recidivist",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "B08",
+        "F13",
+        "G05"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-holding-1",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F15"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-h1-crime-title",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-h1-sentence",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "G01",
+        "G02",
+        "G03",
+        "G04",
+        "G05",
+        "S11"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-h1-sub1",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-h1-sub2",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-h1-sub3",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-h1-sub4",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-holding-2",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-h2-crime-title",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-h2-sentence",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-h2-sub1",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-h2-sub2",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-h2-sub3",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-h2-sub4",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-holding-3",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F15"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-h3-sub1",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F15"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-h3-sub2",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-h3-sub3",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F15"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-h3-sentence",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-v9-holding-recidivist",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-v9-h1",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-v9-h1-term",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-v9-h2",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "B11"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-v9-h2-term",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-v9-h2-fine",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-v9-h3",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "B11",
+        "B12",
+        "F05"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-v9-h3-term",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-v9-h3-fine",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-v9-h4",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-v9-h4-term",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-v9-h5",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-v9-h5-term",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-v9-h5-fine",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-v9-h6",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "B12",
+        "F05"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-v9-h6-term",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-v9-h6-fine",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-h-conf-table",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "G03"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-h-conf-unseized",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "B06",
+        "F18",
+        "F25",
+        "F30",
+        "G02",
+        "G05",
+        "M03"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-h-unseized-amt",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "B06",
+        "F18",
+        "F25",
+        "F30",
+        "G02",
+        "G05",
+        "M03"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-h-conf-paid",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "B07",
+        "F17",
+        "G04"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-h-paid-amt",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "B07",
+        "F17",
+        "G04"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "holding-probation-grant",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F23",
+        "S14"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "holding-probation-years",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F23"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-holding-extra",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "rad-fact-standard",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "rad-fact-quote",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "rad-fact-amend",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-fact-amend",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F28",
+        "G01",
+        "G02",
+        "G03",
+        "G04",
+        "G05",
+        "M08"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "rad-evid-standard",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "rad-evid-quote",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "rad-evid-amend",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-evid-amend",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "G01",
+        "G02",
+        "G03",
+        "G04",
+        "G05"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "auto-sync-statutes",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F27"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "crime-fraud-339-4",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F31"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "c3394-sub1",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "c3394-sub2",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "c3394-sub3",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "c3394-sub4",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "crime-fpa-44",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F15"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "cfpa44-sub1",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F15"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "cfpa44-sub2",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "cfpa44-sub3",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F15"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "cfpa44-del-sub3",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "crime-fraud-339-4-att",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "c3394att-sub1",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "c3394att-sub2",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "c3394att-sub3",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "c3394att-sub4",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "crime-forgery-210",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F07",
+        "F27",
+        "G03",
+        "M06",
+        "S10"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "crime-forgery-220",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F08"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-forgery-220-part",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F08"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "crime-forgery-212",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F06",
+        "G03",
+        "G04",
+        "G05"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "crime-ml-new19",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F03"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "crime-ml-old14",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F03"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "crime-fraud-339",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F31"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "crime-fraud-339-att",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F31"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "crime-org-join",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F32"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "crime-org-join-dup",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "crime-org-recruit",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F32"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "crime-org-recruit-abroad",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F32"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "crime-org-recruit-minor",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F32"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "crime-org-force",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F32"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "crime-org-force-join",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F32"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "crime-org-force-leave",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F32"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "crime-v9-30-1",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "crime-v9-339",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "B12",
+        "F05"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "crime-v9-ml-old14",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "B11"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "crime-v9-ml-new19",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "B11",
+        "B12",
+        "F05"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "crime-v9-339-att",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "B12",
+        "F05"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "crime-v9-ml-old14-att",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "crime-v9-ml-new19-att",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "B12",
+        "F05"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-coprincipal",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "@coprincipal-style:detailed",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F09"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "@coprincipal-style:concise",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F09",
+        "G02",
+        "G03"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-coprincipal-members",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-forgery-absorb",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "G03"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-imag-concur",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F10"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-imag-diff-victims",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-imag-heavy-crime",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "B11",
+        "B12",
+        "F05"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "rad-multi-none",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "rad-multi-yes",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F11",
+        "F29"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-multi-crimes",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F11"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-fact-expand",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F12",
+        "F29"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-expand-indict",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-expand-summary",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "input-custom-law-compare",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "B10",
+        "F29",
+        "G01",
+        "G04",
+        "G05",
+        "M04",
+        "L0-06"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-enable-ml-compare",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-enable-fpa-compare",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-law-compare-summary",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-law-compare-summary",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-v9-row1",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-v9-row2",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-v9-row3",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-v9-row4",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-v9-row5",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-v9-row6",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "enh-recidivist",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "B08",
+        "F13",
+        "F14",
+        "F29",
+        "G05"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-recid-detail",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "B08",
+        "F13",
+        "G05"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "@recid-enhance-opt:yes",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "@recid-enhance-opt:no",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "B08",
+        "F14"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-recid-date",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-recid-case",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "enh-fpa44",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F15",
+        "F29"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "enh-other",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F29"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-enh-other",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F29"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-mit-imag-merge-theory",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "G02",
+        "G03",
+        "G05"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "@fraud-ml-mit-mode:confess_no_proceeds",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "@fraud-ml-mit-mode:confess_paid_proceeds",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "B07",
+        "F17",
+        "G04"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-mit-paid-amt",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "B07",
+        "F17",
+        "G04"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "@fraud-ml-mit-mode:confess_unpaid_proceeds",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "B06",
+        "F18",
+        "G02",
+        "G05",
+        "M03"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-mit-unpaid-amt",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "B06",
+        "F18",
+        "G02",
+        "G05",
+        "M03"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "@fraud-ml-mit-mode:no_confess_in_investigation",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F19",
+        "G03"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "@fraud-ml-mit-mode:omit",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F22"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "@ml23-mit-mode:deny",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F22"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "@ml23-mit-mode:confess",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F22"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "@ml23-mit-mode:omit",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "mit-attempt-25",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "B12",
+        "F20"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "mit-accessory-30",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "mit-org-8",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "mit-surrender-62",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F21"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "mit-ml-old16",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "mit-ml-old16-sentonly",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "mit-ml-new23",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "mit-ml-new23-sentonly",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "mit-org-8-sentonly",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "mit-fpa-old47",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "mit-fpa-old47-court",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "mit-fpa-new47",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "mit-fpa-new47-deemed",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-surrender-reason",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "mit-art59",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-art59-reason",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-art70-71",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "@sentencing-style:driver_full",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "@sentencing-style:accessory_full",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "@sentencing-style:short",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-sent-age",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "M07",
+        "S09"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-sentencing-factors",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "G01",
+        "G02",
+        "G03",
+        "G04",
+        "G05"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-sent-prosecutor-ask",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "G01",
+        "G02",
+        "G03",
+        "G04",
+        "G05"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-sent-no-fine",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "G04",
+        "G05"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "@probation-mode:omit",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "M05"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "@probation-mode:deny",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F29"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "@probation-mode:grant",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "B09",
+        "F24",
+        "M05"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "prob-deny-5yr",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-prob-deny-other",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-prob-clause",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-prob-years",
+      "visible": false,
+      "directlyExercised": true,
+      "tests": [
+        "B09",
+        "F23",
+        "M05"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "prob-reason-confess",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "prob-reason-settle",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "prob-supervision",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "prob-cond-3",
+      "visible": false,
+      "directlyExercised": true,
+      "tests": [
+        "B09",
+        "F24"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-prob-cond-3",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "prob-cond-4",
+      "visible": false,
+      "directlyExercised": true,
+      "tests": [
+        "B09",
+        "F24"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-prob-cond-4",
+      "visible": false,
+      "directlyExercised": true,
+      "tests": [
+        "B09",
+        "F24"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "prob-cond-5",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-prob-cond-5",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "@conf-role-mode:principal",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "@conf-role-mode:accessory",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "@accessory-conf-income:none",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "@accessory-conf-income:received",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F25"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-accessory-proceeds",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F25"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-conf-ml25-intro",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-conf-proceeds-section",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "@conf-proc-mode:no_proceeds",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "@conf-proc-mode:unseized_proceeds",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "B06",
+        "F18",
+        "F30",
+        "G02",
+        "G05",
+        "M03"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-conf-proc-unseized",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "B06",
+        "F18",
+        "F30",
+        "G02",
+        "G05",
+        "M03"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "@conf-proc-mode:paid_proceeds",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "B07",
+        "F17",
+        "G04"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-conf-proc-seized",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "B07",
+        "F17",
+        "G04"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "conf-fpa48",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "G03"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "conf-adj-fpa-lowcost",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "G03",
+        "G04",
+        "G05"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-conf-adj-lowcost-item",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "conf-v9-no-proceeds",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "conf-v9-no-ml-prop",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-conf-fpa48-seized",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-conf-fpa48-unseized",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "conf-proceeds-38-1",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "conf-collect-38-1-3",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "conf-collect-except",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-conf-collect-except-item",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "conf-ml-25",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-conf-ml25-amt",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-conf-ml25-acct",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "conf-adj-proceeds",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-conf-adj-proceeds",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "conf-adj-ml25",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-conf-adj-ml25-amt",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "stat-criminal-339-4",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "stat-criminal-216",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "stat-criminal-212",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "stat-criminal-210",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "F27"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "stat-ml-new19",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "stat-ml-old14",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "stat-criminal-30",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "stat-criminal-339",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "stat-org-3",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "stat-org-4",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "stat-fpa-44",
+      "visible": true,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    },
+    {
+      "key": "chk-include-schedule",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "B10",
+        "G01",
+        "G02",
+        "G04",
+        "G05"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "val-schedule-text",
+      "visible": true,
+      "directlyExercised": true,
+      "tests": [
+        "B10",
+        "G01",
+        "G02",
+        "G04",
+        "G05"
+      ],
+      "defaultObserved": true
+    },
+    {
+      "key": "input-appeal-text",
+      "visible": false,
+      "directlyExercised": false,
+      "tests": [],
+      "defaultObserved": true
+    }
+  ]
+}

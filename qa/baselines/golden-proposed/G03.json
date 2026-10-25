@@ -1,0 +1,459 @@
+{
+  "id": "G03",
+  "status": "PROPOSED_NOT_APPROVED",
+  "source": {
+    "filename": "115,訴,1924,20261014,1.pdf",
+    "sha256": "30bde4476be42bb958ba8b64b6e6eb15002d8b15347b86aab99d95a11c149ccc",
+    "pages": {
+      "holding": "p1 10–11",
+      "crime": "p2 12–20",
+      "mitigation": "p2–3",
+      "confiscation": "p3–4",
+      "sentencing": "p3 10–23"
+    }
+  },
+  "fixtureSha256": "3c7b0069142cfe6220908a9cd36411b6c6ebe4f42cf332b6a63d7ce5a813a8ae",
+  "assertions": [
+    {
+      "kind": "order",
+      "section": "text",
+      "texts": [
+        "主　文",
+        "事　實",
+        "理　由",
+        "認定犯罪事實所憑證據及理由",
+        "論罪科刑",
+        "沒收：",
+        "據上論斷",
+        "附錄本案論罪科刑法條"
+      ],
+      "id": "G03-A01",
+      "classification": "Structural Assertions",
+      "approvalStatus": "PROPOSED_NOT_APPROVED",
+      "provenance": {
+        "pdf": "115,訴,1924,20261014,1.pdf",
+        "locators": {
+          "holding": "p1 10–11",
+          "crime": "p2 12–20",
+          "mitigation": "p2–3",
+          "confiscation": "p3–4",
+          "sentencing": "p3 10–23"
+        },
+        "basis": "附件判決結構與法律條件；非從Behavior Snapshot建立Expected"
+      }
+    },
+    {
+      "kind": "numbering",
+      "section": "crimeText",
+      "id": "G03-A02",
+      "classification": "Structural Assertions",
+      "approvalStatus": "PROPOSED_NOT_APPROVED",
+      "provenance": {
+        "pdf": "115,訴,1924,20261014,1.pdf",
+        "locators": {
+          "holding": "p1 10–11",
+          "crime": "p2 12–20",
+          "mitigation": "p2–3",
+          "confiscation": "p3–4",
+          "sentencing": "p3 10–23"
+        },
+        "basis": "附件判決結構與法律條件；非從Behavior Snapshot建立Expected"
+      }
+    },
+    {
+      "kind": "numbering",
+      "section": "confText",
+      "id": "G03-A03",
+      "classification": "Structural Assertions",
+      "approvalStatus": "PROPOSED_NOT_APPROVED",
+      "provenance": {
+        "pdf": "115,訴,1924,20261014,1.pdf",
+        "locators": {
+          "holding": "p1 10–11",
+          "crime": "p2 12–20",
+          "mitigation": "p2–3",
+          "confiscation": "p3–4",
+          "sentencing": "p3 10–23"
+        },
+        "basis": "附件判決結構與法律條件；非從Behavior Snapshot建立Expected"
+      }
+    },
+    {
+      "kind": "contains",
+      "section": "holdingText",
+      "text": "處有期徒刑壹年貳月。",
+      "id": "G03-A04",
+      "classification": "Strict Text Assertions",
+      "approvalStatus": "PROPOSED_NOT_APPROVED",
+      "provenance": {
+        "pdf": "115,訴,1924,20261014,1.pdf",
+        "locators": {
+          "holding": "p1 10–11",
+          "crime": "p2 12–20",
+          "mitigation": "p2–3",
+          "confiscation": "p3–4",
+          "sentencing": "p3 10–23"
+        },
+        "basis": "附件判決結構與法律條件；非從Behavior Snapshot建立Expected"
+      }
+    },
+    {
+      "kind": "contains",
+      "section": "crimeText",
+      "text": "刑法第339條之4第1項第2款之三人以上共同詐欺取財罪",
+      "id": "G03-A05",
+      "classification": "Strict Text Assertions",
+      "approvalStatus": "PROPOSED_NOT_APPROVED",
+      "provenance": {
+        "pdf": "115,訴,1924,20261014,1.pdf",
+        "locators": {
+          "holding": "p1 10–11",
+          "crime": "p2 12–20",
+          "mitigation": "p2–3",
+          "confiscation": "p3–4",
+          "sentencing": "p3 10–23"
+        },
+        "basis": "附件判決結構與法律條件；非從Behavior Snapshot建立Expected"
+      }
+    },
+    {
+      "kind": "contains",
+      "section": "crimeText",
+      "text": "洗錢防制法第19條第1項後段之洗錢罪",
+      "id": "G03-A06",
+      "classification": "Strict Text Assertions",
+      "approvalStatus": "PROPOSED_NOT_APPROVED",
+      "provenance": {
+        "pdf": "115,訴,1924,20261014,1.pdf",
+        "locators": {
+          "holding": "p1 10–11",
+          "crime": "p2 12–20",
+          "mitigation": "p2–3",
+          "confiscation": "p3–4",
+          "sentencing": "p3 10–23"
+        },
+        "basis": "附件判決結構與法律條件；非從Behavior Snapshot建立Expected"
+      }
+    },
+    {
+      "kind": "contains",
+      "section": "crimeText",
+      "text": "刑法第28條",
+      "id": "G03-A07",
+      "classification": "Strict Text Assertions",
+      "approvalStatus": "PROPOSED_NOT_APPROVED",
+      "provenance": {
+        "pdf": "115,訴,1924,20261014,1.pdf",
+        "locators": {
+          "holding": "p1 10–11",
+          "crime": "p2 12–20",
+          "mitigation": "p2–3",
+          "confiscation": "p3–4",
+          "sentencing": "p3 10–23"
+        },
+        "basis": "附件判決結構與法律條件；非從Behavior Snapshot建立Expected"
+      }
+    },
+    {
+      "kind": "contains",
+      "section": "crimeText",
+      "text": "刑法第55條",
+      "id": "G03-A08",
+      "classification": "Strict Text Assertions",
+      "approvalStatus": "PROPOSED_NOT_APPROVED",
+      "provenance": {
+        "pdf": "115,訴,1924,20261014,1.pdf",
+        "locators": {
+          "holding": "p1 10–11",
+          "crime": "p2 12–20",
+          "mitigation": "p2–3",
+          "confiscation": "p3–4",
+          "sentencing": "p3 10–23"
+        },
+        "basis": "附件判決結構與法律條件；非從Behavior Snapshot建立Expected"
+      }
+    },
+    {
+      "kind": "notContains",
+      "section": "holdingText",
+      "text": "未遂",
+      "id": "G03-A09",
+      "classification": "Strict Text Assertions",
+      "approvalStatus": "PROPOSED_NOT_APPROVED",
+      "provenance": {
+        "pdf": "115,訴,1924,20261014,1.pdf",
+        "locators": {
+          "holding": "p1 10–11",
+          "crime": "p2 12–20",
+          "mitigation": "p2–3",
+          "confiscation": "p3–4",
+          "sentencing": "p3 10–23"
+        },
+        "basis": "附件判決結構與法律條件；非從Behavior Snapshot建立Expected"
+      }
+    },
+    {
+      "kind": "notContains",
+      "section": "holdingText",
+      "text": "幫助",
+      "id": "G03-A10",
+      "classification": "Strict Text Assertions",
+      "approvalStatus": "PROPOSED_NOT_APPROVED",
+      "provenance": {
+        "pdf": "115,訴,1924,20261014,1.pdf",
+        "locators": {
+          "holding": "p1 10–11",
+          "crime": "p2 12–20",
+          "mitigation": "p2–3",
+          "confiscation": "p3–4",
+          "sentencing": "p3 10–23"
+        },
+        "basis": "附件判決結構與法律條件；非從Behavior Snapshot建立Expected"
+      }
+    },
+    {
+      "kind": "notContains",
+      "section": "crimeText",
+      "text": "後段之參與犯罪組織罪",
+      "id": "G03-A11",
+      "classification": "Strict Text Assertions",
+      "approvalStatus": "PROPOSED_NOT_APPROVED",
+      "provenance": {
+        "pdf": "115,訴,1924,20261014,1.pdf",
+        "locators": {
+          "holding": "p1 10–11",
+          "crime": "p2 12–20",
+          "mitigation": "p2–3",
+          "confiscation": "p3–4",
+          "sentencing": "p3 10–23"
+        },
+        "basis": "附件判決結構與法律條件；非從Behavior Snapshot建立Expected"
+      }
+    },
+    {
+      "kind": "contains",
+      "section": "appendixText",
+      "text": "洗錢防制法第19條",
+      "id": "G03-A12",
+      "classification": "Strict Text Assertions",
+      "approvalStatus": "PROPOSED_NOT_APPROVED",
+      "provenance": {
+        "pdf": "115,訴,1924,20261014,1.pdf",
+        "locators": {
+          "holding": "p1 10–11",
+          "crime": "p2 12–20",
+          "mitigation": "p2–3",
+          "confiscation": "p3–4",
+          "sentencing": "p3 10–23"
+        },
+        "basis": "附件判決結構與法律條件；非從Behavior Snapshot建立Expected"
+      }
+    },
+    {
+      "kind": "contains",
+      "section": "confText",
+      "text": "刑法第38條之2第2項",
+      "id": "G03-A13",
+      "classification": "Strict Text Assertions",
+      "approvalStatus": "PROPOSED_NOT_APPROVED",
+      "provenance": {
+        "pdf": "115,訴,1924,20261014,1.pdf",
+        "locators": {
+          "holding": "p1 10–11",
+          "crime": "p2 12–20",
+          "mitigation": "p2–3",
+          "confiscation": "p3–4",
+          "sentencing": "p3 10–23"
+        },
+        "basis": "附件判決結構與法律條件；非從Behavior Snapshot建立Expected"
+      }
+    },
+    {
+      "kind": "notContains",
+      "section": "crimeText",
+      "text": "行使偽造",
+      "id": "G03-A14",
+      "classification": "Strict Text Assertions",
+      "approvalStatus": "PROPOSED_NOT_APPROVED",
+      "provenance": {
+        "pdf": "115,訴,1924,20261014,1.pdf",
+        "locators": {
+          "holding": "p1 10–11",
+          "crime": "p2 12–20",
+          "mitigation": "p2–3",
+          "confiscation": "p3–4",
+          "sentencing": "p3 10–23"
+        },
+        "basis": "附件判決結構與法律條件；非從Behavior Snapshot建立Expected"
+      }
+    },
+    {
+      "kind": "notContains",
+      "section": "holdingText",
+      "text": "沒收之",
+      "id": "G03-A15",
+      "classification": "Strict Text Assertions",
+      "approvalStatus": "PROPOSED_NOT_APPROVED",
+      "provenance": {
+        "pdf": "115,訴,1924,20261014,1.pdf",
+        "locators": {
+          "holding": "p1 10–11",
+          "crime": "p2 12–20",
+          "mitigation": "p2–3",
+          "confiscation": "p3–4",
+          "sentencing": "p3 10–23"
+        },
+        "basis": "附件判決結構與法律條件；非從Behavior Snapshot建立Expected"
+      }
+    },
+    {
+      "kind": "contains",
+      "section": "mitText",
+      "text": "於偵查中未自白",
+      "id": "G03-A16",
+      "classification": "Strict Text Assertions",
+      "approvalStatus": "PROPOSED_NOT_APPROVED",
+      "provenance": {
+        "pdf": "115,訴,1924,20261014,1.pdf",
+        "locators": {
+          "holding": "p1 10–11",
+          "crime": "p2 12–20",
+          "mitigation": "p2–3",
+          "confiscation": "p3–4",
+          "sentencing": "p3 10–23"
+        },
+        "basis": "附件判決結構與法律條件；非從Behavior Snapshot建立Expected"
+      }
+    },
+    {
+      "kind": "notContains",
+      "section": "sentencingText",
+      "text": "自始均坦承犯行",
+      "id": "G03-A17",
+      "classification": "Strict Text Assertions",
+      "approvalStatus": "PROPOSED_NOT_APPROVED",
+      "provenance": {
+        "pdf": "115,訴,1924,20261014,1.pdf",
+        "locators": {
+          "holding": "p1 10–11",
+          "crime": "p2 12–20",
+          "mitigation": "p2–3",
+          "confiscation": "p3–4",
+          "sentencing": "p3 10–23"
+        },
+        "basis": "附件判決結構與法律條件；非從Behavior Snapshot建立Expected"
+      }
+    },
+    {
+      "kind": "notContains",
+      "section": "reasonFullText",
+      "text": "一、本件被告",
+      "id": "G03-A18",
+      "classification": "Strict Text Assertions",
+      "approvalStatus": "PROPOSED_NOT_APPROVED",
+      "provenance": {
+        "pdf": "115,訴,1924,20261014,1.pdf",
+        "locators": {
+          "holding": "p1 10–11",
+          "crime": "p2 12–20",
+          "mitigation": "p2–3",
+          "confiscation": "p3–4",
+          "sentencing": "p3 10–23"
+        },
+        "basis": "附件判決結構與法律條件；非從Behavior Snapshot建立Expected"
+      }
+    },
+    {
+      "kind": "order",
+      "section": "crimeText",
+      "texts": [
+        "核被告所為",
+        "論以共同正犯",
+        "為想像競合犯",
+        "刑之減輕事由",
+        "爰審酌"
+      ],
+      "id": "G03-A19",
+      "classification": "Structural Assertions",
+      "approvalStatus": "PROPOSED_NOT_APPROVED",
+      "provenance": {
+        "pdf": "115,訴,1924,20261014,1.pdf",
+        "locators": {
+          "holding": "p1 10–11",
+          "crime": "p2 12–20",
+          "mitigation": "p2–3",
+          "confiscation": "p3–4",
+          "sentencing": "p3 10–23"
+        },
+        "basis": "附件判決結構與法律條件；非從Behavior Snapshot建立Expected"
+      }
+    },
+    {
+      "kind": "contains",
+      "section": "reasonFullText",
+      "text": "一、認定犯罪事實",
+      "id": "G03-A20",
+      "classification": "Strict Text Assertions",
+      "approvalStatus": "PROPOSED_NOT_APPROVED",
+      "provenance": {
+        "pdf": "115,訴,1924,20261014,1.pdf",
+        "locators": {
+          "holding": "p1 10–11",
+          "crime": "p2 12–20",
+          "mitigation": "p2–3",
+          "confiscation": "p3–4",
+          "sentencing": "p3 10–23"
+        },
+        "basis": "附件判決結構與法律條件；非從Behavior Snapshot建立Expected"
+      }
+    },
+    {
+      "kind": "contains",
+      "section": "reasonFullText",
+      "text": "二、論罪科刑",
+      "id": "G03-A21",
+      "classification": "Strict Text Assertions",
+      "approvalStatus": "PROPOSED_NOT_APPROVED",
+      "provenance": {
+        "pdf": "115,訴,1924,20261014,1.pdf",
+        "locators": {
+          "holding": "p1 10–11",
+          "crime": "p2 12–20",
+          "mitigation": "p2–3",
+          "confiscation": "p3–4",
+          "sentencing": "p3 10–23"
+        },
+        "basis": "附件判決結構與法律條件；非從Behavior Snapshot建立Expected"
+      }
+    },
+    {
+      "kind": "contains",
+      "section": "reasonFullText",
+      "text": "三、沒收",
+      "id": "G03-A22",
+      "classification": "Strict Text Assertions",
+      "approvalStatus": "PROPOSED_NOT_APPROVED",
+      "provenance": {
+        "pdf": "115,訴,1924,20261014,1.pdf",
+        "locators": {
+          "holding": "p1 10–11",
+          "crime": "p2 12–20",
+          "mitigation": "p2–3",
+          "confiscation": "p3–4",
+          "sentencing": "p3 10–23"
+        },
+        "basis": "附件判決結構與法律條件；非從Behavior Snapshot建立Expected"
+      }
+    }
+  ],
+  "editorialReview": [
+    "完整法條適用與法律結論須使用者核准；測試沒有查核現行法。",
+    "自填事實、證據、量刑個人情狀、附表及新舊法比較僅為去識別化候選摘要。",
+    "檢查編號、量刑用語及重複比較文字；段落不必逐字複製PDF。"
+  ],
+  "coverageGaps": [
+    "無日期／金額自動判斷新舊法功能；比較段落須人工填寫。",
+    "主文、所得減刑及沒收理由金額分別填寫，無自動一致性約束。",
+    "PDF卷證表格僅能以純文字附表表示。"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "command": "npm run qa:v1 (host repository layout, root npm ci)",
+  "executionEnvironment": {
+    "node": "v22.23.4",
+    "playwright": "1.58.2",
+    "browser": {
+      "version": "153.0.8010.0",
+      "engine": "Chromium",
+      "isolatedContext": true,
+      "remoteRequestsBlocked": true
+    },
+    "os": "Linux"
+  },
+  "fullSuiteStart": "2026-10-25T14:39:27.991Z",
+  "fullSuiteEnd": "2026-10-25T14:40:39.983Z",
+  "counts": {
+    "Passed": 68,
+    "Failed": 7,
+    "Skipped": 0,
+    "Needs Review": 5
+  },
+  "mutationAt": "2026-10-25T14:40:45.202Z",
+  "mutationDetected": 3,
+  "sourceSha256": "2d990428e4ce6a60576189745e5c5b2d3440151142ea0eebc90bcb35eb85729c",
+  "exitCodeObserved": 1,
+  "note": "非零退出碼由七項已知失敗及未核准Gate造成；沒有因此宣稱框架通過產品驗收。"
+}

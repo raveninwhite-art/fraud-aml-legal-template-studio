@@ -1,0 +1,25 @@
+{
+  "status": "BLOCKED",
+  "baselineStatus": "BASELINE_PENDING_APPROVAL",
+  "fullSuite": true,
+  "P0Failures": [
+    "F19",
+    "F29",
+    "F30"
+  ],
+  "failures": [
+    "F19",
+    "F29",
+    "F30",
+    "S02",
+    "S03",
+    "S08",
+    "S14"
+  ],
+  "reasons": [
+    "P0 重大產文風險未清零",
+    "既有功能／回歸失敗須處理",
+    "五案 Golden 尚待使用者核准",
+    "缺少本次完整結果與來源的 Human Release Sign-off"
+  ]
+}
