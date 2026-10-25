@@ -1,0 +1,11 @@
+
+# QA generated files (fixtures/baselines are synthetic and separately reviewed)
+qa/node_modules/
+qa/test-results/
+qa/reports/
+qa/source/source-manifest.json
+qa/source/input-inventory.json
+qa/source/dependency-map.json
+qa/source/index.qa-lite.html
+playwright-report/
+test-results/
