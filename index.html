@@ -112,6 +112,8 @@
         <button type="button" id="copy-all-btn" class="px-3.5 py-1.5 rounded-xl bg-[#8C6239] hover:bg-[#734F2C] text-[#FFFDF9] font-semibold text-xs sm:text-sm flex items-center gap-1.5 shadow-sm transition">
           <span>📋 複製目前判決文字</span>
         </button>
+        <div id="amount-consistency-warning" class="hidden w-full px-3 py-2 rounded-lg border border-[#C0392B] bg-[#FCE8E6] text-[#8C2F22] text-xs font-semibold" role="alert"></div>
+
         <button type="button" id="export-doc-btn" class="px-3 py-1.5 rounded-xl bg-[#FFFDF9] hover:bg-[#F5EFE6] border border-[#D5C2A8] text-[#4A3B32] font-medium text-xs sm:text-sm flex items-center gap-1 transition shadow-sm">
           <span>📥 匯出 Word (.doc)</span>
         </button>
@@ -468,14 +470,14 @@
               <div class="p-3 rounded-xl border border-[#D8C8B5] bg-[#FAF3E8] space-y-2 mb-3">
                 <label class="flex items-center gap-2 font-semibold text-[#4A3B32] cursor-pointer">
                   <input type="checkbox" id="holding-probation-grant" class="rounded">
-                  <span>主文宣告緩刑（與「四、緩刑宣告」雙向連動）</span>
+                  <span>主文宣告緩刑（宣告條件與「四、緩刑宣告」雙向連動）</span>
                 </label>
                 <div class="flex flex-wrap items-center gap-2 text-xs pl-6">
                   <span>緩刑期間</span><input type="text" id="holding-probation-years" value="O" class="w-16 px-2 py-1 rounded-lg border cream-input"><span>年</span>
                 </div>
               </div>
               <label class="block text-xs text-[#7D685A] mb-1">其他主文後段補充記載（選填）：</label>
-              <input type="text" id="val-holding-extra" value="" placeholder="例如：緩刑O年，緩刑期間付保護管束..." class="w-full px-2.5 py-1.5 rounded-lg border cream-input text-xs sm:text-sm">
+              <input type="text" id="val-holding-extra" value="" placeholder="" class="w-full px-2.5 py-1.5 rounded-lg border cream-input text-xs sm:text-sm">
             </div>
           </div>
 
@@ -1071,26 +1073,8 @@
             </h2>
           </div>
 
-          <div class="p-3.5 rounded-xl border border-[#D8C8B5] bg-[#FAF3E8] space-y-3">
-            <div class="text-xs font-bold text-[#5C493E]">沒收撰寫類型</div>
-            <div class="space-y-3 text-xs sm:text-sm">
-              <label class="flex items-center gap-2 cursor-pointer font-semibold"><input type="radio" name="conf-role-mode" value="principal"> 一、正犯沒收</label>
-              <div class="border-t border-[#E6DEC8] pt-3 space-y-2">
-                <label class="flex items-center gap-2 cursor-pointer font-semibold"><input type="radio" name="conf-role-mode" value="accessory"> 二、幫助犯沒收</label>
-                <div class="pl-6 flex flex-wrap items-center gap-3">
-                  <span class="font-semibold">犯罪所得：</span>
-                  <label class="inline-flex items-center gap-1 cursor-pointer"><input type="radio" name="accessory-conf-income" value="none"> 未獲得報酬</label>
-                  <label class="inline-flex items-center gap-1 cursor-pointer"><input type="radio" name="accessory-conf-income" value="received"> 有獲得報酬</label>
-                </div>
-                <div class="pl-6 flex flex-wrap items-center gap-2">
-                  <span>犯罪所得：</span><input type="text" id="val-accessory-proceeds" value="O元" class="w-28 px-2 py-1 rounded-lg border cream-input">
-                </div>
-              </div>
-            </div>
-          </div>
-
           <div class="p-3.5 rounded-xl border border-[#E6DEC8] bg-[#FFFDF9] space-y-3">
-            <div class="text-xs font-bold text-[#5C493E] uppercase tracking-wider">一、正犯沒收</div>
+            <label class="flex items-center gap-2 cursor-pointer text-xs sm:text-sm font-bold text-[#5C493E]"><input type="radio" name="conf-role-mode" value="principal"><span>一、正犯沒收</span></label>
 
             <label class="flex items-start gap-2 text-xs sm:text-sm p-2.5 rounded-xl cream-subcard border cursor-pointer">
               <input type="checkbox" id="chk-conf-ml25-intro" class="mt-0.5 rounded">
@@ -1167,6 +1151,11 @@
             </div>
           </div>
 
+          <div class="p-3.5 rounded-xl border border-[#E6DEC8] bg-[#FFFDF9] space-y-3">
+            <label class="flex items-center gap-2 cursor-pointer text-xs sm:text-sm font-bold text-[#5C493E]"><input type="radio" name="conf-role-mode" value="accessory"><span>二、幫助犯沒收</span></label>
+            <div class="pl-6 flex flex-wrap items-center gap-3 text-xs sm:text-sm"><span class="font-semibold">犯罪所得：</span><label class="inline-flex items-center gap-1 cursor-pointer"><input type="radio" name="accessory-conf-income" value="none"> 未獲得報酬</label><label class="inline-flex items-center gap-1 cursor-pointer"><input type="radio" name="accessory-conf-income" value="received"> 有獲得報酬</label></div>
+            <div class="pl-6 flex flex-wrap items-center gap-2 text-xs sm:text-sm"><span>犯罪所得：</span><input type="text" id="val-accessory-proceeds" value="O元" class="w-28 px-2 py-1 rounded-lg border cream-input"></div>
+          </div>
 
         </div>
 
@@ -1304,6 +1293,20 @@
 
   <script>
     const PAREN_NUMS = ['㈠', '㈡', '㈢', '㈣', '㈤', '㈥', '㈦', '㈧', '㈨', '㈩'];
+    const CN_NUM_DIGITS = ['零','一','二','三','四','五','六','七','八','九'];
+    function toChineseInteger(value) {
+      const n = Number(value);
+      if (!Number.isInteger(n) || n <= 0) return String(value ?? '');
+      if (n < 10) return CN_NUM_DIGITS[n];
+      if (n < 20) return '十' + (n % 10 ? CN_NUM_DIGITS[n % 10] : '');
+      if (n < 100) return CN_NUM_DIGITS[Math.floor(n / 10)] + '十' + (n % 10 ? CN_NUM_DIGITS[n % 10] : '');
+      return String(n);
+    }
+    function getParenNum(index) {
+      const i = Number(index);
+      if (!Number.isInteger(i) || i < 0) return '（編號待確認）';
+      return PAREN_NUMS[i] || `（${toChineseInteger(i + 1)}）`;
+    }
 
     const STATUTE_TEXTS = {
       'stat-criminal-339-4': '中華民國刑法第339條之4\n犯第339條詐欺罪而有下列情形之一者，處1年以上7年以下有期徒刑，得併科1百萬元以下罰金：\n一、冒用政府機關或公務員名義犯之。\n二、三人以上共同犯之。\n三、以廣播電視、電子通訊、網際網路或其他媒體等傳播工具，對公眾散布而犯之。\n四、以電腦合成或其他科技方法製作關於他人不實影像、聲音或電磁紀錄之方法犯之。\n前項之未遂犯罰之。',
@@ -1515,7 +1518,7 @@
       // 1. 新舊法比較（由使用者自行填寫，若空白則不產生）
       const customLawCompare = val('input-custom-law-compare');
       if (customLawCompare) {
-        crimeSubSections.push(`${PAREN_NUMS[subIdx++]}新舊法比較：\n　　${customLawCompare.replace(/\n/g, '\n　　')}`);
+        crimeSubSections.push(`${getParenNum(subIdx++)}新舊法比較：\n　　${customLawCompare.replace(/\n/g, '\n　　')}`);
       }
 
       // 2. 核被告所為
@@ -1629,7 +1632,7 @@
       if (isChecked('cfpa44-del-sub3')) {
         crimeSentence += '（公訴意旨贅論115年1月23日修法前所無之詐欺犯罪危害防制條例第44條第1項第3款，應予刪除）';
       }
-      crimeSubSections.push(`${PAREN_NUMS[subIdx++]}${crimeSentence}`);
+      crimeSubSections.push(`${getParenNum(subIdx++)}${crimeSentence}`);
 
       // 3. 共同正犯
       let coprincipalBlock = '';
@@ -1640,7 +1643,7 @@
         } else {
           coprincipalBlock = '按共同實施犯罪行為之人，在合同意思範圍以內，各自分擔犯罪行為之一部，相互利用他人之行為，以達其犯罪之目的者，即應對於全部所發生之結果，共同負責。而共同正犯之成立，祇須具有犯意之聯絡及行為之分擔，既不問犯罪動機起於何人，亦不必每一階段犯行，均須參與。又共同正犯之意思聯絡，原不以數人間直接發生者為限，若有間接之聯絡者，亦包括在內，如甲分別邀約乙、丙犯罪，雖乙、丙間彼此並無直接之聯絡，亦無礙於其為共同正犯之成立。是以，行為人參與構成要件行為之實施，並不以參與構成犯罪事實之全部或始終參與為必要，即使僅參與構成犯罪事實之一部分，或僅參與某一階段之行為，亦足以成立共同正犯。經查，被告雖非親自向告訴人實施訛詐，而未自始至終參與各階段之犯行，然被告依該詐欺集團成員指示擔任車手工作，則被告與詐欺集團其他成員間既為詐騙告訴人而彼此分工，堪認其等係在合同意思範圍內，分擔犯罪行為之一部，並相互利用他人之行為，以達犯罪之目的，從而被告與所屬詐欺集團成員間，有犯意聯絡及行為分擔，依刑法第28條之規定，論以共同正犯。';
         }
-        crimeSubSections.push(`${PAREN_NUMS[subIdx++]}${coprincipalBlock}`);
+        crimeSubSections.push(`${getParenNum(subIdx++)}${coprincipalBlock}`);
       }
 
       // 4. 偽造印文署押階段行為及高度行為吸收關係
@@ -1653,7 +1656,7 @@
         } else {
           absorbBlock = '又被告與詐欺集團成員偽造工作證之特種文書後，復持以向告訴人行使，其偽造特種文書之低度行為為行使之高度行為所吸收，不另論罪。';
         }
-        crimeSubSections.push(`${PAREN_NUMS[subIdx++]}${absorbBlock}`);
+        crimeSubSections.push(`${getParenNum(subIdx++)}${absorbBlock}`);
       }
 
       // 5. 想像競合犯
@@ -1662,16 +1665,16 @@
         const shortListStr = shortCrimeNames.length ? shortCrimeNames.join('、') : '上開各罪';
         const diffV = isChecked('chk-imag-diff-victims') ? '，並侵害不同之財產法益' : '';
         imagBlock = `被告所犯${shortListStr}，均係在同一犯罪決意及預定計畫下所為行為，乃一行為觸犯數罪名${diffV}，為想像競合犯，應依刑法第55條之規定，從一重之${val('val-imag-heavy-crime') || '刑法第339條之4第1項第2款三人以上共同詐欺取財'}罪處斷。`;
-        crimeSubSections.push(`${PAREN_NUMS[subIdx++]}${imagBlock}`);
+        crimeSubSections.push(`${getParenNum(subIdx++)}${imagBlock}`);
       }
 
       // 6. 數罪併罰 & 擴張審理
       if (radioVal('multi-crime-mode') === 'yes') {
-        crimeSubSections.push(`${PAREN_NUMS[subIdx++]}被告所為${val('val-multi-crimes') || '上開各次犯行'}間，犯意各別、行為互殊，應予分論併罰。`);
+        crimeSubSections.push(`${getParenNum(subIdx++)}被告所為${val('val-multi-crimes') || '上開各次犯行'}間，犯意各別、行為互殊，應予分論併罰。`);
       }
       if (isChecked('chk-fact-expand')) {
         const expScope = formatSubclauses(['chk-expand-indict', 'chk-expand-summary'], ['起訴', '聲請簡易判決處刑']);
-        crimeSubSections.push(`${PAREN_NUMS[subIdx++]}檢察官移送併辦部分，與本案經起訴部分有想像競合犯之裁判上一罪關係，為${expScope}效力所及，應由本院擴張審理之。`);
+        crimeSubSections.push(`${getParenNum(subIdx++)}檢察官移送併辦部分，與本案經起訴部分有想像競合犯之裁判上一罪關係，為${expScope}效力所及，應由本院擴張審理之。`);
       }
 
       // 7. 累犯加重事由
@@ -1683,13 +1686,13 @@
         } else {
           enhBlock = `${val('val-recid-detail')}，構成刑法第47條第1項之累犯；惟審酌被告前案之罪名及執行情形、本案之犯罪情節等情，不認為被告有何等特殊之不法與罪責非難必要，相關前科紀錄於量刑審酌中之素行部分予以確實審酌即為已足，不另加重其刑。`;
         }
-        crimeSubSections.push(`${PAREN_NUMS[subIdx++]}${enhBlock}`);
+        crimeSubSections.push(`${getParenNum(subIdx++)}${enhBlock}`);
       }
       if (isChecked('enh-fpa44')) {
-        crimeSubSections.push(`${PAREN_NUMS[subIdx++]}被告所犯詐欺犯罪危害防制條例第44條第1項之罪，應依該條項規定加重其刑二分之一。`);
+        crimeSubSections.push(`${getParenNum(subIdx++)}被告所犯詐欺犯罪危害防制條例第44條第1項之罪，應依該條項規定加重其刑二分之一。`);
       }
       if (isChecked('enh-other') && val('val-enh-other')) {
-        crimeSubSections.push(`${PAREN_NUMS[subIdx++]}${val('val-enh-other')}`);
+        crimeSubSections.push(`${getParenNum(subIdx++)}${val('val-enh-other')}`);
       }
 
       // 8. 刑之減輕事由
@@ -1701,7 +1704,7 @@
         mitSubItems.push('想像競合犯之處斷刑，本質上係「刑之合併」。其所謂從一重處斷，乃將想像競合犯組成之評價上數罪，合併為科刑一罪，其所對應之刑罰，亦合併其評價上數罪之數法定刑，而為一個處斷刑。易言之，想像競合犯侵害數法益者皆成立犯罪，論罪時必須輕、重罪併舉論述，同時宣告所犯各罪名，包括各罪有無加重、減免其刑之情形，亦應說明論列，量刑時併衡酌輕罪部分量刑事由，評價始為充足，然後依刑法第55條前段規定「從一重處斷」，非謂對於其餘各罪可置而不論。因此，法院決定處斷刑時，雖以其中最重罪名之法定刑，做為裁量之準據，惟於裁量其輕重時，仍應將輕罪合併評價在內。');
       }
 
-      if (mitMode !== 'omit') {
+      if (mitMode && mitMode !== 'omit') {
         mitSubItems.push('被告於本案行為後，詐欺犯罪危害防制條例於115年1月21日修正公布，並自同年月23日施行。修正前之詐欺犯罪危害防制條例第47條前段規定：「犯詐欺犯罪，在偵查及歷次審判中均自白，如有犯罪所得，自動繳交其犯罪所得者，減輕其刑」；修正後第47條第1項規定：「犯詐欺犯罪，在偵查及歷次審判中均自白，並於檢察官偵查中首次自白之日起六個月內，支付與被害人達成調解或和解之全部金額者，得減輕其刑。」經整體比較結果，修正後詐欺犯罪危害防制條例第47條第1項增加減刑之要件，是適用修正前詐欺犯罪危害防制條例第47條規定較有利於被告。');
       }
 
@@ -1738,12 +1741,12 @@
       let mitBlock = '';
       if (mitSubItems.length === 1) {
         mitBlock = `刑之減輕事由：\n　　${mitSubItems[0]}`;
-        crimeSubSections.push(`${PAREN_NUMS[subIdx++]}${mitBlock}`);
+        crimeSubSections.push(`${getParenNum(subIdx++)}${mitBlock}`);
       } else if (mitSubItems.length > 1) {
         const dotNums = ['⒈', '⒉', '⒊', '⒋', '⒌', '⒍'];
         const numberedMit = mitSubItems.map((txt, i) => `${dotNums[i] || (i + 1) + '.'}${txt}`).join('\n');
         mitBlock = `刑之減輕事由：\n${numberedMit}`;
-        crimeSubSections.push(`${PAREN_NUMS[subIdx++]}${mitBlock}`);
+        crimeSubSections.push(`${getParenNum(subIdx++)}${mitBlock}`);
       }
 
       // 9. 量刑審酌
@@ -1759,13 +1762,16 @@
         const askClause = prosAskStr
           ? `，固然公訴人具體求刑${prosAskStr}等語，被告擔任車手固有非是，然屬該詐欺集團之末端成員${hasMit47}，是應考量個案情節量刑`
           : `，考量被告屬該詐欺集團之末端成員${hasMit47}`;
-        sentencingText = `爰審酌被告${ageStr}，非無工作能力賺取所需，然不知守法慎行正道取財，為圖暴利而擔任車手工作，侵害告訴人財產法益，助長原已猖獗之詐騙歪風，所為非是，應予嚴厲非難，被告雖未實際參與全程詐騙行為，尚非詐欺集團之核心成員，然被告為圖自己私益，擔任詐騙集團之車手，嚴重損害財產交易安全及社會經濟秩序，於本案之客觀犯罪情節並非輕微，又考量被告犯後自始均坦承犯行，並未實際參與全程詐騙行為，亦非詐欺集團之核心成員，並兼衡被告${factorsStr}等一切情狀${askClause}${noFineStr}，故本院參酌上開一切情形，量處如主文所示之刑。`;
+        const confessionAttitude = mitMode === 'no_confess_in_investigation'
+          ? '又考量被告於偵查中否認犯行，其犯後態度應依卷內各階段供述整體評價'
+          : (mitMode === 'omit' ? '又考量被告之犯後態度' : '又考量被告犯後自始均坦承犯行');
+        sentencingText = `爰審酌被告${ageStr}，非無工作能力賺取所需，然不知守法慎行正道取財，為圖暴利而擔任車手工作，侵害告訴人財產法益，助長原已猖獗之詐騙歪風，所為非是，應予嚴厲非難，被告雖未實際參與全程詐騙行為，尚非詐欺集團之核心成員，然被告為圖自己私益，擔任詐騙集團之車手，嚴重損害財產交易安全及社會經濟秩序，於本案之客觀犯罪情節並非輕微，${confessionAttitude}，並未實際參與全程詐騙行為，亦非詐欺集團之核心成員，並兼衡被告${factorsStr}等一切情狀${askClause}${noFineStr}，故本院參酌上開一切情形，量處如主文所示之刑。`;
       } else if (sentStyle === 'accessory_full') {
         sentencingText = `爰審酌被告依其經驗及智識，已預見提供其金融帳戶予他人使用，亟可能涉及財產犯罪，恐掩飾、隱匿他人詐欺犯罪所得之去向或所在，竟提供自己申辦之金融帳戶資料予詐欺集團成員，其所為除造成被害人財產法益受損外，亦增加政府查緝此類犯罪或將來所衍生金融犯罪之困難，更助長原已猖獗之詐欺歪風，其行為當難認有何可取之處，惟念及被告犯後坦認犯行，並兼衡被告${factorsStr}等一切情狀，量處如主文所示之刑，並諭知有期徒刑易科罰金、罰金易服勞役之折算標準。`;
       } else {
         sentencingText = `爰以行為人之行為責任為基礎，審酌本案與刑法第57條各款規定相適合之事實暨其他一切情狀（如${factorsStr}等），量處如主文所示之刑。`;
       }
-      crimeSubSections.push(`${PAREN_NUMS[subIdx++]}${sentencingText}`);
+      crimeSubSections.push(`${getParenNum(subIdx++)}${sentencingText}`);
 
       // 緩刑
       const probMode = radioVal('probation-mode');
@@ -1794,7 +1800,7 @@
         probationText = pLines.join('\n');
       }
       if (probationText) {
-        crimeSubSections.push(`${PAREN_NUMS[subIdx++]}${probationText}`);
+        crimeSubSections.push(`${getParenNum(subIdx++)}${probationText}`);
       }
 
 
@@ -1805,7 +1811,7 @@
       let confIdx = 0;
 
       if (isChecked('chk-conf-ml25-intro')) {
-        confSubSections.push(`${PAREN_NUMS[confIdx++]}按洗錢防制法第25條第1項規定：「犯第19條、第20條之罪，洗錢之財物或財產上利益，不問屬於犯罪行為人與否，沒收之」，而將洗錢之沒收改採義務沒收。惟按，沒收或追徵，有過苛之虞、欠缺刑法上之重要性、犯罪所得價值低微，或為維持受宣告人生活條件之必要者，得不宣告或酌減之，刑法第38條之2第2項定有明文。學理上稱此規定為過苛調節條款，乃將憲法上比例原則予以具體化，不問實體規範為刑法或特別刑法中之義務沒收，亦不分沒收主體為犯罪行為人或第三人之沒收，復不論沒收標的為原客體或追徵其替代價額，同有其適用。洗錢防制法第25條第1項採義務沒收主義，固為刑法第38條第2項前段關於職權沒收之特別規定，惟依前說明，仍有上述過苛條款之調節適用。`);
+        confSubSections.push(`${getParenNum(confIdx++)}按洗錢防制法第25條第1項規定：「犯第19條、第20條之罪，洗錢之財物或財產上利益，不問屬於犯罪行為人與否，沒收之」，而將洗錢之沒收改採義務沒收。惟按，沒收或追徵，有過苛之虞、欠缺刑法上之重要性、犯罪所得價值低微，或為維持受宣告人生活條件之必要者，得不宣告或酌減之，刑法第38條之2第2項定有明文。學理上稱此規定為過苛調節條款，乃將憲法上比例原則予以具體化，不問實體規範為刑法或特別刑法中之義務沒收，亦不分沒收主體為犯罪行為人或第三人之沒收，復不論沒收標的為原客體或追徵其替代價額，同有其適用。洗錢防制法第25條第1項採義務沒收主義，固為刑法第38條第2項前段關於職權沒收之特別規定，惟依前說明，仍有上述過苛條款之調節適用。`);
       }
 
       if (isChecked('chk-conf-proceeds-section')) {
@@ -1820,16 +1826,16 @@
           const pAmt = val('val-conf-proc-seized') || 'O元';
           procDetail = `經查，被告為本案收取詐欺款項之犯行，據被告供稱其獲得報酬${pAmt}等情，業經本院說明如前，再被告業已於本院審理中自動繳交上開犯罪所得，自應依刑法第38條之1第1項前段規定，於被告罪刑項下宣告沒收。又本院考量本案有其他共犯，且洗錢之財物均由詐騙集團上游成員拿取，如認本案全部洗錢財物均應依洗錢防制法第25條第1項規定對被告宣告沒收，恐有違比例原則而有過苛之虞，是以，本院不依此項規定對被告就本案洗錢財物宣告沒收。`;
         }
-        confSubSections.push(`${PAREN_NUMS[confIdx++]}再者，倘為共同犯罪，因共同正犯相互間利用他方之行為，以遂行其犯意之實現，本於責任共同原則，有關犯罪所得，應於其本身所處主刑之後，併為沒收之諭知；然共同犯罪行為人之組織分工及不法所得，未必相同，彼此間犯罪所得之分配懸殊，其分配較少甚或未受分配之人，如仍應就全部犯罪所得負連帶沒收之責，超過其個人所得之剝奪，無異代替其他犯罪參與者承擔刑罰，顯失公平，因共犯連帶沒收與罪刑相當原則相齟齬，故共同犯罪，所得之物之沒收，應就各人分得之數為之，亦即沒收或追徵應就各人所實際分得者為之。${procDetail}`);
+        confSubSections.push(`${getParenNum(confIdx++)}再者，倘為共同犯罪，因共同正犯相互間利用他方之行為，以遂行其犯意之實現，本於責任共同原則，有關犯罪所得，應於其本身所處主刑之後，併為沒收之諭知；然共同犯罪行為人之組織分工及不法所得，未必相同，彼此間犯罪所得之分配懸殊，其分配較少甚或未受分配之人，如仍應就全部犯罪所得負連帶沒收之責，超過其個人所得之剝奪，無異代替其他犯罪參與者承擔刑罰，顯失公平，因共犯連帶沒收與罪刑相當原則相齟齬，故共同犯罪，所得之物之沒收，應就各人分得之數為之，亦即沒收或追徵應就各人所實際分得者為之。${procDetail}`);
       }
 
       if (isChecked('conf-fpa48')) {
-        confSubSections.push(`${PAREN_NUMS[confIdx++]}又按，犯詐欺犯罪，其供犯罪所用之物，不問屬於犯罪行為人與否，均沒收之，詐欺犯罪危害防制條例第48條第1項定有明文。扣案如附表所示之物，屬犯刑法第339條之4之詐欺犯罪，供犯罪所用之物，應不問屬於犯罪行為人與否，應依前開規定宣告沒收。而如附表所示偽造之私文書既已全紙沒收，自無庸就其上偽造之署押、印文再予沒收。`);
+        confSubSections.push(`${getParenNum(confIdx++)}又按，犯詐欺犯罪，其供犯罪所用之物，不問屬於犯罪行為人與否，均沒收之，詐欺犯罪危害防制條例第48條第1項定有明文。扣案如附表所示之物，屬犯刑法第339條之4之詐欺犯罪，供犯罪所用之物，應不問屬於犯罪行為人與否，應依前開規定宣告沒收。而如附表所示偽造之私文書既已全紙沒收，自無庸就其上偽造之署押、印文再予沒收。`);
       }
 
       if (isChecked('conf-adj-fpa-lowcost')) {
         const lowItem = val('val-conf-adj-lowcost-item') || '偽造工作證';
-        confSubSections.push(`${PAREN_NUMS[confIdx++]}至本案被告供犯罪所用之${lowItem}，未據扣案，復無證據證明仍存在，審酌該${lowItem}僅屬事先以電腦製作、列印，取得容易、替代性高，欠缺刑法上之重要性，縱宣告沒收所能達到預防及遏止犯罪之目的甚微，爰依刑法第38條之2第2項規定，不予宣告沒收或追徵其價額。`);
+        confSubSections.push(`${getParenNum(confIdx++)}至本案被告供犯罪所用之${lowItem}，未據扣案，復無證據證明仍存在，審酌該${lowItem}僅屬事先以電腦製作、列印，取得容易、替代性高，欠缺刑法上之重要性，縱宣告沒收所能達到預防及遏止犯罪之目的甚微，爰依刑法第38條之2第2項規定，不予宣告沒收或追徵其價額。`);
       }
 
       if (radioVal('conf-role-mode') === 'accessory') {
@@ -1938,9 +1944,40 @@
         .replace(/\n/g, '<br>');
     }
 
+    function parseMoneyValue(raw) {
+      const text = String(raw || '').trim().replace(/[，,\s新臺幣元圓]/g, '');
+      if (!text || /[OoＯ○]/.test(text)) return null;
+      if (/^\d+$/.test(text)) return Number(text);
+      const digitMap = {零:0,〇:0,壹:1,一:1,貳:2,二:2,參:3,三:3,肆:4,四:4,伍:5,五:5,陸:6,六:6,柒:7,七:7,捌:8,八:8,玖:9,九:9};
+      const unitMap = {拾:10,十:10,佰:100,百:100,仟:1000,千:1000,萬:10000,万:10000};
+      if (![...text].every((c) => c in digitMap || c in unitMap)) return null;
+      let total = 0, section = 0, number = 0;
+      for (const c of text) {
+        if (c in digitMap) number = digitMap[c];
+        else { const unit = unitMap[c]; if (unit === 10000) { section += number; total += section * unit; section = 0; number = 0; } else { section += (number || 1) * unit; number = 0; } }
+      }
+      return total + section + number;
+    }
+    function validateProceedsConsistency(showWarning = true) {
+      const pairs = [];
+      if (isChecked('chk-h-conf-unseized') && radioVal('conf-proc-mode') === 'unseized_proceeds') pairs.push(['未扣案犯罪所得', val('val-h-unseized-amt'), val('val-conf-proc-unseized')]);
+      if (isChecked('chk-h-conf-paid') && radioVal('conf-proc-mode') === 'paid_proceeds') pairs.push(['已繳交犯罪所得', val('val-h-paid-amt'), val('val-conf-proc-seized')]);
+      if (isChecked('chk-h-conf-unseized') && radioVal('conf-role-mode') === 'accessory' && radioVal('accessory-conf-income') === 'received') pairs.push(['幫助犯未扣案犯罪所得', val('val-h-unseized-amt'), val('val-accessory-proceeds')]);
+      const issues = [];
+      for (const [label, holdingRaw, reasonRaw] of pairs) {
+        const a = parseMoneyValue(holdingRaw), b = parseMoneyValue(reasonRaw);
+        if (a === null || b === null) issues.push(`${label}金額無法可靠解析，請人工確認主文與沒收理由是否一致。`);
+        else if (a !== b) issues.push(`${label}金額不一致：主文「${holdingRaw}」、沒收理由「${reasonRaw}」。`);
+      }
+      const box = el('amount-consistency-warning');
+      if (box && showWarning) { box.textContent = issues.join(' '); box.classList.toggle('hidden', !issues.length); }
+      return issues;
+    }
+
     function renderPreview() {
       const container = el('preview-container');
       const d = buildSectionsData();
+      validateProceedsConsistency(true);
 
       const fullDoc = [
         d.headerBlock,
@@ -2108,6 +2145,8 @@
 
       // Export Word (.doc)
       el('export-doc-btn').addEventListener('click', () => {
+        const amountIssues = validateProceedsConsistency(true);
+        if (amountIssues.length) { showToast('犯罪所得金額尚有矛盾或需人工確認，已停止匯出。'); return; }
         const exportRoot=el('preview-container').cloneNode(true); const ct=exportRoot.querySelector('.text-center'), cn=exportRoot.querySelector('.text-right'); if(ct)ct.style.cssText='text-align:center;font-weight:bold;width:100%'; if(cn)cn.style.cssText='text-align:right;width:100%'; const contentHtml=exportRoot.innerHTML;
         const docFile = `
           <html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">
@@ -2148,11 +2187,20 @@
       el('preset-proc-summary-btn').addEventListener('click', () => { el('rad-proc-summary-trial').checked = true; setQuickPresetActive('preset-proc-summary-btn'); renderPreview(); showToast('已套用「簡式審判程序」'); });
       el('preset-proc-simple-btn').addEventListener('click', () => { el('rad-proc-simple-judgment').checked = true; setQuickPresetActive('preset-proc-simple-btn'); renderPreview(); showToast('已套用「簡易判決處刑」'); });
 
+      const presetManagedSelector = '#v11-holding-block input, #v9-holding-block input, #tab-crimes input[type="checkbox"], #tab-crimes input[type="radio"], #tab-sentencing input[type="checkbox"], #tab-sentencing input[type="radio"], #tab-confiscation input[type="checkbox"], #tab-confiscation input[type="radio"]';
+      const resetPresetManagedState = () => {
+        document.querySelectorAll(presetManagedSelector).forEach((input) => { input.checked = input.defaultChecked; });
+        syncProbationControls('reason');
+        syncAppendixStatutes();
+      };
+
       // Presets (Keeping sentencing terms as O年O月 and amounts as O元)
       el('preset-typical-btn').addEventListener('click', () => {
+        resetPresetManagedState();
         setQuickPresetActive('preset-typical-btn');
         el('input-court-name').value = '臺灣OO地方法院';
         el('input-case-no').value = 'O年度訴字第O號';
+        el('val-fact-amend').value = '一、（請於此處貼入或填寫本案犯罪事實）\n二、案經告訴人訴由警察局報告臺灣OO地方檢察署檢察官偵查起訴。';
         el('chk-holding-1').checked = true;
         el('val-h1-sentence').value = '處有期徒刑O年O月。';
         el('chk-holding-2').checked = false;
@@ -2179,6 +2227,7 @@
         el('conf-fpa48').checked = true;
         el('conf-adj-fpa-lowcost').checked = true;
         document.querySelector('input[name="probation-mode"][value="omit"]').checked = true;
+        syncProbationControls('reason');
         el('probation-deny-box').classList.add('hidden');
         el('probation-grant-box').classList.add('hidden');
         syncAppendixStatutes();
@@ -2187,6 +2236,7 @@
       });
 
       el('preset-attempt-btn').addEventListener('click', () => {
+        resetPresetManagedState();
         setQuickPresetActive('preset-attempt-btn');
         el('input-court-name').value = '臺灣OO地方法院';
         el('input-case-no').value = 'O年度訴字第O號';
@@ -2210,6 +2260,7 @@
         el('val-imag-heavy-crime').value = '刑法第339條之4第2項、第1項第2款三人以上共同詐欺取財未遂';
         el('val-prob-years').value = 'O';
         document.querySelector('input[name="probation-mode"][value="omit"]').checked = true;
+        syncProbationControls('reason');
         el('probation-deny-box').classList.add('hidden');
         el('probation-grant-box').classList.remove('hidden');
         syncAppendixStatutes();
@@ -2218,6 +2269,7 @@
       });
 
       el('preset-v9-account-btn').addEventListener('click', () => {
+        resetPresetManagedState();
         setQuickPresetActive('preset-v9-account-btn');
         el('input-court-name').value = '臺灣OO地方法院';
         el('chk-holding-1').checked = false;
@@ -2251,20 +2303,13 @@
       });
 
       el('preset-clear-btn').addEventListener('click', () => {
-        document.querySelectorAll('input[type="checkbox"], input[type="radio"]').forEach((input) => { input.checked = false; });
-        document.querySelectorAll('.quick-preset').forEach((b) => { b.classList.remove('is-active'); b.setAttribute('aria-pressed', 'false'); });
-        el('input-defendant-name').value = '';
-        el('input-case-cause').value = '';
-        el('input-judge-name').value = '';
-        el('input-clerk-name').value = '';
-        el('val-prosecutor-indict').value = '';
-        el('val-prosecutor-trial').value = '';
-        el('input-custom-law-compare').value = '';
+        document.querySelectorAll('.quick-preset').forEach((b) => { b.classList.remove('is-active'); b.setAttribute('aria-pressed','false'); });
+        document.querySelectorAll('#form-panels input[type="checkbox"], #form-panels input[type="radio"]').forEach((input) => { input.checked = false; });
+        ['input-defendant-name','input-case-cause','input-judge-name','input-clerk-name','val-prosecutor-indict','val-prosecutor-trial','input-custom-law-compare'].forEach((id) => { if (el(id)) el(id).value = ''; });
         el('input-court-name').value = '臺灣OO地方法院';
         el('input-case-no').value = 'O年度訴字第O號';
         el('probation-deny-box').classList.add('hidden');
         el('probation-grant-box').classList.add('hidden');
-        document.querySelectorAll('.form-panel').forEach((panel) => panel.classList.remove('hidden'));
         renderPreview();
         showToast('已清空所有勾選項目');
       });
